@@ -1,0 +1,21 @@
+.footer{
+    font-size: map-get($font-size, 'md');
+    background-color: $light-grey;
+    padding: $spacer 0 $spacer/2;
+
+    &__title{
+        font-size: map-get($font-size, 'md');
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacer/2;
+    }
+    &__sep{
+        height: 1px;
+        widows: 100%;
+        background-color: $border-color;
+        margin: $spacer/2 0;
+    }
+    &__intro{
+        font-size: map-get($font-size, 'sm');
+        color: $grey;
+    }
+}

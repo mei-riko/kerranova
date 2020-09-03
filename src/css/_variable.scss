@@ -1,17 +1,15 @@
 $white                : #ffffff;
-$black                : #16181F;
-$red                  : #EF002B;
+$black                : #1d1d1d;
+$red                  : #ff0000;
 
-$light-grey           : #ADADAD;
-$grey                 : #ADADAD;
-$dark-grey            : #1D1F26;
+$light-grey           : #f5f5f5;
+$grey                 : #919191;
 
-$border-color         : #464851;
-$body-color           : $white;
-$bg-main              : #242732;
-$bg-secondary         : #2D3039;
+$border-color         : #d6dbe0;
+$body-color           : $black;
+$body-bg              : #ffffff;
 
-$link-color           : $grey !default;
+$link-color           : $black !default;
 $link-hover-color     : $red !default;
 $link-decoration      : none !default;
 $link-hover-decoration: underline !default;
@@ -63,17 +61,17 @@ $line-height-heading: 1.1;
 
 $dt-font-weight: $font-weight-bold !default;
 
-$spacer : 30px!default;
+$spacer : 40px!default;
 $spacers: ()  !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
   (
     0: 0,
-    1: $spacer/2,         // 15px
-    2: $spacer,           // 30px
-    3: ($spacer * 1.5),   // 45px
-    4: ($spacer * 2),     // 60px
-    5: ($spacer * 3)      // 90px
+    1: $spacer/4,        // 10px
+    2: $spacer/2,        // 20px
+    3: $spacer,          // 40px
+    4: ($spacer * 1.5),  // 60px
+    5: ($spacer * 2)     // 80px
   ),
   $spacers
 );

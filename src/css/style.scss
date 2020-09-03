@@ -8,16 +8,23 @@
 @import "framework/offset";
 @import "framework/framework";
 
-@import "form/button";
+@import "btn/btn";
+@import "btn/btn_action";
+
+@import "header/header";
+@import "footer/footer";
+
 @import "form/form";
 @import "form/form_inline";
-@import "form/checkbox";
-@import "form/error";
-@import "form/jGrowl";
 
-@import "other/footer";
-@import "other/header";
-@import "other/modal";
-@import "other/pagination";
+@import "input/input";
+@import "input/checkbox";
+@import "input/radio";
+
+@import "modal/modal";
+@import "slider/slider";
+@import "pagination/pagination";
 
 @import "navbar/navbar";
+@import "navbar/navbar_header";
+@import "navbar/navbar_footer";
