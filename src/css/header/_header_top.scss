@@ -9,7 +9,8 @@
     }
     &__navbar{
         padding: 0 map-get($map: $spacers, $key: 3);
-        flex: 0 0 calc(100% - 858px);
-        //- logo 220px contact 200px search 300px btn 138px
+        flex: 0 0 calc(100% - 870px);
+        max-width: calc(100% - 870px);
+        //- logo 220px contact 200px search 290px btn 138px
     }
 }

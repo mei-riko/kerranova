@@ -3044,7 +3044,7 @@ table th, table td {
 .navbar_header__item {
   font-size: 13px;
   font-weight: 300;
-  padding: 15px 10px;
+  padding: 15px 13px;
   color: #1d1d1d;
 }
 
@@ -3148,11 +3148,11 @@ table th, table td {
 }
 
 .header__logo {
-  width: 220px;
+  width: 212px;
   height: 24px;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 220px;
-  flex: 0 0 220px;
+  -ms-flex: 0 0 212px;
+  flex: 0 0 212px;
   max-width: 50%;
   display: inline-block;
   background: url("../icon/logo.svg") no-repeat left center/contain;
@@ -3160,9 +3160,9 @@ table th, table td {
 
 .header__search {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 300px;
-  flex: 0 0 300px;
-  max-width: 300px;
+  -ms-flex: 0 0 290px;
+  flex: 0 0 290px;
+  max-width: 290px;
 }
 
 .header__search-input {
@@ -3176,22 +3176,27 @@ table th, table td {
 
 .header__search-input::-webkit-input-placeholder {
   font-weight: 300;
+  font-size: 14px;
 }
 
 .header__search-input::-moz-placeholder {
   font-weight: 300;
+  font-size: 14px;
 }
 
 .header__search-input:-ms-input-placeholder {
   font-weight: 300;
+  font-size: 14px;
 }
 
 .header__search-input::-ms-input-placeholder {
   font-weight: 300;
+  font-size: 14px;
 }
 
 .header__search-input::placeholder {
   font-weight: 300;
+  font-size: 14px;
 }
 
 .header__search-input:hover {
@@ -3214,7 +3219,7 @@ table th, table td {
 }
 
 .header__phone {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1;
 }
@@ -3239,7 +3244,7 @@ table th, table td {
 }
 
 .header__btn {
-  margin-left: 24px;
+  margin-left: 30px;
 }
 
 .header__icon {
@@ -3275,8 +3280,9 @@ table th, table td {
 .header_top__navbar {
   padding: 0 40px;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 calc(100% - 858px);
-  flex: 0 0 calc(100% - 858px);
+  -ms-flex: 0 0 calc(100% - 870px);
+  flex: 0 0 calc(100% - 870px);
+  max-width: calc(100% - 870px);
 }
 
 .header_bottom {
@@ -3344,16 +3350,16 @@ table th, table td {
 
 .content-row__slider {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 calc(100% - 380px);
-  flex: 0 0 calc(100% - 380px);
-  max-width: calc(100% - 380px);
+  -ms-flex: 0 0 calc(100% - 400px);
+  flex: 0 0 calc(100% - 400px);
+  max-width: calc(100% - 400px);
 }
 
 .content-row__promo {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 380px;
-  flex: 0 0 380px;
-  max-width: 380px;
+  -ms-flex: 0 0 400px;
+  flex: 0 0 400px;
+  max-width: 400px;
   height: 420px;
 }
 

@@ -1,17 +1,17 @@
 .header{
     &__logo{
-        width: 220px;
+        width: 212px;
         height: 24px;
 
-        flex: 0 0 220px;
+        flex: 0 0 212px;
         max-width: 50%;
 
         display: inline-block;
         background: url("../icon/logo.svg") no-repeat left center / contain;
     }
     &__search{
-        flex: 0 0 300px;
-        max-width: 300px;
+        flex: 0 0 290px;
+        max-width: 290px;
 
         &-input{
             background: $light-grey url("../icon/search.svg") no-repeat 12px center / 16px;
@@ -23,7 +23,7 @@
 
             &::placeholder{
                 font-weight: $font-weight-light;
-                // font-size: 14px;
+                font-size: 14px;
             }
 
             &:hover{
@@ -43,7 +43,7 @@
         text-align: right;
     }
     &__phone{
-        font-size: 14px;
+        font-size: 16px;
         font-weight: $font-weight-bolder;
         line-height: 1;
         &:hover, &:focus{
@@ -64,7 +64,7 @@
     }
     &__btn{
         // padding: 2px;
-        margin-left: 24px;
+        margin-left: $grid-gutter-width;
     }
     &__icon{
         width: 22px;
