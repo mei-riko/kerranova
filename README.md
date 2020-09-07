@@ -14,5 +14,5 @@ Use in terminal:
 Use in terminal:
 > yarn build
 
-# yarn docs https://classic.yarnpkg.com/ru/docs/install#windows-stable
-# if you have some problem with browser-sync check antivirus and its resolution
+Yarn docs https://classic.yarnpkg.com/ru/docs/install#windows-stable
+If you have some problem with browser-sync check antivirus and its resolution
