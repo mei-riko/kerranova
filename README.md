@@ -8,11 +8,11 @@ need NodeJS & Yarn
 
 2) install libraries from package.json
 Use in terminal:
->> yarn install
+> yarn install
 
 3) building project
 Use in terminal:
->> yarn build
+> yarn build
 
 # yarn docs https://classic.yarnpkg.com/ru/docs/install#windows-stable
 # if you have some problem with browser-sync check antivirus and its resolution
