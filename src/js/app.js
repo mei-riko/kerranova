@@ -60,46 +60,14 @@ $(document).ready(() =>{
   });
   // Слайдер
 	if( $('.slider').length > 0 ){
-    // Review Block Col
-    let $slickReview = $('#reviews');
-		$slickReview.slick({
+    // Slider On Index Page
+    let $slickIndex = $('.slider.slider_index');
+		$slickIndex.slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			arrows      : true,
+			arrows      : false,
 			dots        : true,
-      autoplay  : false,
-      responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            infinite: true,
-            arrows: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            arrows: false,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            infinite: true,
-            arrows: false,
-            dots: true
-          }
-        }
-      ]
+      autoplay  : false
     });
   }
 	// Mobile Navbar

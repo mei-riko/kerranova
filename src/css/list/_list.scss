@@ -1,0 +1,6 @@
+.list{
+    &__item{
+        position: relative;
+        padding-left: map-get($map: $spacers, $key: 2);
+    }
+}

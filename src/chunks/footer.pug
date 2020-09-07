@@ -1,6 +1,6 @@
 footer.footer
     .container
-        .row
+        .row.justify-content-between
             .col.footer__col
                 p.footer__title Камень
                 .navbar.navbar_footer
@@ -26,23 +26,25 @@ footer.footer
             .col.footer__col
                 p.footer__title Дерево
                 .navbar.navbar_footer
-                    a.navbar_footer__item(href="collection.html") PATCHWOOD
-                    a.navbar_footer__item(href="collection.html") RANCHO
-                    a.navbar_footer__item(href="collection.html") MADERA
-                    a.navbar_footer__item(href="collection.html") PALE WOOD
-                    a.navbar_footer__item(href="collection.html") CIMIC WOOD
-                    a.navbar_footer__item(href="collection.html") TIME RING
-                    a.navbar_footer__item(href="collection.html") VILLAGE
+                    .navbar_footer__column
+                        a.navbar_footer__item(href="collection.html") PATCHWOOD
+                        a.navbar_footer__item(href="collection.html") RANCHO
+                        a.navbar_footer__item(href="collection.html") MADERA
+                        a.navbar_footer__item(href="collection.html") PALE WOOD
+                        a.navbar_footer__item(href="collection.html") CIMIC WOOD
+                        a.navbar_footer__item(href="collection.html") TIME RING
+                        a.navbar_footer__item(href="collection.html") VILLAGE
             .col.footer__col
                 p.footer__title Для коммерческих объектов
                 .navbar.navbar_footer
-                    a.navbar_footer__item(href="collection.html") GREY STONE
-                    a.navbar_footer__item(href="collection.html") SNOW WHITE
-                    a.navbar_footer__item(href="collection.html") CONCRETE
-                    a.navbar_footer__item(href="collection.html") CEMENT CRUMBS
-                    a.navbar_footer__item(href="collection.html") LOUNGE WOOD
-                    a.navbar_footer__item(href="collection.html") BLANCO MEANDRI
-                    a.navbar_footer__item(href="collection.html") SELECT WOOD
+                    .navbar_footer__column
+                        a.navbar_footer__item(href="collection.html") GREY STONE
+                        a.navbar_footer__item(href="collection.html") SNOW WHITE
+                        a.navbar_footer__item(href="collection.html") CONCRETE
+                        a.navbar_footer__item(href="collection.html") CEMENT CRUMBS
+                        a.navbar_footer__item(href="collection.html") LOUNGE WOOD
+                        a.navbar_footer__item(href="collection.html") BLANCO MEANDRI
+                        a.navbar_footer__item(href="collection.html") SELECT WOOD
             .col.footer__col
                 p.footer__title Навигация и информация
                 .navbar.navbar_footer
@@ -52,18 +54,18 @@ footer.footer
                         a.navbar_footer__item(href="collection.html") Сертификаты
                         a.navbar_footer__item(href="collection.html") Скачать материалы
                         a.navbar_footer__item(href="collection.html") Укладка и уход
-                    .navbar_footer__column
+                    .navbar_footer__column.navbar_footer__column--last
                         a.navbar_footer__item(href="collection.html") О компании
                         a.navbar_footer__item(href="collection.html") Где купить?
                         a.navbar_footer__item(href="collection.html") Расчет стоимости
                         a.navbar_footer__item(href="collection.html") Контакты
         .footer__sep
         .row
-            .col-4
+            .col-4.col-sm-12.text-sm-center
                 p.footer__intro © Все права защищены. Kerranova. 1999-2020
-            .col-4.text-center
+            .col-4.col-sm-12.text-center
                 p.footer__intro
                     a.footer__intro-link(href="#") Положение об обработке и защите персональных данных 
-            .col-4.text-right
+            .col-4.col-sm-12.text-right.text-sm-center
                 p.footer__intro Скачать 
                     a.footer__intro-link(href="#") полный каталог товаров

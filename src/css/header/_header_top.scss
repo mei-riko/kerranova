@@ -1,0 +1,15 @@
+.header_top{
+    padding: $spacer/2 0;
+
+    &__container{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__navbar{
+        padding: 0 map-get($map: $spacers, $key: 3);
+        flex: 0 0 calc(100% - 858px);
+        //- logo 220px contact 200px search 300px btn 138px
+    }
+}

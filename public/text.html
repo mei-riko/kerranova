@@ -5,18 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Text Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
   <body>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <section class="container">
+    <header>
+      <div class="header header_top">
+        <div class="container header_top__container"><a class="header__logo" href="/"></a>
+          <nav class="navbar navbar_header header_top__navbar"><a class="navbar_header__item-main" href="catalog.html">Товары</a><a class="navbar_header__item-main" href="#">Вдохновение</a><a class="navbar_header__item-main" href="store-location.html">Где купить</a></nav>
+          <div class="header__contact"><a class="header__phone" href="tel:8 800 932 123 43">8 800 932 123 43</a><a class="header__callback" data-fancybox="data-fancybox" data-src="#callbackModal" href="javascript;">Заказать звонок</a><a class="header__link d-none" href="store-location.html">Где купить?</a></div>
+          <form class="form header__search" id="open-search"> 
+            <input class="input header__search-input" placeholder="Что вы ищете?"/>
+          </form>
+          <div class="header__btn-group"><a class="header__btn" href="mailto:info@kerranova.ru"><svg class="svg-icon header__icon header__icon_mail" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<g>
+<path d="M21.5,5.8c0-0.4-0.4-0.8-0.8-0.8H5.3c-0.7,0-1,0.8-0.5,1.3l5.7,5.6l-5.7,5.7C4.2,18.2,4.6,19,5.3,19h15.5c0.4,0,0.8-0.3,0.8-0.8c0,0,0,0,0,0V5.8z M19.9,16.3l-4.4-4.4l4.4-4.3V16.3z M7.1,6.6h11.7L13,12.3L7.1,6.6z M11.5,13l0.9,0.9c0.3,0.3,0.8,0.3,1.1,0l0.9-0.9l4.4,4.4H7.1L11.5,13z"/>
+<path d="M3.3,9.8h2C5.7,9.8,6,9.5,6,9S5.7,8.3,5.3,8.3h-2C2.8,8.3,2.5,8.6,2.5,9S2.8,9.8,3.3,9.8z"/>
+<path d="M5,12c0-0.4-0.3-0.8-0.8-0.8h-2c-0.4,0-0.8,0.3-0.8,0.8s0.3,0.8,0.8,0.8h2C4.7,12.8,5,12.4,5,12z"/>
+<path d="M6,15c0-0.4-0.3-0.8-0.8-0.8h-2c-0.4,0-0.8,0.3-0.8,0.8c0,0.4,0.3,0.8,0.8,0.8h2C5.7,15.7,6,15.4,6,15z"/>
+</g>
+</svg></a><a class="header__btn" data-fancybox="data-fancybox" data-src="#location" href="javascript;"><svg class="svg-icon header__icon header__icon_location" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<g>
+<path d="M12,7.2c-1.8,0-3.2,1.4-3.2,3.1s1.4,3.1,3.2,3.1s3.2-1.4,3.2-3.1S13.8,7.2,12,7.2L12,7.2z M12,11.9c-0.9,0-1.6-0.7-1.6-1.6c0-0.9,0.7-1.6,1.6-1.6s1.6,0.7,1.6,1.6C13.6,11.2,12.9,11.9,12,11.9z M20.5,10.4C20.5,5.8,16.7,2,12,2s-8.5,3.8-8.5,8.4v0v0c0,5.7,4.3,10,8.2,11.6c0.2,0.1,0.4,0.1,0.6,0C15.5,20.7,20.5,16.8,20.5,10.4C20.5,10.4,20.5,10.4,20.5,10.4C20.5,10.4,20.5,10.4,20.5,10.4L20.5,10.4z M18.9,10.4c0,4.6-3,8.2-6.9,10c-3.9-1.8-6.9-5.4-6.9-10c0,0,0,0,0,0l0,0c0-3.7,3.1-6.8,6.9-6.8C15.8,3.6,18.9,6.6,18.9,10.4C18.9,10.4,18.9,10.4,18.9,10.4C18.9,10.4,18.9,10.4,18.9,10.4z"/>
+</g>
+</svg></a><a class="header__btn" href="mailto:info@kerranova.ru"><svg class="svg-icon header__icon header__icon_cart" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<g>
+<path d="M19.7,6.7h-2.4C17,4.1,14.7,2,12,2S7,4.1,6.7,6.7H4.3C3.9,6.7,3.5,7,3.5,7.5v13.8c0,0.4,0.4,0.8,0.8,0.8h15.4c0.4,0,0.8-0.3,0.8-0.8V7.5C20.5,7,20.1,6.7,19.7,6.7z M12,3.6c1.9,0,3.4,1.4,3.7,3.1H8.3C8.6,4.9,10.1,3.6,12,3.6z M18.9,20.4H5.1V8.3h1.6v2.3c0,0.4,0.4,0.8,0.8,0.8c0.4,0,0.8-0.3,0.8-0.8V8.3h7.6v2.3c0,0.4,0.4,0.8,0.8,0.8c0.4,0,0.8-0.3,0.8-0.8V8.3h1.6V20.4z"/>
+</g>
+</svg></a>
+            <div class="header__nav" id="open-nav"></div>
+          </div>
+        </div>
+      </div>
+      <div class="header header_bottom">
+        <div class="container">
+          <nav class="navbar navbar_header"><a class="navbar_header__item navbar_header__item--sale" href="">Акции</a><a class="navbar_header__item" href="">Новинки</a><a class="navbar_header__item" href="">Коллекции</a><a class="navbar_header__item" href="">По помещению</a><a class="navbar_header__item" href="">По текстуре</a><a class="navbar_header__item navbar_header__item--secondary" href="">О компании</a><a class="navbar_header__item navbar_header__item--secondary" href="">Новости</a><a class="navbar_header__item navbar_header__item--secondary" href="">Контакты</a><a class="navbar_header__item" href="">Покупателям</a><a class="navbar_header__item" href="">Партнерам</a></nav>
+        </div>
+      </div>
+    </header>
+    <section class="content container pt-3 pb-4">
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/catalog.html">Лифты</a></li>
         <li class="breadcrumbs__item breadcrumbs__item--active">Текстовая страница</li>
       </ul>
       <h1>Заголовок h1</h1>
-      <p>Maxime placeat, facere possimus, omnis voluptas nulla vero eos. Quam nihil molestiae non recusandae corrupti, quos dolores eos, qui. Id est eligendi optio, cumque nihil impedit, quo minus id, quod maxime. Eligendi optio, cumque nihil molestiae consequatur, vel illum. Temporibus autem quibusdam et expedita distinctio. Saepe eveniet, ut perspiciatis, unde omnis dolor. Provident, similique sunt in ea commodi autem quibusdam et voluptates repudiandae sint.</p><img src="../demo/demo.jpg" alt="" title=""/>
+      <p>Maxime placeat, facere possimus, omnis voluptas nulla vero eos. Quam nihil molestiae non recusandae corrupti, quos dolores eos, qui. Id est eligendi optio, cumque nihil impedit, quo minus id, quod maxime. Eligendi optio, cumque nihil molestiae consequatur, vel illum. Temporibus autem quibusdam et expedita distinctio. Saepe eveniet, ut perspiciatis, unde omnis dolor. Provident, similique sunt in ea commodi autem quibusdam et voluptates repudiandae sint.</p><img class="img-fluid" src="../demo/demo.jpg" alt="" title=""/>
       <h2>Заголовок h2</h2>
       <p>Velit, sed quia non provident, similique sunt in culpa, qui dolorem. Ducimus, qui dolorem ipsum, quia. Quibusdam et accusamus et accusamus et quas. Quo voluptas sit, amet, consectetur, adipisci velit, sed quia voluptas. Veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut enim ipsam. Esse, quam nihil impedit, quo voluptas. Eaque ipsa, quae ab illo inventore veritatis et voluptates.</p>
       <blockquote>Maxime placeat, facere possimus, omnis voluptas nulla vero eos. Quam nihil molestiae non recusandae corrupti, quos dolores eos, qui. Id est eligendi optio, cumque nihil impedit, quo minus id, quod maxime. Eligendi optio, cumque nihil molestiae consequatur, vel illum. Temporibus autem quibusdam et expedita distinctio.</blockquote>
@@ -26,12 +60,32 @@
       <p>Ipsam voluptatem, quia dolor repellendus quis nostrum exercitationem.</p>
       <h5>Заголовок h5</h5>
       <p>Ipsam voluptatem, quia dolor repellendus quis nostrum exercitationem. Asperiores repellat. accusamus et harum quidem rerum hic tenetur. Accusantium doloremque laudantium, totam rem aperiam eaque. Eveniet, ut labore et expedita. Earum rerum hic tenetur a sapiente delectus, ut aut perferendis. Veritatis et dolore magnam aliquam quaerat voluptatem sequi. Aliquid ex ea commodi autem vel illum. Sint et voluptates repudiandae sint.</p>
+      <div class="alert">Quo voluptas sit, amet, consectetur, adipisci velit, sed quia voluptas.
+        <div class="alert__close"></div>
+      </div>
+      <div class="alert alert_success">Quo voluptas sit, amet, consectetur, adipisci velit, sed quia voluptas.
+        <div class="alert__close"></div>
+      </div>
+      <div class="alert alert_danger">Quo voluptas sit, amet, consectetur, adipisci velit, sed quia voluptas.
+        <div class="alert__close"></div>
+      </div>
       <h6>Заголовок h6</h6>
-      <ul>
-        <li>sapiente delectus, ut enim ipsam voluptatem, quia consequuntur. </li>
-        <li>esse, quam nihil molestiae non recusandae illum, qui ratione voluptatem accusantium. </li>
-        <li>adipisci velit, sed quia.</li>
-      </ul>
+      <div class="row mb-2">
+        <div class="col-6">
+          <ul>
+            <li>sapiente delectus, ut enim ipsam voluptatem, quia consequuntur. esse, quam nihil molestiae non recusandae illum, qui ratione voluptatem accusantium. </li>
+            <li>esse, quam nihil molestiae non recusandae illum, qui ratione voluptatem accusantium. </li>
+            <li>adipisci velit, sed quia.</li>
+          </ul>
+        </div>
+        <div class="col-6">
+          <ol>
+            <li>sapiente delectus, ut enim ipsam voluptatem, quia consequuntur. </li>
+            <li>esse, quam nihil molestiae non recusandae illum, qui ratione voluptatem accusantium. </li>
+            <li>adipisci velit, sed quia.</li>
+          </ol>
+        </div>
+      </div>
       <p>Ipsam voluptatem, quia dolor repellendus quis nostrum exercitationem. Asperiores repellat. accusamus et harum quidem rerum hic tenetur. Accusantium doloremque laudantium, totam rem aperiam eaque. Eveniet, ut labore et expedita. Earum rerum hic tenetur a sapiente delectus, ut aut perferendis. Veritatis et dolore magnam aliquam quaerat voluptatem sequi. Aliquid ex ea commodi autem vel illum. Sint et voluptates repudiandae sint.</p>
       <table>
         <thead>
@@ -54,7 +108,7 @@
     </section>
     <footer class="footer">
       <div class="container">
-        <div class="row">
+        <div class="row justify-content-between">
           <div class="col footer__col">
             <p class="footer__title">Камень</p>
             <div class="navbar navbar_footer">
@@ -65,34 +119,40 @@
           </div>
           <div class="col footer__col">
             <p class="footer__title">Дерево</p>
-            <div class="navbar navbar_footer"><a class="navbar_footer__item" href="collection.html">PATCHWOOD</a><a class="navbar_footer__item" href="collection.html">RANCHO</a><a class="navbar_footer__item" href="collection.html">MADERA</a><a class="navbar_footer__item" href="collection.html">PALE WOOD</a><a class="navbar_footer__item" href="collection.html">CIMIC WOOD</a><a class="navbar_footer__item" href="collection.html">TIME RING</a><a class="navbar_footer__item" href="collection.html">VILLAGE</a></div>
+            <div class="navbar navbar_footer">
+              <div class="navbar_footer__column"><a class="navbar_footer__item" href="collection.html">PATCHWOOD</a><a class="navbar_footer__item" href="collection.html">RANCHO</a><a class="navbar_footer__item" href="collection.html">MADERA</a><a class="navbar_footer__item" href="collection.html">PALE WOOD</a><a class="navbar_footer__item" href="collection.html">CIMIC WOOD</a><a class="navbar_footer__item" href="collection.html">TIME RING</a><a class="navbar_footer__item" href="collection.html">VILLAGE</a></div>
+            </div>
           </div>
           <div class="col footer__col">
             <p class="footer__title">Для коммерческих объектов</p>
-            <div class="navbar navbar_footer"><a class="navbar_footer__item" href="collection.html">GREY STONE</a><a class="navbar_footer__item" href="collection.html">SNOW WHITE</a><a class="navbar_footer__item" href="collection.html">CONCRETE</a><a class="navbar_footer__item" href="collection.html">CEMENT CRUMBS</a><a class="navbar_footer__item" href="collection.html">LOUNGE WOOD</a><a class="navbar_footer__item" href="collection.html">BLANCO MEANDRI</a><a class="navbar_footer__item" href="collection.html">SELECT WOOD</a></div>
+            <div class="navbar navbar_footer">
+              <div class="navbar_footer__column"><a class="navbar_footer__item" href="collection.html">GREY STONE</a><a class="navbar_footer__item" href="collection.html">SNOW WHITE</a><a class="navbar_footer__item" href="collection.html">CONCRETE</a><a class="navbar_footer__item" href="collection.html">CEMENT CRUMBS</a><a class="navbar_footer__item" href="collection.html">LOUNGE WOOD</a><a class="navbar_footer__item" href="collection.html">BLANCO MEANDRI</a><a class="navbar_footer__item" href="collection.html">SELECT WOOD</a></div>
+            </div>
           </div>
           <div class="col footer__col">
             <p class="footer__title">Навигация и информация</p>
             <div class="navbar navbar_footer">
               <div class="navbar_footer__column"><a class="navbar_footer__item" href="collection.html">Реализованные объекты</a><a class="navbar_footer__item" href="collection.html">Дизайнерам и архитерторам</a><a class="navbar_footer__item" href="collection.html">Сертификаты</a><a class="navbar_footer__item" href="collection.html">Скачать материалы</a><a class="navbar_footer__item" href="collection.html">Укладка и уход</a></div>
-              <div class="navbar_footer__column"><a class="navbar_footer__item" href="collection.html">О компании</a><a class="navbar_footer__item" href="collection.html">Где купить?</a><a class="navbar_footer__item" href="collection.html">Расчет стоимости</a><a class="navbar_footer__item" href="collection.html">Контакты</a></div>
+              <div class="navbar_footer__column navbar_footer__column--last"><a class="navbar_footer__item" href="collection.html">О компании</a><a class="navbar_footer__item" href="collection.html">Где купить?</a><a class="navbar_footer__item" href="collection.html">Расчет стоимости</a><a class="navbar_footer__item" href="collection.html">Контакты</a></div>
             </div>
           </div>
         </div>
         <div class="footer__sep"></div>
         <div class="row">
-          <div class="col-4">
+          <div class="col-4 col-sm-12 text-sm-center">
             <p class="footer__intro">© Все права защищены. Kerranova. 1999-2020</p>
           </div>
-          <div class="col-4 text-center">
+          <div class="col-4 col-sm-12 text-center">
             <p class="footer__intro"><a class="footer__intro-link" href="#">Положение об обработке и защите персональных данных </a></p>
           </div>
-          <div class="col-4 text-right">
+          <div class="col-4 col-sm-12 text-right text-sm-center">
             <p class="footer__intro">Скачать <a class="footer__intro-link" href="#">полный каталог товаров</a></p>
           </div>
         </div>
       </div>
     </footer>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
+    <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/jquery.inputmask.js"></script>
     <script src="./js/app.min.js"></script>
   </body>

@@ -1,12 +1,17 @@
 .footer{
-    font-size: map-get($font-size, 'md');
+    font-size: map-get($font-size, 'sm');
     background-color: $light-grey;
-    padding: $spacer 0 $spacer/2;
+    padding: $spacer/2 0;
+
+    &__col{
+        max-width: fit-content;
+    }
 
     &__title{
-        font-size: map-get($font-size, 'md');
+        font-size: map-get($font-size, 'sm');
         font-weight: $font-weight-bold;
-        margin-bottom: $spacer/2;
+        line-height: $line-height-heading;
+        margin: $spacer/2 0;
     }
     &__sep{
         height: 1px;
@@ -15,7 +20,19 @@
         margin: $spacer/2 0;
     }
     &__intro{
-        font-size: map-get($font-size, 'sm');
+        font-size: 11px;
         color: $grey;
+
+        &-link{
+            color: $grey;
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .footer{
+        &__intro{
+            margin: 5px 0;
+        }
     }
 }

@@ -1,0 +1,24 @@
+.preview{
+    position: relative;
+
+    &__subtitle{
+        font-size: map-get($map: $font-size, $key: "sm");
+        font-weight: $font-weight-light;
+        line-height: $line-height-heading;
+        margin-bottom: $spacer/4;
+        color: $grey;
+    }
+    &__title{
+        font-size: 24px;
+        font-weight: $font-weight-bolder;
+        line-height: $line-height-heading;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: $spacer/4;
+    }
+    &__intro{
+        font-size: map-get($map: $font-size, $key: "md");
+        font-weight: $font-weight-light;
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,30 @@
+.alert{
+    position: relative;
+    font-size: map-get($font-size, 'sm');
+    padding: $spacer/2;
+    padding-right: $spacer*0.75;
+
+    border-radius: 4px;
+    border: 1px solid $border-color;
+    display: inline-block;
+
+    width: 360px;
+    max-width: 100%;
+
+    &__close{
+        width: 10px;
+        height: 10px;
+        background: url('../icon/close.svg') no-repeat center / contain;
+
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        transition: .4s;
+        cursor: pointer;
+
+        &:hover{
+            opacity: .5;
+        }
+    }
+}

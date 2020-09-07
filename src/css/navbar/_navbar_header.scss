@@ -1,0 +1,42 @@
+.navbar_header{
+    // margin-left: -$grid-gutter-width/2;
+    // margin-right: -$grid-gutter-width/2;
+
+    &__item-main{
+        font-size: 14px;
+        font-weight: $font-weight-bold;
+        padding: $grid-gutter-width/3 $grid-gutter-width/2;
+        color: $black;
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        &:hover, &:focus{
+            color: $black;
+        }
+    }
+    &__item{
+        font-size: 13px;
+        font-weight: $font-weight-light;
+        padding: $grid-gutter-width/2 $grid-gutter-width/3;
+        color: $black;
+
+        &:hover, &:focus{
+            color: $black;
+            text-decoration: none;
+            background-color: darken($color: $light-grey, $amount: 3);
+        }
+
+        &--sale{
+            color: $red;
+            font-weight: $font-weight-bold;
+            padding-left: 0;
+            
+            &:hover, &:focus{
+                color: $red;
+                background-color: $light-grey;
+            }
+        }
+    }
+}

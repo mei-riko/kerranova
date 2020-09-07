@@ -5,12 +5,42 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Index Page
 
+        link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet")
         link(href='./css/style.css', rel='stylesheet')
-
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
-
+        .container
+            .row.content-row.mt-3.mb-3
+                .col.content-row__slider
+                    .slider.slider_index
+                        a.slider_index__item(href="collection.html" style="background-image: url('../demo/demo.jpg');")
+                            .slider_index__content 
+                                .slider_index__text Красота и&nbsp;комфорт в&nbsp;вашей гостиной
+                                <svg class="slider_index__arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" width="24" height="24" viewBox="0 0 24.00 24.00" enable-background="new 0 0 24.00 24.00" xml:space="preserve">
+                                    <path fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 4,12L 16.25,12L 11,6.74994L 11.6643,6L 18.1642,12.5L 11.6642,19L 11,18.25L 16.25,13L 4,13L 4,12 Z "/>
+                                </svg>
+                        a.slider_index__item(href="collection.html" style="background-image: url('../demo/photo.png');")
+                            .slider_index__content 
+                                .slider_index__text Руководство по&nbsp;обустройству вашего дома
+                                <svg class="slider_index__arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" width="24" height="24" viewBox="0 0 24.00 24.00" enable-background="new 0 0 24.00 24.00" xml:space="preserve">
+                                    <path fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 4,12L 16.25,12L 11,6.74994L 11.6643,6L 18.1642,12.5L 11.6642,19L 11,18.25L 16.25,13L 4,13L 4,12 Z "/>
+                                </svg>
+                .col.content-row__promo
+                    .preview.preview_promo.content-row__promo-inside
+                        p.preview__subtitle Новая коллекция
+                        p.preview__title Central Park
+                        .preview_promo__image(style="background-image: url('../demo/photo.png');")
+                        p.preview__intro Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см
+                        a.link-arrow.preview_promo__link(href="collection.html") Посмотреть коллекцию
         include chunks/footer.pug
-        script(src="./js/jquery.inputmask.js")
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
+        script(src="./js/slick.min.js")
+
+        script(src="./js/jquery.inputmask.min.js")
         script(src="./js/app.min.js")

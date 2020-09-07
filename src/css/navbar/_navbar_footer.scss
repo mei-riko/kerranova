@@ -1,3 +1,26 @@
 .navbar_footer{
+    display: flex;
     flex-wrap: nowrap;
+
+    &__column{
+        flex-grow: 1;
+        padding-right: map-get($map: $spacers, $key: 4);
+
+        &--last{
+            padding-right: 0;
+        }
+    }
+    &__item{
+        display: block;
+        white-space: nowrap;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .navbar_footer{
+        flex-wrap: wrap;
+        &__column{
+            padding-right: map-get($map: $spacers, $key: 3);
+        }
+    }
 }

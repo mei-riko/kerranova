@@ -1,0 +1,45 @@
+.breadcrumbs{
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+
+    padding-bottom: $spacer/4;
+    margin-bottom: $spacer/4;
+    border-bottom: 1px solid $border-color;
+
+    font-size: 10px;
+    line-height: 14px;
+
+    &__item{
+        position: relative;
+        padding-right: $spacer/2;
+
+        &:after{
+            content: '';
+            display: block;
+            width: $spacer/2;
+            height: 14px;
+            background: url('../icon/arrow-next.svg') no-repeat center / 6px;
+    
+            position: absolute;
+            top: 0;
+            right: 0;
+    
+            transition: .4s;
+            cursor: pointer;
+    
+            &:hover{
+                opacity: .5;
+            }
+        }
+
+        &--active{
+            padding-right: 0;
+            color: $grey;
+            &:after{
+                display: none;
+            }
+        }
+    }
+}

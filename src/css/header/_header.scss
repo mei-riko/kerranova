@@ -1,0 +1,78 @@
+.header{
+    &__logo{
+        width: 220px;
+        height: 24px;
+
+        flex: 0 0 220px;
+        max-width: 50%;
+
+        display: inline-block;
+        background: url("../icon/logo.svg") no-repeat left center / contain;
+    }
+    &__search{
+        flex: 0 0 300px;
+        max-width: 300px;
+
+        &-input{
+            background: $light-grey url("../icon/search.svg") no-repeat 12px center / 16px;
+            border-color: $light-grey;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: $spacer;
+            width: 100%;
+
+            &::placeholder{
+                font-weight: $font-weight-light;
+                // font-size: 14px;
+            }
+
+            &:hover{
+                background-color: darken($color: $light-grey, $amount: 3);
+                border-color: darken($color: $light-grey, $amount: 3);
+            }
+            &:focus{
+                background-color: $light-grey;
+                border-color: $light-grey;
+            }
+        }
+    }
+    &__contact{
+        flex: 0 0 200px;
+        max-width: 200px;
+        padding-right: map-get($map: $spacers, $key: 3);
+        text-align: right;
+    }
+    &__phone{
+        font-size: 14px;
+        font-weight: $font-weight-bolder;
+        line-height: 1;
+        &:hover, &:focus{
+            text-decoration: none;
+        }
+    }
+    &__callback{
+        font-size: 12px;
+        line-height: 1;
+        text-decoration: underline;
+        text-transform: lowercase;
+        margin-top: 4px;
+        transition: .4s;
+
+        &:hover, &:focus{
+            color: $grey;
+        }
+    }
+    &__btn{
+        // padding: 2px;
+        margin-left: 24px;
+    }
+    &__icon{
+        width: 22px;
+        height: 22px;
+        transition: .4s;
+
+        &:hover{
+            fill: $grey;
+        }
+    }
+}

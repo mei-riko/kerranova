@@ -1,13 +1,17 @@
 $white                : #ffffff;
 $black                : #1d1d1d;
 $red                  : #ff0000;
-
+$blue                 : #0c36b0;
+// fa3928
 $light-grey           : #f5f5f5;
 $grey                 : #919191;
 
 $border-color         : #d6dbe0;
 $body-color           : $black;
 $body-bg              : #ffffff;
+
+$success              : #a0d34f;
+$danger               : $red;
 
 $link-color           : $black !default;
 $link-hover-color     : $red !default;
@@ -42,7 +46,7 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation M
 
 $font-size: (
   xs: 0,
-  sm: 12px,
+  sm: 13px,
   md: 14px,
   lg: 16px,
   xl: 16px
@@ -51,13 +55,13 @@ $font-size: (
 $font-weight-light  : 300;
 $font-weight        : 400;
 $font-weight-bolder : 600;
-$font-weight-bold   : 800;
+$font-weight-bold   : 700;
 
 $font-family-heading  : $font-family-base;
 $font-weight-heading  : $font-weight-bold;
 
-$line-height        : 1.6;
-$line-height-heading: 1.1;
+$line-height        : 1.5;
+$line-height-heading: 1.2;
 
 $dt-font-weight: $font-weight-bold !default;
 

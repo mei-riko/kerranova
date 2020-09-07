@@ -1,0 +1,19 @@
+.list_square{
+    &__item{
+        margin-bottom: $spacer/8;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:before{
+            content:'';
+            display: block;
+            background: $black;
+            width: 6px;
+            height: 6px;
+
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+    }
+}

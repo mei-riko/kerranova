@@ -11,9 +11,6 @@
 @import "btn/btn";
 @import "btn/btn_action";
 
-@import "header/header";
-@import "footer/footer";
-
 @import "form/form";
 @import "form/form_inline";
 
@@ -22,9 +19,32 @@
 @import "input/radio";
 
 @import "modal/modal";
+
+@import "slider/slick";
 @import "slider/slider";
-@import "pagination/pagination";
+@import "slider/slider_index";
+
+@import "alert/alert";
+@import "alert/alert_danger";
+@import "alert/alert_success";
+
+@import "list/list";
+@import "list/list_square";
+@import "list/list_numeric";
+
+@import "preview/preview";
+@import "preview/preview_promo";
 
 @import "navbar/navbar";
 @import "navbar/navbar_header";
 @import "navbar/navbar_footer";
+
+@import "breadcrumbs/breadcrumbs";
+@import "pagination/pagination";
+
+@import "header/header";
+@import "header/header_top";
+@import "header/header_bottom";
+
+@import "footer/footer";
+@import "content/content";

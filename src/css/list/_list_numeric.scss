@@ -1,0 +1,23 @@
+.list_numeric{
+    list-style-type: none;
+    counter-reset:  item;
+   
+    &__item{
+        padding-left: 30px;
+        margin-bottom: $spacer/8;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:before{
+            content: counter(item) '. ';
+            display: block;
+            counter-increment: item;
+            font-weight: $font-weight-bold;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
