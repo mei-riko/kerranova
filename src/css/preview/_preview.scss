@@ -9,12 +9,23 @@
         color: $grey;
     }
     &__title{
-        font-size: 24px;
+        font-size: 17px;
         font-weight: $font-weight-bolder;
         line-height: $line-height-heading;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 1.5px;
         margin-bottom: $spacer/4;
+
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+
+        &_link{
+            color: $black;
+            &:hover, &:focus{
+                color: $black;
+            }
+        }
     }
     &__intro{
         font-size: map-get($map: $font-size, $key: "md");

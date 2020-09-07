@@ -13,29 +13,32 @@
         height: 40px;
         z-index: 11;
         transition: .4s;
-
-        opacity: .5;
+        &.slick-disabled{
+            opacity: 0;
+        }
     }
     .slick-prev{
         left: 0;
         transform: translate(-50%, -50%);
-        background: url("../icon/arrow-prev.svg") no-repeat center / 30px;
+        background: $white url("../icon/arrow-prev.svg") no-repeat center / 20px;
+        filter: drop-shadow( 2px 2px 4px rgba(0,0,0,.15) );
 
         &:before{content: '';}
         &:hover, &:focus{
-            background: url("../icon/arrow-prev.svg") no-repeat center / 30px;
-            opacity: 1;
+            background: $white url("../icon/arrow-prev.svg") no-repeat center / 20px;
+            filter: drop-shadow( 2px 2px 4px rgba(0,0,0,.3) );
         }
     }
     .slick-next{
         right: 0;
         transform: translate(50%, -50%);
-        background: url("../icon/arrow-next.svg") no-repeat center / 30px;
+        background: $white url("../icon/arrow-next.svg") no-repeat center / 20px;
+        filter: drop-shadow( 2px 2px 4px rgba(0,0,0,.15) );
 
         &:before{content: '';}
         &:hover, &:focus{
-            background: url("../icon/arrow-next.svg") no-repeat center / 30px;
-            opacity: 1;
+            background: $white url("../icon/arrow-next.svg") no-repeat center / 20px;
+            filter: drop-shadow( 2px 2px 4px rgba(0,0,0,.3) );
         }
     }
 }

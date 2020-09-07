@@ -1,0 +1,15 @@
+.label{
+    font-size: 12px;
+    line-height: 1;
+    padding: 10px 15px;
+
+    color: $black;
+    border-radius: 20px;
+    border: 1px solid $border-color;
+
+    &:hover, &:focus{
+        color: $black;
+        border-color: $black;
+        text-decoration: none;
+    }
+}

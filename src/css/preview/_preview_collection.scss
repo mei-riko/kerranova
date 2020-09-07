@@ -1,0 +1,26 @@
+.preview_collection{
+    &__image{
+        width: 100%;
+        height: auto;
+        margin-bottom: $spacer/4;
+    }
+    &__gallery{
+        display: flex;
+        flex-wrap: wrap;
+
+        margin-left:-5px;
+        margin-right:-5px;
+        margin-bottom: $spacer/4;
+
+        &-item{
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding: 0 5px;
+            margin-bottom: $spacer/4;
+        }
+    }
+    &__intro{
+        height: 40px;
+        overflow: hidden;
+    }
+}

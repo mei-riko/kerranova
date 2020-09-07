@@ -1,0 +1,28 @@
+.preview_page{
+
+    &__image{
+        width: 100%;
+        height: 160px;
+
+        background: no-repeat center / cover;
+    }
+    &__title{
+        font-size: map-get($map: $font-size, $key: "md");
+        font-weight: $font-weight-bold;
+        padding: 30px 30px 60px;
+        border: 1px solid $border-color;
+
+        &:after{
+            top: auto;
+            bottom: 20px;
+            left: 30px;
+            right: auto;
+            background-position-x: left;
+            background-size: 24px;
+        }
+
+        &:hover, &:focus{
+            text-decoration: underline;
+        }
+    }
+}

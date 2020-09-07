@@ -23,10 +23,15 @@
 @import "slider/slick";
 @import "slider/slider";
 @import "slider/slider_index";
+@import "slider/slider_preview";
+@import "slider/slider_product";
 
 @import "alert/alert";
 @import "alert/alert_danger";
 @import "alert/alert_success";
+
+@import "label/label";
+@import "label/label_link";
 
 @import "list/list";
 @import "list/list_square";
@@ -34,6 +39,9 @@
 
 @import "preview/preview";
 @import "preview/preview_promo";
+@import "preview/preview_product";
+@import "preview/preview_page";
+@import "preview/preview_collection";
 
 @import "navbar/navbar";
 @import "navbar/navbar_header";
@@ -47,4 +55,9 @@
 @import "header/header_bottom";
 
 @import "footer/footer";
+
 @import "content/content";
+@import "content/content-title";
+@import "content/content-group";
+@import "content/content-row";
+@import "content/content-banner";

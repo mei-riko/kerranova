@@ -1,0 +1,39 @@
+.preview_product{
+    &__image{
+        width: 100%;
+        height: auto;
+        background: no-repeat center / contain;
+        margin-bottom: $spacer/2;
+
+        &:after{
+            content: '';
+            display: block;
+            width: 100%;
+            padding-bottom: 100%;
+        }
+    }
+    &__title{
+        font-size: 16px;
+        font-weight: $font-weight-bold;
+        letter-spacing: 0;
+    }
+    &__intro{
+        height: 40px;
+        overflow: hidden;
+        margin-bottom: $spacer/4;
+    }
+    &__collection{
+        display: block;
+    }
+    &__size{
+        display: block;
+    }
+    &__price{
+        font-size: 14px;
+        font-weight: $font-weight-bolder;
+    }
+    &__rub{
+        font-weight: $font-weight-light;
+        margin-left: 4px;
+    }
+}

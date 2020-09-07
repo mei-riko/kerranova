@@ -1,0 +1,14 @@
+.content-row{
+    &__slider{
+        flex: 0 0 calc(100% - 400px);
+        max-width: calc(100% - 400px);
+    }
+    &__promo{
+        flex: 0 0 400px;
+        max-width: 400px;
+        height: 420px;
+    }
+    &__promo-inside{
+        height: 100%;
+    }
+}

@@ -63,11 +63,31 @@ $(document).ready(() =>{
     // Slider On Index Page
     let $slickIndex = $('.slider.slider_index');
 		$slickIndex.slick({
-			slidesToShow: 1,
+			slidesToShow  : 1,
 			slidesToScroll: 1,
-			arrows      : false,
-			dots        : true,
-      autoplay  : false
+			arrows        : false,
+			dots          : true,
+      autoplay      : false
+    });
+    // Slider Collection
+    let $slickCollection = $('.slider.slider_collection');
+		$slickCollection.slick({
+      infinite      : false,
+			slidesToShow  : 4,
+			slidesToScroll: 4,
+			arrows        : true,
+			dots          : false,
+      autoplay      : false
+    });
+    // Slider Product
+    let $slickProduct = $('.slider.slider_product');
+		$slickProduct.slick({
+      infinite      : false,
+			slidesToShow  : 5,
+			slidesToScroll: 5,
+			arrows        : true,
+			dots          : false,
+      autoplay      : false
     });
   }
 	// Mobile Navbar

@@ -1,6 +1,7 @@
 .slider_index{
     width: 100%;
     padding-right: map-get($map: $spacers, $key: 1);
+    // margin-bottom: $spacer;
 
     &__item{
         position: relative;
@@ -30,7 +31,7 @@
 
         background: $white;
         border-radius: 6px;
-        max-width: 300px;
+        max-width: 290px;
         padding: $grid-gutter-width;
     }
     &__text{
@@ -48,6 +49,39 @@
     }
     //- Slick
     &.slick-dotted.slick-slider {
-        margin-bottom: $spacer/2;
+        margin-bottom: 0;
+    }
+    .slick-dots{
+        position: unset;
+        text-align: right;
+        margin: $spacer/4 0;
+        bottom: 0;
+
+        li{
+            width: auto;
+            height: auto;
+            transform: scale(0.7);
+
+            button{
+                display: block;
+                padding: 0;
+                background: url("../icon/dot.svg") no-repeat center / 10px;
+                width: 12px;
+                height: 12px;
+                opacity: .5;
+                transition: .4s;
+
+                &:before{
+                    display: none;
+                }
+            }
+
+            &.slick-active{
+                transform: scale(1);
+                button{
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

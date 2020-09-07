@@ -124,6 +124,7 @@ table{
 
 .text-uppercase{text-transform: uppercase;}
 .text-bold,strong,b{font-weight: 700;}
+.text-bolder{font-weight: 600;}
 
 .text-small,small,.small{font-size: 0.9rem;}
 .text-lead,.lead{font-size: 1.2rem;}
@@ -144,6 +145,21 @@ table{
     border: 1px solid $border-color;
 }
 
+.line{
+    position: relative;
+
+    &:before{
+        content: '';
+        display: block;
+        width: calc(100% - 30px);
+        height: 1px;
+        background: $border-color;
+
+        position: absolute;
+        left: 15px;
+        bottom: 0;
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
     html,body {font-size: map-get($font-size, 'xl');}
     
