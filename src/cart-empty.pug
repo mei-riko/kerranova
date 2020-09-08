@@ -10,7 +10,20 @@ html(lang="ru")
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
-
+        include chunks/mixin.pug
+        //- Popular Collection
+        .container.pt-3.pb-1
+            h2.h3.mb-2.content-title Самые популярные коллекции
+            .row
+                .col-3.mb-2
+                    +collection("Marble Trend", "Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см")(src="../demo/collection-1.png")
+                .col-3.mb-2
+                    +collection("Premium Marble", "Размеры плитки: 80x160, 80x80, 60x120 см")(src="../demo/collection-2.png")
+                .col-3.mb-2
+                    +collection("Terrazzo", "Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см")(src="../demo/collection-3.png")
+                .col-3.mb-2
+                    +collection("Montana", "Размеры плитки: 80x160, 80x80, 60x120, 120x120 см")(src="../demo/collection-4.png")
+        
         include chunks/footer.pug
         script(src="./js/jquery.inputmask.js")
         script(src="./js/app.min.js")
