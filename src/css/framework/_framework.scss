@@ -45,18 +45,6 @@ ol, ul{
         margin-bottom: 0;
     }
 }
-a{
-    display: inline-block;
-    outline: none;
-    transition: .3s;
-
-    color: $link-color;
-
-    &:hover, &:focus{
-        color: $link-hover-color;
-        outline: none;
-    }
-}
 .blockquote, blockquote{
     font-size: 1rem;
     padding: $spacer/4 $spacer/2;
@@ -72,6 +60,18 @@ table{
         padding: 8px 15px;
     }
 }
+a{
+    display: inline-block;
+    outline: none;
+    transition: .3s;
+
+    color: $link-color;
+
+    &:hover, &:focus{
+        color: $link-hover-color;
+        outline: none;
+    }
+}
 .link-inverse{
     color: $link-hover-color;
     &:hover{
@@ -81,7 +81,6 @@ table{
 .link-arrow{
     position: relative;
     padding-right: 25px;
-
     &:after{
         content: '';
         display: block;
@@ -104,7 +103,7 @@ table{
         }
     }
 }
-
+// Background
 .bg-black{background-color: $black;}
 .bg-white{background-color: $white;}
 
@@ -128,6 +127,8 @@ table{
 
 .text-small,small,.small{font-size: 0.9rem;}
 .text-lead,.lead{font-size: 1.2rem;}
+
+.text-underline{text-decoration: underline;}
 
 .text{
     &-right{text-align: right;}

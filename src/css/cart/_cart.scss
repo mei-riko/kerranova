@@ -1,0 +1,94 @@
+.cart{
+    &__inside{
+        border-radius: 4px;
+        border: 1px solid $border-color;
+        padding: 3*$spacer/4;
+        background-color: $white;
+
+        &-prop{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &-name{
+            flex: 0 0 180px;
+            max-width: 180px;
+            font-weight: $font-weight-light;
+            color: $grey;
+        }
+        &-val{
+            flex: 0 0 calc(100% - 180px);
+            max-width: calc(100% - 180px);
+            margin-bottom: 0;
+        }
+    }
+    &__sidebar{
+        border-radius: 4px;
+        border: 1px solid $border-color;
+        padding: $spacer/2 3*$spacer/4;
+        background-color: $white;
+
+        &--disable{
+            filter: grayscale(1);
+            opacity: .5;
+        }
+    }
+    &__prop{
+        display: flex;
+        flex-wrap: wrap;
+
+        margin-bottom: $spacer/2;
+        padding-bottom: $spacer/2;
+        border-bottom: 1px solid $border-color;
+
+        font-size: 14px;
+
+        &-name{
+            flex: 0 0 50%;
+            max-width: 50%;
+            text-align: left;
+            font-weight: $font-weight-light;
+            color: $grey;
+        }
+        &-val{
+            flex: 0 0 50%;
+            max-width: 50%;
+            text-align: right;
+            margin-bottom: $spacer/4;
+            font-weight: $font-weight-bold;
+        }
+    }
+    &__total{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+
+        &-name{
+            flex: 0 0 50%;
+            max-width: 50%;
+            text-align: left;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+        }
+        &-val{
+            flex: 0 0 50%;
+            max-width: 50%;
+            text-align: right;
+            font-weight: $font-weight-bold;
+            margin-bottom: 0;
+        }
+
+        & + .btn{
+            margin-top: $spacer/2;
+        }
+    }
+    &__subinfo{
+        font-size: 12px;
+        color: $grey;
+        margin: $spacer/4 0 0;
+
+        &-link{
+            @extend .text-underline;
+            color: $grey;
+        }
+    }
+}

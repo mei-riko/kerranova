@@ -4,7 +4,8 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Index Page</title>
+    <title>Empty Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
   <body>
@@ -43,7 +44,38 @@
         </div>
       </div>
     </header>
-    <div class="container pt-3 pb-1">
+    <div class="container">
+      <div class="row cart">
+        <div class="col-8 pt-3 pb-3">
+          <div class="cart__inside">
+            <h1 class="h3">Ваша корзина</h1>
+            <p>Здесь пока нет ни одного товара, но это легко исправить.</p><a class="btn btn_action" href="catalog.html">Посмотреть коллекции</a>
+          </div>
+        </div>
+        <div class="col-4 pt-3 pb-3">
+          <div class="cart__sidebar cart__sidebar--disable">
+            <dl class="cart__prop">
+              <dt class="cart__prop-name">Общая сумма заказа</dt>
+              <dd class="cart__prop-val">5 637,60 р.</dd>
+              <dt class="cart__prop-name">Вес вашей корзины</dt>
+              <dd class="cart__prop-val">12 кг.</dd>
+              <dt class="cart__prop-name">НДС (20%, включен в цену)</dt>
+              <dd class="cart__prop-val">939,60 р.</dd>
+            </dl>
+            <dl class="cart__total">
+              <dt class="cart__total-name">Итоговая сумма</dt>
+              <dd class="cart__total-val">5 637,60 р.</dd>
+            </dl>
+            <div class="btn btn--full btn_action">Перейти к оформлению заказа</div>
+          </div>
+          <p class="cart__subinfo">Стоимость указана для <a class="cart__subinfo-link" href="#">Самарская обл.</a></p>
+          <p class="cart__subinfo">Информация о <a class="cart__subinfo-link" href="#">способах доставки. </a> 30-дневный период возврата товара, 
+            комиссия за возврат и возврат стоимости за неотправленный товар. Прочитать <a class="cart__subinfo-link" href="#">о возврате и возмещении стоимости товара.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container mb-3">
       <h2 class="h3 mb-2 content-title">Самые популярные коллекции</h2>
       <div class="row">
         <div class="col-3 mb-2">
@@ -117,7 +149,9 @@
         </div>
       </div>
     </footer>
-    <script src="./js/jquery.inputmask.js"></script>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/jquery.inputmask.min.js"></script>
     <script src="./js/app.min.js"></script>
   </body>
 </html>

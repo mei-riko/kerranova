@@ -3,14 +3,50 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Index Page
+        title Order
 
+        link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet")
         link(href='./css/style.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
-
+        include chunks/mixin.pug
+        .container
+            .row.cart
+                .col-8.pt-3.pb-3
+                    .cart__inside
+                        h1.h3 Заказ успешно оформлен
+                        p Спасибо. Ваш заказ принят в обработку. Мы свяжемся с вами в ближайшее время 
+                            | для уточнения всех&nbsp;деталей
+                        dl.cart__inside-prop
+                            dt.cart__inside-name Номер заказа: 
+                            dd.cart__inside-val 3207 
+                            dt.cart__inside-name Дата заказа: 
+                            dd.cart__inside-val Август 31, 2020 
+                            dt.cart__inside-name Итоговая сумма: 
+                            dd.cart__inside-val 5 637,60 р.
+                            dt.cart__inside-name Способ оплаты: 
+                            dd.cart__inside-val Оплата по счету
+                .col-4.pt-3.pb-3
+                    .cart__sidebar
+                        dl.cart__prop
+                            dt.cart__prop-name Общая сумма заказа
+                            dd.cart__prop-val 5 637,60 р.
+                            dt.cart__prop-name Вес вашей корзины
+                            dd.cart__prop-val 12 кг.
+                            dt.cart__prop-name НДС (20%, включен в цену)
+                            dd.cart__prop-val 939,60 р.
+                        dl.cart__total
+                            dt.cart__total-name Итоговая сумма
+                            dd.cart__total-val 5 637,60 р.
+                    p.cart__subinfo Стоимость указана для 
+                        a.cart__subinfo-link(href="#") Самарская обл.
+                    p.cart__subinfo Информация о 
+                            a.cart__subinfo-link(href="#") способах доставки. 
+                            |  30-дневный период возврата товара, 
+                            | комиссия за возврат и возврат стоимости за неотправленный товар. Прочитать 
+                            a.cart__subinfo-link(href="#") о возврате и возмещении стоимости товара.
         include chunks/footer.pug
         script(src="./js/jquery.inputmask.js")
         script(src="./js/app.min.js")

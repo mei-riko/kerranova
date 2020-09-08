@@ -32,3 +32,44 @@ mixin preview-page(title)
     .preview.preview_page
         .preview_page__image(style!=attributes.style)
         a.link-arrow.preview_page__title(href="collection.html")= title
+mixin cart-item(collection,title,article,price1,price2)
+    .cart-item.row
+        .col.cart-item__image
+            img.img-fluid(src!=attributes.src)
+        .col.cart-item__content
+            .row.align-items-end
+                .col-6
+                    a.cart-item__collection(href="collection.html")= collection
+                    a.cart-item__title(href="product.html")= title
+                    p.cart-item__article= article
+                .col-3
+                    form.form.form_count(action="")
+                        input.input.input_count.input_count--active(type="number" value="1")
+                .col-2
+                    p.cart-item__price= price1
+                        span.cart-item__rub ₽
+                    p.cart-item__subprice= price2
+            .row.align-items-end.mt-2
+                .col-6
+                    dl.cart-item__prop
+                        dt.cart-item__prop-name Цвет:
+                        dd.cart-item__prop-val ULPIS / Пульпис
+                        dt.cart-item__prop-name Поверхность:
+                        dd.cart-item__prop-val Структурированная с sugar-эффектом
+                        dt.cart-item__prop-name Размер:
+                        dd.cart-item__prop-val 60х60
+                .col-3
+                    dl.cart-item__prop
+                        dt.cart-item__prop-name Площадь (м2):
+                        dd.cart-item__prop-val 2.88
+                        dt.cart-item__prop-name Упаковки:
+                        dd.cart-item__prop-val 4
+                        dt.cart-item__prop-name Штуки:
+                        dd.cart-item__prop-val 48
+                .col-2.text-right
+                    button.btn.btn_delete(type="remove")
+                        <svg class="btn_delete__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                            <path d="M456,58.755H326V20c0-11.046-8.954-20-20-20H206c-11.046,0-20,8.954-20,20v38.755H56c-11.046,0-20,8.954-20,20v78.34c0,11.046,8.954,20,20,20h30V462c0,27.57,22.43,50,50,50h240c27.57,0,50-22.43,50-50V177.095h30c11.046,0,20-8.954,20-20v-78.34C476,67.709,467.046,58.755,456,58.755z M226,40h60v18.755h-60V40z M386,462c0,5.514-4.486,10-10,10H136c-5.514,0-10-4.486-10-10V177.095h260V462z M436,137.095c-10.717,0-341.452,0-360,0v-38.34h360V137.095z"/>
+                            <path d="M206,206.623c-11.046,0-20,8.954-20,20v195.851c0,11.045,8.954,19.999,20,19.999s20-8.954,20-20v-195.85C226,215.577,217.046,206.623,206,206.623z"/>
+                            <path d="M306,206.623c-11.046,0-20,8.954-20,20v195.851c0,11.045,8.954,19.999,20,19.999c11.046,0,20-8.954,20-20v-195.85C326,215.577,317.046,206.623,306,206.623z"/>
+                        </svg>

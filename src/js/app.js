@@ -58,7 +58,14 @@ $(document).ready(() =>{
       toggle.find(".toggle-item__content").slideUp();
     }
   });
-  // Слайдер
+  // Input Number
+  if( $('.input.input_count.input_count--active').length > 0 ){
+    $('.input.input_count.input_count--active').number_plugin({
+      width: '65px',
+      height: '42px'
+    });
+  }
+    // Слайдер
 	if( $('.slider').length > 0 ){
     // Slider On Index Page
     let $slickIndex = $('.slider.slider_index');

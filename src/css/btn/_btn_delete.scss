@@ -1,0 +1,20 @@
+.btn_delete{
+    background: inherit;
+    padding: 10px;
+    border: 1px solid $border-color;
+    transition: .4s;
+
+    &__icon{
+        width: 16px;
+        height: 16px;
+        fill: $border-color;
+        transition: .4s;
+    }
+    &:hover, &:focus{
+        border-color: $grey;
+
+        .btn_delete__icon{
+            fill: $grey;
+        }
+    }
+}
