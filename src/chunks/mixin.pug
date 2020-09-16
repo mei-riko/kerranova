@@ -78,4 +78,7 @@ mixin cart-order-item(collection,title,article,price)
         .col.cart-order__item-image
             img.img-fluid(src!=attributes.src)
         .col.cart-order__item-content
-            .
+            .row.align-items-end
+                .col-8
+                    p.cart-order__title= title
+                .col-4
