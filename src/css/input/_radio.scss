@@ -2,22 +2,44 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    padding-top: 8px;
     
     &__input{
         display: none;
 
-        &:checked + .checkbox__label:after {
+        &:checked + .radio__label:after {
             content: '';
             display: block;
+
+            position: absolute;
+            top: 5px;
+            left: 13px;
+
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+            background-color: $black;
         }
     }
     &__label{
         position: relative;
         cursor: pointer;
+        padding-left: 50px;
+        line-height: 16px;
 
         &:before{
             content:'';
             display: block;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateY(-8px);
+
+            width: 34px;
+            height: 34px;
+            border: 1px solid $border-color;
+            border-radius: 4px;
         }
     }
 }

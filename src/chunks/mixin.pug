@@ -78,7 +78,23 @@ mixin cart-order-item(collection,title,article,price)
         .col.cart-order__item-image
             img.img-fluid(src!=attributes.src)
         .col.cart-order__item-content
-            .row.align-items-end
-                .col-8
+            .row
+                .col-9
                     p.cart-order__title= title
-                .col-4
+                    p.cart-order__information
+                        span= collection
+                        span= article
+                .col-3.text-right
+                    p.cart-order__price= price 
+                        span.cart-order__rub ₽
+            .row
+                .col-9
+                    dl.cart-order__prop
+                        dd.cart-order__prop-val ULPIS / Пульпис
+                        dd.cart-order__prop-val Структурированная с sugar-эффектом
+                        dd.cart-order__prop-val 60х60
+                .col-3.text-right
+                    dl.cart-order__prop
+                        dd.cart-order__prop-val 2.88 м2
+                        dd.cart-order__prop-val 4 уп.
+                        dd.cart-order__prop-val 48 шт.

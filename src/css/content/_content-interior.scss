@@ -1,0 +1,29 @@
+.content-interior{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__image{
+        width: 100%;
+        min-height: 270px;
+        margin-bottom: 30px;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        cursor: pointer;
+
+        &--full{
+            height: 570px;
+        }
+    }
+    &__col-left{
+        flex: 0 0 60%;
+        max-width: calc(60% - 15px);
+    }
+    &__col-right{
+        flex: 0 0 40%;
+        max-width: calc(40% - 15px);
+    }
+}

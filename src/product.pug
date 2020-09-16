@@ -3,14 +3,95 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Index Page
+        title Product
 
         link(href='./css/style.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
-
+        include chunks/mixin.pug
+        .product
+            .product__card
+                ul.breadcrumbs.product__breadcrumbs
+                    li.breadcrumbs__item
+                        a.breadcrumbs__link(href="/catalog.html") Коллекции
+                    li.breadcrumbs__item
+                        a.breadcrumbs__link(href="/collection.html") Marble Trend
+                    li.breadcrumbs__item.breadcrumbs__item--active Текстовая страница
+                .row
+                    .col-4
+                        p Слайдер
+                    .col-4
+                        .product__intro
+                            h1.product__title K-1000 CARRARA
+                            p.product__offer Marble Trend K-1000/LR/600x600x10
+                    .col-4
+                        .product__infornation
+                        .product__sidebar
+                .product__content.product__content--close
+                    .row
+                        .col-4
+                        .col-4
+                        .col-4
+                    a.btn.btn_secondary#openContent(href="javascript;") Подробнее о товаре
+        //- Collection Product
+        .container.mt-4.pb-3.line.line_after
+            h3.h4.content-title Другие товары коллекции
+            .slider.slider_preview.slider_product.row
+                .col.slider_product__col.mb-2
+                    +product("K-1001 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-1.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1002 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 769")(style="background-image:url('../demo/product-2.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1003 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 2 449")(style="background-image:url('../demo/product-3.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1004 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 959")(style="background-image:url('../demo/product-4.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1005 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-5.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1006 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-1.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1007 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-2.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1008 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-3.jpg');")
+        //- Recommend Product
+        .container.mt-4.pb-3.line.line_after
+            h3.h4.content-title Хорошо сочетается с
+            .slider.slider_preview.slider_product.row
+                .col.slider_product__col.mb-2
+                    +product("K-1001 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-1.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1002 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 769")(style="background-image:url('../demo/product-2.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1003 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 2 449")(style="background-image:url('../demo/product-3.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1004 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 959")(style="background-image:url('../demo/product-4.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1005 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-5.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1006 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-1.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1007 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-2.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1008 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-3.jpg');")
+        //- Interiors
+        .container.mt-4.mb-2
+            h4.content-title Интерьерные решения
+            .content-interior
+                .content-interior__col-left
+                    .content-interior__image.content-interior__image--full(data-fancybox="interior" data-src="../demo/demo.jpg" style="background-image:url('../demo/demo.jpg');")
+                .content-interior__col-right
+                    .content-interior__image(data-fancybox="interior" data-src="../demo/pic-1.webp" style="background-image:url('../demo/pic-1.webp');")
+                    .content-interior__image(data-fancybox="interior" data-src="../demo/pic-2.webp" style="background-image:url('../demo/pic-2.webp');")
         include chunks/footer.pug
-        script(src="./js/jquery.inputmask.js")
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
+        script(src="./js/slick.min.js")
+
+        script(src="./js/jquery.inputmask.min.js")
         script(src="./js/app.min.js")
