@@ -73,3 +73,9 @@ mixin cart-item(collection,title,article,price1,price2)
                             <path d="M206,206.623c-11.046,0-20,8.954-20,20v195.851c0,11.045,8.954,19.999,20,19.999s20-8.954,20-20v-195.85C226,215.577,217.046,206.623,206,206.623z"/>
                             <path d="M306,206.623c-11.046,0-20,8.954-20,20v195.851c0,11.045,8.954,19.999,20,19.999c11.046,0,20-8.954,20-20v-195.85C326,215.577,317.046,206.623,306,206.623z"/>
                         </svg>
+mixin cart-order-item(collection,title,article,price)
+    .cart-order__item.row
+        .col.cart-order__item-image
+            img.img-fluid(src!=attributes.src)
+        .col.cart-order__item-content
+            .

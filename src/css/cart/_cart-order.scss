@@ -1,0 +1,9 @@
+.cart-order{
+    &__item{
+        margin-top: $grid-gutter-width;
+        &-image{
+            flex: 0 0 95px;
+            max-width: 25%;
+        }
+    }
+}
