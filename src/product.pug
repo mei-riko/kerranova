@@ -19,72 +19,143 @@ html(lang="ru")
                     li.breadcrumbs__item
                         a.breadcrumbs__link(href="/collection.html") Marble Trend
                     li.breadcrumbs__item.breadcrumbs__item--active Текстовая страница
-                .row
+                form.form.row
                     .col-4
-                        p Слайдер
+                        .slider.product-slider
+                            .slider__item
+                                a.product-slider__item(href="javascript;" data-fancybox="slider" data-src="../demo/pic-1.webp" style="background-image:url('../demo/pic-1.webp');")
+                            .slider__item
+                                a.product-slider__item(href="javascript;" data-fancybox="slider" data-src="../demo/pic-2.webp" style="background-image:url('../demo/pic-2.webp');")
+                            .slider__item
+                                a.product-slider__item(href="javascript;" data-fancybox="slider" data-src="../demo/pic-3.webp" style="background-image:url('../demo/pic-3.webp');")
+                            .slider__item
+                                a.product-slider__item(href="javascript;" data-fancybox="slider" data-src="../demo/pic-4.webp" style="background-image:url('../demo/pic-4.webp');")
+                            .slider__item
+                                a.product-slider__item(href="javascript;" data-fancybox="slider" data-src="../demo/pic-5.webp" style="background-image:url('../demo/pic-5.webp');")
+                        .slider.product-slider-nav
+                            .slider__item
+                                .product-slider-nav__item(style="background-image:url('../demo/pic-1.webp');")
+                            .slider__item
+                                .product-slider-nav__item(style="background-image:url('../demo/pic-2.webp');")
+                            .slider__item
+                                .product-slider-nav__item(style="background-image:url('../demo/pic-3.webp');")
+                            .slider__item
+                                .product-slider-nav__item(style="background-image:url('../demo/pic-4.webp');")
+                            .slider__item
+                                .product-slider-nav__item(style="background-image:url('../demo/pic-5.webp');")
                     .col-4
-                        .product__intro
+                        .product__body
                             h1.product__title K-1000 CARRARA
-                            form.form
-                                p.product__offer Marble Trend K-1000/LR/600x600x10
-                                p.product__label Цвет: 
-                                    span.product__prop PULPIS / Пульпис
-                                .form__group
-                                    .input-group
-                                        .radio.radio_color
-                                            input.radio_color__input.radio__input#color1(type="radio" name="color" checked="checked")
-                                            label.radio__label(for="color1")
-                                        .radio.radio_color
-                                            input.radio_color__input.radio__input#color2(type="radio" name="color")
-                                            label.radio__label(for="color2")
-                                        .radio.radio_color
-                                            input.radio_color__input.radio__input#color3(type="radio" name="color")
-                                            label.radio__label(for="color3")
-                                        .radio.radio_color
-                                            input.radio_color__input.radio__input#color4(type="radio" name="color")
-                                            label.radio__label(for="color4")
-                                        .radio.radio_color
-                                            input.radio_color__input.radio__input#color5(type="radio" name="color")
-                                            label.radio__label(for="color5")
-                                        .radio.radio_color
-                                            input.radio_color__input.radio__input#color6(type="radio" name="color")
-                                            label.radio__label(for="color6")
-                                        .radio.radio_color
-                                            input.radio_color__input.radio__input#color7(type="radio" name="color")
-                                            label.radio__label(for="color7")
-                                        .radio.radio_color
-                                            input.radio_color__input.radio__input#color8(type="radio" name="color")
-                                            label.radio__label(for="color8")
-                                        .radio.radio_color
-                                            input.radio_color__input.radio__input#color9(type="radio" name="color")
-                                            label.radio__label(for="color9")
-                                p.product__label Размер: 
-                                .form__group
-                                    .input-group
-                                        .radio.radio_size
-                                            input.radio__input#size1(type="radio" name="size" checked="checked")
-                                            label.radio__label(for="size1") 60x60
-                                        .radio.radio_size
-                                            input.radio__input#size2(type="radio" name="size")
-                                            label.radio__label(for="size2") 30x60
-                                        .radio.radio_size
-                                            input.radio__input#size3(type="radio" name="size")
-                                            label.radio__label(for="size3") 120x60
-                                p.product__label Тип поверхности: 
-                                    span.tooltip-info(data-toggle="tooltip" data-placement="top" title="Tooltip on top")
-                                select#material.input.input_select-product(name="")
-                                    option(value="type1") Структурированная с sugar-эффектом
-                                    option(value="type2") Матовая
-                                    option(value="type3") Глянцевая
+                            p.product__offer Marble Trend K-1000/LR/600x600x10
+                            p.product__label Цвет: 
+                                span.product__prop PULPIS / Пульпис
+                            .form__group
+                                .input-group
+                                    .radio.radio_color
+                                        input.radio__input#color1(type="radio" name="color" checked="checked")
+                                        label.radio_color__label.radio__label(for="color1" style="background-color: #1d1d1d;")
+                                    .radio.radio_color
+                                        input.radio__input#color2(type="radio" name="color")
+                                        label.radio_color__label.radio__label(for="color2" style="background-color: #eee;")
+                                    .radio.radio_color
+                                        input.radio__input#color3(type="radio" name="color")
+                                        label.radio_color__label.radio__label(for="color3" style="background-color: #eee;")
+                                    .radio.radio_color
+                                        input.radio__input#color4(type="radio" name="color")
+                                        label.radio_color__label.radio__label(for="color4" style="background-color: #eee;")
+                                    .radio.radio_color
+                                        input.radio__input#color5(type="radio" name="color")
+                                        label.radio_color__label.radio__label(for="color5" style="background-color: #eee;")
+                                    .radio.radio_color
+                                        input.radio__input#color6(type="radio" name="color")
+                                        label.radio_color__label.radio__label(for="color6" style="background-color: #eee;")
+                                    .radio.radio_color
+                                        input.radio__input#color7(type="radio" name="color")
+                                        label.radio_color__label.radio__label(for="color7" style="background-color: #eee;")
+                                    .radio.radio_color
+                                        input.radio__input#color8(type="radio" name="color")
+                                        label.radio_color__label.radio__label(for="color8" style="background-color: #eee;")
+                                    .radio.radio_color
+                                        input.radio__input#color9(type="radio" name="color")
+                                        label.radio_color__label.radio__label(for="color9" style="background-color: #eee;")
+                            p.product__label Размер: 
+                            .form__group
+                                .input-group
+                                    .radio.radio_size
+                                        input.radio__input#size1(type="radio" name="size" checked="checked")
+                                        label.radio_size__label.radio__label(for="size1") 60x60
+                                    .radio.radio_size
+                                        input.radio__input#size2(type="radio" name="size")
+                                        label.radio_size__label.radio__label(for="size2") 30x60
+                                    .radio.radio_size
+                                        input.radio__input#size3(type="radio" name="size")
+                                        label.radio_size__label.radio__label(for="size3") 120x60
+                                    .radio.radio_size
+                                        input.radio__input#size4(type="radio" name="size" checked="checked")
+                                        label.radio_size__label.radio__label(for="size4") 60x60
+                                    .radio.radio_size
+                                        input.radio__input#size5(type="radio" name="size")
+                                        label.radio_size__label.radio__label(for="size5") 30x60
+                            p.product__label Тип поверхности: 
+                                span.tooltip-info(data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom")
+                            select#material.input.input_select-product(name="")
+                                option(value="type1") Структурированная с sugar-эффектом
+                                option(value="type2") Матовая
+                                option(value="type3") Глянцевая
                     .col-4
-                        .product__infornation
-                        .product__sidebar
-                .product__content.product__content--close
+                        .product-sidebar
+                            p.product-sidebar__info 
+                                svg.product-sidebar__info-icon(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" viewBox="0 0 24.00 24.00" enable-background="new 0 0 24.00 24.00" xml:space="preserve")
+                                    path(fill="#0c36b0" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 11.5,3C 16.7467,3 21,7.25329 21,12.5C 21,17.7467 16.7467,22 11.5,22C 6.25329,22 2,17.7467 2,12.5C 2,7.25329 6.25329,3 11.5,3 Z M 11.5,4C 6.80557,4 3,7.80558 3,12.5C 3,17.1944 6.80558,21 11.5,21C 16.1944,21 20,17.1944 20,12.5C 20,7.80558 16.1944,4 11.5,4 Z M 11,8.00001L 11,10L 12,10L 12,8.00001L 11,8.00001 Z M 11,12L 11,17L 12,17L 12,12L 11,12 Z ")
+                                | Важная информация
+                            p.text-small Плитка продается упаковками.<br/>
+                                | 1 упаковка данного товара = 
+                                strong 1.44м2
+                        .product-sidebar
+                            .row.align-items-end.mb-1
+                                .col-6.mb-1
+                                    p.product__price.product__price_result 123 797
+                                        span.product__rub ₽
+                                .col-6.mb-1.text-right
+                                    a.text-small.text-grey(href="#") Нужен расчёт?
+                            p.product__price 1 419
+                                span.product__rub ₽
+                                span /м
+                                    sup 2
+                            p.text-small Стоимость кв.м. для 
+                                a.product__link(href="#") Самарская обл.
+                            input.input.input_count.input_count--full(type="number" value="1")
+                            .input-group.product-sidebar__type
+                                .radio.radio_type
+                                    input.radio__input#type1(type="radio" name="type" checked="checked")
+                                    label.radio_type__label.radio__label(for="type1") м2
+                                .radio.radio_type
+                                    input.radio__input#type2(type="radio" name="type")
+                                    label.radio_type__label.radio__label(for="type2") упаковки
+                                .radio.radio_type
+                                    input.radio__input#type3(type="radio" name="type")
+                                    label.radio_type__label.radio__label(for="type3") штуки
+                            a.btn.btn_action.btn--full(href="#") Добавить в корзину
+                        a.product-sidebar-btn.btn.btn_secondary.btn--small.btn--full.mt-1(href="#") Купить в 1 клик
+                .product-content.product-content--close.content
                     .row
                         .col-4
+                            p 
+                                strong Заголовок колонки
+                            p Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
                         .col-4
+                            p 
+                                strong Заголовок колонки
+                            ul
+                                li даже с языками, использующими латинский алфавит, могут возникнуть небольшие проблемы
+                                li лучше использовать в качестве «рыбы» текст на том языке, который планируется использовать при запуске проекта
+                                li существует несколько вариантов Lorem ipsum
                         .col-4
-                    a.btn.btn_secondary#openContent(href="javascript;") Подробнее о товаре
+                            p 
+                                strong Заголовок колонки
+                            p Некоторые вопросы, связанные с языками, использующими латинский. Частотой, имеется разница в различных языках те или иные буквы встречаются. Буквы встречаются с разной частотой, имеется разница в xvi веке. Именно из его трактата о пределах добра и демонстрации внешнего вида. Вырвал отдельные фразы и демонстрации внешнего вида контента, просмотра шрифтов. Вставки на кириллический контент – написание. Есть специальные генераторы, создающие собственные варианты текста сыграет на руку.
+                    .product-content__btn
+                        a.btn.btn--small.btn_secondary#toggleContent(href="javascript;") Подробнее о товаре
         //- Collection Product
         .container.mt-4.pb-3.line.line_after
             h3.h4.content-title Другие товары коллекции
@@ -136,6 +207,8 @@ html(lang="ru")
                     .content-interior__image(data-fancybox="interior" data-src="../demo/pic-2.webp" style="background-image:url('../demo/pic-2.webp');")
         include chunks/footer.pug
 
+        script(src="./number_plugin/number_plugin.min.js")
+        
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")
 

@@ -1,0 +1,38 @@
+.product-sidebar{
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    padding: map-get($map: $spacers, $key: 2);
+    width: 320px;
+    max-width: 100%;
+    margin-left: auto;
+
+    &__type{
+        justify-content: center;
+        margin: $spacer/4 auto $spacer/2;
+    }
+    &__info{
+        @extend .text-small;
+        font-weight: $font-weight-bold;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-bottom: map-get($map: $spacers, $key: 1);
+
+        &-icon{
+            width: 16px;
+            height: 16px;
+            margin-right: 6px;
+        }
+    }
+
+    & + .product-sidebar{
+        border-top: none;
+    }
+
+    &-btn{
+        display: block;
+        width: 320px;
+        max-width: 100%;
+        margin-left: auto;
+    }
+}

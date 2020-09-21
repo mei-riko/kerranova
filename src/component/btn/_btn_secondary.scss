@@ -1,0 +1,9 @@
+.btn_secondary{
+    background: $white;
+    color: $black;
+    border: 1px solid $border-color;
+    &:hover, &:focus{
+        background: $light-grey;
+        color: $black;
+    }
+}

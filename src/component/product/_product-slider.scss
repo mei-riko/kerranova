@@ -1,0 +1,36 @@
+.product-slider{
+    width: 460px;
+    max-width: 100%;
+    margin-bottom: $spacer/2;
+
+    &__item{
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        background: no-repeat center / cover;
+
+        &:after{
+            content:'';
+            display: block;
+            padding-bottom: 100%;
+        }
+    }
+}
+
+.product-slider-nav{
+    &__item{
+        margin: 0 5px;
+        background: no-repeat center / cover;
+        height: 80px;
+    }
+    .slider__item{
+        opacity: .5;
+        transition: .4s;
+        cursor: pointer;
+        &:hover,
+        &.slick-current{
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.radio_size{
+    display: inline-flex;
+    padding: 0;
+    margin-right: $spacer/4;
+    
+    &__label{
+        padding: 8px 16px;
+        border-radius: 4px;
+        border: 1px solid $border-color;
+        transition: .4s;
+
+        &:hover, &:focus{
+            background-color: $light-grey;
+        }
+
+        &:before{
+            display: none;
+        }
+    }
+    .radio__input:checked + .radio_size__label {
+        background-color: $black;
+        color: $white;
+        &:after{
+            display: none;
+        }
+    }
+}

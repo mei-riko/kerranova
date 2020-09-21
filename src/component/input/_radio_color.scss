@@ -1,0 +1,27 @@
+.radio_color{
+    display: inline-flex;
+    padding: 0;
+    margin-right: $spacer/4;
+
+    &__label{
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border-radius: 20px;
+        background: no-repeat center / cover;
+
+        &:before{
+            display: none;
+        }
+    }
+    .radio__input:checked + .radio_color__label:after {
+        transform: translateX(-4px) translateY(-4px);
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        background: initial;
+        border: 1px solid $border-color;
+    }
+}

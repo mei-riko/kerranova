@@ -8,14 +8,7 @@
 }
 
 // Number Plugin
-.main_number_plugin{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    width: 140px!important;
-}
 .input_plugin_number{
     @extend .input;
     @extend .input_count;
@@ -83,5 +76,20 @@
 
     &:hover:before{
         color: $blue;
+    }
+}
+.main_number_plugin{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 140px;
+
+    &--full{
+        min-width: 100%;
+        .input_plugin_number{
+            min-width: calc(100% - 90px);
+        }
     }
 }
