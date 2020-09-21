@@ -34,7 +34,7 @@ var gulp = require("gulp"),
   });
   
   gulp.task('css', function () {
-    return gulp.src(['./src/css/*.scss'])
+    return gulp.src(['./src/component/*.scss'])
       .pipe(changed('public', { extension: '.css' }))
       .pipe(plumber())
       .pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
@@ -79,8 +79,8 @@ var gulp = require("gulp"),
   gulp.task('watch', function () {
     gulp.watch(['./src/*.pug'], gulp.parallel('html'));
     gulp.watch(['./src/chunks/*.pug'], gulp.parallel('html'));
-    gulp.watch(['./src/css/*.scss'], gulp.parallel('css'));
-    gulp.watch(['./src/css/*/*.scss'], gulp.parallel('css'));
+    gulp.watch(['./src/component/*.scss'], gulp.parallel('css'));
+    gulp.watch(['./src/component/*/*.scss'], gulp.parallel('css'));
     gulp.watch(['./src/js/*.js'], gulp.parallel('scripts'));
   });
   

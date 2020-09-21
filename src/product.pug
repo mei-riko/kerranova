@@ -25,7 +25,57 @@ html(lang="ru")
                     .col-4
                         .product__intro
                             h1.product__title K-1000 CARRARA
-                            p.product__offer Marble Trend K-1000/LR/600x600x10
+                            form.form
+                                p.product__offer Marble Trend K-1000/LR/600x600x10
+                                p.product__label Цвет: 
+                                    span.product__prop PULPIS / Пульпис
+                                .form__group
+                                    .input-group
+                                        .radio.radio_color
+                                            input.radio_color__input.radio__input#color1(type="radio" name="color" checked="checked")
+                                            label.radio__label(for="color1")
+                                        .radio.radio_color
+                                            input.radio_color__input.radio__input#color2(type="radio" name="color")
+                                            label.radio__label(for="color2")
+                                        .radio.radio_color
+                                            input.radio_color__input.radio__input#color3(type="radio" name="color")
+                                            label.radio__label(for="color3")
+                                        .radio.radio_color
+                                            input.radio_color__input.radio__input#color4(type="radio" name="color")
+                                            label.radio__label(for="color4")
+                                        .radio.radio_color
+                                            input.radio_color__input.radio__input#color5(type="radio" name="color")
+                                            label.radio__label(for="color5")
+                                        .radio.radio_color
+                                            input.radio_color__input.radio__input#color6(type="radio" name="color")
+                                            label.radio__label(for="color6")
+                                        .radio.radio_color
+                                            input.radio_color__input.radio__input#color7(type="radio" name="color")
+                                            label.radio__label(for="color7")
+                                        .radio.radio_color
+                                            input.radio_color__input.radio__input#color8(type="radio" name="color")
+                                            label.radio__label(for="color8")
+                                        .radio.radio_color
+                                            input.radio_color__input.radio__input#color9(type="radio" name="color")
+                                            label.radio__label(for="color9")
+                                p.product__label Размер: 
+                                .form__group
+                                    .input-group
+                                        .radio.radio_size
+                                            input.radio__input#size1(type="radio" name="size" checked="checked")
+                                            label.radio__label(for="size1") 60x60
+                                        .radio.radio_size
+                                            input.radio__input#size2(type="radio" name="size")
+                                            label.radio__label(for="size2") 30x60
+                                        .radio.radio_size
+                                            input.radio__input#size3(type="radio" name="size")
+                                            label.radio__label(for="size3") 120x60
+                                p.product__label Тип поверхности: 
+                                    span.tooltip-info(data-toggle="tooltip" data-placement="top" title="Tooltip on top")
+                                select#material.input.input_select-product(name="")
+                                    option(value="type1") Структурированная с sugar-эффектом
+                                    option(value="type2") Матовая
+                                    option(value="type3") Глянцевая
                     .col-4
                         .product__infornation
                         .product__sidebar
@@ -94,4 +144,4 @@ html(lang="ru")
         script(src="./js/slick.min.js")
 
         script(src="./js/jquery.inputmask.min.js")
-        script(src="./js/app.min.js")
+        script(src="./js/app.js")

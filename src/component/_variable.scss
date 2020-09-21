@@ -38,8 +38,14 @@ $container-max-widths: (
   hd: 1360px,
 ) !default;
 
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
 $font-size-base       : 1rem;
-$font-weight-base     : 200;
+$font-weight-base     : $font-weight-light;
 $line-height-base     : 1.4;
 
 $font-family-base     : "Open Sans",    "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -97,6 +103,24 @@ $label-margin-bottom: 10px;
 
 $enable-grid-classes              : true !default;
 $enable-pointer-cursor-for-buttons: true !default;
+
+// Tooltips
+
+$tooltip-font-size:                 12px !default;
+$tooltip-max-width:                 200px !default;
+$tooltip-color:                     $white !default;
+$tooltip-bg:                        $black !default;
+$tooltip-border-radius:             2px !default;
+$tooltip-opacity:                   .9 !default;
+$tooltip-padding-y:                 .25rem !default;
+$tooltip-padding-x:                 .5rem !default;
+$tooltip-margin:                    0 !default;
+
+$tooltip-arrow-width:               .8rem !default;
+$tooltip-arrow-height:              .4rem !default;
+$tooltip-arrow-color:               $tooltip-bg !default;
+
+$zindex-tooltip:                    1070 !default;
 
 // Utilities
 

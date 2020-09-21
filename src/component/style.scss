@@ -33,6 +33,9 @@
 @import "alert/alert_danger";
 @import "alert/alert_success";
 
+@import "node_modules/bootstrap/scss/mixins/reset-text";
+@import "tooltip/tooltip";
+
 @import "label/label";
 @import "label/label_link";
 

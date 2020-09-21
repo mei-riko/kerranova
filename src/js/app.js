@@ -1,4 +1,9 @@
-import $ from 'jquery'
+import $ from 'jquery';
+
+import '../../node_modules/popper.js/dist/umd/popper';
+import '../../node_modules/bootstrap/js/dist/util';
+import '../../node_modules/bootstrap/js/dist/tooltip';
+
 $(document).ready(() =>{
   $(".scroll").click(function() {
     $("html, body").animate({
@@ -65,7 +70,8 @@ $(document).ready(() =>{
       height: '42px'
     });
   }
-    // Слайдер
+  $('[data-toggle="tooltip"]').tooltip();
+  // Слайдер
 	if( $('.slider').length > 0 ){
     // Slider On Index Page
     let $slickIndex = $('.slider.slider_index');
