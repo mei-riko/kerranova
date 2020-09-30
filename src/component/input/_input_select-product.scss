@@ -6,3 +6,9 @@
     padding-bottom: $spacer/4;
     border: 1px solid $border-color;
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .input_select-product{
+        width: 100%;
+    }
+}

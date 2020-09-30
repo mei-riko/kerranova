@@ -76,3 +76,9 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .header{
+        display: none;
+    }
+}

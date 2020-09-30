@@ -42,7 +42,7 @@
         padding: map-get($spacers, 2) map-get($spacers, 3);
     }
     &__body{
-        width: 360px;
+        width: 450px;
         max-width: 100%;
         margin-left: auto;
     }
@@ -84,5 +84,65 @@
     &__link{
         color: $blue;
         text-decoration: underline;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .product{
+        // Container
+        &__body{
+            width: 360px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .product{
+        // Element
+        &__title{
+            font-size: 24px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .product{
+        // Container
+        &__card{
+            padding: $spacer/2;
+        }
+        &__body{
+            width: 100%;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .product{
+        &:before{
+            height: 360px;
+        }
+        &:after{
+            top: 360px;
+        }
+        // Container
+        &__card{
+            padding: map-get($spacers, 2) map-get($spacers, 3);
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .product{
+        padding-top: $spacer/2;
+        
+        &:before{
+            height: 200px;
+        }
+        &:after{
+            top: 200px;
+        }
+        // Container
+        &__card{
+            max-width: calc(100% - 40px);
+            margin-left: auto;
+            margin-right: auto;
+            padding: $spacer/2;
+        }
     }
 }

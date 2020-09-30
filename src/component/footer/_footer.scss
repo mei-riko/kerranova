@@ -31,6 +31,9 @@
 
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .footer{
+        &__col{
+            min-width: fit-content;
+        }
         &__intro{
             margin: 5px 0;
         }

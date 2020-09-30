@@ -1,5 +1,5 @@
 .product-slider{
-    width: 460px;
+    width: 100%;
     max-width: 100%;
     margin-bottom: $spacer/2;
 
@@ -13,7 +13,7 @@
         &:after{
             content:'';
             display: block;
-            padding-bottom: 100%;
+            padding-bottom: 75%;
         }
     }
 }
@@ -31,6 +31,27 @@
         &:hover,
         &.slick-current{
             opacity: 1;
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .product-slider{
+        width: 460px;
+        &__item{
+            &:after{
+                padding-bottom: 100%;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .product-slider-nav{
+        .slick-next{
+            transform: translate(50%, -50%);
+        }
+        .slick-prev{
+            transform: translate(-50%, -50%);
         }
     }
 }

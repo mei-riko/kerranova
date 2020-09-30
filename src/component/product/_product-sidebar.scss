@@ -8,7 +8,7 @@
 
     &__type{
         justify-content: center;
-        margin: $spacer/4 auto $spacer/2;
+        margin: $spacer/4 auto;
     }
     &__info{
         @extend .text-small;
@@ -34,5 +34,36 @@
         width: 320px;
         max-width: 100%;
         margin-left: auto;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .product-sidebar{
+        width: 100%;
+
+        & + .product-sidebar{
+            border-top: 1px solid $border-color;
+        }
+
+        &__type{
+            margin-bottom: 0;
+        }
+
+        &-btn{
+            width: 100%;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .product-sidebar{
+        order: 1;
+
+        &_info{
+            order: 3;
+        }
+
+        &-btn{
+            width: 100%;
+            order:2;
+        }
     }
 }

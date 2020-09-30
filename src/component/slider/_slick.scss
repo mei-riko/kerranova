@@ -42,3 +42,14 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .slider{
+        .slick-next{
+            transform: translate(-15px, -50%);
+        }
+        .slick-prev{
+            transform: translate(15px, -50%);
+        }
+    }
+}

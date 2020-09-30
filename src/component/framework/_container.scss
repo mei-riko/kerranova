@@ -20,17 +20,15 @@
   padding-right: 0;
   padding-left: 0
 }
-// меньше 1680px
+// меньше 1600px
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
   .container{
-      // контейнер 1360px
       width: map-get($container-max-widths, 'xl');
   }
 }
 // меньше 1400px
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
   .container{
-      // контейнер 960px
       width: map-get($container-max-widths, 'lg');
   }
 }
@@ -41,14 +39,13 @@
       width: map-get($container-max-widths, 'md');
   }
 }
-// < 834px
+// меньше 768px
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
   .container{
-      // контейнер 460px
       width: map-get($container-max-widths, 'sm');
   }
 }
-// < 480px
+// меньше 480px
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
   .container{
       width: 100%;
