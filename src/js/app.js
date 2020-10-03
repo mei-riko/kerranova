@@ -50,4 +50,11 @@ $(document).ready(() =>{
   });
   // Подсказки
   $('[data-toggle="tooltip"]').tooltip();
+  // Инициализация b-lazy
+  var blazy = new Blazy({
+    breakpoints: [{
+   	    width: 480, // max-width
+   	    src: 'data-src-xs' // name attr
+   	}]
+  });
 });

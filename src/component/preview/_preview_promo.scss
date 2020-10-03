@@ -43,3 +43,40 @@
         }
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .preview_promo{
+        padding: $spacer/2 3*$spacer/4;
+
+        &__title{
+            font-size: 20px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .preview_promo{
+        padding: $spacer/2;
+        &__image{
+            height: 120px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .preview_promo{
+        padding: $spacer/2 3*$spacer/4;
+        &__image{
+            height: 180px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .preview_promo{
+        padding: $spacer/2;
+
+        &__title{
+            font-size: 18px;
+        }
+        &__image{
+            height: 140px;
+        }
+    }
+}

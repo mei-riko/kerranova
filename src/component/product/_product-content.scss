@@ -21,6 +21,14 @@
         max-height: 600px;
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .product-content{
+        font-size: 14px;
+        ol, ul, p{
+            font-size: 14px;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .product-content{
         padding-bottom: map-get($map: $spacers, $key: 4);

@@ -1,0 +1,25 @@
+.preview_portfolio{
+    &__intro{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+
+        font-size: 12px;
+        margin: 0;
+        padding: $spacer/6 $spacer/4;
+        max-width: calc(100% - 40px);
+        background: $white;
+        border-radius: 6px;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .preview_portfolio{
+        &__intro{
+            bottom: 10px;
+            left: 10px;
+            max-width: calc(100% - 20px);
+            line-height: 1.2;
+        }
+    }
+}

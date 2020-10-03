@@ -1,0 +1,23 @@
+.content-scroll{
+    padding-bottom: $grid-gutter-width/2;
+    overflow-x: auto;
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .content-scroll{
+        &__link{
+            left: 0;
+            right: auto;
+        }
+        &__group{
+            padding-right: 0;
+            padding-left: 140px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .content-scroll{
+        &__group{
+            padding-left: 115px;
+        }
+    }
+}

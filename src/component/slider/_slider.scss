@@ -1,1 +1,12 @@
 .slider{}
+.slider-container{
+    max-width: 100%;
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .slider-container{
+        &_sm{
+            overflow: hidden;
+        }
+    }
+}

@@ -1,5 +1,13 @@
 .preview_page{
-
+    &__label{
+        @extend .label;
+        padding: 6px 12px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: $red;
+        color: $white;
+    }
     &__image{
         width: 100%;
         height: 160px;
@@ -23,6 +31,17 @@
 
         &:hover, &:focus{
             text-decoration: underline;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .preview_page{
+        &__title{
+            padding: 15px 20px 40px;
+            &::after{
+                left: 20px;
+                bottom: 12px;
+            }
         }
     }
 }

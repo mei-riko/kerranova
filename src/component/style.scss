@@ -33,7 +33,7 @@
 @import "slider/slick";
 @import "slider/slider";
 @import "slider/slider_index";
-@import "slider/slider_preview";
+@import "slider/slider_collection";
 @import "slider/slider_product";
 
 @import "alert/alert";
@@ -55,6 +55,7 @@
 @import "preview/preview_product";
 @import "preview/preview_page";
 @import "preview/preview_collection";
+@import "preview/preview_portfolio";
 
 @import "navbar/navbar";
 @import "navbar/navbar_header";
@@ -72,6 +73,8 @@
 @import "content/content";
 @import "content/content-title";
 @import "content/content-group";
+@import "content/content-scroll";
+
 @import "content/content-row";
 @import "content/content-banner";
 @import "content/content-interior";

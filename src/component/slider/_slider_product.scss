@@ -3,4 +3,30 @@
         flex: 0 0 20%;
         max-width: 20%;
     }
+    .slick-next{
+        transform: translate(10px, -50%);
+    }
+    .slick-prev{
+        transform: translate(-10px, -50%);
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .slider_product{
+        .slick-arrow{
+            &.slick-disabled{
+                opacity: 0.3;
+            }
+        }
+        .slick-next{
+            transform: translate(0, 0);
+            top: 100%;
+            right: auto;
+            left: 65px;
+        }
+        .slick-prev{
+            transform: translate(15px, 0);
+            top: 100%;
+        }
+    }
 }

@@ -13,7 +13,7 @@ html(lang="ru")
         include chunks/mixin.pug
         //- Slider
         .container
-            .row.content-row.mt-3
+            .row.content-row.mt-3.mb-0.mb-md-2
                 .col.content-row__slider.mb-2
                     .slider.slider_index
                         a.slider_index__item(href="collection.html" style="background-image: url('../demo/demo.jpg');")
@@ -36,25 +36,26 @@ html(lang="ru")
                         p.preview__intro Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см
                         a.link-arrow.preview_promo__link(href="collection.html") Посмотреть коллекцию
         //- Popular Collection
-        .container.pb-3.line.line_after
+        .container.pb-3.pb-md-2
             h2.h3.mb-2.content-title Самые популярные коллекции
-            .slider.slider_preview.slider_collection.row
-                .col-3.mb-2
-                    +collection("Marble Trend", "Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см")(src="../demo/collection-1.png")
-                .col-3.mb-2
-                    +collection("Premium Marble", "Размеры плитки: 80x160, 80x80, 60x120 см")(src="../demo/collection-2.png")
-                .col-3.mb-2
-                    +collection("Terrazzo", "Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см")(src="../demo/collection-3.png")
-                .col-3.mb-2
-                    +collection("Montana", "Размеры плитки: 80x160, 80x80, 60x120, 120x120 см")(src="../demo/collection-4.png")
-                .col-3.mb-2
-                    +collection("Premium Marble", "Размеры плитки: 80x160, 80x80, 60x120 см")(src="../demo/collection-2.png")
-                .col-3.mb-2
-                    +collection("Terrazzo", "Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см")(src="../demo/collection-3.png")
-                .col-3.mb-2
-                    +collection("Montana", "Размеры плитки: 80x160, 80x80, 60x120, 120x120 см")(src="../demo/collection-4.png")
+            .slider-container.slider-container_sm
+                .slider.slider_preview.slider_collection.row
+                    .col-3.mb-2
+                        +collection("Marble Trend", "Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см")(src="../demo/collection-1.png")
+                    .col-3.mb-2
+                        +collection("Premium Marble", "Размеры плитки: 80x160, 80x80, 60x120 см")(src="../demo/collection-2.png")
+                    .col-3.mb-2
+                        +collection("Terrazzo", "Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см")(src="../demo/collection-3.png")
+                    .col-3.mb-2
+                        +collection("Montana", "Размеры плитки: 80x160, 80x80, 60x120, 120x120 см")(src="../demo/collection-4.png")
+                    .col-3.mb-2
+                        +collection("Premium Marble", "Размеры плитки: 80x160, 80x80, 60x120 см")(src="../demo/collection-2.png")
+                    .col-3.mb-2
+                        +collection("Terrazzo", "Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см")(src="../demo/collection-3.png")
+                    .col-3.mb-2
+                        +collection("Montana", "Размеры плитки: 80x160, 80x80, 60x120, 120x120 см")(src="../demo/collection-4.png")
         //- Popular Product
-        .container.mt-4
+        .container.mt-3.mt-md-2.mb-sm-4
             h3.content-title Идеально для ванной комнаты
             .slider.slider_preview.slider_product.row
                 .col.slider_product__col.mb-2
@@ -75,82 +76,109 @@ html(lang="ru")
                     +product("K-1008 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-3.jpg');")
         //- Sale banner
         .content-banner
-            .container
-                a.content-banner__img(href="text.html" title="" style="background-image: url('../demo/banner.png');")
+            .container.pt-3.pb-3
+                .row.align-items-center
+                    .col-4.col-lg-6.col-md-12.col-sm-12.mb-md-3.mb-sm-1
+                        p.content-banner__title Скидка на&nbsp;всю сантехнику Sanita&nbsp;Luxe до&nbsp;50%
+                        p.text-small Lorem ipsum dolor sit amet. Unde omnis dolor repellendus reprehenderit.
+                        .d-none.d-lg-block.d-sm-none
+                            a.btn.btn_secondary.btn--small(href="#") Получить скидку
+                    .col-6.col-lg-6.col-md-12.col-sm-12.mb-sm-3
+                        .row
+                            .col-4.col-lg-6.col-md-4.col-sm-6
+                                img.img-fluid(src="../demo/collection-1.png")
+                            .col-4.col-lg-6.col-md-4.col-sm-6
+                                img.img-fluid(src="../demo/collection-2.png")
+                            .col-4.col-lg-6.col-md-4.d-lg-none.d-md-block.d-sm-none
+                                img.img-fluid(src="../demo/collection-3.png")
+                    .col-2.d-lg-none.d-sm-block.col-sm-12
+                        a.btn.btn_secondary(href="#") Получить скидку
         //- Popular Solution
-        .container.pb-3.line.line_after
+        .container.pb-3.pb-md-2
             h3.mb-2.content-title Решения для обеденной зоны
-            .slider.slider_preview.slider_collection.row
-                .col-3.mb-2
-                    +collection-simple("Дизайн-проект с плиткой из коллекции «Marble Trend»")(src="../demo/collection-1.png")
-                .col-3.mb-2
-                    +collection-simple("«Black&White»: идеальное решение для работы и отдыха")(src="../demo/collection-2.png")
-                .col-3.mb-2
-                    +collection-simple("Особенная практичность")(src="../demo/collection-3.png")
-                .col-3.mb-2
-                    +collection-simple("Ярко и стильно — это просто с плиткой «Montana»")(src="../demo/collection-4.png")
-                .col-3.mb-2
-                    +collection-simple("Дизайн-проект с плиткой из коллекции «Marble Trend»")(src="../demo/collection-2.png")
-                .col-3.mb-2
-                    +collection-simple("Идеальное решение")(src="../demo/collection-3.png")
-                .col-3.mb-2
-                    +collection-simple("Ярко и стильно — это просто с плиткой")(src="../demo/collection-4.png")
+            .slider-container.slider-container_sm
+                .slider.slider_preview.slider_collection.row
+                    .col-3.mb-2
+                        +collection-simple("Дизайн-проект с плиткой из коллекции «Marble Trend»")(src="../demo/collection-1.png")
+                    .col-3.mb-2
+                        +collection-simple("«Black&White»: идеальное решение для работы и отдыха")(src="../demo/collection-2.png")
+                    .col-3.mb-2
+                        +collection-simple("Особенная практичность")(src="../demo/collection-3.png")
+                    .col-3.mb-2
+                        +collection-simple("Ярко и стильно — это просто с плиткой «Montana»")(src="../demo/collection-4.png")
+                    .col-3.mb-2
+                        +collection-simple("Дизайн-проект с плиткой из коллекции «Marble Trend»")(src="../demo/collection-2.png")
+                    .col-3.mb-2
+                        +collection-simple("Идеальное решение")(src="../demo/collection-3.png")
+                    .col-3.mb-2
+                        +collection-simple("Ярко и стильно — это просто с плиткой")(src="../demo/collection-4.png")
         //- Project
-        .container.mt-4
-            h4.h3.mb-2 Реализованные проекты для вдохновения
-            .content-group
-                a.label.label_link.content-group__item(href="#") Общественные интерьеры
-                a.label.label_link.content-group__item(href="#") Торговые центры
-                a.label.label_link.content-group__item(href="#") Жилые комплексы
-                a.label.label_link.content-group__item(href="#") Бизнес-центры
-                a.label.label_link.content-group__item(href="#") Фасады
-                a.label.label_link.content-group__item(href="#") Салоны красоты
-                a.label.content-group__link(href="#") Все проекты
-            .row.mt-3
-                .col-3.mb-2(data-fancybox="project" data-src="../demo/pic-1.webp")
-                    img.img-fluid.mb-1(src="../demo/pic-1.webp")
-                .col-3.mb-2(data-fancybox="project" data-src="../demo/pic-2.webp")
-                    img.img-fluid.mb-1(src="../demo/pic-2.webp")
-                .col-3.mb-2(data-fancybox="project" data-src="../demo/pic-3.webp")
-                    img.img-fluid.mb-1(src="../demo/pic-3.webp")
-                .col-3.mb-2(data-fancybox="project" data-src="../demo/pic-4.webp")
-                    img.img-fluid.mb-1(src="../demo/pic-4.webp")
-                .col-3.mb-2(data-fancybox="project" data-src="../demo/pic-5.webp")
-                    img.img-fluid.mb-1(src="../demo/pic-5.webp")
-                .col-3.mb-2(data-fancybox="project" data-src="../demo/pic-6.webp")
-                    img.img-fluid.mb-1(src="../demo/pic-6.webp")
+        .container.mt-3.mt-md-2
+            h4.h3.mb-2 Реализованные проекты для&nbsp;вдохновения
+            .content-scroll
+                .content-group.content-scroll__group
+                    a.label.label_link.content-group__item(href="#") Общественные интерьеры
+                    a.label.label_link.content-group__item(href="#") Торговые центры
+                    a.label.label_link.content-group__item(href="#") Жилые комплексы
+                    a.label.label_link.content-group__item(href="#") Бизнес-центры
+                    a.label.label_link.content-group__item(href="#") Фасады
+                    a.label.label_link.content-group__item(href="#") Салоны красоты
+                    a.label.content-scroll__link.content-group__link(href="#") Все проекты
+            .row.mt-3.mt-sm-2
+                .col-3.col-lg-4.col-sm-6.mb-2
+                    .preview.preview_portfolio(data-fancybox="project" data-src="../demo/pic-1.webp")
+                        p.preview_portfolio__intro Оформление квартиры-студии
+                        img.img-fluid.mb-1(src="../demo/pic-1.webp")
+                .col-3.col-lg-4.col-sm-6.mb-2
+                    .preview.preview_portfolio(data-fancybox="project" data-src="../demo/pic-2.webp")
+                        img.img-fluid.mb-1(src="../demo/pic-2.webp")
+                .col-3.col-lg-4.col-sm-6.mb-2
+                    .preview.preview_portfolio(data-fancybox="project" data-src="../demo/pic-3.webp")
+                        img.img-fluid.mb-1(src="../demo/pic-3.webp")
+                .col-3.col-lg-4.col-sm-6.mb-2
+                    .preview.preview_portfolio(data-fancybox="project" data-src="../demo/pic-4.webp")
+                        p.preview_portfolio__intro Шоу-рум #DesignLab
+                        img.img-fluid.mb-1(src="../demo/pic-4.webp")
+                .col-3.col-lg-4.col-sm-6.mb-2
+                    .preview.preview_portfolio(data-fancybox="project" data-src="../demo/pic-5.webp")
+                        img.img-fluid.mb-1(src="../demo/pic-5.webp")
+                .col-3.col-lg-4.col-sm-6.mb-2
+                    .preview.preview_portfolio(data-fancybox="project" data-src="../demo/pic-6.webp")
+                        img.img-fluid.mb-1(src="../demo/pic-6.webp")
         //- Sales
-        .container.mt-4
+        .container.mt-3.mt-md-2
             p.h3.content-title Узнайте о наших предложениях
             .row
-                .col-4.mb-2
-                    +preview-page("Комплексное решение для ванных комнат c сантехникой Sanita Luxe")(style="background-image: url('../demo/collection-2.png');")
-                .col-4.mb-2
-                    +preview-page("Для дизайнеров и архитекторов: каталоги и уникальные  предложения")(style="background-image: url('../demo/collection-3.png');")
-                .col-4.mb-2
-                    +preview-page("Готовые решения для комплектации коммерческих объектов")(style="background-image: url('../demo/collection-4.png');")
+                .col-4.mb-2.col-sm-12
+                    +preview-page("Комплексное решение для ванных комнат c сантехникой Sanita Luxe","-50%")(style="background-image: url('../demo/collection-2.png');")
+                .col-4.mb-2.col-sm-12
+                    +preview-page("Для дизайнеров и архитекторов: каталоги и уникальные  предложения","")(style="background-image: url('../demo/collection-3.png');")
+                .col-4.mb-2.col-sm-12
+                    +preview-page("Готовые решения для комплектации коммерческих объектов","")(style="background-image: url('../demo/collection-4.png');")
         //- Instagram
-        .container.mt-3.mb-3
+        .container.mt-3.mb-3.mt-md-2.mb-sm-2.mb-sm-1
             .content-group
-                p.h3.content-title Стильные идеи в Instagram
+                p.h3.content-title.content-group__title Стильные идеи в&nbsp;Instagram
                 a.label.content-group__link(href="#") Больше в профиле
             .row
-                .col-2.mb-2
+                .col-2.col-md-4.col-sm-6.mb-2
                     img.img-fluid.mb-1(src="../demo/pic-1.webp")
-                .col-2.mb-2
+                .col-2.col-md-4.col-sm-6.mb-2
                     img.img-fluid.mb-1(src="../demo/pic-2.webp")
-                .col-2.mb-2
+                .col-2.col-md-4.col-sm-6.mb-2
                     img.img-fluid.mb-1(src="../demo/pic-3.webp")
-                .col-2.mb-2
+                .col-2.col-md-4.col-sm-6.mb-2
                     img.img-fluid.mb-1(src="../demo/pic-4.webp")
-                .col-2.mb-2
+                .col-2.col-md-4.col-sm-6.mb-2
                     img.img-fluid.mb-1(src="../demo/pic-5.webp")
-                .col-2.mb-2
+                .col-2.col-md-4.col-sm-6.mb-2
                     img.img-fluid.mb-1(src="../demo/pic-6.webp")
         include chunks/footer.pug
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")
+
+        script(src="./js/blazy.min.js")
 
         link(href='./css/slick.css', rel='stylesheet')
         link(href='./css/slick-theme.css', rel='stylesheet')

@@ -28,8 +28,10 @@ mixin product(title, collection, size, price)
         p.preview_product__price= price
             span.preview_product__rub ₽
             span.text-bolder /м2
-mixin preview-page(title)
+mixin preview-page(title, label)
     .preview.preview_page
+        if label
+            span.preview_page__label= label
         .preview_page__image(style!=attributes.style)
         a.link-arrow.preview_page__title(href="collection.html")= title
 mixin cart-item(collection,title,article,price1,price2)

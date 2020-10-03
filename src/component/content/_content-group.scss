@@ -4,16 +4,27 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+
     width: 100%;
     
     padding-right: 140px;
 
     &__item{
+        white-space: nowrap;
         margin-right: $spacer/4;
     }
     &__link{
         position: absolute;
         right: 0;
         top: 0;
+        white-space: nowrap;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .content-group{
+        &__title{
+            font-size: 18px;
+        }
     }
 }

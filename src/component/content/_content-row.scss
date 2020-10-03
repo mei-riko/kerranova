@@ -12,3 +12,42 @@
         height: 100%;
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .content-row{
+        &__slider{
+            flex: 0 0 calc(100% - 360px);
+            max-width: calc(100% - 360px);
+        }
+        &__promo{
+            flex: 0 0 360px;
+            max-width: 360px;
+            height: auto;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .content-row{
+        &__slider{
+            flex: 0 0 calc(100% - 300px);
+            max-width: calc(100% - 300px);
+        }
+        &__promo{
+            flex: 0 0 300px;
+            max-width: 300px;
+            height: auto;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .content-row{
+        &__slider{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        &__promo{
+            flex: 0 0 100%;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
