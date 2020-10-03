@@ -11,6 +11,15 @@
   flex-wrap: wrap;
   margin-right: -($grid-gutter-width/2);
   margin-left: -($grid-gutter-width/2);
+
+  &_instagram{
+    margin-left: -4px;
+    margin-right: -4px;
+    .col, [class*=col-] {
+      padding-right: 4px;
+      padding-left: 4px;
+    }
+  }
 }
 .no-gutters {
   margin-right: 0;
