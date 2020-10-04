@@ -45,72 +45,72 @@
       </div>
     </header>
     <div class="container">
-      <div class="row cart">
-        <div class="col-8 pt-3 pb-3">
+      <div class="row cart justify-content-between">
+        <div class="col-7 col-xl-8 col-lg-7 col-md-6 col-sm-12 pt-3 pb-3 pb-sm-1">
           <h1 class="h3">Оформление заказа</h1>
           <form class="form form_order" action="">
-            <div class="form__group mb-2">
+            <div class="form__group mb-2 mb-md-1">
               <input class="input input--full input--error" type="text" placeholder="* ФИО"/><span class="form__validation error">Обязательно заполните ФИО</span>
             </div>
-            <div class="row form__group mb-2">
-              <div class="col-6">
+            <div class="row form__group mb-2 mb-md-1">
+              <div class="col-6 col-md-12">
                 <input class="input input--full phone" type="tel" placeholder="* Телефон"/><span class="form__validation error_phone"></span>
               </div>
-              <div class="col-6">
+              <div class="col-6 col-md-12">
                 <input class="input input--full" type="email" placeholder="* E-mail"/>
               </div>
             </div>
-            <div class="form__group mb-2">
+            <div class="form__group mb-2 mb-md-1">
               <input class="input input--full" type="text" placeholder="Адрес доставки"/>
             </div>
-            <div class="form__group mb-2">
+            <div class="form__group mb-2 mb-md-1">
               <textarea class="input input--full input_textarea" name="" cols="30" rows="4"></textarea>
             </div>
             <div class="row form__group mt-3 mb-1">
-              <div class="col-5 mb-2">
+              <div class="col-5 col-lg-6 mb-2 col-md-12 mb-md-1">
                 <div class="radio">
                   <input class="radio__input" id="payment1" type="radio" name="payment" checked="checked"/>
                   <label class="radio__label" for="payment1">Интернет-эквайринг Сбербанк</label>
                 </div>
               </div>
-              <div class="col-5 mb-2">
+              <div class="col-5 col-lg-6 mb-2 col-md-12 mb-md-1">
                 <div class="radio">
                   <input class="radio__input" id="payment2" type="radio" name="payment"/>
                   <label class="radio__label" for="payment2">Оплата по счету</label>
                 </div>
               </div>
             </div>
-            <button class="btn btn_action" type="submit">Оформить заказ</button>
+            <button class="btn btn_action d-sm-none" type="submit">Оформить заказ</button>
           </form>
         </div>
-        <div class="col-4 pt-3 pb-3">
+        <div class="col-4 col-lg-5 col-md-6 col-sm-12 pt-3 pb-3 pt-sm-0">
           <div class="cart-order">
-            <p class="h6">Ваш заказ</p>
+            <p class="h6 mb-sm-1">Ваш заказ</p>
                 <div class="cart-order__item row">
                   <div class="col cart-order__item-image"><img class="img-fluid" src="../demo/product-1.jpg"/></div>
                   <div class="col cart-order__item-content">
                     <div class="row">
-                      <div class="col-9">
+                      <div class="col-9 col-lg-8 col-xs-7">
                         <p class="cart-order__title">K-1000 CARRARA</p>
-                        <p class="cart-order__information"><span>Marble Trend</span><span>K-1000/LR/600x600x10</span></p>
+                        <p class="cart-order__information d-sm-none"><span>Marble Trend</span><span>K-1000/LR/600x600x10</span></p>
                       </div>
-                      <div class="col-3 text-right">
+                      <div class="col-3 col-lg-4 col-xs-5 text-right">
                         <p class="cart-order__price">2 838<span class="cart-order__rub">₽</span></p>
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-9">
+                      <div class="col-9 col-lg-8 col-xs-7">
                         <dl class="cart-order__prop">
                           <dd class="cart-order__prop-val">ULPIS / Пульпис</dd>
                           <dd class="cart-order__prop-val">Структурированная с sugar-эффектом</dd>
                           <dd class="cart-order__prop-val">60х60</dd>
                         </dl>
                       </div>
-                      <div class="col-3 text-right">
+                      <div class="col-3 col-lg-4 col-xs-5 text-right">
                         <dl class="cart-order__prop">
-                          <dd class="cart-order__prop-val">2.88 м2</dd>
-                          <dd class="cart-order__prop-val">4 уп.</dd>
-                          <dd class="cart-order__prop-val">48 шт.</dd>
+                          <dd class="cart-order__prop-val">2.88&nbsp;м2</dd>
+                          <dd class="cart-order__prop-val">4&nbsp;уп.</dd>
+                          <dd class="cart-order__prop-val">48&nbsp;шт.</dd>
                         </dl>
                       </div>
                     </div>
@@ -120,27 +120,27 @@
                   <div class="col cart-order__item-image"><img class="img-fluid" src="../demo/product-2.jpg"/></div>
                   <div class="col cart-order__item-content">
                     <div class="row">
-                      <div class="col-9">
+                      <div class="col-9 col-lg-8 col-xs-7">
                         <p class="cart-order__title">МОЗАИКА K-1000/m01</p>
-                        <p class="cart-order__information"><span>Terrazzo</span><span>K-1000/m01/30x30</span></p>
+                        <p class="cart-order__information d-sm-none"><span>Terrazzo</span><span>K-1000/m01/30x30</span></p>
                       </div>
-                      <div class="col-3 text-right">
+                      <div class="col-3 col-lg-4 col-xs-5 text-right">
                         <p class="cart-order__price">5 040<span class="cart-order__rub">₽</span></p>
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-9">
+                      <div class="col-9 col-lg-8 col-xs-7">
                         <dl class="cart-order__prop">
                           <dd class="cart-order__prop-val">ULPIS / Пульпис</dd>
                           <dd class="cart-order__prop-val">Структурированная с sugar-эффектом</dd>
                           <dd class="cart-order__prop-val">60х60</dd>
                         </dl>
                       </div>
-                      <div class="col-3 text-right">
+                      <div class="col-3 col-lg-4 col-xs-5 text-right">
                         <dl class="cart-order__prop">
-                          <dd class="cart-order__prop-val">2.88 м2</dd>
-                          <dd class="cart-order__prop-val">4 уп.</dd>
-                          <dd class="cart-order__prop-val">48 шт.</dd>
+                          <dd class="cart-order__prop-val">2.88&nbsp;м2</dd>
+                          <dd class="cart-order__prop-val">4&nbsp;уп.</dd>
+                          <dd class="cart-order__prop-val">48&nbsp;шт.</dd>
                         </dl>
                       </div>
                     </div>
@@ -150,27 +150,27 @@
                   <div class="col cart-order__item-image"><img class="img-fluid" src="../demo/product-3.jpg"/></div>
                   <div class="col cart-order__item-content">
                     <div class="row">
-                      <div class="col-9">
+                      <div class="col-9 col-lg-8 col-xs-7">
                         <p class="cart-order__title">МОЗАИКА K-302/m016</p>
-                        <p class="cart-order__information"><span>Shervo</span><span>K-302/SR/m06/282x303x10</span></p>
+                        <p class="cart-order__information d-sm-none"><span>Shervo</span><span>K-302/SR/m06/282x303x10</span></p>
                       </div>
-                      <div class="col-3 text-right">
+                      <div class="col-3 col-lg-4 col-xs-5 text-right">
                         <p class="cart-order__price">5 470<span class="cart-order__rub">₽</span></p>
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-9">
+                      <div class="col-9 col-lg-8 col-xs-7">
                         <dl class="cart-order__prop">
                           <dd class="cart-order__prop-val">ULPIS / Пульпис</dd>
                           <dd class="cart-order__prop-val">Структурированная с sugar-эффектом</dd>
                           <dd class="cart-order__prop-val">60х60</dd>
                         </dl>
                       </div>
-                      <div class="col-3 text-right">
+                      <div class="col-3 col-lg-4 col-xs-5 text-right">
                         <dl class="cart-order__prop">
-                          <dd class="cart-order__prop-val">2.88 м2</dd>
-                          <dd class="cart-order__prop-val">4 уп.</dd>
-                          <dd class="cart-order__prop-val">48 шт.</dd>
+                          <dd class="cart-order__prop-val">2.88&nbsp;м2</dd>
+                          <dd class="cart-order__prop-val">4&nbsp;уп.</dd>
+                          <dd class="cart-order__prop-val">48&nbsp;шт.</dd>
                         </dl>
                       </div>
                     </div>
@@ -195,6 +195,7 @@
           <p class="cart__subinfo">Информация о <a class="cart__subinfo-link" href="#">способах доставки. </a> 30-дневный период возврата товара, 
             комиссия за возврат и возврат стоимости за неотправленный товар. Прочитать <a class="cart__subinfo-link" href="#">о возврате и возмещении стоимости товара.</a>
           </p>
+          <div class="d-none d-sm-block mt-sm-2"><a class="btn btn_action btn--full" href="javascript;">Оформить заказ</a></div>
         </div>
       </div>
     </div>

@@ -13,36 +13,36 @@ html(lang="ru")
         include chunks/header.pug
         include chunks/mixin.pug
         .container
-            .row.cart
-                .col-8.pt-3.pb-3
+            .row.cart.justify-content-between
+                .col-7.col-xl-8.col-lg-7.col-md-6.col-sm-12.pt-3.pb-3.pb-sm-1
                     h1.h3 Оформление заказа
                     form.form.form_order(action="")
-                        .form__group.mb-2
+                        .form__group.mb-2.mb-md-1
                             input.input.input--full.input--error(type="text" placeholder="* ФИО")
                             span.form__validation.error Обязательно заполните ФИО
-                        .row.form__group.mb-2
-                            .col-6
+                        .row.form__group.mb-2.mb-md-1
+                            .col-6.col-md-12
                                 input.input.input--full.phone(type="tel" placeholder="* Телефон")
                                 span.form__validation.error_phone
-                            .col-6
+                            .col-6.col-md-12
                                 input.input.input--full(type="email" placeholder="* E-mail")
-                        .form__group.mb-2
+                        .form__group.mb-2.mb-md-1
                             input.input.input--full(type="text" placeholder="Адрес доставки")
-                        .form__group.mb-2
+                        .form__group.mb-2.mb-md-1
                             textarea.input.input--full.input_textarea(name="", cols="30", rows="4")
                         .row.form__group.mt-3.mb-1
-                            .col-5.mb-2
+                            .col-5.col-lg-6.mb-2.col-md-12.mb-md-1
                                 .radio
                                     input.radio__input#payment1(type="radio" name="payment" checked="checked")
                                     label.radio__label(for="payment1") Интернет-эквайринг Сбербанк
-                            .col-5.mb-2
+                            .col-5.col-lg-6.mb-2.col-md-12.mb-md-1
                                 .radio
                                     input.radio__input#payment2(type="radio" name="payment")
                                     label.radio__label(for="payment2") Оплата по счету
-                        button.btn.btn_action(type="submit") Оформить заказ
-                .col-4.pt-3.pb-3
+                        button.btn.btn_action.d-sm-none(type="submit") Оформить заказ
+                .col-4.col-lg-5.col-md-6.col-sm-12.pt-3.pb-3.pt-sm-0
                     .cart-order
-                        p.h6 Ваш заказ
+                        p.h6.mb-sm-1 Ваш заказ
                         +cart-order-item("Marble Trend", "K-1000 CARRARA", "K-1000/LR/600x600x10", "2 838")(src="../demo/product-1.jpg" alt="" title="")
                         +cart-order-item("Terrazzo", "МОЗАИКА K-1000/m01", "K-1000/m01/30x30", "5 040")(src="../demo/product-2.jpg" alt="" title="")
                         +cart-order-item("Shervo", "МОЗАИКА K-302/m016", "K-302/SR/m06/282x303x10", "5 470")(src="../demo/product-3.jpg" alt="" title="")
@@ -64,6 +64,8 @@ html(lang="ru")
                             |  30-дневный период возврата товара, 
                             | комиссия за возврат и возврат стоимости за неотправленный товар. Прочитать 
                             a.cart__subinfo-link(href="#") о возврате и возмещении стоимости товара.
+                    .d-none.d-sm-block.mt-sm-2
+                        a.btn.btn_action.btn--full(href="javascript;") Оформить заказ
         include chunks/footer.pug
         script(src="./js/jquery.inputmask.min.js")
         script(src="./js/app.min.js")

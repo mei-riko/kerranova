@@ -21,7 +21,7 @@ mixin collection-simple(title, intro)
 mixin product(title, collection, size, price)
     .preview.preview_product
         .preview_product__image(style!=attributes.style)
-        a.preview__title.preview_product__title.preview__title_link(href="collection.html")= title
+        a.preview__title.preview_product__title.preview__title_link(href="product.html")= title
         p.preview__intro.preview_product__intro
             span.preview_product__collection= collection
             span.preview_product__size= size 
@@ -40,19 +40,19 @@ mixin cart-item(collection,title,article,price1,price2)
             img.img-fluid(src!=attributes.src)
         .col.cart-item__content
             .row.align-items-end
-                .col-6
+                .col-5.col-xl-6.col-lg-8.col-xs-12.mb-sm-1.cart-item__order-title
                     a.cart-item__collection(href="collection.html")= collection
                     a.cart-item__title(href="product.html")= title
                     p.cart-item__article= article
-                .col-3
+                .col-3.col-xl-3.col-sm-12.d-lg-none
                     form.form.form_count(action="")
                         input.input.input_count.input_count--active(type="number" value="1")
-                .col-2
+                .col-2.col-xl-2.col-lg-4.col-xs-12.mb-sm-1.cart-item__order-price
                     p.cart-item__price= price1
                         span.cart-item__rub ₽
                     p.cart-item__subprice= price2
-            .row.align-items-end.mt-2
-                .col-6
+            .row.align-items-end.mt-1
+                .col-5.col-xl-6.col-lg-7.col-md-12.mb-lg-2.mb-md-0
                     dl.cart-item__prop
                         dt.cart-item__prop-name Цвет:
                         dd.cart-item__prop-val ULPIS / Пульпис
@@ -60,15 +60,18 @@ mixin cart-item(collection,title,article,price1,price2)
                         dd.cart-item__prop-val Структурированная с sugar-эффектом
                         dt.cart-item__prop-name Размер:
                         dd.cart-item__prop-val 60х60
-                .col-3
+                .col-3.col-xl-3.col-lg-5.col-md-12.mb-lg-2
                     dl.cart-item__prop
                         dt.cart-item__prop-name Площадь (м2):
-                        dd.cart-item__prop-val 2.88
+                        dd.cart-item__prop-val 2.88 
                         dt.cart-item__prop-name Упаковки:
                         dd.cart-item__prop-val 4
                         dt.cart-item__prop-name Штуки:
                         dd.cart-item__prop-val 48
-                .col-2.text-right
+                .d-none.d-lg-block.col.col-lg-8.col-md-8
+                    form.form.form_count.cart-item__count(action="")
+                        input.input.input_count.input_count--active(type="number" value="1")
+                .col-2.col-xl-2.col-lg-4.col-md-4.text-right
                     button.btn.btn_delete(type="remove")
                         <svg class="btn_delete__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
                             <path d="M456,58.755H326V20c0-11.046-8.954-20-20-20H206c-11.046,0-20,8.954-20,20v38.755H56c-11.046,0-20,8.954-20,20v78.34c0,11.046,8.954,20,20,20h30V462c0,27.57,22.43,50,50,50h240c27.57,0,50-22.43,50-50V177.095h30c11.046,0,20-8.954,20-20v-78.34C476,67.709,467.046,58.755,456,58.755z M226,40h60v18.755h-60V40z M386,462c0,5.514-4.486,10-10,10H136c-5.514,0-10-4.486-10-10V177.095h260V462z M436,137.095c-10.717,0-341.452,0-360,0v-38.34h360V137.095z"/>
@@ -81,22 +84,22 @@ mixin cart-order-item(collection,title,article,price)
             img.img-fluid(src!=attributes.src)
         .col.cart-order__item-content
             .row
-                .col-9
+                .col-9.col-lg-8.col-xs-7
                     p.cart-order__title= title
-                    p.cart-order__information
-                        span= collection
-                        span= article
-                .col-3.text-right
+                    p.cart-order__information.d-sm-none
+                        span= collection 
+                        span= article 
+                .col-3.col-lg-4.col-xs-5.text-right
                     p.cart-order__price= price 
                         span.cart-order__rub ₽
             .row
-                .col-9
+                .col-9.col-lg-8.col-xs-7
                     dl.cart-order__prop
                         dd.cart-order__prop-val ULPIS / Пульпис
                         dd.cart-order__prop-val Структурированная с sugar-эффектом
                         dd.cart-order__prop-val 60х60
-                .col-3.text-right
+                .col-3.col-lg-4.col-xs-5.text-right
                     dl.cart-order__prop
-                        dd.cart-order__prop-val 2.88 м2
-                        dd.cart-order__prop-val 4 уп.
-                        dd.cart-order__prop-val 48 шт.
+                        dd.cart-order__prop-val 2.88&nbsp;м2
+                        dd.cart-order__prop-val 4&nbsp;уп.
+                        dd.cart-order__prop-val 48&nbsp;шт.

@@ -14,7 +14,7 @@ html(lang="ru")
         include chunks/mixin.pug
         .container
             .row.cart
-                .col-8.pt-3.pb-3
+                .col-8.col-lg-7.col-md-6.col-sm-12.pt-3.pb-3
                     .cart__inside 
                         h1.h3 Заказ успешно оформлен
                         p Спасибо. Ваш заказ принят в обработку. Мы свяжемся с вами в ближайшее время 
@@ -28,7 +28,7 @@ html(lang="ru")
                             dd.cart__inside-val 5 637,60 р.
                             dt.cart__inside-name Способ оплаты: 
                             dd.cart__inside-val Оплата по счету
-                .col-4.pt-3.pb-3
+                .col-4.col-lg-5.col-md-6.col-sm-12.pt-3.pb-3.pt-sm-0
                     .cart-order
                         p.h6 Ваш заказ
                         +cart-order-item("Marble Trend", "K-1000 CARRARA", "K-1000/LR/600x600x10", "2 838")(src="../demo/product-1.jpg" alt="" title="")

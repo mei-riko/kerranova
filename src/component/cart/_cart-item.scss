@@ -17,6 +17,7 @@
         display: block;
 
         font-size: 18px;
+        line-height: 20px;
         font-weight: $font-weight-bold;
         color: $black;
         letter-spacing: 1px;
@@ -49,11 +50,13 @@
             max-width: calc(100% - 90px);
             text-align: right;
             font-weight: $font-weight-light;
-            margin-bottom: 0;
+            margin-bottom: 4px;
+            line-height: 1.2;
         }
     }
     &__price{
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 20px;
         font-weight: $font-weight-bold;
         text-align: right;
         margin-bottom: 0;
@@ -65,5 +68,53 @@
     }
     &__rub{
         margin-left: 4px;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .cart-item{
+        &__image{
+            flex: 0 0 120px;
+        }
+        &__title{
+            font-size: 16px;
+            line-height: 18px;
+        }
+        &__order-price{
+            padding-left: 0;
+        }
+        &__price{
+            font-size: 16px;
+            line-height: 18px;
+        }
+        &__subprice{
+            font-size: 12px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .cart-item{
+        &__prop-val{
+            padding-left: 4px;
+            text-align: left;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .cart-item{
+        &__image{
+            flex: 0 0 90px;
+            max-width: 25%;
+            padding-right: 0;
+        }
+        &__order-price{
+            padding-left: $grid-gutter-width/2;
+        }
+        &__price{
+            font-size: 16px;
+            text-align: left;
+        }
+        &__subprice{
+            text-align: left;
+        }
     }
 }

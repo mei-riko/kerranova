@@ -3,16 +3,22 @@
         margin-top: $grid-gutter-width;
         &-image{
             flex: 0 0 95px;
-            max-width: 25%;
+            max-width: 95px;
+        }
+        &-content{
+            flex: 0 0 calc(100% - 95px);
+            max-width: calc(100% - 95px);
         }
     }
     &__title{
         font-weight: $font-weight-bolder;
         text-transform: uppercase;
         letter-spacing: 1px;
+        line-height: 1.2;
         margin-bottom: $spacer/8;
     }
     &__price{
+        white-space: nowrap;
         font-weight: $font-weight-bolder;
     }
     &__rub{
@@ -22,8 +28,9 @@
     }
     &__information{
         font-size: 12px;
+        line-height: 14px;
         color: $grey;
-        margin-bottom: $spacer/4;
+        margin-bottom: $spacer/4!important;
     }
     &__prop{
         font-size: 12px;
@@ -31,8 +38,46 @@
         margin-bottom: 0;
 
         &-val{
-            white-space: nowrap;
+            // white-space: nowrap;
             margin-bottom: 2px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .cart-order{
+        &__item{
+            &-content{
+                padding-left: 0;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .cart-order{
+        &__title{
+            margin-bottom: $spacer/5;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .cart-order{
+        &__item{
+            margin-top: $spacer/2;
+            &-image{
+                flex: 0 0 60px;
+                max-width: 60px;
+                padding-right: 0;
+            }
+            &-content{
+                flex: 0 0 calc(100% - 60px);
+                max-width: calc(100% - 60px);
+                padding-left: $grid-gutter-width/2;
+            }
+        }
+        &__prop{
+            &-val{
+                white-space: unset;
+            }
         }
     }
 }

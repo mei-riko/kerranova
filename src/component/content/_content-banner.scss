@@ -3,7 +3,6 @@
     background: $blue;
     color: $white;
     &__title{
-        @extend .h2;
         margin-bottom: $spacer/4;
     }
 }
