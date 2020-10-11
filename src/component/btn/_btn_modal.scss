@@ -1,0 +1,26 @@
+.btn_modal{
+    background: $white;
+    color: $black;
+    border: 1px solid $border-color;
+
+    position: relative;
+    text-align: left;
+
+    &:after{
+        content: '';
+
+        position: absolute;
+        top: calc(50% - 5px);
+        right: 12px;
+
+        display: block;
+        width: 10px;
+        height: 10px;
+
+        background: url("../icon/arrow-next.svg") no-repeat center / contain;
+    }
+    &:hover, &:focus{
+        background: $light-grey;
+        color: $black;
+    }
+}

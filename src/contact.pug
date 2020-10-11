@@ -3,14 +3,94 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Index Page
+        title Contact Page
 
         link(href='./css/style.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
-
+        section.content.container.pt-3.pb-2.line.line_after
+            ul.breadcrumbs
+                li.breadcrumbs__item
+                    a.breadcrumbs__link(href="/index.html") Домой
+                li.breadcrumbs__item.breadcrumbs__item--active Контакты
+            h1 Контактная информация
+            .row
+                .col-8.col-md-10.col-sm-12
+                    p По всем вопросам, связанным с покупкой, подбором, возвратом товаров, а так же по вопросам сотрудничества,
+                        | можно обращаться по электронной почте 
+                        a.text-underline.text-bold(href="mailto:info@kerranova.ru") info@kerranova.ru
+            .row.mt-4
+                .col-6.col-md-12.mb-3
+                    p.text-bold.mb-1 Юридический адрес
+                    p ООО «Керранова Плюс»
+                        | <br/>117623, г.&nbsp;Москва, ул.&nbsp;Мелитопольская 2-я, дом&nbsp;21, корпус&nbsp;3, этаж&nbsp;1 
+                        | <br/>помещение&nbsp;I комната&nbsp;3
+                .col-6.col-md-12.mb-3
+                    p.text-bold.mb-1 Почтовый адрес
+                    p 443068, г. Самара, ул. Ново-Садовая, 140, 2 этаж, офис ООО «Керранова Плюс»
+                    p 
+                        a.text-underline.text-bold(href="javascript;" data-fancybox="map" data-src="#modalMap") На карте
+                .col-6.col-md-12.mb-3
+                    p.text-bold.mb-1 Телефон
+                    p Есть вопросы по заказу, о способах доставки или по качеству доставленного товара? 
+                        | Наши сотрудники отвечают на ваши вопросы ежедневно с&nbsp;08:00&nbsp;до&nbsp;22:00&nbsp;МСК
+                    p 
+                        a.text-underline.text-bold(href="tel:8 (800) 511-38-21") 8 (800) 511-38-21
+                        span  (горячая линия)
+                .col-6.col-md-12.mb-3
+                    p.text-bold.mb-1 Форма обратной связи
+                    p Вы можете оформить письменное обращение или&nbsp;оставить отзыв о&nbsp;работе магазина или&nbsp;компании. 
+                        | Наши сотрудники отвечают в&nbsp;течение 48&nbsp;часов.
+                    p 
+                        a.text-underline.text-bold(href="javascript;" data-fancybox="form" data-src="#modalForm") Напишите нам
+            .row.mt-2
+                .col-6.col-md-12.mb-3
+                    p.h4.mb-1 Адреса магазинов
+                    p Узнайте адрес ближайшего к Вам магазина
+                    a.btn.btn--small.btn_secondary(href="store.html") Где нас найти?
+                .col-6.col-md-12.mb-3
+                    p.h4.mb-1 Материалы для скачивания
+                    p Парнёрами: все необходимые материалы для наполнения интернет-магазина
+                    a.btn.btn--small.btn_secondary(href="store.html") Узнать больше
+        section.content.container.pt-3.pb-3
+            h4 Наши сотрудники
+            .row
+                .col-4.col-sm-6.col-xs-12.mt-2
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent") Руководства
+                .col-4.col-sm-6.col-xs-12.mt-2
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent") Отдел аналитики и статистики продаж
+                .col-4.col-sm-6.col-xs-12.mt-2
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent") Отдел маркетинга
+                .col-4.col-sm-6.col-xs-12.mt-2
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent") Отдел объектных продаж
+                .col-4.col-sm-6.col-xs-12.mt-2
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent") Отдел региональных продаж
+                .col-4.col-sm-6.col-xs-12.mt-2
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent") Отдел по работе с клиентами
+        .modal.modal_map#modalMap
+            .modal_map__content
+                <div style="position:relative;overflow:hidden;"><iframe src="https://yandex.ru/map-widget/v1/-/CCQ~A-H~3A" width="100%" height="400" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
+        .modal.modal_form#modalForm
+            form.form.modal_form__content
+                .form__group.mb-1
+                    input.input.input--full(type="text" placeholder="ФИО")
+                .form__group.mb-1
+                    input.input.input--full.input--error.phone(type="tel" placeholder="* Телефон")
+                    span.form__validation.error Обязательно укажите телефон
+                .form__group.mb-2
+                    textarea.input.input--full(name="", rows="2", placeholder="Задайте на любой вопрос")
+                button.btn.btn_action(type="submit") Отправить сообщение
+                .form__agree.checkbox
+                    input.checkbox__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
+                    label.checkbox__label(for="agreeInline") согласен с обработкой 
+                        a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
         include chunks/footer.pug
-        script(src="./js/jquery.inputmask.js")
+
+        script(src="./js/jquery.inputmask.min.js")
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
         script(src="./js/app.min.js")

@@ -1,9 +1,28 @@
 .modal{
     display: none;
-
-    // width: 720px;
     max-width: 100%;
-    // max-height: 80vh;
-}
 
-.modal.fancybox-content{}
+    &.fancybox-content{
+        padding: $spacer/2;
+    }
+
+    // Style
+    &_map{
+        width: 580px;
+
+        .fancybox-button{
+            width: 20px;
+            height: 20px;
+            padding: 0;
+
+            &.fancybox-close-small{
+                padding: 0;
+            }
+        }
+    }
+    &_form{
+        &__content{
+            padding: $spacer/2;
+        }
+    }
+}

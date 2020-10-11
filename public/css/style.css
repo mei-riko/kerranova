@@ -2689,6 +2689,30 @@ a:hover, a:focus {
   color: #1d1d1d;
 }
 
+.btn_modal {
+  background: #ffffff;
+  color: #1d1d1d;
+  border: 1px solid #d6dbe0;
+  position: relative;
+  text-align: left;
+}
+
+.btn_modal:after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 5px);
+  right: 12px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: url("../icon/arrow-next.svg") no-repeat center/contain;
+}
+
+.btn_modal:hover, .btn_modal:focus {
+  background: #f5f5f5;
+  color: #1d1d1d;
+}
+
 .form {
   margin-bottom: 0;
 }
@@ -3123,6 +3147,28 @@ a:hover, a:focus {
 .modal {
   display: none;
   max-width: 100%;
+}
+
+.modal.fancybox-content {
+  padding: 20px;
+}
+
+.modal_map {
+  width: 580px;
+}
+
+.modal_map .fancybox-button {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
+.modal_map .fancybox-button.fancybox-close-small {
+  padding: 0;
+}
+
+.modal_form__content {
+  padding: 20px;
 }
 
 .slider .slick-slide {
