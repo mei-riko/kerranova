@@ -5,8 +5,9 @@
 @import "framework/container";
 @import "framework/grid";
 @import "framework/position";
-@import "framework/offset";
 @import "framework/framework";
+
+@import "framework/offset";
 
 @import "btn/btn";
 @import "btn/btn_action";
@@ -30,6 +31,8 @@
 @import "input/input-group";
 
 @import "modal/modal";
+@import "modal/modal_form";
+@import "modal/modal_map";
 
 @import "slider/slick";
 @import "slider/slider";

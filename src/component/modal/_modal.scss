@@ -1,28 +1,43 @@
 .modal{
     display: none;
-    max-width: 100%;
+    width: 820px;
+    max-width: 94%;
 
     &.fancybox-content{
         padding: $spacer/2;
     }
 
-    // Style
-    &_map{
-        width: 580px;
-
-        .fancybox-button{
-            width: 20px;
-            height: 20px;
-            padding: 0;
-
-            &.fancybox-close-small{
-                padding: 0;
-            }
-        }
+    &__title{
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+        font-size: 14px;
+        letter-spacing: 2px;
+        padding-bottom: $spacer/2;
+        border-bottom: 1px solid $border-color;
     }
-    &_form{
-        &__content{
-            padding: $spacer/2;
+    &__row{
+        position: relative;
+        padding-bottom: $grid-gutter-width;
+        margin-bottom: $grid-gutter-width;
+
+        &:after{
+            content: "";
+            display: block;
+            width: calc(100% - 30px);
+            height: 1px;
+            background-color: $border-color;
+
+            position: absolute;
+            left: 15px;
+            bottom: 0;
+        }
+        &:last-of-type{
+            padding-bottom: 0;
+            margin-bottom: 0;
+
+            &:after{
+                display: none;
+            }
         }
     }
 }

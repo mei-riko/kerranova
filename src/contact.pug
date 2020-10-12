@@ -22,24 +22,24 @@ html(lang="ru")
                         | можно обращаться по электронной почте 
                         a.text-underline.text-bold(href="mailto:info@kerranova.ru") info@kerranova.ru
             .row.mt-4
-                .col-6.col-md-12.mb-3
+                .col-6.col-sm-12.mb-3
                     p.text-bold.mb-1 Юридический адрес
                     p ООО «Керранова Плюс»
                         | <br/>117623, г.&nbsp;Москва, ул.&nbsp;Мелитопольская 2-я, дом&nbsp;21, корпус&nbsp;3, этаж&nbsp;1 
                         | <br/>помещение&nbsp;I комната&nbsp;3
-                .col-6.col-md-12.mb-3
+                .col-6.col-sm-12.mb-3
                     p.text-bold.mb-1 Почтовый адрес
                     p 443068, г. Самара, ул. Ново-Садовая, 140, 2 этаж, офис ООО «Керранова Плюс»
                     p 
                         a.text-underline.text-bold(href="javascript;" data-fancybox="map" data-src="#modalMap") На карте
-                .col-6.col-md-12.mb-3
+                .col-6.col-sm-12.mb-3
                     p.text-bold.mb-1 Телефон
                     p Есть вопросы по заказу, о способах доставки или по качеству доставленного товара? 
                         | Наши сотрудники отвечают на ваши вопросы ежедневно с&nbsp;08:00&nbsp;до&nbsp;22:00&nbsp;МСК
                     p 
                         a.text-underline.text-bold(href="tel:8 (800) 511-38-21") 8 (800) 511-38-21
                         span  (горячая линия)
-                .col-6.col-md-12.mb-3
+                .col-6.col-sm-12.mb-3
                     p.text-bold.mb-1 Форма обратной связи
                     p Вы можете оформить письменное обращение или&nbsp;оставить отзыв о&nbsp;работе магазина или&nbsp;компании. 
                         | Наши сотрудники отвечают в&nbsp;течение 48&nbsp;часов.
@@ -49,26 +49,26 @@ html(lang="ru")
                 .col-6.col-md-12.mb-3
                     p.h4.mb-1 Адреса магазинов
                     p Узнайте адрес ближайшего к Вам магазина
-                    a.btn.btn--small.btn_secondary(href="store.html") Где нас найти?
+                    a.btn.btn--small.btn_secondary(href="store-location.html") Где нас найти?
                 .col-6.col-md-12.mb-3
                     p.h4.mb-1 Материалы для скачивания
                     p Парнёрами: все необходимые материалы для наполнения интернет-магазина
-                    a.btn.btn--small.btn_secondary(href="store.html") Узнать больше
+                    a.btn.btn--small.btn_secondary(href="download.html") Узнать больше
         section.content.container.pt-3.pb-3
             h4 Наши сотрудники
             .row
                 .col-4.col-sm-6.col-xs-12.mt-2
-                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent") Руководства
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent1") Руководство
                 .col-4.col-sm-6.col-xs-12.mt-2
-                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent") Отдел аналитики и статистики продаж
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent2") Отдел аналитики и статистики продаж
                 .col-4.col-sm-6.col-xs-12.mt-2
-                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent") Отдел маркетинга
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent3") Отдел маркетинга
                 .col-4.col-sm-6.col-xs-12.mt-2
-                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent") Отдел объектных продаж
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent4") Отдел объектных продаж
                 .col-4.col-sm-6.col-xs-12.mt-2
-                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent") Отдел региональных продаж
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent5") Отдел региональных продаж
                 .col-4.col-sm-6.col-xs-12.mt-2
-                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent") Отдел по работе с клиентами
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent6") Отдел по работе с клиентами
         .modal.modal_map#modalMap
             .modal_map__content
                 <div style="position:relative;overflow:hidden;"><iframe src="https://yandex.ru/map-widget/v1/-/CCQ~A-H~3A" width="100%" height="400" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
@@ -81,11 +81,65 @@ html(lang="ru")
                     span.form__validation.error Обязательно укажите телефон
                 .form__group.mb-2
                     textarea.input.input--full(name="", rows="2", placeholder="Задайте на любой вопрос")
-                button.btn.btn_action(type="submit") Отправить сообщение
+                button.btn.btn_action.btn--xs-full(type="submit") Отправить сообщение
                 .form__agree.checkbox
                     input.checkbox__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
                     label.checkbox__label(for="agreeInline") согласен с обработкой 
                         a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
+        .modal#modalContent1
+            .modal__content
+                p.modal__title Руководство
+                .row.modal__row
+                    .col-3.col-sm-4
+                        img.img-fluid(src="../demo/demo-person.jpg" alt="" title="")
+                    .col-9.col-sm-8
+                        p.h5.mb-1 Бушуев Андрей Анатольевич
+                        p.text-italic.text-small Руководитель направления региональных продаж ООО "КЕРРАНОВА плюс" (СНГ) 
+                        p.mb-1.text-small.text-bold.text-uppercase Телефоны: 
+                        ul.list.list_square
+                            li.list__item.list_square__item 
+                                a(href="tel:#") +7 (846) 233 45 22 
+                                span.text-small  (добавочный - 6835), 
+                            li.list__item.list_square__item 
+                                a(href="tel:#") +7 927 68-709-19
+                            li.list__item.list_square__item 
+                                a(href="tel:#") +7 917 132-14-23
+                        p.mb-1.text-small
+                            span.text-bold.text-uppercase E-mail:<br/>
+                            a.text-underline(href="mailto:rsm.samara1@grasaro.ru") rsm.samara1@grasaro.ru
+                        p.mb-1.text-small
+                            span.text-bold.text-uppercase Skype: <br/>
+                            span bushuev.andry
+                .row.modal__row
+                    .col-3.col-sm-4
+                        img.img-fluid(src="../demo/demo-person.jpg" alt="" title="")
+                    .col-9.col-sm-8
+                        p.h5.mb-1 Артюхов Артем Алексеевич
+                        p.text-italic.text-small Начальник отдела управления продуктом ООО "КЕРРАНОВА плюс"
+                        p.mb-1.text-small.text-bold.text-uppercase Телефоны: 
+                        ul.list.list_square
+                            li.list__item.list_square__item 
+                                a(href="tel:#") +7 927 68-709-19
+                            li.list__item.list_square__item 
+                                a(href="tel:#") +7 917 132-14-23
+                        p.mb-1.text-small
+                            span.text-bold.text-uppercase E-mail:<br/>
+                            a.text-underline(href="mailto:rsm.samara1@grasaro.ru") rsm.samara1@grasaro.ru   
+                .row.modal__row
+                    .col-3.col-sm-4
+                        img.img-fluid(src="../demo/demo-person.jpg" alt="" title="")
+                    .col-9.col-sm-8
+                        p.h5.mb-1 Артюхов Артем Алексеевич
+                        p.text-italic.text-small Начальник отдела управления продуктом ООО "КЕРРАНОВА плюс"
+                        p.mb-1.text-small.text-bold.text-uppercase Телефоны: 
+                        ul.list.list_square
+                            li.list__item.list_square__item 
+                                a(href="tel:#") +7 927 68-709-19
+                            li.list__item.list_square__item 
+                                a(href="tel:#") +7 917 132-14-23
+                        p.mb-1.text-small
+                            span.text-bold.text-uppercase E-mail:<br/>
+                            a.text-underline(href="mailto:rsm.samara1@grasaro.ru") rsm.samara1@grasaro.ru        
         include chunks/footer.pug
 
         script(src="./js/jquery.inputmask.min.js")

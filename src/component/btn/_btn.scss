@@ -26,8 +26,26 @@
     }
 }
 
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .btn{
+        &--md-full{
+            width: 100%;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .btn{
         padding: 12px 20px 14px;
+
+        &--sm-full{
+            width: 100%;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .btn{
+        &--xs-full{
+            width: 100%;
+        }
     }
 }

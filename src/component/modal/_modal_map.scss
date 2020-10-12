@@ -1,0 +1,13 @@
+.modal_map{
+    width: 580px;
+
+    .fancybox-button{
+        width: 20px;
+        height: 20px;
+        padding: 0;
+
+        &.fancybox-close-small{
+            padding: 0;
+        }
+    }
+}
