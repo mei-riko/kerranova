@@ -3,14 +3,71 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Index Page
+        title Store Location
 
         link(href='./css/style.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
-
+        section.content.container.pt-3.pb-3
+            ul.breadcrumbs
+                li.breadcrumbs__item
+                    a.breadcrumbs__link(href="/index.html") Домой
+                li.breadcrumbs__item.breadcrumbs__item--active Где купить?
+            h1 Адреса магазинов
+            .row
+                .col-8.col-md-10.col-sm-12
+                    p Вы можете купить керамогранит KERRANOVA в&nbsp;розничных магазинах и&nbsp;у&nbsp;официальных 
+                        | дистрибьюторов по&nbsp;всей&nbsp;России и&nbsp;странах&nbsp;СНГ. 
+                        | Для того, чтобы найти ближайший магазин, выберете свой регион и&nbsp;город и&nbsp;нажмите 
+                        | "Фильтр". В&nbsp;случае, если вам нужен дистрибьютор, отметьте соответствующую галочку.
+                    a.btn.btn--small.btn_secondary(href="javascript;" data-fancybox="form" data-src="#modalForm") Заказать звонок
+        section.content.container.pb-3
+            .row
+                .col-4.col-lg-5.col-sm-12.mb-sm-3
+                    h2.h4 Где хотите купить?
+                    p Узнайте адрес ближайшего к&nbsp;Вам магазина
+                    p.text-grey.mb-1 Быстрый выбор:
+                    .content-group.mb-2
+                        a.label.content-group__item(href="#") Москва
+                        a.label.content-group__item(href="#") Самара
+                        a.label.label--active.content-group__item(href="#") Санкт-Петербург
+                    p.text-grey.mb-1 Выберите город:
+                    select.input.input--full.input_select-product(name="")
+                        option(value="type1") Показывать все
+                        option(value="type2") Россия, Москва
+                        option(value="type3") Беларусь, Минск
+                    .checkbox.mt-2
+                        input.checkbox__input#filter1(type="checkbox" name="filter")
+                        label.checkbox__label(for="filter1") Розничный магазин
+                    .checkbox.mt-1
+                        input.checkbox__input#filter2(type="checkbox" name="filter")
+                        label.checkbox__label(for="filter2") Оптовый магазин
+                    .checkbox.mt-1
+                        input.checkbox__input#filter3(type="checkbox" name="filter")
+                        label.checkbox__label(for="filter3") Дистрибъютор
+                    a.btn.btn_action.btn--xs-full.mt-3(href="#") Применить фильтр
+                    .mt-1
+                        a.text-underline.text-small(href="#") Очистить фильтр
+                .col-8.col-lg-7.col-sm-12
+                    .map#mapStore
         include chunks/footer.pug
-        script(src="./js/jquery.inputmask.js")
+        
+        .modal.modal_form#modalForm
+            form.form.modal_form__content
+                .form__group.mb-1
+                    input.input.input--full.phone(type="tel" placeholder="* Телефон")
+                    span.form__validation.error
+                button.btn.btn_action.btn--full(type="submit") Перезвоните мне
+                .form__agree.checkbox.checkbox_agree
+                    input.checkbox__input.checkbox_agree__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
+                    label.checkbox__label.checkbox_agree__label(for="agreeInline") согласен с обработкой 
+                        a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
+        
+        script(src="./js/jquery.inputmask.min.js")
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
         script(src="./js/app.min.js")

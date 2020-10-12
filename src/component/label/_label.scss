@@ -12,4 +12,9 @@
         border-color: $black;
         text-decoration: none;
     }
+
+    &--active{
+        background: $light-grey;
+        border-color: $light-grey;
+    }
 }

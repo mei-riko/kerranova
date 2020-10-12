@@ -1,4 +1,10 @@
 .modal_form{
+    width: 420px;
+
+    &.fancybox-content{
+        width: 420px;
+    }
+
     &__content{
         padding: $spacer/2;
     }

@@ -1,0 +1,31 @@
+.checkbox_agree{
+    padding-top: 0;
+
+    &__input{
+        &:checked + .checkbox_agree__label:after {
+            background-color: $red;
+
+            width: 5px;
+            height: 5px;
+
+            left: 4px;
+            top: 4px;
+        }
+    }
+    &__label{
+        margin: 0;
+        padding-left: 20px;
+        line-height: 12px;
+
+        &:before{
+            border: 1px solid $grey;
+
+            width: 13px;
+            height: 13px;
+
+            left: 0;
+            top: 0;
+            transform: none;
+        }
+    }
+}

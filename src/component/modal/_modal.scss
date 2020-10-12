@@ -1,9 +1,11 @@
 .modal{
     display: none;
     width: 820px;
-    max-width: 94%;
+    max-width: 90%;
 
     &.fancybox-content{
+        width: 820px;
+        max-width: 90%;
         padding: $spacer/2;
     }
 

@@ -1,7 +1,8 @@
-.checkbox{
+.checkbox {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    padding-top: 8px;
     
     &__input{
         display: none;
@@ -9,36 +10,37 @@
         &:checked + .checkbox__label:after {
             content: '';
             display: block;
-            background-color: $red;
-
-            width: 5px;
-            height: 5px;
+            width: 10px;
+            height: 10px;
 
             position: absolute;
-            left: 4px;
             top: 4px;
+            left: 12px;
+
+            border-radius: 2px;
+            background: url("../icon/checkmark.svg") no-repeat center / contain;
         }
     }
     &__label{
         position: relative;
-        margin: 0;
-        padding-left: 20px;
-        line-height: 12px;
-
         cursor: pointer;
+
+        padding-left: 50px;
+        line-height: 16px;
 
         &:before{
             content:'';
             display: block;
 
-            border: 1px solid $grey;
-
-            width: 13px;
-            height: 13px;
-
             position: absolute;
             left: 0;
             top: 0;
+            transform: translateY(-8px);
+
+            width: 34px;
+            height: 34px;
+            border: 1px solid $border-color;
+            border-radius: 4px;
         }
     }
 }

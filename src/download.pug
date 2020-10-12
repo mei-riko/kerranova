@@ -3,14 +3,43 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Index Page
+        title Download Material
 
         link(href='./css/style.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
-
+        section.content.container.pt-3.pb-3
+            ul.breadcrumbs
+                li.breadcrumbs__item
+                    a.breadcrumbs__link(href="/index.html") Домой
+                li.breadcrumbs__item.breadcrumbs__item--active Материалы для скачивания
+            h1 Материалы для скачивания
+            .row
+                .col-8.col-md-10.col-sm-12
+                    p Все необходимые материалы для наполнения интернет-магазина. 
+                        | По вопросам сотрудничества можно обращаться по электронной почте 
+                        a.text-underline.text-bold(href="mailto:info@kerranova.ru") info@kerranova.ru
+            .row.mt-2
+                .col-4.col-md-6.col-sm-12.mt-2
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent1") Генеральный каталог 2020
+                .col-4.col-md-6.col-sm-12.mt-2
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent2") Интерьеры
+                .col-4.col-md-6.col-sm-12.mt-2
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent3") Текстуры
+                .col-4.col-md-6.col-sm-12.mt-2
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent4") Брендбук компании
+                .col-4.col-md-6.col-sm-12.mt-2
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent5") Логотипы Kerranova
+                .col-4.col-md-6.col-sm-12.mt-2
+                    a.btn.btn--full.btn_modal(href="javascript;" data-fancybox="content" data-src="#modalContent6") Сертификаты качества
+        section.content.container.pb-3
+            img.img-fluid(src="../demo/demo-full.webp" alt="" title="")
+            .row.mt-3
+                .col-8.col-md-10.col-sm-12
+                    p Lorem ipsum dolor sit amet. In ea commodi autem quibusdam et quasi architecto beatae vitae dicta sunt. Totam rem aperiam eaque ipsa quae. Quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt. Sit voluptatem accusantium doloremque laudantium. Harum quidem rerum facilis est et molestiae consequatur, vel eum iure reprehenderit. Incidunt, ut aut rerum facilis est et expedita distinctio sint. Quam nihil molestiae consequattur. 
+                    p Culpa, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et harum. Nihil molestiae consequatur, vel illum, qui in ea voluptate velit esse quam. Atque corrupti, quos dolores eos, qui dolorem ipsum, quia dolor sit. Officiis debitis aut officiis debitis aut odit aut fugit. Nemo enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam. Odio dignissimos ducimus, qui voluptatem, quia voluptas assumenda est. 
         include chunks/footer.pug
-        script(src="./js/jquery.inputmask.js")
+        script(src="./js/jquery.inputmask.min.js")
         script(src="./js/app.min.js")
