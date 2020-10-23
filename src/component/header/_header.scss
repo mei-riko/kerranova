@@ -62,9 +62,22 @@
             color: $grey;
         }
     }
+    &__nav{
+        display: none;
+    }
     &__btn{
         // padding: 2px;
         margin-left: $grid-gutter-width;
+
+        &_catalog{
+            display: none;
+        }
+        &_portfolio{
+            display: none;
+        }
+    }
+    &__btn-label{
+        display: none;
     }
     &__icon{
         width: 22px;
@@ -79,6 +92,109 @@
 
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .header{
-        display: none;
+        &__nav{
+            display: inline-block;
+        }
+        &__btn{
+            margin-left: $spacer/2;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .header{
+        &__contact{
+            display: none;
+        }
+        &__search{
+            flex: 0 0 260px;
+            max-width: 260px;
+            margin-left: $spacer/2;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .header{
+        &__contact{
+            display: block;
+            flex: 0 0 150px;
+            max-width: 50%;
+            padding-left: $spacer/2;
+            padding-right: 0;
+        }
+        &__callback{
+            display: none;
+        }
+        &__search{
+            margin-left: 0;
+            margin-top: $spacer/2;
+
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        &__btn-group{
+            position: fixed;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            z-index: 99;
+
+            padding: 6px 0;
+
+            background: #fff;
+            filter: drop-shadow(0px 2px 6px $grey);
+
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+        &__btn{
+            text-align: center;
+            margin: 0;
+            padding: 4px 16px;
+
+            flex: 0 0 110px;
+            max-width: 110px;
+
+            border-left: 1px solid $border-color;
+
+            &_mail{
+                display: none;
+            }
+            &_location{
+                display: none;
+            }
+            &_catalog{
+                display: inline-block;
+                border-left: none;
+            }
+            &_portfolio{
+                display: inline-block;
+            }
+        }
+        &__icon{
+            width: 20px;
+            height: 20px;
+        }
+        &__btn-label{
+            display: block;
+            font-size: 10px;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .header{
+        &__btn{
+            max-width: calc( (100% - 110px)/3 );
+            &_portfolio{
+                max-width: 110px;
+            }
+        }
+        &__phone{
+            font-size: map-get($map: $font-size, $key: md);
+        }
     }
 }

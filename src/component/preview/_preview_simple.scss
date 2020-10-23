@@ -1,0 +1,99 @@
+.preview_simple{
+    position: relative;
+    padding-left: 30px;
+    padding-right: 80px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    width: 280px;
+    max-width: 100%;
+    min-height: 65px;
+
+    &__icon{
+        position: absolute;
+        left: -30px;
+        top: -2px;
+        width: 20px;
+        height: 20px;
+        background: no-repeat center / 18px;
+
+        &.icon-collection{
+            background-image: url("../icon/collection.svg");
+        }
+        &.icon-page{
+            background-image: url("../icon/information.svg");
+        }
+        &.icon-product{
+            background-image: url("../icon/chevron-right.svg");
+            background-size: 26px;
+        }
+    }
+    &__image{
+        width: 65px;
+        height: 65px;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &--focus{
+            width: 100px;
+            height: 100px;
+
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__title{
+        position: relative;
+
+        flex: 0 0 100%;
+        max-width: 100%;
+        
+        font-size: map-get($map: $font-size, $key: sm);
+        line-height: 1.2;
+        margin-bottom: 5px;
+    }
+    &__intro{
+        font-size: 12px;
+        line-height: 1.2;
+        color: $grey;
+        margin-bottom: 0;
+
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    &--full{
+        padding-right: 0;
+    }
+    &--focus{
+        width: 100%;
+        padding: 20px 140px 20px 30px;
+        border-radius: 6px;
+        background: $light-grey;
+        min-height: 130px;
+    }
+}
+
+a.preview_simple{
+    text-decoration: none;
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .preview_simple{
+        &__image{
+            &--focus{
+                width: 45px;
+                height: 45px;
+            }
+        }
+        &--focus{
+            padding: 20px 80px 20px 20px;
+            min-height: 105px;
+        }
+    }
+}

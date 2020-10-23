@@ -4,6 +4,11 @@ html,body {
     line-height: $line-height;
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
+
+    &.hidden{
+        overflow: hidden;
+        // margin-right: 14px;
+    }
 }
 *,
 *::before,
@@ -22,6 +27,7 @@ h1, h2, h3, h4, h5, h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6{
     margin-top: map-get($spacers, 3);
 }
+
 .h1,h1{font-size: 36px;}
 .h2,h2{font-size: 28px;}
 .h3,h3{font-size: 24px;}
@@ -85,7 +91,7 @@ a{
         content: '';
         display: block;
         width: 20px;
-        height: 1.5rem;
+        height: 100%;
 
         position: absolute;
         top: 0;
@@ -103,6 +109,28 @@ a{
         }
     }
 }
+.icon-btn{
+    outline: none;
+    border: none;
+    background-color: $light-grey;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: $spacer;
+    height: $spacer;
+    border-radius: 50%;
+    
+    transition: background .2s;
+
+    position: absolute;
+
+    &:hover, &:focus{
+        outline: none;
+        background-color: darken($color: $light-grey, $amount: 10);
+    }
+}
 // Background
 .bg-black{background-color: $black;}
 .bg-white{background-color: $white;}
@@ -110,6 +138,21 @@ a{
 .p-relative{position: relative;}
 .p-sticky{position: sticky; top: 0; left: 0; z-index: 101;}
 .p-absolute{position: absolute; top: 0; left: 0; z-index: 101;}
+
+.overlay{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 101;
+
+    background: rgba(0,0,0,.4);
+
+    &--disable{
+        display: none;
+    }
+}
 
 .d{
     &-flex{display: flex;}

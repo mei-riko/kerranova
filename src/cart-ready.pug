@@ -10,8 +10,9 @@ html(lang="ru")
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
-        include chunks/header.pug
         include chunks/mixin.pug
+        include chunks/header.pug
+
         .container
             .row.cart
                 .col-8.col-lg-7.col-md-6.col-sm-12.pt-3.pb-3
@@ -35,5 +36,11 @@ html(lang="ru")
                         +cart-order-item("Terrazzo", "МОЗАИКА K-1000/m01", "K-1000/m01/30x30", "5 040")(src="../demo/product-2.jpg" alt="" title="")
                         +cart-order-item("Shervo", "МОЗАИКА K-302/m016", "K-302/SR/m06/282x303x10", "5 470")(src="../demo/product-3.jpg" alt="" title="")
         include chunks/footer.pug
-        script(src="./js/jquery.inputmask.js")
+        
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        script(src="./js/blazy.min.js")
+
+        script(src="./js/jquery.inputmask.min.js")
         script(src="./js/app.min.js")

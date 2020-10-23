@@ -14,3 +14,19 @@
         //- logo 220px contact 200px search 290px btn 138px
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .header_top{
+        &__navbar{
+            display: none;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .header_top{
+        padding: $spacer/2 0 0;
+        &__container{
+            flex-wrap: wrap;
+        }
+    }
+}

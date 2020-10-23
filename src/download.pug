@@ -9,7 +9,9 @@ html(lang="ru")
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/mixin.pug
         include chunks/header.pug
+
         section.content.container.pt-3.pb-3
             ul.breadcrumbs
                 li.breadcrumbs__item
@@ -41,5 +43,11 @@ html(lang="ru")
                     p Lorem ipsum dolor sit amet. In ea commodi autem quibusdam et quasi architecto beatae vitae dicta sunt. Totam rem aperiam eaque ipsa quae. Quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt. Sit voluptatem accusantium doloremque laudantium. Harum quidem rerum facilis est et molestiae consequatur, vel eum iure reprehenderit. Incidunt, ut aut rerum facilis est et expedita distinctio sint. Quam nihil molestiae consequattur. 
                     p Culpa, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et harum. Nihil molestiae consequatur, vel illum, qui in ea voluptate velit esse quam. Atque corrupti, quos dolores eos, qui dolorem ipsum, quia dolor sit. Officiis debitis aut officiis debitis aut odit aut fugit. Nemo enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam. Odio dignissimos ducimus, qui voluptatem, quia voluptas assumenda est. 
         include chunks/footer.pug
+        
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        script(src="./js/blazy.min.js")
+
         script(src="./js/jquery.inputmask.min.js")
         script(src="./js/app.min.js")

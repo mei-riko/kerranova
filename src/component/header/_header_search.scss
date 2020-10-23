@@ -1,0 +1,45 @@
+.header_search{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    width: 100%;
+    padding: 20px 0;
+    background: #fff;
+
+    transition: .5s;
+    transform: translateY(-100%);
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    &__form{
+        position: relative;
+        margin-bottom: $spacer/2;
+    }
+    &__input{
+        padding-left: map-get($map: $spacers, $key: 4);
+        margin-bottom: 0;
+    }
+    &__btn{
+        top: calc(50% - 20px);
+
+        &.close{
+            left: $spacer/4;
+        }
+        &.arrow{
+            right: $spacer/4;
+        }
+
+        &:hover, &:focus{
+            outline: none;
+            background-color: darken($color: $light-grey, $amount: 10);
+        }
+    }
+
+    &--open{
+        transform: translateY(0);
+        filter: drop-shadow(0px 2px 6px $grey);
+    }
+}

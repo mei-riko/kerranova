@@ -63,10 +63,12 @@
 @import "preview/preview_page";
 @import "preview/preview_collection";
 @import "preview/preview_portfolio";
+@import "preview/preview_simple";
 
 @import "navbar/navbar";
 @import "navbar/navbar_header";
 @import "navbar/navbar_footer";
+@import "navbar/navbar-inside";
 
 @import "breadcrumbs/breadcrumbs";
 @import "pagination/pagination";
@@ -74,6 +76,7 @@
 @import "header/header";
 @import "header/header_top";
 @import "header/header_bottom";
+@import "header/header_search";
 
 @import "footer/footer";
 

@@ -1,14 +1,21 @@
+mixin preview-simple(title, intro)
+    a.preview.preview_simple.mb-2(href="#")
+        .preview-simple__content
+            p.preview_simple__title= title
+                span.preview_simple__icon(class!=attributes.class)
+            p.preview_simple__intro= intro
+        img.preview_simple__image(src!=attributes.src)
 mixin collection(title, intro)
-    .preview.preview_collection
+    a.preview.preview_collection(href="collection.html")
         img.preview_collection__image(src!=attributes.src)
         .preview_collection__gallery
             img.preview_collection__gallery-item(src="../demo/pic-1.png")
             img.preview_collection__gallery-item(src="../demo/pic-2.png")
             img.preview_collection__gallery-item(src="../demo/pic-3.png")
             img.preview_collection__gallery-item(src="../demo/pic-4.png")
-        a.preview__title.preview__title_link(href="collection.html")= title
+        .preview__title.preview__title_link= title
         p.preview__intro.preview_collection__intro= intro
-        a.link-arrow.preview_promo__link(href="collection.html") Посмотреть коллекцию
+        .link-arrow.preview_promo__link Посмотреть коллекцию
 mixin collection-simple(title, intro)
     .preview.preview_collection
         img.preview_collection__image(src!=attributes.src)

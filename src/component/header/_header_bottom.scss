@@ -1,3 +1,9 @@
 .header_bottom{
     background-color: $light-grey;
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .header_bottom{
+        // display: none;
+    }
+}

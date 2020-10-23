@@ -9,8 +9,9 @@ html(lang="ru")
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
-        include chunks/header.pug
         include chunks/mixin.pug
+        include chunks/header.pug
+        
         .product
             .product__card
                 ul.breadcrumbs.product__breadcrumbs
@@ -221,13 +222,15 @@ html(lang="ru")
         include chunks/footer.pug
 
         script(src="./number_plugin/number_plugin.min.js")
-        
-        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
-        script(src="./js/jquery.fancybox.min.js")
 
         link(href='./css/slick.css', rel='stylesheet')
         link(href='./css/slick-theme.css', rel='stylesheet')
         script(src="./js/slick.min.js")
 
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        script(src="./js/blazy.min.js")
+
         script(src="./js/jquery.inputmask.min.js")
-        script(src="./js/app.js")
+        script(src="./js/app.min.js")

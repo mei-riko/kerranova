@@ -3,8 +3,11 @@ import $ from 'jquery';
 import '../../node_modules/popper.js/dist/umd/popper';
 import '../../node_modules/bootstrap/js/dist/util';
 import '../../node_modules/bootstrap/js/dist/tooltip';
+import '../component/header/search';
+import '../component/navbar/navbar';
 import '../component/slider/slider';
 import '../component/input/input';
+import '../component/product/product';
 
 $(document).ready(() =>{
   // Плавные скролл
@@ -33,19 +36,6 @@ $(document).ready(() =>{
 			toggle.removeClass("toggle-item--active");
       toggle.find(".toggle-item__title").removeClass("toggle-item__title--active");
       toggle.find(".toggle-item__content").slideUp();
-    }
-  });
-  $('.product-content #toggleContent').on("click", function(e){
-    e.preventDefault();
-    let btn = $(this).parent();
-    if( !btn.hasClass("product-content__btn--active")){
-      btn.addClass("product-content__btn--active");
-      $(this).text("Скрыть подробности");
-      $(".product-content").removeClass("product-content--close").addClass("product-content--open");
-		}else{
-      btn.removeClass("product-content__btn--active");
-      $(this).text("Подробнее о товаре");
-      $(".product-content").removeClass("product-content--open").addClass("product-content--close");
     }
   });
   // Подсказки

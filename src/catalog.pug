@@ -9,8 +9,60 @@ html(lang="ru")
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/mixin.pug
         include chunks/header.pug
-
+        section.container.pt-3.pb-4
+            .row
+                .col-4
+                    .preview.preview_promo
+                        //- p.preview__subtitle По применению
+                        .preview_promo__image(style="background-image: url('../demo/collection-1.png');")
+                        p.preview__title Для ванной комнаты
+                        p.preview__intro Коллекции Eternа, Premium Marble и другие
+                        a.link-arrow.preview_promo__link(href="collection-type.html") Посмотреть коллекции
+                .col-4
+                    .preview.preview_promo
+                        //- p.preview__subtitle По применению
+                        .preview_promo__image(style="background-image: url('../demo/collection-3.png');")
+                        p.preview__title Для гостиной
+                        p.preview__intro Коллекции Eternа, Premium Marble и другие
+                        a.link-arrow.preview_promo__link(href="collection-type.html") Посмотреть коллекции
+                .col-4
+                    .preview.preview_promo
+                        //- p.preview__subtitle По применению
+                        .preview_promo__image(style="background-image: url('../demo/collection-4.png');")
+                        p.preview__title Для кухни
+                        p.preview__intro Коллекции Eternа, Premium Marble и другие
+                        a.link-arrow.preview_promo__link(href="collection-type.html") Посмотреть коллекции
+            h1.h3.mb-3 Каталог коллекций
+            .content-scroll
+                .content-group.content-scroll__group
+                    a.label.label_link.content-group__item(href="#") Ванна
+                    a.label.label_link.content-group__item(href="#") Кухня
+                    a.label.label_link.content-group__item(href="#") Гостиная
+                    a.label.label_link.content-group__item(href="#") Спальня
+                    a.label.label_link.content-group__item(href="#") Офис
+                    a.label.content-scroll__link.content-group__link(href="#") Все коллекции
+            .row.mt-3.mt-sm-2
+                .col-3.mb-2
+                    +collection("Marble Trend", "Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см")(src="../demo/collection-1.png")
+                .col-3.mb-2
+                    +collection("Premium Marble", "Размеры плитки: 80x160, 80x80, 60x120 см")(src="../demo/collection-2.png")
+                .col-3.mb-2
+                    +collection("Terrazzo", "Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см")(src="../demo/collection-3.png")
+                .col-3.mb-2
+                    +collection("Montana", "Размеры плитки: 80x160, 80x80, 60x120, 120x120 см")(src="../demo/collection-4.png")
+                .col-3.mb-2
+                    +collection("Premium Marble", "Размеры плитки: 80x160, 80x80, 60x120 см")(src="../demo/collection-2.png")
+                .col-3.mb-2
+                    +collection("Terrazzo", "Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см")(src="../demo/collection-3.png")
+                
         include chunks/footer.pug
-        script(src="./js/jquery.inputmask.js")
+        
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        script(src="./js/blazy.min.js")
+
+        script(src="./js/jquery.inputmask.min.js")
         script(src="./js/app.min.js")

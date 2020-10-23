@@ -11,36 +11,156 @@
   <body>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <header>
+      <div class="header header_search">
+        <div class="container">
+          <form class="form header_search__form"><button id="close-search" class="header_search__btn icon-btn close" aria-label="Закрыть" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6Z" fill="currentColor"></path></svg></button>
+            <input class="input input--full header_search__input" placeholder="Что вы ищете?"/><button id="search-start" class="header_search__btn icon-btn arrow" aria-label="Поиск" type="submit"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill="#000000" fill-rule="evenodd" clip-rule="evenodd" d="M 4,12L 16.25,12L 11,6.74994L 11.6643,6L 18.1642,12.5L 11.6642,19L 11,18.25L 16.25,13L 4,13L 4,12 Z "/></svg></button>
+          </form>
+          <p class="text-bold text-small mt-2">Чаще всего ищут:</p>
+          <div class="header_search__result row">
+            <div class="col-3 col-lg-4 col-md-6 col-sm-12"><a class="preview preview_simple mb-2" href="#">
+                    <div class="preview-simple__content">
+                      <p class="preview_simple__title">Marble Trend<span class="preview_simple__icon icon-collection"></span></p>
+                      <p class="preview_simple__intro">Коллекция с иммитацией мрамора</p>
+                    </div><img class="preview_simple__image" src="../demo/pic-1.webp"/></a>
+            </div>
+            <div class="col-3 col-lg-4 col-md-6 col-sm-12"><a class="preview preview_simple mb-2" href="#">
+                    <div class="preview-simple__content">
+                      <p class="preview_simple__title">Материалы для скачивания<span class="preview_simple__icon icon-page"></span></p>
+                      <p class="preview_simple__intro">Каталоги плитки, брендбук и т.д.</p>
+                    </div><img class="preview_simple__image" src="../demo/pic-2.webp"/></a>
+            </div>
+            <div class="col-3 col-lg-4 col-md-6 col-sm-12"><a class="preview preview_simple mb-2" href="#">
+                    <div class="preview-simple__content">
+                      <p class="preview_simple__title">K-1001 Carrara<span class="preview_simple__icon icon-product"></span></p>
+                      <p class="preview_simple__intro">Популярная позиция из нашей коллекции Marble Trend</p>
+                    </div><img class="preview_simple__image" src="../demo/pic-1.png"/></a>
+            </div>
+            <div class="col-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="preview preview_simple preview_simple--full mb-2">
+                <div class="preview-simple__content">
+                  <p class="preview_simple__title">Доставка и оплата<span class="preview_simple__icon icon-page"></span></p>
+                  <p class="preview_simple__intro">Подробности об способах оплаты товаров. Детальная информация о доставке.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="header header_top">
         <div class="container header_top__container"><a class="header__logo" href="/"></a>
-          <nav class="navbar navbar_header header_top__navbar"><a class="navbar_header__item-main" href="catalog.html">Товары</a><a class="navbar_header__item-main" href="#">Вдохновение</a><a class="navbar_header__item-main" href="store-location.html">Где купить</a></nav>
+          <nav class="navbar navbar_header header_top__navbar"><a class="navbar__item navbar_header__item-main" href="catalog.html">Каталог</a><a class="navbar__item navbar_header__item-main" href="#">Вдохновение</a><a class="navbar__item navbar_header__item-main" href="store-location.html">Где купить</a></nav>
           <div class="header__contact"><a class="header__phone" href="tel:8 800 932 123 43">8 800 932 123 43</a><a class="header__callback" data-fancybox="data-fancybox" data-src="#callbackModal" href="javascript;">Заказать звонок</a><a class="header__link d-none" href="store-location.html">Где купить?</a></div>
           <form class="form header__search" id="open-search"> 
-            <input class="input header__search-input" placeholder="Что вы ищете?"/>
+            <input class="input header__search-input" disabled="disabled" placeholder="Что вы ищете?"/>
           </form>
-          <div class="header__btn-group"><a class="header__btn" href="mailto:info@kerranova.ru"><svg class="svg-icon header__icon header__icon_mail" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+          <div class="header__btn-group"><a class="header__btn header__btn_mail" href="mailto:info@kerranova.ru"><svg class="svg-icon header__icon header__icon_mail" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g>
 <path d="M21.5,5.8c0-0.4-0.4-0.8-0.8-0.8H5.3c-0.7,0-1,0.8-0.5,1.3l5.7,5.6l-5.7,5.7C4.2,18.2,4.6,19,5.3,19h15.5c0.4,0,0.8-0.3,0.8-0.8c0,0,0,0,0,0V5.8z M19.9,16.3l-4.4-4.4l4.4-4.3V16.3z M7.1,6.6h11.7L13,12.3L7.1,6.6z M11.5,13l0.9,0.9c0.3,0.3,0.8,0.3,1.1,0l0.9-0.9l4.4,4.4H7.1L11.5,13z"/>
 <path d="M3.3,9.8h2C5.7,9.8,6,9.5,6,9S5.7,8.3,5.3,8.3h-2C2.8,8.3,2.5,8.6,2.5,9S2.8,9.8,3.3,9.8z"/>
 <path d="M5,12c0-0.4-0.3-0.8-0.8-0.8h-2c-0.4,0-0.8,0.3-0.8,0.8s0.3,0.8,0.8,0.8h2C4.7,12.8,5,12.4,5,12z"/>
 <path d="M6,15c0-0.4-0.3-0.8-0.8-0.8h-2c-0.4,0-0.8,0.3-0.8,0.8c0,0.4,0.3,0.8,0.8,0.8h2C5.7,15.7,6,15.4,6,15z"/>
 </g>
-</svg></a><a class="header__btn" data-fancybox="data-fancybox" data-src="#location" href="javascript;"><svg class="svg-icon header__icon header__icon_location" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+</svg></a><a class="header__btn header__btn_location" data-fancybox="location" data-src="#location" href="javascript;"><svg class="svg-icon header__icon header__icon_location" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g>
 <path d="M12,7.2c-1.8,0-3.2,1.4-3.2,3.1s1.4,3.1,3.2,3.1s3.2-1.4,3.2-3.1S13.8,7.2,12,7.2L12,7.2z M12,11.9c-0.9,0-1.6-0.7-1.6-1.6c0-0.9,0.7-1.6,1.6-1.6s1.6,0.7,1.6,1.6C13.6,11.2,12.9,11.9,12,11.9z M20.5,10.4C20.5,5.8,16.7,2,12,2s-8.5,3.8-8.5,8.4v0v0c0,5.7,4.3,10,8.2,11.6c0.2,0.1,0.4,0.1,0.6,0C15.5,20.7,20.5,16.8,20.5,10.4C20.5,10.4,20.5,10.4,20.5,10.4C20.5,10.4,20.5,10.4,20.5,10.4L20.5,10.4z M18.9,10.4c0,4.6-3,8.2-6.9,10c-3.9-1.8-6.9-5.4-6.9-10c0,0,0,0,0,0l0,0c0-3.7,3.1-6.8,6.9-6.8C15.8,3.6,18.9,6.6,18.9,10.4C18.9,10.4,18.9,10.4,18.9,10.4C18.9,10.4,18.9,10.4,18.9,10.4z"/>
 </g>
-</svg></a><a class="header__btn" href="cart.html"><svg class="svg-icon header__icon header__icon_cart" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<g>
-<path d="M19.7,6.7h-2.4C17,4.1,14.7,2,12,2S7,4.1,6.7,6.7H4.3C3.9,6.7,3.5,7,3.5,7.5v13.8c0,0.4,0.4,0.8,0.8,0.8h15.4c0.4,0,0.8-0.3,0.8-0.8V7.5C20.5,7,20.1,6.7,19.7,6.7z M12,3.6c1.9,0,3.4,1.4,3.7,3.1H8.3C8.6,4.9,10.1,3.6,12,3.6z M18.9,20.4H5.1V8.3h1.6v2.3c0,0.4,0.4,0.8,0.8,0.8c0.4,0,0.8-0.3,0.8-0.8V8.3h7.6v2.3c0,0.4,0.4,0.8,0.8,0.8c0.4,0,0.8-0.3,0.8-0.8V8.3h1.6V20.4z"/>
-</g>
-</svg></a>
-            <div class="header__nav" id="open-nav"></div>
+</svg></a><a class="header__btn header__btn_catalog" href="catalog.html"><svg class="svg-icon header__icon header__icon_catalog" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#1d1d1d" d="M3 4h17v17H3V4zm1 1v7h7V5H4zm15 7V5h-7v7h7zM4 20h7v-7H4v7zm15 0v-7h-7v7h7z"/></svg><span class="header__btn-label">Каталог</span></a><a class="header__btn header__btn_portfolio" href="text.html"><svg class="svg-icon header__icon header__icon_portfolio" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#1d1d1d" d="M6,3H17L20.9,8.57L11.5,22L2.1,8.57L6,3M10.16,4L8.46,8H14.54L12.84,4H10.16M8.33,9L11.5,18.76L14.67,9H8.33M3.72,8H7.38L9.08,4H6.5L3.72,8M3.62,9L10.44,18.75L7.28,9H3.62M19.28,8L16.5,4H13.92L15.62,8H19.28M19.38,9H15.72L12.56,18.75L19.38,9Z"/></svg><span class="header__btn-label">Вдохновение</span></a><a class="header__btn header__btn_cart" href="cart.html"><svg class="svg-icon header__icon header__icon_cart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path fill="#1d1d1d" d="M19.7,6.7h-2.4C17,4.1,14.7,2,12,2S7,4.1,6.7,6.7H4.3C3.9,6.7,3.5,7,3.5,7.5v13.8c0,0.4,0.4,0.8,0.8,0.8h15.4c0.4,0,0.8-0.3,0.8-0.8V7.5C20.5,7,20.1,6.7,19.7,6.7z M12,3.6c1.9,0,3.4,1.4,3.7,3.1H8.3C8.6,4.9,10.1,3.6,12,3.6z M18.9,20.4H5.1V8.3h1.6v2.3c0,0.4,0.4,0.8,0.8,0.8c0.4,0,0.8-0.3,0.8-0.8V8.3h7.6v2.3c0,0.4,0.4,0.8,0.8,0.8c0.4,0,0.8-0.3,0.8-0.8V8.3h1.6V20.4z"/></g></svg><span class="header__btn-label">Корзина</span></a>
+            <div class="header__btn header__nav" id="open-nav"><svg class="svg-icon header__icon header__icon_nav" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#1d1d1d" clip-rule="evenodd" d="M20 8H4V6H20V8ZM20 13H4V11H20V13ZM20 18H4V16H20V18Z"></path></svg><span class="header__btn-label">Меню</span></div>
           </div>
         </div>
       </div>
       <div class="header header_bottom">
         <div class="container">
-          <nav class="navbar navbar_header"><a class="navbar_header__item navbar_header__item--sale" href="">Акции</a><a class="navbar_header__item" href="">Новинки</a><a class="navbar_header__item" href="">Коллекции</a><a class="navbar_header__item" href="">По помещению</a><a class="navbar_header__item" href="">По текстуре</a><a class="navbar_header__item navbar_header__item--secondary" href="">О компании</a><a class="navbar_header__item navbar_header__item--secondary" href="">Новости</a><a class="navbar_header__item navbar_header__item--secondary" href="">Контакты</a><a class="navbar_header__item" href="">Покупателям</a><a class="navbar_header__item" href="">Партнерам</a></nav>
+          <nav class="navbar navbar_header">
+            <div class="navbar_header__mobile-title">Меню</div><button id="close-nav" class="navbar_header__close icon-btn" aria-label="Закрыть" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6Z" fill="currentColor"></path></svg></button><a class="navbar__item navbar_header__item navbar_header__item--mobile" href="">Каталог</a><a class="navbar__item navbar_header__item navbar_header__item--mobile" href="">Вдохновение</a><a class="navbar__item navbar_header__item navbar_header__item--mobile" href="">Где купить?</a><a class="navbar__item navbar_header__item navbar_header__item--sale" href="">Акции</a>
+            <div class="navbar_header__parent"><a class="navbar__item navbar_header__item" data-nav="new" href="javascript;">Новинки</a>
+              <div class="navbar-inside" id="new">
+                <p class="navbar-inside__title">Новое в каталоге</p><button class="navbar_header__back icon-btn" data-close="new" aria-label="Назад" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill="#1d1d1d" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 19,13L 6.74998,13L 12,18.2501L 11.3357,19L 4.83579,12.5L 11.3358,6L 12,6.75001L 6.75,12L 19,12L 19,13 Z "/></svg></button>
+                <div class="navbar-inside__row row">
+                  <div class="navbar-inside__col col-2 col-lg-12 mb-lg-2"><a class="navbar_header__link" href="product.html">Marble Trend K-1004</a><a class="navbar_header__link" href="product.html">Premium Marble K-956</a><a class="navbar_header__link" href="product.html">Terrazzo K-332</a><a class="navbar_header__link" href="product.html">Terrazzo K-333</a><a class="navbar_header__link" href="product.html">CENTRAL PARK K-921</a></div>
+                  <div class="navbar-inside__col col-3 col-lg-12"><a class="preview preview_simple mb-2" href="#">
+                          <div class="preview-simple__content">
+                            <p class="preview_simple__title">Marble Trend<span class="preview_simple__icon icon-collection"></span></p>
+                            <p class="preview_simple__intro">Коллекция с иммитацией мрамора</p>
+                          </div><img class="preview_simple__image" src="../demo/pic-1.webp"/></a><a class="preview preview_simple mb-2" href="#">
+                          <div class="preview-simple__content">
+                            <p class="preview_simple__title">Marble Trend<span class="preview_simple__icon icon-collection"></span></p>
+                            <p class="preview_simple__intro">Коллекция с иммитацией мрамора</p>
+                          </div><img class="preview_simple__image" src="../demo/pic-1.webp"/></a>
+                  </div>
+                  <div class="navbar-inside__col col-3 col-lg-12"><a class="preview preview_simple mb-2" href="#">
+                          <div class="preview-simple__content">
+                            <p class="preview_simple__title">Marble Trend<span class="preview_simple__icon icon-collection"></span></p>
+                            <p class="preview_simple__intro">Коллекция с иммитацией мрамора</p>
+                          </div><img class="preview_simple__image" src="../demo/pic-1.webp"/></a><a class="preview preview_simple mb-2" href="#">
+                          <div class="preview-simple__content">
+                            <p class="preview_simple__title">Marble Trend<span class="preview_simple__icon icon-collection"></span></p>
+                            <p class="preview_simple__intro">Коллекция с иммитацией мрамора</p>
+                          </div><img class="preview_simple__image" src="../demo/pic-1.webp"/></a>
+                  </div>
+                  <div class="navbar-inside__col col-4 col-lg-12"><a class="preview preview_simple preview_simple--focus mb-2" href="collection.html">
+                      <div class="preview-simple__content">
+                        <p class="preview_simple__title text-bold">Интерьеры для вашей ванной комнаты</p>
+                        <p class="preview_simple__intro">Большинство плитки от Kerranova влагостойкая</p>
+                      </div><img class="preview_simple__image preview_simple__image--focus" src="../demo/pic-1.png"/></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar_header__parent"><a class="navbar__item navbar_header__item" data-nav="collection" href="javascript;">Коллекции</a>
+              <div class="navbar-inside" id="collection"><a class="navbar-inside__title link-arrow" href="catalog.html">Все коллекции</a><button class="navbar_header__back icon-btn" data-close="collection" aria-label="Назад" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill="#1d1d1d" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 19,13L 6.74998,13L 12,18.2501L 11.3357,19L 4.83579,12.5L 11.3358,6L 12,6.75001L 6.75,12L 19,12L 19,13 Z "/></svg></button>
+                <div class="navbar-inside__row row">
+                  <div class="navbar-inside__col col-2 col-lg-12 mb-lg-2"><a class="navbar_header__link" href="collection.html">CENTRAL PARK</a><a class="navbar_header__link" href="collection.html">CANYON</a><a class="navbar_header__link" href="collection.html">MONTANA</a><a class="navbar_header__link" href="collection.html">MARBLE TREND</a><a class="navbar_header__link" href="collection.html">GENESIS</a><a class="navbar_header__link" href="collection.html">TERRAZZO</a></div>
+                  <div class="navbar-inside__col col-2 col-lg-12 mb-lg-2"><a class="navbar_header__link" href="collection.html">SHEVRO</a><a class="navbar_header__link" href="collection.html">MANHATTAN</a><a class="navbar_header__link" href="collection.html">THE BRONX</a><a class="navbar_header__link" href="collection.html">BLACK&WHITE</a><a class="navbar_header__link" href="collection.html">ETERNA</a><a class="navbar_header__link" href="collection.html">ONICE</a></div>
+                  <div class="navbar-inside__col col-2 col-lg-12 mb-lg-2"><a class="navbar_header__link" href="collection.html">ARRIS</a><a class="navbar_header__link" href="collection.html">SHAKESPEARE</a><a class="navbar_header__link" href="collection.html">TERRA</a><a class="navbar_header__link" href="collection.html">PREMIUM MARBLE</a><a class="navbar_header__link" href="collection.html">PATCHWOOD</a><a class="navbar_header__link" href="collection.html">RANCHO</a></div>
+                  <div class="navbar-inside__col col-2 col-lg-12 mb-lg-2"><a class="navbar_header__link" href="collection.html">MADERA</a><a class="navbar_header__link" href="collection.html">PALE WOOD</a><a class="navbar_header__link" href="collection.html">CIMIC WOOD</a><a class="navbar_header__link" href="collection.html">TIME RING</a><a class="navbar_header__link" href="collection.html">VILLAGE</a></div>
+                  <div class="navbar-inside__col col-3 col-lg-12"><a class="preview preview_simple mb-2" href="#">
+                          <div class="preview-simple__content">
+                            <p class="preview_simple__title">Marble Trend<span class="preview_simple__icon icon-collection"></span></p>
+                            <p class="preview_simple__intro">Коллекция с иммитацией мрамора</p>
+                          </div><img class="preview_simple__image" src="../demo/pic-1.webp"/></a><a class="preview preview_simple mb-2" href="#">
+                          <div class="preview-simple__content">
+                            <p class="preview_simple__title">Marble Trend<span class="preview_simple__icon icon-collection"></span></p>
+                            <p class="preview_simple__intro">Коллекция с иммитацией мрамора</p>
+                          </div><img class="preview_simple__image" src="../demo/pic-1.webp"/></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar_header__parent"><a class="navbar__item navbar_header__item" data-nav="type" href="javascript;">По помещению</a>
+              <div class="navbar-inside" id="type">
+                <p class="navbar-inside__title">Сортировать по типу помещения</p><button class="navbar_header__back icon-btn" data-close="type" aria-label="Назад" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill="#1d1d1d" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 19,13L 6.74998,13L 12,18.2501L 11.3357,19L 4.83579,12.5L 11.3358,6L 12,6.75001L 6.75,12L 19,12L 19,13 Z "/></svg></button>
+                <div class="navbar-inside__row row">
+                  <div class="navbar-inside__col col-3 col-lg-12"><a class="preview preview_simple mb-2" href="#">
+                          <div class="preview-simple__content">
+                            <p class="preview_simple__title">Для ванной комнаты<span class="preview_simple__icon icon-collection"></span></p>
+                            <p class="preview_simple__intro">Коллекция с иммитацией мрамора</p>
+                          </div><img class="preview_simple__image" src="../demo/pic-1.webp"/></a><a class="preview preview_simple mb-2" href="#">
+                          <div class="preview-simple__content">
+                            <p class="preview_simple__title">Для гостиной<span class="preview_simple__icon icon-collection"></span></p>
+                            <p class="preview_simple__intro">Коллекция с иммитацией мрамора</p>
+                          </div><img class="preview_simple__image" src="../demo/pic-2.webp"/></a>
+                  </div>
+                  <div class="navbar-inside__col col-3 col-lg-12"><a class="preview preview_simple mb-2" href="#">
+                          <div class="preview-simple__content">
+                            <p class="preview_simple__title">Для кухни<span class="preview_simple__icon icon-collection"></span></p>
+                            <p class="preview_simple__intro">Коллекция с иммитацией мрамора</p>
+                          </div><img class="preview_simple__image" src="../demo/pic-3.webp"/></a><a class="preview preview_simple mb-2" href="#">
+                          <div class="preview-simple__content">
+                            <p class="preview_simple__title">Для санузла<span class="preview_simple__icon icon-collection"></span></p>
+                            <p class="preview_simple__intro">Коллекция с иммитацией мрамора</p>
+                          </div><img class="preview_simple__image" src="../demo/pic-4.webp"/></a>
+                  </div>
+                  <div class="navbar-inside__col col-3 col-lg-12"><a class="preview preview_simple mb-2" href="#">
+                          <div class="preview-simple__content">
+                            <p class="preview_simple__title">Для спальни<span class="preview_simple__icon icon-collection"></span></p>
+                            <p class="preview_simple__intro">Коллекция с иммитацией мрамора</p>
+                          </div><img class="preview_simple__image" src="../demo/pic-1.webp"/></a>
+                  </div>
+                </div>
+              </div>
+            </div><a class="navbar__item navbar_header__item navbar_header__item--secondary" href="text.html">О компании</a><a class="navbar__item navbar_header__item navbar_header__item--secondary" href="download.html">Материалы</a><a class="navbar__item navbar_header__item navbar_header__item--secondary" href="contact.html">Контакты</a><a class="navbar__item navbar_header__item" href="text.html">Покупателям</a><a class="navbar__item navbar_header__item" href="text.html">Партнерам</a>
+          </nav>
         </div>
       </div>
     </header>
@@ -244,6 +364,10 @@
         </div>
       </div>
     </footer>
+    <div class="overlay overlay--disable"></div>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/blazy.min.js"></script>
     <script src="./js/jquery.inputmask.min.js"></script>
     <script src="./js/app.min.js"></script>
   </body>

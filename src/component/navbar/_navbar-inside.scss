@@ -1,0 +1,44 @@
+.navbar-inside{
+    display: none;
+
+    position: absolute;
+    top: 45px;
+    left: 0;
+
+    padding: 30px;
+
+    width: 100%;
+    max-width: 100%;
+    background-color: darken($color: $light-grey, $amount: 3);
+
+    &__title{
+        font-size: map-get($map: $font-size, $key: sm);
+        line-height: 1.2;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        margin-bottom: $spacer/2;
+    }
+
+    &--active{
+        display: block;
+        z-index: 999;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .navbar-inside{
+        &--active{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            background-color: $white;;
+
+            width: 360px;
+            max-width: 100%;
+            padding: 36px 60px;
+        }
+    }
+}

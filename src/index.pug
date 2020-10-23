@@ -9,8 +9,9 @@ html(lang="ru")
         link(href='./css/style.css', rel='stylesheet')
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
-        include chunks/header.pug
         include chunks/mixin.pug
+        include chunks/header.pug
+        
         //- Slider
         .container
             .row.content-row.mt-3.mb-0.mb-md-2
@@ -175,14 +176,14 @@ html(lang="ru")
                     img.img-fluid.mb-1(src="../demo/pic-6.webp")
         include chunks/footer.pug
 
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
+        script(src="./js/slick.min.js")
+
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")
 
         script(src="./js/blazy.min.js")
-
-        link(href='./css/slick.css', rel='stylesheet')
-        link(href='./css/slick-theme.css', rel='stylesheet')
-        script(src="./js/slick.min.js")
 
         script(src="./js/jquery.inputmask.min.js")
         script(src="./js/app.min.js")

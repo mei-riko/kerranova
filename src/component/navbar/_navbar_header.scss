@@ -1,6 +1,15 @@
 .navbar_header{
     // margin-left: -$grid-gutter-width/2;
     // margin-right: -$grid-gutter-width/2;
+    position: relative;
+
+    &__mobile-title{
+        display: none;
+    }
+    &__back,
+    &__close{
+        display: none;
+    }
 
     &__item-main{
         font-size: 14px;
@@ -38,5 +47,115 @@
                 background-color: $light-grey;
             }
         }
+        &--secondary{
+            color: $grey;
+        }
+        &--mobile{
+            display: none;
+        }
     }
+    &__parent{
+        font-size: 13px;
+        font-weight: $font-weight-light;
+        color: $black;
+        display: inline-block;
+
+        &:hover, &:focus{
+            color: $black;
+            text-decoration: none;
+            background-color: darken($color: $light-grey, $amount: 3);
+        }
+    }
+    &__link{
+        display: block;
+        margin-bottom: $spacer/4;
+        
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .navbar_header{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    
+        width: 360px;
+        max-width: 100%;
+    
+        padding: $spacer/2 47px;
+    
+        z-index: 8000;
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+    
+        overflow-y: auto;
+        overflow-x: hidden;
+        transform: translateX(-360px);
+        transition: transform 0.2s 0s;
+        transition-property: transform, visibility;
+
+        &__mobile-title{
+            display: block;
+            padding: 13px;
+            font-weight: $font-weight-bold;
+        }
+        &__back,
+        &__close{
+            display: block;
+
+            top: $spacer/2;
+            right: $spacer/2;
+        }
+        &__item{
+            font-size: 14px;
+            padding: 8px 13px;
+            width: 100%;
+
+            &--sale{
+                padding-left: 13px;
+            }
+            &--mobile{
+                display: block;
+                font-weight: $font-weight-bold;
+            }
+        }
+        &__parent{
+            position: relative;
+            &:after{
+                content: '';
+
+                display: block;
+                width: 10px;
+                height: 10px;
+                
+                background: url(../icon/arrow-next.svg) no-repeat center / contain;
+                
+                position: absolute;
+                right: -15px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        &--active{
+            transform: translateX(0px);
+            filter: drop-shadow(0px 2px 6px $grey);
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .navbar_header{
+        padding: $spacer/2 27px;
+        &__parent{
+            &:after{
+                right: 5px;
+            }
+        }
+    }   
 }
