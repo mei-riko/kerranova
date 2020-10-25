@@ -50,6 +50,9 @@
         &__title{
             font-size: 20px;
         }
+        &__image{
+            height: 140px;
+        }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){

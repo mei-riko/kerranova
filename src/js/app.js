@@ -8,6 +8,7 @@ import '../component/navbar/navbar';
 import '../component/slider/slider';
 import '../component/input/input';
 import '../component/product/product';
+import '../component/collection/aside';
 
 $(document).ready(() =>{
   // Плавные скролл

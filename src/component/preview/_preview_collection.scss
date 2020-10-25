@@ -1,4 +1,10 @@
 .preview_collection{
+    &__catalog{
+        text-decoration: none;
+        &:hover, &:focus{
+            color: inherit;
+        }
+    }
     &__image{
         width: 100%;
         height: auto;
@@ -22,5 +28,17 @@
     &__intro{
         height: 40px;
         overflow: hidden;
+    }
+    &__link{
+        font-size: map-get($map: $font-size, $key: "sm");
+        font-weight: $font-weight-bold;
+        line-height: 18px;
+        margin-top: $spacer/2;
+        cursor: pointer;
+        
+        &:hover, &:focus{
+            text-decoration: none;
+            color: $black;
+        }
     }
 }

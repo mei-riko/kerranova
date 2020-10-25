@@ -39,7 +39,7 @@
 
 @import "slider/slick";
 @import "slider/slider";
-@import "slider/slider_index";
+@import "slider/slider_content";
 @import "slider/slider_collection";
 @import "slider/slider_product";
 
@@ -97,3 +97,6 @@
 @import "product/product";
 @import "product/product-sidebar";
 @import "product/product-content";
+
+@import "collection/collection";
+@import "collection/collection-aside";

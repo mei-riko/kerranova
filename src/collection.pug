@@ -1,16 +1,86 @@
 html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Index Page
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Collection
 
-        link(href='./css/style.css', rel='stylesheet')
+    link(href='./css/style.css', rel='stylesheet')
 
-    body
-        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
-        include chunks/header.pug
+  body
+    script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+    include chunks/mixin.pug
+    include chunks/header.pug
+    //- Slider
+    .container.collection
+        //- Information
+        .row.mt-3.mb-2
+            .col-7.mb-2
+                .slider.slider_content
+                    a.slider_content__item.slider_content__item--collection(href="collection.html" style="background-image: url('../demo/demo.jpg');")
+                    a.slider_content__item.slider_content__item--collection(href="collection.html" style="background-image: url('../demo/photo.png');")
+            .col-5.mb-2
+                h1.collection__title Marble Trend
+                p.collection__intro Ванная — это одновременно и личное, и общее пространство. Наши решения для хранения облегчат утренние сборы всем членам семьи. У нас есть для этого шкафы, стеллажи и полки, причем в разных стилях и разных размеров.
+        //- Product List
+        .content-scroll.collection__filter
+            .content-group
+                span.label.label_link.content-group__item(data-filter="type") Тип товара
+                span.label.label_link.content-group__item(data-filter="price") Цена
+                span.label.label_link.content-group__item(data-filter="color") Цвет
+                span.label.label_link.content-group__item(data-filter="material") Тип поверхности
+                span.label.label_link.content-group__item(data-filter="size") Размер
+                span.label.label_link.label_link--active.content-group__item(data-filter="texture") Фактура
+                span.label.label_link.content-group__item(data-filter="area") Назначение                    
+        .row.collection__row
+            .col.col-sm-6.mb-3.mb-sm-2
+                +product("K-1001 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-1.jpg');")
+            .col.col-sm-6.mb-3.mb-sm-2
+                +product("K-1002 CALACATTA GOLD", "Marble Trend" , "60х60, 30х60, 120х60", "от 769")(style="background-image:url('../demo/product-2.jpg');")
+            .col.col-sm-6.mb-3.mb-sm-2
+                +product("K-1003 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 2 449")(style="background-image:url('../demo/product-3.jpg');")
+            .col.col-sm-6.mb-3.mb-sm-2
+                +product("K-1004 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 959")(style="background-image:url('../demo/product-4.jpg');")
+            .col.col-sm-6.mb-3.mb-sm-2
+                +product("K-1005 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-5.jpg');")
+            .col.col-sm-6.mb-3.mb-sm-2
+                +product("K-1006 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-1.jpg');")
+            .col.col-sm-6.mb-3.mb-sm-2
+                +product("K-1007 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-2.jpg');")
+            .col.col-sm-6.mb-3.mb-sm-2
+                +product("K-1008 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-3.jpg');")
+            .col.col-sm-6.mb-3.mb-sm-2
+                +product("K-1001 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-1.jpg');")
+            .col.col-sm-6.mb-3.mb-sm-2
+                +product("K-1002 CALACATTA GOLD", "Marble Trend" , "60х60, 30х60, 120х60", "от 769")(style="background-image:url('../demo/product-2.jpg');")
+        .text-center
+            a.btn.btn_secondary.btn--small(href="#") Загрузить ещё
+        //- Interiors
+        .mt-3.mb-2
+            h4.content-title Интерьерные решения
+            .content-interior
+                .content-interior__col-left
+                    .content-interior__image.content-interior__image--full(data-fancybox="interior" data-src="../demo/demo.jpg" style="background-image:url('../demo/demo.jpg');")
+                .content-interior__col-right
+                    .content-interior__image(data-fancybox="interior" data-src="../demo/pic-1.webp" style="background-image:url('../demo/pic-1.webp');")
+                    .content-interior__image(data-fancybox="interior" data-src="../demo/pic-2.webp" style="background-image:url('../demo/pic-2.webp');")
+        //- Content
+        .row.content.mt-3.mb-3
+            .col-9.col-sm-12
+                h4 Информация о коллекции Marble Trend
+                p Мрамор является одним из самых востребованных материалов в дизайн-проектах интерьеров. Colorker снова бросает вызов природе в коллекции Invictus, добиваясь крайнего сходства. Утонченная плитка крупного формата в новых цветовых решениях, подчеркивающая естественный рисунок прекрасного камня. 
+                p Исключительная красота стала плодом напряженной исследовательской работы, позволившей воплотить в жизнь этот проект, рожденный, чтобы быть непобедимым. Эта коллекция также представлена в расцветке White, позволяющей создавать всегда востребованные полы из белого мрамора высочайшего качества. Расцветку Amber отличает не только огромная сила и индивидуальность, но и ослепительный блеск. INVICTUS, мощная и привлекательная коллекция для рынков, на которых высоко котируется видимая роскошь. 
+    .collection-aside(data-collection="filter")
+        
+    include chunks/footer.pug
+    link(href='./css/slick.css', rel='stylesheet')
+    link(href='./css/slick-theme.css', rel='stylesheet')
+    script(src="./js/slick.min.js")
 
-        include chunks/footer.pug
-        script(src="./js/jquery.inputmask.js")
-        script(src="./js/app.min.js")
+    link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+    script(src="./js/jquery.fancybox.min.js")
+
+    script(src="./js/blazy.min.js")
+
+    script(src="./js/jquery.inputmask.min.js")
+    script(src="./js/app.min.js")

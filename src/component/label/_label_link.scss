@@ -5,4 +5,10 @@
     &:hover, &:focus{
         border-color: $border-color;
     }
+
+    &--active{
+        background-color: $black;
+        color: $white;
+        border-color: $black;
+    }
 }

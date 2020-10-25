@@ -1,4 +1,4 @@
-.slider_index{
+.slider_content{
     width: 100%;
     padding-right: map-get($map: $spacers, $key: 1);
     // margin-bottom: $spacer;
@@ -8,20 +8,29 @@
 
         background: no-repeat center / cover;
         border-radius: 4px;
+        width: 100%;
         height: 420px;
         margin: 0;
 
         &:hover, &:focus{
-            .slider_index__text{
+            .slider_content__text{
                 color: $black;
             }
-            .slider_index__arrow{
+            .slider_content__arrow{
                 fill: $grey;
             }
         }
         //- Slick
         &.slick-slide{
             height: 420px;
+        }
+        //- Collection
+        &--collection{
+            height: 300px;
+            //- Slick
+            &.slick-slide{
+                height: 300px;
+            }
         }
     }
     &__content{
@@ -39,13 +48,15 @@
         font-size: map-get($map: $font-size, $key: "md");
         font-weight: $font-weight-bold;
         line-height: 1.4;
-        margin-bottom: $grid-gutter-width/2;
+        // margin-bottom: $grid-gutter-width/2;
         color: $black;
+
         &:hover, &:focus{
             color: $black;
         }
     }
     &__arrow{
+        margin-top: $grid-gutter-width/2;
         transition: .4s;
     }
     //- Slick
@@ -87,11 +98,19 @@
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
-    .slider_index{
+    .slider_content{
         &__item{
             //- Slick
             &.slick-slide{
                 height: 350px;
+            }
+            //- Collection
+            &--collection{
+                height: 300px;
+                //- Slick
+                &.slick-slide{
+                    height: 300px;
+                }
             }
         }
         &__content{
@@ -100,7 +119,7 @@
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
-    .slider_index{
+    .slider_content{
         &__item{
             //- Slick
             &.slick-slide{
@@ -115,7 +134,7 @@
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
-    .slider_index{
+    .slider_content{
         &__item{
             //- Slick
             &.slick-slide{
@@ -125,7 +144,7 @@
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
-    .slider_index{
+    .slider_content{
         &__item{
             max-height: 100vh;
             //- Slick

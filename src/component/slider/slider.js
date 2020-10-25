@@ -4,8 +4,8 @@ $(document).ready(() =>{
   // Слайдер
 	if( $('.slider').length > 0 ){
     // Slider On Index Page
-    let $slickIndex = $('.slider.slider_index');
-		$slickIndex.slick({
+    let $slickContent = $('.slider.slider_content');
+		$slickContent.slick({
 			slidesToShow  : 1,
 			slidesToScroll: 1,
 			arrows        : false,

@@ -6,16 +6,17 @@ mixin preview-simple(title, intro)
             p.preview_simple__intro= intro
         img.preview_simple__image(src!=attributes.src)
 mixin collection(title, intro)
-    a.preview.preview_collection(href="collection.html")
-        img.preview_collection__image(src!=attributes.src)
-        .preview_collection__gallery
-            img.preview_collection__gallery-item(src="../demo/pic-1.png")
-            img.preview_collection__gallery-item(src="../demo/pic-2.png")
-            img.preview_collection__gallery-item(src="../demo/pic-3.png")
-            img.preview_collection__gallery-item(src="../demo/pic-4.png")
-        .preview__title.preview__title_link= title
-        p.preview__intro.preview_collection__intro= intro
-        .link-arrow.preview_promo__link Посмотреть коллекцию
+    .preview.preview_collection
+        a.preview_collection__catalog(href="collection.html")
+            img.preview_collection__image(src!=attributes.src)
+            .preview_collection__gallery
+                img.preview_collection__gallery-item(src="../demo/pic-1.png")
+                img.preview_collection__gallery-item(src="../demo/pic-2.png")
+                img.preview_collection__gallery-item(src="../demo/pic-3.png")
+                img.preview_collection__gallery-item(src="../demo/pic-4.png")
+            .preview__title.preview__title_link= title
+            p.preview__intro.preview_collection__intro= intro
+        .link-arrow.preview_collection__link(id!=attributes.id) Посмотреть коллекцию
 mixin collection-simple(title, intro)
     .preview.preview_collection
         img.preview_collection__image(src!=attributes.src)
@@ -26,9 +27,9 @@ mixin collection-simple(title, intro)
             img.preview_collection__gallery-item(src="../demo/pic-4.png")
         a.link-arrow.preview_promo__link-title(href="collection.html")= title
 mixin product(title, collection, size, price)
-    .preview.preview_product
+    a.preview.preview_product(href="product.html")
         .preview_product__image(style!=attributes.style)
-        a.preview__title.preview_product__title.preview__title_link(href="product.html")= title
+        .preview__title.preview_product__title= title
         p.preview__intro.preview_product__intro
             span.preview_product__collection= collection
             span.preview_product__size= size 
