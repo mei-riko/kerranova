@@ -1,0 +1,66 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Empty Search
+
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/mixin.pug
+        include chunks/header.pug
+        //- Information
+        section.container.mt-3.mt-sm-2
+            .row
+                .col-8.col-md-10.col-sm-12
+                    h1.h2.text-base По&nbsp;запросу 
+                        span.text-bold "плитка для офиса" 
+                        | нет&nbsp;совпадений.
+                    p Мы не нашли подходящих товаров, но 
+                        a.text-underline(href="search-text.html") есть 3 стр.
+                        | , связанных с этим запросом.
+        //- Sales
+        aside.container.mt-4.mt-md-3
+            .row
+                .col-4.mb-2.col-sm-12
+                    +preview-page("Комплексное решение для ванных комнат c сантехникой Sanita Luxe","-50%")(style="background-image: url('../demo/collection-2.png');")
+                .col-4.mb-2.col-sm-12
+                    +preview-page("Для дизайнеров и архитекторов: каталоги и уникальные  предложения","")(style="background-image: url('../demo/collection-3.png');")
+                .col-4.mb-2.col-sm-12
+                    +preview-page("Готовые решения для комплектации коммерческих объектов","")(style="background-image: url('../demo/collection-4.png');")
+        //- Popular Product
+        aside.container.mt-3.mt-md-2.mb-3.mb-md-2
+            h3.content-title Популярные товары
+            .slider.slider_preview.slider_product.row
+                .col.slider_product__col.mb-2
+                    +product("K-1001 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-1.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1002 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 769")(style="background-image:url('../demo/product-2.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1003 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 2 449")(style="background-image:url('../demo/product-3.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1004 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 959")(style="background-image:url('../demo/product-4.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1005 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-5.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1006 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-1.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1007 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-2.jpg');")
+                .col.slider_product__col.mb-2
+                    +product("K-1008 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-3.jpg');")
+        
+        include chunks/footer.pug
+        
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
+        script(src="./js/slick.min.js")
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        script(src="./js/blazy.min.js")
+
+        script(src="./js/jquery.inputmask.min.js")
+        script(src="./js/app.min.js")

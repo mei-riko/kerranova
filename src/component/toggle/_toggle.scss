@@ -1,0 +1,44 @@
+.toggle-item{
+    &__title{
+        position: relative;
+        padding: $spacer/2 0;
+        padding-right: $spacer;
+        cursor: pointer;
+
+        &:after{
+            content: '';
+            display: block;
+
+            width: $spacer/2;
+            height: $spacer/2;
+
+            background: url("../icon/arrow-down.svg") no-repeat center / contain;
+
+            position: absolute;
+            right: $spacer/4;
+            top: calc(50% - 10px);
+        }
+        &--active{
+            &:after{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__content{
+        display: none;
+        padding: $spacer/2 0;
+        &--active{
+            display: block;
+        }
+    }
+
+    // Filters
+    &_filter{
+        font-size: map-get($map: $font-size, $key: "sm");
+        &__value{
+            display: block;
+            color: $grey;
+            font-weight: $font-weight-base;
+        }
+    }
+}

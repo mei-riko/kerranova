@@ -81,14 +81,17 @@ $(document).ready(() =>{
 
     // Desktop Hover Nav
     var timeout = null;
-    // Задержка скрытия меню 0.5сек
+    // Задержка скрытия меню 0.4сек
     $('.navbar.navbar_header .navbar_header__parent').mouseenter(function(){
         clearTimeout(timeout);
-        navbarHover( $(this) );
+        let nav = $(this);
+        timeout = setTimeout( function(){
+            navbarHover( nav );
+        }, 200);
     });    
-    $('.navbar.navbar_header .navbar_header__parent').mouseleave(function(){
+    $('.navbar.navbar_header .navbar_header__parent').mouseleave(function(event){
         clearTimeout(timeout);
-        timeout = setTimeout( navbarUnHover , 500);
+        timeout = setTimeout( navbarUnHover , 400);
     });
     
     // Mobile Click Nav

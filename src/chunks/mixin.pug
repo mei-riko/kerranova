@@ -1,5 +1,5 @@
 mixin preview-simple(title, intro)
-    a.preview.preview_simple.mb-2(href="#")
+    a.preview.preview_simple.mb-2(href!=attributes.href)
         .preview-simple__content
             p.preview_simple__title= title
                 span.preview_simple__icon(class!=attributes.class)

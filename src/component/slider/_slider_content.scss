@@ -140,6 +140,14 @@
             &.slick-slide{
                 height: 320px;
             }
+            //- Collection
+            &--collection{
+                height: 240px;
+                //- Slick
+                &.slick-slide{
+                    height: 240px;
+                }
+            }
         }
     }
 }
@@ -150,6 +158,14 @@
             //- Slick
             &.slick-slide{
                 height: 360px;
+            }
+            //- Collection
+            &--collection{
+                height: 160px;
+                //- Slick
+                &.slick-slide{
+                    height: 160px;
+                }
             }
         }
         &__content{

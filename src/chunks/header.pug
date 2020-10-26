@@ -8,13 +8,13 @@ header
             p.text-bold.text-small.mt-2 Чаще всего ищут:
             .header_search__result.row
                 .col-3.col-lg-4.col-md-6.col-sm-12
-                    +preview-simple("Marble Trend", "Коллекция с иммитацией мрамора")(class="icon-collection" src="../demo/pic-1.webp")
+                    +preview-simple("Marble Trend", "Коллекция с иммитацией мрамора")(class="icon-collection" src="../demo/pic-1.webp" href="collection.html")
                 .col-3.col-lg-4.col-md-6.col-sm-12
-                    +preview-simple("Материалы для скачивания", "Каталоги плитки, брендбук и т.д.")(class="icon-page" src="../demo/pic-2.webp")
+                    +preview-simple("Материалы для скачивания", "Каталоги плитки и брендбук")(class="icon-page" src="../demo/pic-2.webp" href="download.html")
                 .col-3.col-lg-4.col-md-6.col-sm-12
-                    +preview-simple("K-1001 Carrara", "Популярная позиция из нашей коллекции Marble Trend")(class="icon-product" src="../demo/pic-1.png")
+                    +preview-simple("K-1001 Carrara", "Популярная позиция из нашей коллекции Marble Trend")(class="icon-product" src="../demo/pic-1.png" href="product.html")
                 .col-3.col-lg-4.col-md-6.col-sm-12
-                    .preview.preview_simple.preview_simple--full.mb-2
+                    a.preview.preview_simple.preview_simple--full.mb-2(href="text.html")
                         .preview-simple__content
                             p.preview_simple__title Доставка и оплата
                                 span.preview_simple__icon.icon-page
@@ -66,13 +66,13 @@ header
                 .navbar_header__mobile-title Меню
                 <button id="close-nav" class="navbar_header__close icon-btn" aria-label="Закрыть" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6Z" fill="currentColor"></path></svg></button>
                 
-                a.navbar__item.navbar_header__item.navbar_header__item--mobile(href="") Каталог
-                a.navbar__item.navbar_header__item.navbar_header__item--mobile(href="") Вдохновение
-                a.navbar__item.navbar_header__item.navbar_header__item--mobile(href="") Где купить?
+                a.navbar__item.navbar_header__item.navbar_header__item--mobile(href="catalog.html") Каталог
+                a.navbar__item.navbar_header__item.navbar_header__item--mobile(href="#") Вдохновение
+                a.navbar__item.navbar_header__item.navbar_header__item--mobile(href="store-location.html") Где купить?
                 
-                a.navbar__item.navbar_header__item.navbar_header__item--sale(href="") Акции
+                a.navbar__item.navbar_header__item.navbar_header__item--sale(href="#") Акции
                 .navbar_header__parent
-                    a.navbar__item.navbar_header__item(data-nav="new" href="javascript;") Новинки
+                    a.navbar__item.navbar_header__item(data-nav="new" href="#") Новинки
                     //- Inside Nav
                     .navbar-inside#new
                         p.navbar-inside__title Новое в каталоге
@@ -97,7 +97,7 @@ header
                                         p.preview_simple__intro Большинство плитки от Kerranova влагостойкая
                                     img.preview_simple__image.preview_simple__image--focus(src="../demo/pic-1.png")
                 .navbar_header__parent
-                    a.navbar__item.navbar_header__item(data-nav="collection" href="javascript;") Коллекции
+                    a.navbar__item.navbar_header__item(data-nav="collection" href="catalog.html") Коллекции
                     //- Inside Nav
                     .navbar-inside#collection
                         a.navbar-inside__title.link-arrow(href="catalog.html") Все коллекции
@@ -141,13 +141,13 @@ header
                         <button class="navbar_header__back icon-btn" data-close="type" aria-label="Назад" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill="#1d1d1d" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 19,13L 6.74998,13L 12,18.2501L 11.3357,19L 4.83579,12.5L 11.3358,6L 12,6.75001L 6.75,12L 19,12L 19,13 Z "/></svg></button>
                         .navbar-inside__row.row
                             .navbar-inside__col.col-3.col-lg-12
-                                +preview-simple("Для ванной комнаты", "Коллекция с иммитацией мрамора")(class="icon-collection" src="../demo/pic-1.webp")
-                                +preview-simple("Для гостиной", "Коллекция с иммитацией мрамора")(class="icon-collection" src="../demo/pic-2.webp")
+                                +preview-simple("Для ванной комнаты", "Коллекция с иммитацией мрамора")(class="icon-collection" src="../demo/pic-1.webp" href="collection-type.html")
+                                +preview-simple("Для гостиной", "Коллекция с иммитацией мрамора")(class="icon-collection" src="../demo/pic-2.webp" href="collection-type.html")
                             .navbar-inside__col.col-3.col-lg-12
-                                +preview-simple("Для кухни", "Коллекция с иммитацией мрамора")(class="icon-collection" src="../demo/pic-3.webp")
-                                +preview-simple("Для санузла", "Коллекция с иммитацией мрамора")(class="icon-collection" src="../demo/pic-4.webp")
+                                +preview-simple("Для кухни", "Коллекция с иммитацией мрамора")(class="icon-collection" src="../demo/pic-3.webp" href="collection-type.html")
+                                +preview-simple("Для санузла", "Коллекция с иммитацией мрамора")(class="icon-collection" src="../demo/pic-4.webp" href="collection-type.html")
                             .navbar-inside__col.col-3.col-lg-12
-                                +preview-simple("Для спальни", "Коллекция с иммитацией мрамора")(class="icon-collection" src="../demo/pic-1.webp")
+                                +preview-simple("Для спальни", "Коллекция с иммитацией мрамора")(class="icon-collection" src="../demo/pic-1.webp" href="collection-type.html")
                 a.navbar__item.navbar_header__item.navbar_header__item--secondary(href="text.html") О компании
                 a.navbar__item.navbar_header__item.navbar_header__item--secondary(href="download.html") Материалы
                 a.navbar__item.navbar_header__item.navbar_header__item--secondary(href="contact.html") Контакты

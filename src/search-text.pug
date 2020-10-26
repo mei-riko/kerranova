@@ -1,0 +1,79 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Search Text
+
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/mixin.pug
+        include chunks/header.pug
+        //- Information
+        section.container.mt-3.mt-sm-2
+            .row.align-items-end
+                .col-8.col-md-10.col-sm-12
+                    h1.h2.text-base Найдено по&nbsp;запросу 
+                        span.text-bold "плитка для офиса" 
+                .col-4.col-md-10.col-sm-12.mb-2.text-small.text-right.text-md-left
+                    a.text-bold(href="search.html") Товары (31) 
+                    span.separation |
+                    a.text-bold.text-underline(href="search-text.html") Страницы (4)
+        //- Result List
+        section.container.mt-3.mt-sm-2
+            .row
+                .col-3.col-lg-4.col-md-6.col-sm-12
+                    a.preview.preview_simple.preview_simple--full.mb-2(href="text.html")
+                        .preview-simple__content
+                            p.preview_simple__title Доставка и оплата
+                                span.preview_simple__icon.icon-page
+                            p.preview_simple__intro Подробности об способах оплаты товаров. Детальная информация о доставке.
+                .col-3.col-lg-4.col-md-6.col-sm-12
+                    +preview-simple("Материалы для скачивания", "Каталоги плитки и брендбук")(class="icon-page" src="../demo/pic-2.webp" href="download.html")
+                .col-3.col-lg-4.col-md-6.col-sm-12
+                    a.preview.preview_simple.preview_simple--full.mb-2(href="text.html")
+                        .preview-simple__content
+                            p.preview_simple__title Способы оплаты
+                                span.preview_simple__icon.icon-page
+                            p.preview_simple__intro Подробности об способах оплаты товаров.
+                .col-3.col-lg-4.col-md-6.col-sm-12
+                    +preview-simple("Для дизайнеров и архитекторов", "Подробности об способах сотрудничества")(class="icon-page" src="../demo/collection-3.png" href="download.html")
+                .col-3.col-lg-4.col-md-6.col-sm-12
+                    +preview-simple("Скидка на Sanita Luxe", "Комплексное решение для ванных комнат")(class="icon-page" src="../demo/collection-2.png" href="download.html")
+        //- Recommendation
+        aside.container.mt-4.mt-md-3.mb-3.mb-md-2
+            h3.content-title Не нашли то, что искали? Посмотрите нашу подборку:
+            .row.mt-3
+                .col-4.col-md-6.col-sm-12.mb-sm-2
+                    .preview.preview_promo
+                        //- p.preview__subtitle По применению
+                        .preview_promo__image(style="background-image: url('../demo/collection-1.png');")
+                        p.preview__title Для ванной комнаты
+                        p.preview__intro Коллекции Eternа, Premium Marble и другие
+                        a.link-arrow.preview_promo__link(href="collection-type.html") Узнать больше
+                .col-4.col-md-6.col-sm-12.mb-sm-2
+                    .preview.preview_promo
+                        //- p.preview__subtitle По применению
+                        .preview_promo__image(style="background-image: url('../demo/collection-3.png');")
+                        p.preview__title Для гостиной
+                        p.preview__intro Коллекции Eternа, Premium Marble и другие
+                        a.link-arrow.preview_promo__link(href="collection-type.html") Узнать больше
+                .col-4.d-md-none.col-sm-12.d-sm-block
+                    .preview.preview_promo
+                        //- p.preview__subtitle По применению
+                        .preview_promo__image(style="background-image: url('../demo/collection-4.png');")
+                        p.preview__title Для кухни
+                        p.preview__intro Коллекции Eternа, Premium Marble и другие
+                        a.link-arrow.preview_promo__link(href="collection-type.html") Узнать больше
+        
+        include chunks/footer.pug
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        script(src="./js/blazy.min.js")
+
+        script(src="./js/jquery.inputmask.min.js")
+        script(src="./js/app.min.js")

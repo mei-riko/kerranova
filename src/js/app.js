@@ -26,9 +26,9 @@ $(document).ready(() =>{
   // Отмена стандартного поведения ссылки
   $('a[data-trigger="click"]').click(function(e){e.preventDefault();})
   // Раскрытие блока
-  $('.toggle-item').on("click", function(e){
+  $('.toggle-item .toggle-item__title').on("click", function(e){
     e.preventDefault();
-    let toggle = $(this);
+    let toggle = $(this).parent();
     if( !toggle.hasClass("toggle-item--active")){
       toggle.addClass("toggle-item--active");
       toggle.find(".toggle-item__title").addClass("toggle-item__title--active");

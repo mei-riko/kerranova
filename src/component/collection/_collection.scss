@@ -18,3 +18,33 @@
         }
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .collection{
+        &__row{
+            .col{
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .collection{
+        &__row{
+            .col{
+                flex: 0 0 calc(100%/3);
+                max-width: calc(100%/3);
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .collection{
+        &__row{
+            .col{
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    }
+}

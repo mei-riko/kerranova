@@ -9,7 +9,7 @@
 
     background-color: $white;;
 
-    width: 360px;
+    width: 380px;
     max-width: 100%;
     padding: $spacer/2;
 
@@ -26,6 +26,16 @@
     &__col{
         padding-left: $spacer/4;
         padding-right: $spacer/4;
+
+        .preview_product{
+            &__title{
+                font-size: map-get($map: $font-size, $key: "md");
+                white-space: pre-wrap;
+            }
+            &__collection, &__size{
+                font-size: map-get($map: $font-size, $key: "sm");
+            }
+        }
     }
 
     &__title{

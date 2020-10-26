@@ -1,8 +1,10 @@
 .label_link{
     background: $light-grey;
     border-color: $light-grey;
+    cursor: pointer;
 
     &:hover, &:focus{
+        color: $black;
         border-color: $border-color;
     }
 
@@ -10,5 +12,10 @@
         background-color: $black;
         color: $white;
         border-color: $black;
+        &:hover, &:focus{
+            background-color: $black;
+            color: $white;
+            border-color: $black;
+        }
     }
 }
