@@ -25,3 +25,21 @@
         }
     }
 }
+
+// Woocommerce
+.radio_attribute_pa_027-surface-type,
+.radio_attribute_pa_017-size{
+    font-size: 14px;
+    @extend .radio_size;
+
+    .radio__label{
+        @extend .radio_size__label;
+    }
+    .radio__input:checked + .radio__label {
+        background-color: $black;
+        color: $white;
+        &:after{
+            display: none;
+        }
+    }
+}

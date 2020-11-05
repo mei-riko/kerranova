@@ -1,6 +1,6 @@
 .product-content{
     position: relative;
-    padding: $spacer 0;
+    padding: $spacer 0 map-get($map: $spacers, $key: 4);
     transition: .4s;
 
     &__btn{
@@ -18,13 +18,26 @@
         overflow: hidden;
     }
     &--open{
-        max-height: 600px;
+        max-height: 800px;
+    }
+
+    // Woocommerce
+    .woocommerce-product-attributes{
+        border: none;
+    }
+    .woocommerce-product-attributes-item__label{
+        font-weight: $font-weight-base;
+        color: $grey;
+        padding: 0 20px 4px 0;
+    }
+    .woocommerce-product-attributes-item__value{
+        padding: 0 0 4px;
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
     .product-content{
         font-size: 14px;
-        ol, ul, p{
+        table, ol, ul, p{
             font-size: 14px;
         }
     }

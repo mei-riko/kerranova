@@ -185,9 +185,9 @@ author: https://t.me/Progwtf
                     $(this).val(min);
                 }
                 if(custom_class === false){
-                    $(this).after("<div class='main_number_plugin " + settings['style'] + "' style='width: " + settings['width'] + "'><input type='text' pattern='[0­9]*' value='" + value + "' class='input_plugin_number' style='width: " + settings['width'] + "; height: " + settings['height'] + "'><div class='plus_plugin_number'></div><div class='minus_plugin_number'></div></div>");
+                    $(this).after("<div class='main_number_plugin " + settings['style'] + "' style='width: " + settings['width'] + "'><input type='text' pattern='[0­-9]+' value='" + value + "' class='input_plugin_number' style='width: " + settings['width'] + "; height: " + settings['height'] + "'><div class='plus_plugin_number'></div><div class='minus_plugin_number'></div></div>");
                 }else{
-                    $(this).after("<div class='main_number_plugin " + settings['style'] + "' style='width: " + settings['width'] + "'><input type='text' pattern='[0­9]*' value='" + value + "' class='input_plugin_number " + custom_class + "' style='width: " + settings['width'] + "; height: " + settings['height'] + "'><div class='plus_plugin_number'></div><div class='minus_plugin_number'></div></div>");
+                    $(this).after("<div class='main_number_plugin " + settings['style'] + "' style='width: " + settings['width'] + "'><input type='text' pattern='[0-­9]+' value='" + value + "' class='input_plugin_number " + custom_class + "' style='width: " + settings['width'] + "; height: " + settings['height'] + "'><div class='plus_plugin_number'></div><div class='minus_plugin_number'></div></div>");
                 }
 
             }

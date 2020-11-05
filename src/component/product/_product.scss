@@ -53,6 +53,7 @@
     &__title{
         font-size: 28px;
         letter-spacing: 1px;
+        text-transform: uppercase;
         margin-bottom: map-get($spacers, 1);
     }
     &__offer{
@@ -84,6 +85,41 @@
     &__link{
         color: $blue;
         text-decoration: underline;
+    }
+    // Woocommerce
+    &_meta{
+        font-size: 14px;
+        margin-bottom: map-get($spacers, 1);
+    }
+    &_sibling_list{
+        @extend .input-group;
+    }
+    &_sibling{
+        position: relative;
+
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 0;
+
+        margin-right: map-get($spacers, 1);
+        margin-bottom: map-get($spacers, 1);
+
+        &--active{
+            &:after{
+                content: '';
+                display: block;
+
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                width: calc(100% + 10px);
+                height: calc(100% + 10px);
+
+                border: 1px solid $border-color;
+                border-radius: 50%;
+            }
+        }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
