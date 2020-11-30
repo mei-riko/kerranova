@@ -308,6 +308,21 @@
       </div>
     </footer>
     <div class="overlay overlay--disable"></div>
+    <div class="modal modal_form" id="callbackModal">
+      <form class="form modal_form__content">
+        <div class="form__group mb-1">
+          <input class="input input--full" type="text" placeholder="Ваше имя"/>
+        </div>
+        <div class="form__group mb-1">
+          <input class="input input--full input--error phone" type="tel" placeholder="* Телефон"/><span class="form__validation error">Обязательно укажите телефон</span>
+        </div>
+        <button class="btn btn_action btn--xs-full" type="submit">Перезвоните мне</button>
+        <div class="form__agree checkbox checkbox_agree">
+          <input class="checkbox__input checkbox_agree__input" id="agreeInline" type="checkbox" name="agreeInline" checked="checked" required="required"/>
+          <label class="checkbox__label checkbox_agree__label" for="agreeInline">согласен с обработкой <a class="form__link-inverse" href="/policy.pdf" target="_blank">персональных данных        </a></label>
+        </div>
+      </form>
+    </div>
     <div class="collection-aside collection-aside_filter" data-collection="filter"><button class="collection-aside__close icon-btn" aria-label="Закрыть" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6Z" fill="currentColor"></path></svg></button><a class="btn btn_secondary btn--small mb-2" href="#reset">Очистить фильтр</a>
       <div class="toggle-item toggle-item_filter" id="type">
         <div class="toggle-item__title text-bold">Тип товара</div>

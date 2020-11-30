@@ -70,3 +70,15 @@ footer.footer
                 p.footer__intro Скачать 
                     a.footer__intro-link(href="#") полный каталог товаров
 .overlay.overlay--disable
+.modal.modal_form#callbackModal
+    form.form.modal_form__content
+        .form__group.mb-1
+            input.input.input--full(type="text" placeholder="Ваше имя")
+        .form__group.mb-1
+            input.input.input--full.input--error.phone(type="tel" placeholder="* Телефон")
+            span.form__validation.error Обязательно укажите телефон
+        button.btn.btn_action.btn--xs-full(type="submit") Перезвоните мне
+        .form__agree.checkbox.checkbox_agree
+            input.checkbox__input.checkbox_agree__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
+            label.checkbox__label.checkbox_agree__label(for="agreeInline") согласен с обработкой 
+                a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных        

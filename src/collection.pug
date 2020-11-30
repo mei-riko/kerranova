@@ -39,6 +39,7 @@ html(lang="ru")
                 span.label.label_link.content-group__item(data-filter="size") Размер
                 span.label.label_link.label_link--active.content-group__item(data-filter="texture") Фактура
                 span.label.label_link.content-group__item(data-filter="area") Назначение                    
+        p.woocommerce-result-count Показ всех 3 элементов
         .row.collection__row
             .col.col-sm-6.mb-3.mb-sm-2
                 +product("K-1001 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-1.jpg');")
@@ -116,25 +117,16 @@ html(lang="ru")
         .toggle-item.toggle-item_filter#color
             .toggle-item__title.text-bold Цвет
             .toggle-item__content
-                .input-group
-                    .radio.radio_color
-                        input.radio__input#color1(type="radio" name="color" checked="checked")
-                        label.radio_color__label.radio__label(for="color1" style="background-color: #1d1d1d;")
-                    .radio.radio_color
-                        input.radio__input#color2(type="radio" name="color")
-                        label.radio_color__label.radio__label(for="color2" style="background-color: #eee;")
-                    .radio.radio_color
-                        input.radio__input#color3(type="radio" name="color")
-                        label.radio_color__label.radio__label(for="color3" style="background-color: #eee;")
-                    .radio.radio_color
-                        input.radio__input#color4(type="radio" name="color")
-                        label.radio_color__label.radio__label(for="color4" style="background-color: #eee;")
-                    .radio.radio_color
-                        input.radio__input#color5(type="radio" name="color")
-                        label.radio_color__label.radio__label(for="color5" style="background-color: #eee;")
-                    .radio.radio_color
-                        input.radio__input#color6(type="radio" name="color")
-                        label.radio_color__label.radio__label(for="color6" style="background-color: #eee;")
+                .woocommerce-widget-layered-nav-list
+                    .woocommerce-widget-layered-nav-list__item 
+                        a Белый 
+                        span.count (1)
+                    .woocommerce-widget-layered-nav-list__item.woocommerce-widget-layered-nav-list__item--chosen 
+                        a Серый 
+                        span.count (1)
+                    .woocommerce-widget-layered-nav-list__item 
+                        a Синий 
+                        span.count (1)
         .toggle-item.toggle-item_filter#material
             .toggle-item__title.text-bold Тип поверхности
             .toggle-item__content

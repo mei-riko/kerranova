@@ -180,6 +180,7 @@
       <div class="content-scroll collection__filter">
         <div class="content-group"><span class="label label_link content-group__item" data-filter="type">Тип товара</span><span class="label label_link content-group__item" data-filter="sort">Сортировать</span><span class="label label_link content-group__item" data-filter="price">Цена</span><span class="label label_link content-group__item" data-filter="color">Цвет</span><span class="label label_link content-group__item" data-filter="material">Тип поверхности</span><span class="label label_link content-group__item" data-filter="size">Размер</span><span class="label label_link label_link--active content-group__item" data-filter="texture">Фактура</span><span class="label label_link content-group__item" data-filter="area">Назначение                    </span></div>
       </div>
+      <p class="woocommerce-result-count">Показ всех 3 элементов</p>
       <div class="row collection__row">
         <div class="col col-sm-6 mb-3 mb-sm-2"><a class="preview preview_product" href="product.html">
                 <div class="preview_product__image" style="background-image:url('../demo/product-1.jpg');"></div>
@@ -313,31 +314,10 @@
       <div class="toggle-item toggle-item_filter" id="color">
         <div class="toggle-item__title text-bold">Цвет</div>
         <div class="toggle-item__content">
-          <div class="input-group">
-            <div class="radio radio_color">
-              <input class="radio__input" id="color1" type="radio" name="color" checked="checked"/>
-              <label class="radio_color__label radio__label" for="color1" style="background-color: #1d1d1d;"></label>
-            </div>
-            <div class="radio radio_color">
-              <input class="radio__input" id="color2" type="radio" name="color"/>
-              <label class="radio_color__label radio__label" for="color2" style="background-color: #eee;"></label>
-            </div>
-            <div class="radio radio_color">
-              <input class="radio__input" id="color3" type="radio" name="color"/>
-              <label class="radio_color__label radio__label" for="color3" style="background-color: #eee;"></label>
-            </div>
-            <div class="radio radio_color">
-              <input class="radio__input" id="color4" type="radio" name="color"/>
-              <label class="radio_color__label radio__label" for="color4" style="background-color: #eee;"></label>
-            </div>
-            <div class="radio radio_color">
-              <input class="radio__input" id="color5" type="radio" name="color"/>
-              <label class="radio_color__label radio__label" for="color5" style="background-color: #eee;"></label>
-            </div>
-            <div class="radio radio_color">
-              <input class="radio__input" id="color6" type="radio" name="color"/>
-              <label class="radio_color__label radio__label" for="color6" style="background-color: #eee;"></label>
-            </div>
+          <div class="woocommerce-widget-layered-nav-list">
+            <div class="woocommerce-widget-layered-nav-list__item"> <a>Белый </a><span class="count">(1)</span></div>
+            <div class="woocommerce-widget-layered-nav-list__item woocommerce-widget-layered-nav-list__item--chosen"> <a>Серый </a><span class="count">(1)</span></div>
+            <div class="woocommerce-widget-layered-nav-list__item"> <a>Синий </a><span class="count">(1)</span></div>
           </div>
         </div>
       </div>
@@ -456,6 +436,21 @@
       </div>
     </footer>
     <div class="overlay overlay--disable"></div>
+    <div class="modal modal_form" id="callbackModal">
+      <form class="form modal_form__content">
+        <div class="form__group mb-1">
+          <input class="input input--full" type="text" placeholder="Ваше имя"/>
+        </div>
+        <div class="form__group mb-1">
+          <input class="input input--full input--error phone" type="tel" placeholder="* Телефон"/><span class="form__validation error">Обязательно укажите телефон</span>
+        </div>
+        <button class="btn btn_action btn--xs-full" type="submit">Перезвоните мне</button>
+        <div class="form__agree checkbox checkbox_agree">
+          <input class="checkbox__input checkbox_agree__input" id="agreeInline" type="checkbox" name="agreeInline" checked="checked" required="required"/>
+          <label class="checkbox__label checkbox_agree__label" for="agreeInline">согласен с обработкой <a class="form__link-inverse" href="/policy.pdf" target="_blank">персональных данных        </a></label>
+        </div>
+      </form>
+    </div>
     <link href="./css/slick.css" rel="stylesheet"/>
     <link href="./css/slick-theme.css" rel="stylesheet"/>
     <script src="./js/slick.min.js"></script>
