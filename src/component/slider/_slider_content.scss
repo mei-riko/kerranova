@@ -65,7 +65,9 @@
     }
     .slick-dots{
         position: unset;
-        text-align: right;
+        // text-align: right;
+        display: flex;
+        justify-content: flex-end;
         margin: $spacer/4 0;
         bottom: 0;
 

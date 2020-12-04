@@ -3,46 +3,49 @@
     line-height: 1;
     color: $grey;
 }
-.woocommerce-widget-layered-nav-list{
-    &__item{
-        margin-bottom: $spacer/2;
-
-        a{
-            position: relative;
-            cursor: pointer;
-
-            margin-bottom: $spacer/4;
-            padding-left: 50px;
-            line-height: 16px;
-
-            &::before{
-                content: '';
-                display: block;
-
-                position: absolute;
-                left: 0;
-                top: 0;
-                transform: translateY(-8px);
-
-                width: 34px;
-                height: 34px;
-                border: 1px solid $border-color;
-                border-radius: 4px;
-            }
-        }
-        .count{
-            margin-left: $spacer/8;
-            opacity: .6;
-        }
-
-        &:last-child{
-            margin-bottom: 0;
-        }
-
-        &--chosen{
+.woocommerce{
+    .woocommerce-widget-layered-nav-list{
+        .woocommerce-widget-layered-nav-list__item{
+            margin-bottom: $spacer/2;
+    
             a{
-                &:before{
-                    background: url("../icon/checkmark.svg") no-repeat center / 10px;
+                position: relative;
+                cursor: pointer;
+    
+                margin-bottom: $spacer/4;
+                padding-left: 50px!important;
+                line-height: 16px;
+    
+                &::before{
+                    content: '';
+                    display: block;
+    
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transform: translateY(-8px);
+    
+                    width: 34px;
+                    height: 34px;
+                    margin: 0;
+                    border: 1px solid $border-color;
+                    border-radius: 4px;
+                }
+            }
+            .count{
+                margin-left: $spacer/8;
+                opacity: .6;
+            }
+    
+            &:last-child{
+                margin-bottom: 0;
+            }
+    
+            &--chosen{
+                a{
+                    &:before{
+                        background: url("../icon/checkmark.svg") no-repeat center / 10px;
+                    }
                 }
             }
         }
@@ -62,6 +65,7 @@
 
     font-size: 20px;
     line-height: 26px;
+    text-align: center;
 }
 .knv_quantity_increase{
     display: inline-block;
@@ -75,6 +79,7 @@
 
     font-size: 18px;
     line-height: 30px;
+    text-align: center;
 }
 .knv_quantity_view{
     display: inline-block;
@@ -85,4 +90,17 @@
     padding: 4px 10px;
     margin: 0 10px;
     min-width: calc(100% - 90px);
+}
+
+// Instargam Widget
+#sb_instagram #sbi_images{
+    @extend .row;
+    @extend .row_instagram;
+    float: unset;
+}
+#sb_instagram #sbi_images .sbi_item{
+    @extend .col-2;
+    @extend .col-md-4;
+    @extend .col-sm-6;
+    width: 100%!important;
 }

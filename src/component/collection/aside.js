@@ -54,6 +54,24 @@ $(document).ready(() =>{
         $("body").removeClass("open-aside");
     });
 
+    let url = window.location.search;
+    let name, filter, order;
+    if( url != "") {
+        // Разбираем адрес на части
+        filter = url.split('&');
+
+        $.each(filter,function(index,value){
+            // Фильтр
+            if( value.indexOf('filter') != "-1"){
+                name = value.split("=")[0].match(/filter_([^&]+)/)[1];
+                $(".collection .collection__filter .label.label_link[data-filter=knv_layered_nav-"+ name +"]").addClass("label_link--active");
+            }
+            // Сортировка
+            if( value.indexOf('orderby') != "-1"){
+                $(".collection .collection__filter .label.label_link[data-filter=sort]").addClass("label_link--active");
+            }
+        });
+    }
     $(document).mouseup(function (e){ // событие клика по веб-документу
         let collectionActive = $(".collection-aside.collection-aside--active"); // элемент
         if (!collectionActive.is(e.target) // клик был не по блоку
