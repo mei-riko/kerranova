@@ -104,3 +104,13 @@
     @extend .col-sm-6;
     width: 100%!important;
 }
+
+// Woocommerce Alert
+.woocommerce-info{
+    @extend .alert;
+    width: auto;
+
+    &::before{
+        display: none;
+    }
+}

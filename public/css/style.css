@@ -2475,6 +2475,14 @@ a:hover, a:focus {
   width: 100% !important;
 }
 
+.woocommerce-info {
+  width: auto;
+}
+
+.woocommerce-info::before {
+  display: none;
+}
+
 .separation {
   padding: 0 10px;
 }
@@ -3827,7 +3835,7 @@ a:hover, a:focus {
   }
 }
 
-.alert {
+.alert, .woocommerce-info {
   position: relative;
   font-size: 13px;
   padding: 20px;
