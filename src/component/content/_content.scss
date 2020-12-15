@@ -1,6 +1,11 @@
 .content{
     overflow: hidden;
 
+    &__text{
+        width: 940px;
+       max-width: 100%;
+    }
+
     ul:not(.breadcrumbs){
         li{
             @extend .list__item;
@@ -28,7 +33,10 @@
             }
         }
     }
-    a{
+    a:not(.btn){
         @extend .text-underline;
+        &.label{
+            text-decoration: none;
+        }
     }
 }

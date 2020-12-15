@@ -3,6 +3,8 @@
         position: relative;
         padding: $spacer/2 0;
         padding-right: $spacer;
+        margin-bottom: 0;
+
         cursor: pointer;
 
         &:after{
@@ -40,5 +42,9 @@
             color: $grey;
             font-weight: $font-weight-base;
         }
+    }
+    // Content
+    &_content{
+        border-bottom: 1px solid $border-color;
     }
 }

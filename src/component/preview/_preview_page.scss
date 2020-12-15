@@ -15,6 +15,7 @@
         background: no-repeat center / cover;
     }
     &__title{
+        width: 100%;
         font-size: map-get($map: $font-size, $key: "md");
         font-weight: $font-weight-bold;
         padding: 30px 30px 60px;

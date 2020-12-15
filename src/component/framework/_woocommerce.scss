@@ -114,3 +114,108 @@
         display: none;
     }
 }
+
+// Cart
+.woocommerce img.preview_collection__gallery-item, 
+.woocommerce-page img.preview_collection__gallery-item{
+    @extend .preview_collection__gallery-item;
+}
+// Currency
+.woocommerce-Price-currencySymbol{
+    font-weight: 400;
+}
+
+// Cart
+.knv-woocommerce-form-coupon-toggle{
+    font-size: map-get($map: $font-size, $key: sm);
+    margin: 0 0 $spacer/2;
+
+    .showcoupon{
+        text-decoration: underline;
+    }
+}
+.woocommerce form.checkout_coupon{
+    border-radius: 4px;
+    border: 1px solid $border-color;
+    padding: $spacer/2 3*$spacer/4;
+    background-color: $white;
+    margin: 0 0 $spacer/2;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    p:not(.form-row){
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .form-row{
+        float: unset;
+        margin: 0;
+        padding: 0;
+
+        .input-text{
+            @extend .input;
+        }
+        .button{
+            @extend .btn;
+            @extend .btn_action;
+            @extend .btn--full;
+        }
+
+        &.form-row-first{
+            flex: 0 0 calc(100% - 210px);
+            max-width: calc(100% - 210px);
+        }
+        &.form-row-last{
+            flex: 0 0 200px;
+            max-width: 200px;
+        }
+    }
+}
+
+// Order{
+.woocommerce-checkout-review-order{
+    .woocommerce-Price-amount{
+        font-size: map-get($map: $font-size, $key: sm);
+    }
+    .variation{
+        font-size: 12px;
+        line-height: 14px;
+    
+        p{
+            font-size: 12px;
+            line-height: 14px;
+        }
+    
+        dt{
+            display: none;
+        }
+        dd{
+            margin-bottom: 2px;
+        }
+    }
+    .product-quantity{
+        font-weight: 400;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .woocommerce form.checkout_coupon{
+        .form-row, .form-row.form-row-first, .form-row.form-row-last{
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 10px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .woocommerce form.checkout_coupon{
+        padding: $spacer/2;
+    }
+}

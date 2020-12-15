@@ -79,7 +79,7 @@
             margin-bottom: 0;
         }
 
-        & + .btn{
+        & + .btn, & + .wc-proceed-to-checkout{
             margin-top: $spacer/2;
             &::first-letter{
                 text-transform: uppercase;

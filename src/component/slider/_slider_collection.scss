@@ -4,8 +4,10 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .slider_collection{
-        max-width: calc(100% - 120px);
-        margin-left: 60px;
+        &.slick-initialized{
+            max-width: calc(100% - 120px);
+            margin-left: 60px;
+        }
 
         .slick-list{
             overflow: visible;
@@ -20,8 +22,10 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .slider_collection{
-        max-width: calc(100% - 80px);
-        margin-left: 40px;
+        &.slick-initialized{
+            max-width: calc(100% - 80px);
+            margin-left: 40px;
+        }
         .slick-prev{
             opacity: 0;
         }

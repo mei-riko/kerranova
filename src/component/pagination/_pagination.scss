@@ -1,0 +1,31 @@
+.pagination{
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item{
+        display: inline-block;
+        width: 30px;
+        border-radius: 50%;
+        margin: 0 6px;
+
+        font-size: map-get($map: $font-size, $key: sm);
+        text-align: center;
+        line-height: 30px;
+
+        background: $light-grey;
+
+        &:hover, &:focus{
+            color: $black;
+            border-color: $border-color;
+        }
+    }
+}
+
+.woocommerce-pagination ul.page-numbers{
+    @extend .pagination;
+    @extend .mb-3;
+}
+.woocommerce-pagination span.page-numbers,
+.woocommerce-pagination a.page-numbers{
+    @extend .pagination__item;
+}
