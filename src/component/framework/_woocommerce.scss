@@ -52,7 +52,6 @@
     }
 }
 // Счётчик количества в товаре
-
 .knv_quantity_decrease{
     display: inline-block;
     width: 30px;
@@ -90,6 +89,21 @@
     padding: 4px 10px;
     margin: 0 10px;
     min-width: calc(100% - 90px);
+}
+// Скрытые вариации в товаре
+.product__label{
+    display: none;
+}
+.product__label[data-attribute=pa_017-size],
+.product__label[data-attribute=pa_027-surface-type]{
+    display: block;
+}
+.variation_radio_input{
+    display: none;
+}
+.variation_radio_input[data-attribute_name=attribute_pa_017-size],
+.variation_radio_input[data-attribute_name=attribute_pa_027-surface-type]{
+    display: block;
 }
 
 // Instargam Widget
@@ -199,6 +213,10 @@
     .product-quantity{
         font-weight: 400;
     }
+}
+.woocommerce .form.form_order .form-row label{
+    font-size: 12px;
+    line-height: 14px;
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'md')){

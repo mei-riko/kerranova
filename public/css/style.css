@@ -2207,6 +2207,8 @@ a:hover, a:focus {
   -webkit-box-direction: reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .woocommerce-error:before, .woocommerce-info:before, .woocommerce-message:before {
@@ -2219,6 +2221,13 @@ a:hover, a:focus {
 
 .woocommerce-error:after, .woocommerce-info:after, .woocommerce-message:after {
   display: none;
+}
+
+.woocommerce-error li, .woocommerce-info li, .woocommerce-message li {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
 }
 
 .woocommerce-error .button, .woocommerce-info .button, .woocommerce-message .button {
@@ -2467,6 +2476,24 @@ a:hover, a:focus {
   min-width: calc(100% - 90px);
 }
 
+.product__label {
+  display: none;
+}
+
+.product__label[data-attribute=pa_017-size],
+.product__label[data-attribute=pa_027-surface-type] {
+  display: block;
+}
+
+.variation_radio_input {
+  display: none;
+}
+
+.variation_radio_input[data-attribute_name=attribute_pa_017-size],
+.variation_radio_input[data-attribute_name=attribute_pa_027-surface-type] {
+  display: block;
+}
+
 #sb_instagram #sbi_images {
   float: unset;
 }
@@ -2563,6 +2590,11 @@ a:hover, a:focus {
 
 .woocommerce-checkout-review-order .product-quantity {
   font-weight: 400;
+}
+
+.woocommerce .form.form_order .form-row label {
+  font-size: 12px;
+  line-height: 14px;
 }
 
 @media all and (max-width: 1024px) {
