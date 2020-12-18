@@ -44,4 +44,12 @@
             color: $black;
         }
     }
+
+    
 }
+a.preview_collection{
+    &:hover, &:focus{
+        color: inherit;        
+    }
+}
+    

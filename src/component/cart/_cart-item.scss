@@ -44,6 +44,13 @@
             max-width: 90px;
             text-align: left;
             font-weight: $font-weight-light;
+
+            // white-space: nowrap;
+
+            &--xl{
+                flex: 0 0 250px;
+                max-width: 250px;
+            }
         }
         &-val{
             flex: 0 0 calc(100% - 90px);
@@ -52,6 +59,11 @@
             font-weight: $font-weight-light;
             margin-bottom: 4px;
             line-height: 1.2;
+
+            &--xl{
+                flex: 0 0 calc(100% - 250px);
+                max-width: calc(100% - 250px);
+            }
         }
     }
     &__price{
@@ -60,6 +72,10 @@
         font-weight: $font-weight-bold;
         text-align: right;
         margin-bottom: 0;
+
+        .woocommerce-Price-amount{
+            font-weight: 600;
+        }
     }
     &__subprice{
         font-size: 14px;
