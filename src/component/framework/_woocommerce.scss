@@ -120,14 +120,106 @@
 }
 
 // Woocommerce Alert
-.woocommerce-info{
-    @extend .alert;
-    width: auto;
+.woocommerce-error, .woocommerce-info, .woocommerce-message{
+    padding-left: calc((100% - 1470px)/2);
+    padding-right: calc((100% - 1470px)/2);
 
-    &::before{
+    margin-bottom: 0;
+
+    border-color: $grey;
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+    &:before,
+    &:after{
         display: none;
     }
+
+    li{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .button{
+        float: none;
+        @extend .btn;
+        @extend .btn_secondary; 
+        @extend .btn--small;
+    }
 }
+.woocommerce-message{
+    border-top: none;
+    background: #E5F5DC;
+}
+.woocommerce-error{
+    border-top: none;
+    background: $danger;
+    color: $white;
+}
+.woocommerce-info{
+    border-top: none;
+    background: $white;
+}
+
+.woocommerce{
+    .woocommerce-notices-wrapper{
+        .woocommerce-error, .woocommerce-info, .woocommerce-message{
+            margin-top: $spacer;
+            flex-direction: row;
+            padding-left: $spacer;
+            padding-right: $spacer;
+        }
+        .woocommerce-error{
+            border: 1px solid $danger;
+        }
+        .woocommerce-message{
+            border: 1px solid $success;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .woocommerce-error, .woocommerce-info, .woocommerce-message{
+        // контейнер 1360px
+        padding-left: calc((100% - 1330px)/2);
+        padding-right: calc((100% - 1330px)/2);
+    }
+  }
+  // меньше 1400px
+  @media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .woocommerce-error, .woocommerce-info, .woocommerce-message{
+        // контейнер 980px
+        padding-left: calc((100% - 950px)/2);
+        padding-right: calc((100% - 950px)/2); 
+    }
+  }
+  // меньше 1024px
+  @media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .woocommerce-error, .woocommerce-info, .woocommerce-message{
+        // контейнер 740px
+        padding-left: calc((100% - 710px)/2);
+        padding-right: calc((100% - 710px)/2);
+    }
+  }
+  // меньше 768px
+  @media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .woocommerce-error, .woocommerce-info, .woocommerce-message{
+        // контейнер 440px
+        padding-left: calc((100% - 410px)/2);
+        padding-right: calc((100% - 410px)/2);
+    }
+  }
+  // меньше 480px
+  @media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .woocommerce-error, .woocommerce-info, .woocommerce-message{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+  }
 
 // Cart
 .woocommerce img.preview_collection__gallery-item, 

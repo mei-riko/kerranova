@@ -1,0 +1,14 @@
+.table{
+    width: 100%
+}
+
+.table-responsive{
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.table-scroll{
+    height: 520px;
+    max-height: 100vh;
+    overflow-y: auto;
+}

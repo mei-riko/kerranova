@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Store Location</title>
     <link href="./css/style.css" rel="stylesheet"/>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="./js/map-ready.js"></script>
   </head>
   <body>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -177,36 +179,8 @@
       </div>
     </section>
     <section class="content container pb-3">
-      <div class="row">
-        <div class="col-4 col-lg-5 col-sm-12 mb-sm-3">
-          <h2 class="h4">Где хотите купить?</h2>
-          <p>Узнайте адрес ближайшего к&nbsp;Вам магазина</p>
-          <p class="text-grey mb-1">Быстрый выбор:</p>
-          <div class="content-group mb-2"><a class="label content-group__item" href="#">Москва</a><a class="label content-group__item" href="#">Самара</a><a class="label label--active content-group__item" href="#">Санкт-Петербург</a></div>
-          <p class="text-grey mb-1">Выберите город:</p>
-          <select class="input input--full input_select-product" name="">
-            <option value="type1">Показывать все</option>
-            <option value="type2">Россия, Москва</option>
-            <option value="type3">Беларусь, Минск</option>
-          </select>
-          <div class="checkbox mt-2">
-            <input class="checkbox__input" id="filter1" type="checkbox" name="filter"/>
-            <label class="checkbox__label" for="filter1">Розничный магазин</label>
-          </div>
-          <div class="checkbox mt-1">
-            <input class="checkbox__input" id="filter2" type="checkbox" name="filter"/>
-            <label class="checkbox__label" for="filter2">Оптовый магазин</label>
-          </div>
-          <div class="checkbox mt-1">
-            <input class="checkbox__input" id="filter3" type="checkbox" name="filter"/>
-            <label class="checkbox__label" for="filter3">Дистрибъютор</label>
-          </div><a class="btn btn_action btn--xs-full mt-3" href="#">Применить фильтр</a>
-          <div class="mt-1"><a class="text-underline text-small" href="#">Очистить фильтр</a></div>
-        </div>
-        <div class="col-8 col-lg-7 col-sm-12">
-          <div class="map" id="mapStore"></div>
-        </div>
-      </div>
+      <div class="content-group mb-2"><a class="label content-group__item" id="all" href="#">Вся карта</a><a class="label content-group__item" id="msw" href="#">Москва</a><a class="label content-group__item" id="smr" href="#">Самара</a></div>
+      <div class="map" id="mapStore"></div>
     </section>
     <footer class="footer">
       <div class="container">

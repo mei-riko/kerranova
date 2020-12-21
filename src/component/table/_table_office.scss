@@ -1,0 +1,14 @@
+.table_office{
+    &__head{
+        @extend .text-small;
+    }
+    &__item{
+        td{
+            font-size: 13px;
+        }
+
+        &.odd{
+            background-color: $light-grey;
+        }
+    }
+}

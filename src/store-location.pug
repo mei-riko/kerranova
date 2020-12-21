@@ -7,6 +7,9 @@ html(lang="ru")
 
         link(href='./css/style.css', rel='stylesheet')
 
+        script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src="./js/map-ready.js")
+
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/mixin.pug
@@ -25,34 +28,39 @@ html(lang="ru")
                         | "Фильтр". В&nbsp;случае, если вам нужен дистрибьютор, отметьте соответствующую галочку.
                     a.btn.btn--small.btn_secondary(href="javascript;" data-fancybox="form" data-src="#modalForm") Заказать звонок
         section.content.container.pb-3
-            .row
-                .col-4.col-lg-5.col-sm-12.mb-sm-3
-                    h2.h4 Где хотите купить?
-                    p Узнайте адрес ближайшего к&nbsp;Вам магазина
-                    p.text-grey.mb-1 Быстрый выбор:
-                    .content-group.mb-2
-                        a.label.content-group__item(href="#") Москва
-                        a.label.content-group__item(href="#") Самара
-                        a.label.label--active.content-group__item(href="#") Санкт-Петербург
-                    p.text-grey.mb-1 Выберите город:
-                    select.input.input--full.input_select-product(name="")
-                        option(value="type1") Показывать все
-                        option(value="type2") Россия, Москва
-                        option(value="type3") Беларусь, Минск
-                    .checkbox.mt-2
-                        input.checkbox__input#filter1(type="checkbox" name="filter")
-                        label.checkbox__label(for="filter1") Розничный магазин
-                    .checkbox.mt-1
-                        input.checkbox__input#filter2(type="checkbox" name="filter")
-                        label.checkbox__label(for="filter2") Оптовый магазин
-                    .checkbox.mt-1
-                        input.checkbox__input#filter3(type="checkbox" name="filter")
-                        label.checkbox__label(for="filter3") Дистрибъютор
-                    a.btn.btn_action.btn--xs-full.mt-3(href="#") Применить фильтр
-                    .mt-1
-                        a.text-underline.text-small(href="#") Очистить фильтр
-                .col-8.col-lg-7.col-sm-12
-                    .map#mapStore
+            .content-group.mb-2
+                a.label.content-group__item#all(href="#") Вся карта
+                a.label.content-group__item#msw(href="#") Москва
+                a.label.content-group__item#smr(href="#") Самара
+            .map#mapStore
+            //- .row
+            //-     .col-4.col-lg-5.col-sm-12.mb-sm-3#mapFilter
+            //-         h2.h4 Где хотите купить?
+            //-         p Узнайте адрес ближайшего к&nbsp;Вам магазина
+            //-         p.text-grey.mb-1 Быстрый выбор:
+            //-         .content-group.mb-2
+            //-             a.label.content-group__item(href="?mapCity=msw" data-city="msw") Москва
+            //-             a.label.content-group__item(href="?mapCity=smr" data-city="smr") Самара
+            //-             a.label.content-group__item(href="?mapCity=spb" data-city="spb") Санкт-Петербург
+            //-         p.text-grey.mb-1 Выберите город:
+            //-         select#city.input.input--full.input_select-product(name="city")
+            //-             option(disabled="disabled" selected="selected") —
+            //-             option(value="msw") Москва
+            //-             option(value="smr") Самара
+            //-             option(value="spb") Санкт-Петербург
+            //-         .checkbox.mt-2
+            //-             input.checkbox__input#filter1(type="checkbox" name="filter" value="rm")
+            //-             label.checkbox__label(for="filter1") Розничный магазин
+            //-         .checkbox.mt-1
+            //-             input.checkbox__input#filter2(type="checkbox" name="filter" value="om")
+            //-             label.checkbox__label(for="filter2") Оптовый магазин
+            //-         .checkbox.mt-1
+            //-             input.checkbox__input#filter3(type="checkbox" name="filter" value="d")
+            //-             label.checkbox__label(for="filter3") Дистрибъютор
+            //-         a.btn.btn_action.btn--xs-full.mt-3#filterBtn(href="#") Применить фильтр
+            //-         .mt-1
+            //-             a.text-underline.text-small(href="store-location.html") Очистить фильтр
+            //-     .col-8.col-lg-7.col-sm-12
         include chunks/footer.pug
         .modal.modal_form#modalForm
             form.form.modal_form__content

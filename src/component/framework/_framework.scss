@@ -208,56 +208,6 @@ a{
     }
 }
 
-// Woocommerce
-.woocommerce-notices-wrapper{
-
-}
-.woocommerce-error, .woocommerce-info, .woocommerce-message{
-    padding: 20px 40px 20px 60px;
-    margin: 0;
-    border-color: $grey;
-    font-size: 14px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-
-    &:before{
-        top: 50%;
-        left: 30px;
-        transform: translateY(-50%);
-    }
-    &:after{
-        display: none;
-    }
-
-    li{
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-
-    .button{
-        float: none;
-        @extend .btn;
-        @extend .btn_secondary; 
-        @extend .btn--small;
-    }
-}
-.woocommerce-message{
-    border-top-color: $success;
-    background: #daefb7;
-}
-.woocommerce-error{
-    border-top-color: $danger;
-    background: $danger;
-    color: $white;
-}
-.woocommerce-info{
-    border-top-color: $grey;
-    background: $white;
-}
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
     html,body {font-size: map-get($font-size, 'xl');}
     

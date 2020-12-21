@@ -26,6 +26,7 @@
         }
     }
     &__item{
+        display: inline-block;
         font-size: 13px;
         font-weight: $font-weight-light;
         padding: 13px;
@@ -124,6 +125,10 @@
                 display: block;
                 font-weight: $font-weight-bold;
             }
+
+            &:hover, &:focus{
+                background-color: $white;
+            }
         }
         &__parent{
             position: relative;
@@ -140,6 +145,10 @@
                 right: -15px;
                 top: 50%;
                 transform: translateY(-50%);
+            }
+
+            &:hover, &:focus{
+                background-color: $white;
             }
         }
         &--active{

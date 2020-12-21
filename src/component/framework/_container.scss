@@ -32,25 +32,28 @@
 // меньше 1600px
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
   .container{
+      // контейнер 1360px
       width: map-get($container-max-widths, 'xl');
   }
 }
 // меньше 1400px
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
   .container{
+      // контейнер 980px
       width: map-get($container-max-widths, 'lg');
   }
 }
 // меньше 1024px
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
   .container{
-      // контейнер 820px
+      // контейнер 740px
       width: map-get($container-max-widths, 'md');
   }
 }
 // меньше 768px
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
   .container{
+      // контейнер 440px
       width: map-get($container-max-widths, 'sm');
   }
 }

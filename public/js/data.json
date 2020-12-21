@@ -1,0 +1,31 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature", 
+            "id": 0, 
+            "options":{ "city": "msw"}, 
+            "geometry": {"type": "Point", "coordinates": [55.691516,37.552732]}, 
+            "properties": {
+                "balloonContentHeader": "DESIGN LAB", 
+                "balloonContentBody": "Адрес: Ленинский пр-т., 67, Москва. Ежедневно 9:00 - 20:00", 
+                "balloonContentFooter": "https://dizlab.ru", 
+                "clusterCaption": "DESIGN LAB, Москва", 
+                "hintContent": "DESIGN LAB, Москва"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 1, 
+            "options":{ "city": "smr"}, 
+            "geometry": {"type": "Point", "coordinates": [53.220136,50.162366]}, 
+            "properties": {
+                "balloonContentHeader": "DESIGN LAB", 
+                "balloonContentBody": "Адрес: ул. Ново-Садовая, 140, Самара. Ежедневно 9:00 - 20:00", 
+                "balloonContentFooter": "https://dizlab.ru", 
+                "clusterCaption": "DESIGN LAB, Самара", 
+                "hintContent": "DESIGN LAB, Самара"
+            }
+        }
+    ]
+}

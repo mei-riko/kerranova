@@ -2,7 +2,11 @@
     width: 100%;
     max-width: 100%;
 
-    min-height: 320px;
+    min-height: 420px;
 
     background: inherit url("../icon/loader.gif");
+
+    &__office-info{
+        @extend .text-small;
+    }
 }
