@@ -1,6 +1,25 @@
 
 .collection-aside_filter{
+    overflow: hidden;
+    padding-right: 0;
+
     .collection-aside__close{
         top: $spacer/2;
+    }
+
+    &__body{
+        padding-right: $spacer/2;
+        height: calc( 100% - 140px );
+        overflow-y: auto;
+    }
+    &__footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        padding: $spacer/2;
+        background-color: $white;
+        border-top: 1px solid $border-color;
     }
 }

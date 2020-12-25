@@ -18,6 +18,11 @@
             color: $black;
             border-color: $border-color;
         }
+
+        &--active{
+            color: $white;
+            background-color: $black;
+        }
     }
 }
 
@@ -28,4 +33,8 @@
 .woocommerce-pagination span.page-numbers,
 .woocommerce-pagination a.page-numbers{
     @extend .pagination__item;
+
+    &.curent{
+        @extend .pagination__item--active;
+    }
 }

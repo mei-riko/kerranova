@@ -265,130 +265,133 @@
       </div>
     </div>
     <div class="collection-aside collection-aside_filter" data-collection="filter"><button class="collection-aside__close icon-btn" aria-label="Закрыть" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6Z" fill="currentColor"></path></svg></button><a class="btn btn_secondary btn--small mb-2" href="#reset">Очистить фильтр</a>
-      <div class="toggle-item toggle-item_filter" id="type">
-        <div class="toggle-item__title text-bold">Тип товара</div>
-        <div class="toggle-item__content">
-          <div class="checkbox mb-2">
-            <input class="checkbox__input" id="type1" type="checkbox" name="type"/>
-            <label class="checkbox__label" for="type1">Плитка</label>
+      <div class="collection-aside_filter__body">
+        <div class="toggle-item toggle-item_filter" id="type">
+          <div class="toggle-item__title text-bold">Тип товара</div>
+          <div class="toggle-item__content">
+            <div class="checkbox mb-2">
+              <input class="checkbox__input" id="type1" type="checkbox" name="type"/>
+              <label class="checkbox__label" for="type1">Плитка</label>
+            </div>
+            <div class="checkbox mb-2">
+              <input class="checkbox__input" id="type2" type="checkbox" name="type"/>
+              <label class="checkbox__label" for="type2">Резка</label>
+            </div>
+            <div class="checkbox mb-2">
+              <input class="checkbox__input" id="type3" type="checkbox" name="type"/>
+              <label class="checkbox__label" for="type3">Мозаика</label>
+            </div>
+            <div class="checkbox mb-2">
+              <input class="checkbox__input" id="type4" type="checkbox" name="type"/>
+              <label class="checkbox__label" for="type4">Специальные элементы</label>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" id="type5" type="checkbox" name="type"/>
+              <label class="checkbox__label" for="type5">Печатные</label>
+            </div>
           </div>
-          <div class="checkbox mb-2">
-            <input class="checkbox__input" id="type2" type="checkbox" name="type"/>
-            <label class="checkbox__label" for="type2">Резка</label>
+        </div>
+        <div class="toggle-item toggle-item_filter" id="sort">
+          <div class="toggle-item__title text-bold">Сортировать</div>
+          <div class="toggle-item__content">
+            <div class="radio mb-2">
+              <input class="radio__input" id="sort1" type="radio" name="sort"/>
+              <label class="radio__label" for="sort1">Цена: от низкой до высокой</label>
+            </div>
+            <div class="radio mb-2">
+              <input class="radio__input" id="sort2" type="radio" name="sort"/>
+              <label class="radio__label" for="sort2">Цена: от высокой до низкой</label>
+            </div>
+            <div class="radio">
+              <input class="radio__input" id="sort3" type="radio" name="sort"/>
+              <label class="radio__label" for="sort3">По алфавиту: от А до Я</label>
+            </div>
           </div>
-          <div class="checkbox mb-2">
-            <input class="checkbox__input" id="type3" type="checkbox" name="type"/>
-            <label class="checkbox__label" for="type3">Мозаика</label>
+        </div>
+        <div class="toggle-item toggle-item_filter" id="price">
+          <div class="toggle-item__title text-bold">Цена</div>
+          <div class="toggle-item__content"></div>
+        </div>
+        <div class="toggle-item toggle-item_filter" id="color">
+          <div class="toggle-item__title text-bold">Цвет</div>
+          <div class="toggle-item__content">
+            <div class="woocommerce-widget-layered-nav-list">
+              <div class="woocommerce-widget-layered-nav-list__item"> <a>Белый </a><span class="count">(1)</span></div>
+              <div class="woocommerce-widget-layered-nav-list__item woocommerce-widget-layered-nav-list__item--chosen"> <a>Серый </a><span class="count">(1)</span></div>
+              <div class="woocommerce-widget-layered-nav-list__item"> <a>Синий </a><span class="count">(1)</span></div>
+            </div>
           </div>
-          <div class="checkbox mb-2">
-            <input class="checkbox__input" id="type4" type="checkbox" name="type"/>
-            <label class="checkbox__label" for="type4">Специальные элементы</label>
+        </div>
+        <div class="toggle-item toggle-item_filter" id="material">
+          <div class="toggle-item__title text-bold">Тип поверхности</div>
+          <div class="toggle-item__content">
+            <div class="checkbox mb-2">
+              <input class="checkbox__input" id="material1" type="checkbox" name="material"/>
+              <label class="checkbox__label" for="material1">Структурированная с sugar-эффектом</label>
+            </div>
+            <div class="checkbox mb-2">
+              <input class="checkbox__input" id="material2" type="checkbox" name="material"/>
+              <label class="checkbox__label" for="material2">Матовая</label>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" id="material3" type="checkbox" name="material"/>
+              <label class="checkbox__label" for="material3">Глянцевая</label>
+            </div>
           </div>
-          <div class="checkbox">
-            <input class="checkbox__input" id="type5" type="checkbox" name="type"/>
-            <label class="checkbox__label" for="type5">Печатные</label>
+        </div>
+        <div class="toggle-item toggle-item_filter" id="size">
+          <div class="toggle-item__title text-bold">Размер</div>
+          <div class="toggle-item__content">
+            <div class="checkbox mb-2">
+              <input class="checkbox__input" id="size1" type="checkbox" name="size"/>
+              <label class="checkbox__label" for="size1">60x60</label>
+            </div>
+            <div class="checkbox mb-2">
+              <input class="checkbox__input" id="size2" type="checkbox" name="size"/>
+              <label class="checkbox__label" for="size2">120x60</label>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" id="size3" type="checkbox" name="size"/>
+              <label class="checkbox__label" for="size3">30x60</label>
+            </div>
+          </div>
+        </div>
+        <div class="toggle-item toggle-item_filter" id="texture">
+          <div class="toggle-item__title text-bold">Фактура<span class="toggle-item_filter__value">Мрамор, Дерево</span></div>
+          <div class="toggle-item__content">
+            <div class="checkbox mb-2">
+              <input class="checkbox__input" id="texture1" type="checkbox" name="texture" checked="checked"/>
+              <label class="checkbox__label" for="texture1">Мрамор</label>
+            </div>
+            <div class="checkbox mb-2">
+              <input class="checkbox__input" id="texture2" type="checkbox" name="texture" checked="checked"/>
+              <label class="checkbox__label" for="texture2">Дерево</label>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" id="texture3" type="checkbox" name="texture"/>
+              <label class="checkbox__label" for="texture3">Штукатурка</label>
+            </div>
+          </div>
+        </div>
+        <div class="toggle-item toggle-item_filter" id="area">
+          <div class="toggle-item__title text-bold">Назначение</div>
+          <div class="toggle-item__content">
+            <div class="checkbox mb-2">
+              <input class="checkbox__input" id="area1" type="checkbox" name="area"/>
+              <label class="checkbox__label" for="area1">Ванна</label>
+            </div>
+            <div class="checkbox mb-2">
+              <input class="checkbox__input" id="area2" type="checkbox" name="area"/>
+              <label class="checkbox__label" for="area2">Гостинная</label>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" id="area3" type="checkbox" name="area"/>
+              <label class="checkbox__label" for="area3">Офис</label>
+            </div>
           </div>
         </div>
       </div>
-      <div class="toggle-item toggle-item_filter" id="sort">
-        <div class="toggle-item__title text-bold">Сортировать</div>
-        <div class="toggle-item__content">
-          <div class="radio mb-2">
-            <input class="radio__input" id="sort1" type="radio" name="sort"/>
-            <label class="radio__label" for="sort1">Цена: от низкой до высокой</label>
-          </div>
-          <div class="radio mb-2">
-            <input class="radio__input" id="sort2" type="radio" name="sort"/>
-            <label class="radio__label" for="sort2">Цена: от высокой до низкой</label>
-          </div>
-          <div class="radio">
-            <input class="radio__input" id="sort3" type="radio" name="sort"/>
-            <label class="radio__label" for="sort3">По алфавиту: от А до Я</label>
-          </div>
-        </div>
-      </div>
-      <div class="toggle-item toggle-item_filter" id="price">
-        <div class="toggle-item__title text-bold">Цена</div>
-        <div class="toggle-item__content"></div>
-      </div>
-      <div class="toggle-item toggle-item_filter" id="color">
-        <div class="toggle-item__title text-bold">Цвет</div>
-        <div class="toggle-item__content">
-          <div class="woocommerce-widget-layered-nav-list">
-            <div class="woocommerce-widget-layered-nav-list__item"> <a>Белый </a><span class="count">(1)</span></div>
-            <div class="woocommerce-widget-layered-nav-list__item woocommerce-widget-layered-nav-list__item--chosen"> <a>Серый </a><span class="count">(1)</span></div>
-            <div class="woocommerce-widget-layered-nav-list__item"> <a>Синий </a><span class="count">(1)</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="toggle-item toggle-item_filter" id="material">
-        <div class="toggle-item__title text-bold">Тип поверхности</div>
-        <div class="toggle-item__content">
-          <div class="checkbox mb-2">
-            <input class="checkbox__input" id="material1" type="checkbox" name="material"/>
-            <label class="checkbox__label" for="material1">Структурированная с sugar-эффектом</label>
-          </div>
-          <div class="checkbox mb-2">
-            <input class="checkbox__input" id="material2" type="checkbox" name="material"/>
-            <label class="checkbox__label" for="material2">Матовая</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" id="material3" type="checkbox" name="material"/>
-            <label class="checkbox__label" for="material3">Глянцевая</label>
-          </div>
-        </div>
-      </div>
-      <div class="toggle-item toggle-item_filter" id="size">
-        <div class="toggle-item__title text-bold">Размер</div>
-        <div class="toggle-item__content">
-          <div class="checkbox mb-2">
-            <input class="checkbox__input" id="size1" type="checkbox" name="size"/>
-            <label class="checkbox__label" for="size1">60x60</label>
-          </div>
-          <div class="checkbox mb-2">
-            <input class="checkbox__input" id="size2" type="checkbox" name="size"/>
-            <label class="checkbox__label" for="size2">120x60</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" id="size3" type="checkbox" name="size"/>
-            <label class="checkbox__label" for="size3">30x60</label>
-          </div>
-        </div>
-      </div>
-      <div class="toggle-item toggle-item_filter" id="texture">
-        <div class="toggle-item__title text-bold">Фактура<span class="toggle-item_filter__value">Мрамор, Дерево</span></div>
-        <div class="toggle-item__content">
-          <div class="checkbox mb-2">
-            <input class="checkbox__input" id="texture1" type="checkbox" name="texture" checked="checked"/>
-            <label class="checkbox__label" for="texture1">Мрамор</label>
-          </div>
-          <div class="checkbox mb-2">
-            <input class="checkbox__input" id="texture2" type="checkbox" name="texture" checked="checked"/>
-            <label class="checkbox__label" for="texture2">Дерево</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" id="texture3" type="checkbox" name="texture"/>
-            <label class="checkbox__label" for="texture3">Штукатурка</label>
-          </div>
-        </div>
-      </div>
-      <div class="toggle-item toggle-item_filter" id="area">
-        <div class="toggle-item__title text-bold">Назначение</div>
-        <div class="toggle-item__content">
-          <div class="checkbox mb-2">
-            <input class="checkbox__input" id="area1" type="checkbox" name="area"/>
-            <label class="checkbox__label" for="area1">Ванна</label>
-          </div>
-          <div class="checkbox mb-2">
-            <input class="checkbox__input" id="area2" type="checkbox" name="area"/>
-            <label class="checkbox__label" for="area2">Гостинная</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" id="area3" type="checkbox" name="area"/>
-            <label class="checkbox__label" for="area3">Офис</label>
-          </div>
-        </div>
-      </div><a class="btn btn_action btn--small mt-3" href="#reset">Применить фильтр</a>
+      <div class="collection-aside_filter__footer"><a class="btn btn_action btn--small" href="#reset">Применить фильтр</a></div>
     </div>
     <footer class="footer">
       <div class="container">

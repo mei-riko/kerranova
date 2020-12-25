@@ -50,6 +50,24 @@
             }
         }
     }
+    .woocommerce-widget-layered-nav-checkboxes{
+        .woocommerce-widget-layered-nav-checkboxes__item{
+            margin-bottom: $spacer/2;
+            @extend .checkbox;
+
+            .knv-attribute-filter,
+            input[type=checkbox]{
+                @extend .checkbox__input;
+                &[disabled=disabled] + label{
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                }
+            }
+            label{
+                @extend .checkbox__label;
+            }
+        }
+    }
 }
 // Счётчик количества в товаре
 .knv_quantity_decrease{
@@ -106,6 +124,12 @@
     display: block;
 }
 
+// Недоступные вариации в товаре
+.knv-variation-not-found{
+    text-decoration: none;
+    opacity: .5;
+}
+
 // Instargam Widget
 #sb_instagram #sbi_images{
     @extend .row;
@@ -131,8 +155,8 @@
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
+    justify-content: flex-start;
+    flex-direction: row;
     flex-wrap: wrap;
 
     &:before,
@@ -150,6 +174,9 @@
         @extend .btn;
         @extend .btn_secondary; 
         @extend .btn--small;
+        &.wc-forward{
+            margin-right: $spacer/2;
+        }
     }
 }
 .woocommerce-message{
@@ -170,9 +197,11 @@
     .woocommerce-notices-wrapper{
         .woocommerce-error, .woocommerce-info, .woocommerce-message{
             margin-top: $spacer;
-            flex-direction: row;
             padding-left: $spacer;
             padding-right: $spacer;
+        }
+        .woocommerce-info{
+            border: 1px solid $border-color;
         }
         .woocommerce-error{
             border: 1px solid $danger;
@@ -180,58 +209,39 @@
         .woocommerce-message{
             border: 1px solid $success;
         }
+        .restore-item{
+            @extend .btn;
+            @extend .btn_secondary;
+            @extend .btn--small;
+        }
     }
 }
-@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+.collection{
     .woocommerce-error, .woocommerce-info, .woocommerce-message{
-        // контейнер 1360px
-        padding-left: calc((100% - 1330px)/2);
-        padding-right: calc((100% - 1330px)/2);
+        margin-bottom: $spacer;
+        padding-left: $spacer;
+        padding-right: $spacer;
     }
-  }
-  // меньше 1400px
-  @media all and (max-width: map-get($grid-breakpoints, 'lg')){
-    .woocommerce-error, .woocommerce-info, .woocommerce-message{
-        // контейнер 980px
-        padding-left: calc((100% - 950px)/2);
-        padding-right: calc((100% - 950px)/2); 
+    .woocommerce-info{
+        border: 1px solid $border-color;
     }
-  }
-  // меньше 1024px
-  @media all and (max-width: map-get($grid-breakpoints, 'md')){
-    .woocommerce-error, .woocommerce-info, .woocommerce-message{
-        // контейнер 740px
-        padding-left: calc((100% - 710px)/2);
-        padding-right: calc((100% - 710px)/2);
+    .woocommerce-error{
+        border: 1px solid $danger;
     }
-  }
-  // меньше 768px
-  @media all and (max-width: map-get($grid-breakpoints, 'sm')){
-    .woocommerce-error, .woocommerce-info, .woocommerce-message{
-        // контейнер 440px
-        padding-left: calc((100% - 410px)/2);
-        padding-right: calc((100% - 410px)/2);
+    .woocommerce-message{
+        border: 1px solid $success;
     }
-  }
-  // меньше 480px
-  @media all and (max-width: map-get($grid-breakpoints, 'xs')){
-    .woocommerce-error, .woocommerce-info, .woocommerce-message{
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-  }
+}
 
 // Cart
+.knv-cart-active{
+    @extend .header__btn_cart--active;
+}
 .woocommerce img.preview_collection__gallery-item, 
 .woocommerce-page img.preview_collection__gallery-item{
     @extend .preview_collection__gallery-item;
 }
-// Currency
-.woocommerce-Price-currencySymbol{
-    font-weight: 400;
-}
-
-// Cart
+// Cart Coupon
 .knv-woocommerce-form-coupon-toggle{
     font-size: map-get($map: $font-size, $key: sm);
     margin: 0 0 $spacer/2;
@@ -281,6 +291,10 @@
     }
 }
 
+// Currency
+.woocommerce-Price-currencySymbol{
+    font-weight: 400;
+}
 // Order{
 .woocommerce-checkout-review-order{
     .woocommerce-Price-amount{
@@ -311,7 +325,181 @@
     line-height: 14px;
 }
 
+// Checkout
+.woocommerce .form.form_order{
+    .woocommerce-billing-fields__field-wrapper{
+        @extend .row;
+        @extend .align-items-end;
+        .form-row{
+            @extend .col-6;
+            float: unset;
+            margin: 0 0 $spacer/2;
+        }
+    }
+    .payment_box{
+        padding-left: 50px;
+        p{
+            @extend .text-small;
+            width: 210px;
+            max-width: 100%;
+            color: $grey;
+        }
+    }
+    .form-row.place-order{
+        padding: 0;
+        margin: $spacer/2 0 0;
+    }
+    .woocommerce-terms-and-conditions-wrapper{
+        p{
+            @extend .text-small;
+            margin: 0 0 $spacer/2;
+        }
+        a{
+            text-decoration: underline;
+        }
+    }
+}
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order{
+    float: unset;
+}
+// Order
+.woocommerce .woocommerce-order{
+    @extend .row;
+    .woocommerce-order-details{
+        //col-8 col-lg-7 col-md-6 col-sm-12 pt-3 pb-3
+        @extend .col-8;
+
+        &__title{
+            @extend .h6;
+        }
+    }
+    .woocommerce-customer-details{
+        // col-4 col-lg-5 col-md-6 col-sm-12 pt-3 pb-3 pt-sm-0
+        @extend .col-4;
+
+        address{
+            border-radius: 4px;
+            border: 1px solid $border-color;
+            padding: $spacer/2;
+            background-color: $white;
+        }
+    }
+    .woocommerce-column__title{
+        @extend .h6;
+    }
+
+    .woocommerce-table.woocommerce-table--order-details{
+        thead{
+            font-size: 12px;
+            font-weight: $font-weight-normal;
+        }
+        .woocommerce-table__line-item{
+            .woocommerce-table__product-name{
+                a{
+                    font-weight: $font-weight-bold;
+                    color: $black;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+                .wc-item-meta{
+                    @extend .mt-1;
+                    @extend .text-small;
+                    li{
+                        padding-left: 0;
+                        line-height: 1.3;
+                        &:before{
+                            display: none;
+                        }
+                    }
+                    .wc-item-meta-label{
+                        font-weight: $font-weight-normal;
+                        color: $grey;
+                    }
+                    p{
+                        @extend .text-small;
+                    }
+                }
+            }
+        }
+    }
+
+    .woocommerce-notice{
+        @extend .col-12;
+        @extend .h3;
+        // border-radius: 4px;
+        // border: 1px solid $border-color;
+        // border-bottom: none;
+        // padding-top: $spacer/2;
+        // padding-bottom: $spacer/2;
+        // margin: 0;
+        // background-color: $white;
+    }
+    .woocommerce-order-overview{
+        @extend .col-12;
+        // border-radius: 4px;
+        // border: 1px solid $border-color;
+        // border-top: none;
+        // padding-bottom: $spacer/2;
+        // background-color: $white;
+
+        li{
+            font-size: 1rem;
+            text-transform: none;
+            color: $grey;
+            border: none;
+
+            float: unset;
+            display: flex;
+            align-items: center;
+            padding: 0;            
+
+            &:before{
+                display: none;
+            }
+
+            strong{
+                font-size: 1rem;
+                font-weight: $font-weight-normal;
+                color: $black;
+                margin-left: $spacer/2;
+            }
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .woocommerce-error, .woocommerce-info, .woocommerce-message{
+        // контейнер 1360px
+        padding-left: calc((100% - 1330px)/2);
+        padding-right: calc((100% - 1330px)/2);
+    }
+}
+// меньше 1400px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .woocommerce-error, .woocommerce-info, .woocommerce-message{
+        // контейнер 980px
+        padding-left: calc((100% - 950px)/2);
+        padding-right: calc((100% - 950px)/2); 
+    }
+    // Order
+    .woocommerce .woocommerce-order{
+        .woocommerce-order-details{
+            //col-8 col-lg-7 col-md-6 col-sm-12 pt-3 pb-3
+            @extend .col-lg-7;
+        }
+        .woocommerce-customer-details{
+            // col-4 col-lg-5 col-md-6 col-sm-12 pt-3 pb-3 pt-sm-0
+            @extend .col-lg-5;
+        }
+    }
+}
+// меньше 1024px
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .woocommerce-error, .woocommerce-info, .woocommerce-message{
+        // контейнер 740px
+        padding-left: calc((100% - 710px)/2);
+        padding-right: calc((100% - 710px)/2);
+    }
     .woocommerce form.checkout_coupon{
         .form-row, .form-row.form-row-first, .form-row.form-row-last{
             flex: 0 0 100%;
@@ -324,7 +512,40 @@
         }
     }
 }
+// меньше 768px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .woocommerce-error, .woocommerce-info, .woocommerce-message{
+        // контейнер 440px
+        padding-left: calc((100% - 410px)/2);
+        padding-right: calc((100% - 410px)/2);
+    }
+    // Checkout
+    .woocommerce .form.form_order{
+        .woocommerce-billing-fields__field-wrapper{
+            .form-row{
+                @extend .col-sm-12;
+            }
+        }
+    }
+    // Order
+    .woocommerce .woocommerce-order{
+        .woocommerce-order-details{
+            //col-8 col-lg-7 col-md-6 col-sm-12 pt-3 pb-3
+            @extend .col-sm-12;
+            @extend .mb-sm-2;
+        }
+        .woocommerce-customer-details{
+            // col-4 col-lg-5 col-md-6 col-sm-12 pt-3 pb-3 pt-sm-0
+            @extend .col-sm-12;
+        }
+    }
+}
+// меньше 480px
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .woocommerce-error, .woocommerce-info, .woocommerce-message{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .woocommerce form.checkout_coupon{
         padding: $spacer/2;
     }

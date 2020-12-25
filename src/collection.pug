@@ -81,102 +81,104 @@ html(lang="ru")
     .collection-aside.collection-aside_filter(data-collection="filter")
         <button class="collection-aside__close icon-btn" aria-label="Закрыть" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6Z" fill="currentColor"></path></svg></button>
         a.btn.btn_secondary.btn--small.mb-2(href="#reset") Очистить фильтр
-        .toggle-item.toggle-item_filter#type
-            .toggle-item__title.text-bold Тип товара
-            .toggle-item__content
-                .checkbox.mb-2
-                    input.checkbox__input#type1(type="checkbox" name="type")
-                    label.checkbox__label(for="type1") Плитка
-                .checkbox.mb-2
-                    input.checkbox__input#type2(type="checkbox" name="type")
-                    label.checkbox__label(for="type2") Резка
-                .checkbox.mb-2
-                    input.checkbox__input#type3(type="checkbox" name="type")
-                    label.checkbox__label(for="type3") Мозаика
-                .checkbox.mb-2
-                    input.checkbox__input#type4(type="checkbox" name="type")
-                    label.checkbox__label(for="type4") Специальные элементы
-                .checkbox
-                    input.checkbox__input#type5(type="checkbox" name="type")
-                    label.checkbox__label(for="type5") Печатные
-        .toggle-item.toggle-item_filter#sort
-            .toggle-item__title.text-bold Сортировать
-            .toggle-item__content
-                .radio.mb-2
-                    input.radio__input#sort1(type="radio" name="sort")
-                    label.radio__label(for="sort1") Цена: от низкой до высокой
-                .radio.mb-2
-                    input.radio__input#sort2(type="radio" name="sort")
-                    label.radio__label(for="sort2") Цена: от высокой до низкой
-                .radio
-                    input.radio__input#sort3(type="radio" name="sort")
-                    label.radio__label(for="sort3") По алфавиту: от А до Я
-        .toggle-item.toggle-item_filter#price
-            .toggle-item__title.text-bold Цена
-            .toggle-item__content
-        .toggle-item.toggle-item_filter#color
-            .toggle-item__title.text-bold Цвет
-            .toggle-item__content
-                .woocommerce-widget-layered-nav-list
-                    .woocommerce-widget-layered-nav-list__item 
-                        a Белый 
-                        span.count (1)
-                    .woocommerce-widget-layered-nav-list__item.woocommerce-widget-layered-nav-list__item--chosen 
-                        a Серый 
-                        span.count (1)
-                    .woocommerce-widget-layered-nav-list__item 
-                        a Синий 
-                        span.count (1)
-        .toggle-item.toggle-item_filter#material
-            .toggle-item__title.text-bold Тип поверхности
-            .toggle-item__content
-                .checkbox.mb-2
-                    input.checkbox__input#material1(type="checkbox" name="material")
-                    label.checkbox__label(for="material1") Структурированная с sugar-эффектом
-                .checkbox.mb-2
-                    input.checkbox__input#material2(type="checkbox" name="material")
-                    label.checkbox__label(for="material2") Матовая
-                .checkbox
-                    input.checkbox__input#material3(type="checkbox" name="material")
-                    label.checkbox__label(for="material3") Глянцевая
-        .toggle-item.toggle-item_filter#size
-            .toggle-item__title.text-bold Размер
-            .toggle-item__content
-                .checkbox.mb-2
-                    input.checkbox__input#size1(type="checkbox" name="size")
-                    label.checkbox__label(for="size1") 60x60
-                .checkbox.mb-2
-                    input.checkbox__input#size2(type="checkbox" name="size")
-                    label.checkbox__label(for="size2") 120x60
-                .checkbox
-                    input.checkbox__input#size3(type="checkbox" name="size")
-                    label.checkbox__label(for="size3") 30x60
-        .toggle-item.toggle-item_filter#texture
-            .toggle-item__title.text-bold Фактура
-                span.toggle-item_filter__value Мрамор, Дерево
-            .toggle-item__content
-                .checkbox.mb-2
-                    input.checkbox__input#texture1(type="checkbox" name="texture" checked="checked")
-                    label.checkbox__label(for="texture1") Мрамор
-                .checkbox.mb-2
-                    input.checkbox__input#texture2(type="checkbox" name="texture" checked="checked")
-                    label.checkbox__label(for="texture2") Дерево
-                .checkbox
-                    input.checkbox__input#texture3(type="checkbox" name="texture")
-                    label.checkbox__label(for="texture3") Штукатурка
-        .toggle-item.toggle-item_filter#area
-            .toggle-item__title.text-bold Назначение
-            .toggle-item__content
-                .checkbox.mb-2
-                    input.checkbox__input#area1(type="checkbox" name="area")
-                    label.checkbox__label(for="area1") Ванна
-                .checkbox.mb-2
-                    input.checkbox__input#area2(type="checkbox" name="area")
-                    label.checkbox__label(for="area2") Гостинная
-                .checkbox
-                    input.checkbox__input#area3(type="checkbox" name="area")
-                    label.checkbox__label(for="area3") Офис
-        a.btn.btn_action.btn--small.mt-3(href="#reset") Применить фильтр
+        .collection-aside_filter__body
+            .toggle-item.toggle-item_filter#type
+                .toggle-item__title.text-bold Тип товара
+                .toggle-item__content
+                    .checkbox.mb-2
+                        input.checkbox__input#type1(type="checkbox" name="type")
+                        label.checkbox__label(for="type1") Плитка
+                    .checkbox.mb-2
+                        input.checkbox__input#type2(type="checkbox" name="type")
+                        label.checkbox__label(for="type2") Резка
+                    .checkbox.mb-2
+                        input.checkbox__input#type3(type="checkbox" name="type")
+                        label.checkbox__label(for="type3") Мозаика
+                    .checkbox.mb-2
+                        input.checkbox__input#type4(type="checkbox" name="type")
+                        label.checkbox__label(for="type4") Специальные элементы
+                    .checkbox
+                        input.checkbox__input#type5(type="checkbox" name="type")
+                        label.checkbox__label(for="type5") Печатные
+            .toggle-item.toggle-item_filter#sort
+                .toggle-item__title.text-bold Сортировать
+                .toggle-item__content
+                    .radio.mb-2
+                        input.radio__input#sort1(type="radio" name="sort")
+                        label.radio__label(for="sort1") Цена: от низкой до высокой
+                    .radio.mb-2
+                        input.radio__input#sort2(type="radio" name="sort")
+                        label.radio__label(for="sort2") Цена: от высокой до низкой
+                    .radio
+                        input.radio__input#sort3(type="radio" name="sort")
+                        label.radio__label(for="sort3") По алфавиту: от А до Я
+            .toggle-item.toggle-item_filter#price
+                .toggle-item__title.text-bold Цена
+                .toggle-item__content
+            .toggle-item.toggle-item_filter#color
+                .toggle-item__title.text-bold Цвет
+                .toggle-item__content
+                    .woocommerce-widget-layered-nav-list
+                        .woocommerce-widget-layered-nav-list__item 
+                            a Белый 
+                            span.count (1)
+                        .woocommerce-widget-layered-nav-list__item.woocommerce-widget-layered-nav-list__item--chosen 
+                            a Серый 
+                            span.count (1)
+                        .woocommerce-widget-layered-nav-list__item 
+                            a Синий 
+                            span.count (1)
+            .toggle-item.toggle-item_filter#material
+                .toggle-item__title.text-bold Тип поверхности
+                .toggle-item__content
+                    .checkbox.mb-2
+                        input.checkbox__input#material1(type="checkbox" name="material")
+                        label.checkbox__label(for="material1") Структурированная с sugar-эффектом
+                    .checkbox.mb-2
+                        input.checkbox__input#material2(type="checkbox" name="material")
+                        label.checkbox__label(for="material2") Матовая
+                    .checkbox
+                        input.checkbox__input#material3(type="checkbox" name="material")
+                        label.checkbox__label(for="material3") Глянцевая
+            .toggle-item.toggle-item_filter#size
+                .toggle-item__title.text-bold Размер
+                .toggle-item__content
+                    .checkbox.mb-2
+                        input.checkbox__input#size1(type="checkbox" name="size")
+                        label.checkbox__label(for="size1") 60x60
+                    .checkbox.mb-2
+                        input.checkbox__input#size2(type="checkbox" name="size")
+                        label.checkbox__label(for="size2") 120x60
+                    .checkbox
+                        input.checkbox__input#size3(type="checkbox" name="size")
+                        label.checkbox__label(for="size3") 30x60
+            .toggle-item.toggle-item_filter#texture
+                .toggle-item__title.text-bold Фактура
+                    span.toggle-item_filter__value Мрамор, Дерево
+                .toggle-item__content
+                    .checkbox.mb-2
+                        input.checkbox__input#texture1(type="checkbox" name="texture" checked="checked")
+                        label.checkbox__label(for="texture1") Мрамор
+                    .checkbox.mb-2
+                        input.checkbox__input#texture2(type="checkbox" name="texture" checked="checked")
+                        label.checkbox__label(for="texture2") Дерево
+                    .checkbox
+                        input.checkbox__input#texture3(type="checkbox" name="texture")
+                        label.checkbox__label(for="texture3") Штукатурка
+            .toggle-item.toggle-item_filter#area
+                .toggle-item__title.text-bold Назначение
+                .toggle-item__content
+                    .checkbox.mb-2
+                        input.checkbox__input#area1(type="checkbox" name="area")
+                        label.checkbox__label(for="area1") Ванна
+                    .checkbox.mb-2
+                        input.checkbox__input#area2(type="checkbox" name="area")
+                        label.checkbox__label(for="area2") Гостинная
+                    .checkbox
+                        input.checkbox__input#area3(type="checkbox" name="area")
+                        label.checkbox__label(for="area3") Офис
+        .collection-aside_filter__footer
+            a.btn.btn_action.btn--small(href="#reset") Применить фильтр
     include chunks/footer.pug
     link(href='./css/slick.css', rel='stylesheet')
     link(href='./css/slick-theme.css', rel='stylesheet')
