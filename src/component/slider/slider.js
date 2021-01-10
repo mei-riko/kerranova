@@ -4,9 +4,19 @@ $(document).ready(() =>{
   // Слайдер
 	if( $('.slider').length > 0 ){
     // Slider On Index Page
-    let $slickContent = $('.slider.slider_content');
+    let $slickContent = $('.content-row__slider .slider.slider_content');
 		$slickContent.slick({
 			slidesToShow  : 1,
+			slidesToScroll: 1,
+			arrows        : false,
+			dots          : true,
+      autoplay      : false
+    });
+    // Slider On Collection Page
+    let $slickCollectionContent = $('.collection .slider.slider_content');
+		$slickCollectionContent.slick({
+      infinite      : false,
+      slidesToShow  : 1,
 			slidesToScroll: 1,
 			arrows        : false,
 			dots          : true,

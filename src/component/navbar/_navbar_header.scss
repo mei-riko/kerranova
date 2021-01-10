@@ -77,6 +77,10 @@
     }
 }
 
+span.navbar_header__item{
+    cursor: default;
+}
+
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .navbar_header{
         position: fixed;
