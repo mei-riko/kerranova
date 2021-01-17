@@ -394,7 +394,7 @@ template {
   }
 }
 
-.col, .row .mj-page-nav, #sb_instagram #sbi_images .mj-page-nav, .woocommerce .form.form_order .woocommerce-billing-fields__field-wrapper .mj-page-nav, .woocommerce .woocommerce-order .mj-page-nav, .col-1, .col-2, #sb_instagram #sbi_images .sbi_item, .col-3, .col-4, .woocommerce .woocommerce-order .woocommerce-customer-details, .col-5, .col-6, .woocommerce .form.form_order .woocommerce-billing-fields__field-wrapper .form-row, .col-7, .col-8, .woocommerce .woocommerce-order .woocommerce-order-details, .col-9, .col-10, .col-11, .col-12, .woocommerce .woocommerce-order .woocommerce-notice, .woocommerce .woocommerce-order .woocommerce-order-overview {
+.col, .row .mj-page-nav, #sb_instagram #sbi_images .mj-page-nav, .woocommerce .form.form_order .woocommerce-billing-fields__field-wrapper .mj-page-nav, .woocommerce .woocommerce-order .mj-page-nav, .col-1, .col-2, #sb_instagram #sbi_images .sbi_item, .col-3, .col-4, .woocommerce .woocommerce-order .woocommerce-customer-details, .col-5, .col-6, .woocommerce .form.form_order .woocommerce-billing-fields__field-wrapper .form-row, .col-7, .col-8, .woocommerce .woocommerce-order .woocommerce-order-details, .col-9, .col-10, .col-11, .col-12, .woocommerce .woocommerce-order .woocommerce-notice, .woocommerce .woocommerce-order .woocommerce-order-overview, .row .mj-page-nav, #sb_instagram #sbi_images .mj-page-nav, .woocommerce .form.form_order .woocommerce-billing-fields__field-wrapper .mj-page-nav, .woocommerce .woocommerce-order .mj-page-nav {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -487,7 +487,7 @@ template {
   max-width: 91.66667%;
 }
 
-.col-12, .woocommerce .woocommerce-order .woocommerce-notice, .woocommerce .woocommerce-order .woocommerce-order-overview {
+.col-12, .woocommerce .woocommerce-order .woocommerce-notice, .woocommerce .woocommerce-order .woocommerce-order-overview, .row .mj-page-nav, #sb_instagram #sbi_images .mj-page-nav, .woocommerce .form.form_order .woocommerce-billing-fields__field-wrapper .mj-page-nav, .woocommerce .woocommerce-order .mj-page-nav {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
@@ -4745,6 +4745,8 @@ a.preview_product:hover .preview_product__title, a.preview_product:focus .previe
 
 .preview_collection__image {
   width: 100%;
+  -ms-flex-item-align: center;
+  align-self: center;
   height: auto;
   margin-bottom: 10px;
 }
@@ -4762,10 +4764,14 @@ a.preview_product:hover .preview_product__title, a.preview_product:focus .previe
 
 .preview_collection__gallery-item, .woocommerce img.preview_collection__gallery-item,
 .woocommerce-page img.preview_collection__gallery-item {
+  width: 25%;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   max-width: 25%;
+  height: auto;
+  -ms-flex-item-align: center;
+  align-self: center;
   padding: 0 5px;
   margin-bottom: 10px;
 }
@@ -5272,7 +5278,7 @@ span.navbar_header__item {
   font-size: 13px;
   text-align: center;
   line-height: 30px;
-  text-decoration: none;
+  text-decoration: none !important;
   background: #f5f5f5;
 }
 
@@ -5280,11 +5286,18 @@ span.navbar_header__item {
 .woocommerce-pagination a.page-numbers:hover, .pagination__item:focus, .mj-paging-link:focus, .mj-paging-link-active:focus, .woocommerce-pagination span.page-numbers:focus,
 .woocommerce-pagination a.page-numbers:focus {
   color: #1d1d1d;
-  border-color: #d6dbe0;
+  background-color: #d6dbe0;
 }
 
 .pagination__item--active, .mj-paging-link-active, .woocommerce-pagination span.page-numbers.current,
 .woocommerce-pagination a.page-numbers.current {
+  color: #ffffff;
+  background-color: #1d1d1d;
+}
+
+.pagination__item--active:hover, .mj-paging-link-active:hover, .woocommerce-pagination span.page-numbers.current:hover,
+.woocommerce-pagination a.page-numbers.current:hover, .pagination__item--active:focus, .mj-paging-link-active:focus, .woocommerce-pagination span.page-numbers.current:focus,
+.woocommerce-pagination a.page-numbers.current:focus {
   color: #ffffff;
   background-color: #1d1d1d;
 }
@@ -5703,6 +5716,9 @@ span.navbar_header__item {
 }
 
 @media all and (max-width: 768px) {
+  .footer {
+    padding-bottom: 80px;
+  }
   .footer__col {
     min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
@@ -6612,6 +6628,9 @@ span.navbar_header__item {
 }
 
 @media all and (max-width: 768px) {
+  .product {
+    margin-top: 20px;
+  }
   .product:before {
     height: 360px;
   }

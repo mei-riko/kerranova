@@ -15,18 +15,23 @@
         font-size: map-get($map: $font-size, $key: sm);
         text-align: center;
         line-height: 30px;
-        text-decoration: none;
+        text-decoration: none!important;
 
         background: $light-grey;
 
         &:hover, &:focus{
             color: $black;
-            border-color: $border-color;
+            background-color: $border-color;
         }
 
         &--active{
             color: $white;
             background-color: $black;
+
+            &:hover, &:focus{
+                color: $white;
+                background-color: $black;
+            }
         }
     }
 }
@@ -40,6 +45,7 @@
 }
 .row .mj-page-nav{
     @extend .col;
+    @extend .col-12;
 }
 .mj-paging-link{
     @extend .pagination__item;

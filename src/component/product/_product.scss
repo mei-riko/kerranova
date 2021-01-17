@@ -151,6 +151,7 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .product{
+        margin-top: $spacer/2;
         &:before{
             height: 360px;
         }

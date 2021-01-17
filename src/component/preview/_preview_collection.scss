@@ -10,6 +10,7 @@
     }
     &__image{
         width: 100%;
+        align-self:center; 
         height: auto;
         margin-bottom: $spacer/4;
     }
@@ -22,8 +23,12 @@
         margin-bottom: $spacer/4;
 
         &-item{
+            width: 25%;
             flex: 0 0 25%;
             max-width: 25%;
+            height: auto;
+
+            align-self:center; 
             padding: 0 5px;
             margin-bottom: $spacer/4;
         }

@@ -8,6 +8,7 @@ $(document).ready(() =>{
         $("body").addClass("hidden open-search");
 
         $(".header.header_search").addClass("header_search--open");
+        $(".header.header_search .header_search__input").focus();
     });
     
     $('.header.header_search #close-search').on("click", function(e){
