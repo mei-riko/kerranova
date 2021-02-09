@@ -14,14 +14,20 @@ $(document).ready(() =>{
     });
     // Slider On Collection Page
     let $slickCollectionContent = $('.collection .slider.slider_content');
-		$slickCollectionContent.slick({
-      infinite      : false,
-      slidesToShow  : 1,
-			slidesToScroll: 1,
-			arrows        : false,
-			dots          : true,
-      autoplay      : false
+    $slickCollectionContent.each(function(){
+      let count =  $(this).find(".slider_content__item").length;
+      if ( count > 1 ){
+        $(this).slick({
+          infinite      : false,
+          slidesToShow  : 1,
+          slidesToScroll: 1,
+          arrows        : false,
+          dots          : true,
+          autoplay      : false
+        });
+      }
     });
+
     // Slider Collection
     let $slickCollection = $('.slider.slider_collection');
     $slickCollection.each(function(){

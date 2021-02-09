@@ -11,6 +11,10 @@
         padding-right: $spacer/2;
         height: calc( 100% - 140px );
         overflow-y: auto;
+
+        &--full{
+            height: calc( 100% - 40px );
+        }
     }
     &__footer{
         position: fixed;

@@ -5,6 +5,8 @@ html,body {
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
 
+    max-width: 100vw;
+
     &.hidden{
         overflow: hidden;
         // margin-right: 14px;

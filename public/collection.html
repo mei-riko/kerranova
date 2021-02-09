@@ -103,7 +103,7 @@
                 </div>
               </div>
             </div>
-            <div class="navbar_header__parent"><a class="navbar__item navbar_header__item" data-nav="collection" href="catalog.html">Коллекции</a>
+            <div class="navbar_header__parent"><a class="navbar__item navbar_header__item navbar_header__item--new" data-nav="collection" href="catalog.html">Коллекции</a>
               <div class="navbar-inside" id="collection"><a class="navbar-inside__title link-arrow" href="catalog.html">Все коллекции</a><button class="navbar_header__back icon-btn" data-close="collection" aria-label="Назад" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill="#1d1d1d" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 19,13L 6.74998,13L 12,18.2501L 11.3357,19L 4.83579,12.5L 11.3358,6L 12,6.75001L 6.75,12L 19,12L 19,13 Z "/></svg></button>
                 <div class="navbar-inside__row row">
                   <div class="navbar-inside__col col-2 col-lg-12 mb-lg-2"><a class="navbar_header__link" href="collection.html">CENTRAL PARK</a><a class="navbar_header__link" href="collection.html">CANYON</a><a class="navbar_header__link" href="collection.html">MONTANA</a><a class="navbar_header__link" href="collection.html">MARBLE TREND</a><a class="navbar_header__link" href="collection.html">GENESIS</a><a class="navbar_header__link" href="collection.html">TERRAZZO</a></div>
@@ -174,11 +174,11 @@
           </p>
         </div>
         <div class="col-6 col-sm-12 mb-2">
-          <div class="slider slider_content"><a class="slider_content__item slider_content__item--collection" href="/demo/demo.jpg" data-fancybox="gallery" style="background-image: url('../demo/demo.jpg');"></a><a class="slider_content__item slider_content__item--collection" href="/demo/photo.png" data-fancybox="gallery" style="background-image: url('../demo/photo.png');"></a></div>
+          <div class="slider slider_content"><a class="slider_content__item slider_content__item--collection" href="/demo/demo.jpg" data-fancybox="gallery"><img class="slider_content__image" src="/demo/demo.jpg"/></a><a class="slider_content__item slider_content__item--collection" href="/demo/photo.png" data-fancybox="gallery"><img class="slider_content__image" src="/demo/photo.png"/></a></div>
         </div>
       </div>
       <div class="content-scroll collection__filter">
-        <div class="content-group"><span class="label label_link content-group__item" data-filter="type">Тип товара</span><span class="label label_link content-group__item" data-filter="sort">Сортировать</span><span class="label label_link content-group__item" data-filter="price">Цена</span><span class="label label_link content-group__item" data-filter="color">Цвет</span><span class="label label_link content-group__item" data-filter="material">Тип поверхности</span><span class="label label_link content-group__item" data-filter="size">Размер</span><span class="label label_link label_link--active content-group__item" data-filter="texture">Фактура</span><span class="label label_link content-group__item" data-filter="area">Назначение                    </span></div>
+        <div class="content-group"><span class="label label_link content-group__item label_link--active" data-filter="sort">Сортировать</span><span class="label label_link content-group__item" data-filter="type">Тип товара</span><span class="label label_link content-group__item" data-filter="price">Цена</span><span class="label label_link content-group__item" data-filter="brand">Производитель</span><span class="label label_link content-group__item" data-filter="all">Все фильтры</span></div>
       </div>
       <p class="woocommerce-result-count">Показ всех 3 элементов</p>
       <div class="row collection__row">
@@ -265,7 +265,24 @@
       </div>
     </div>
     <div class="collection-aside collection-aside_filter" data-collection="filter"><button class="collection-aside__close icon-btn" aria-label="Закрыть" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6Z" fill="currentColor"></path></svg></button><a class="btn btn_secondary btn--small mb-2" href="#reset">Очистить фильтр</a>
-      <div class="collection-aside_filter__body">
+      <div class="collection-aside_filter__body collection-aside_filter__body--full"><a href="?test">Test</a>
+        <div class="toggle-item toggle-item_filter" id="sort">
+          <div class="toggle-item__title text-bold">Сортировать</div>
+          <div class="toggle-item__content">
+            <div class="radio mb-2">
+              <input class="radio__input" id="sort1" type="radio" name="sort"/>
+              <label class="radio__label" for="sort1">Цена: от низкой до высокой</label>
+            </div>
+            <div class="radio mb-2">
+              <input class="radio__input" id="sort2" type="radio" name="sort"/>
+              <label class="radio__label" for="sort2">Цена: от высокой до низкой</label>
+            </div>
+            <div class="radio">
+              <input class="radio__input" id="sort3" type="radio" name="sort"/>
+              <label class="radio__label" for="sort3">По алфавиту: от А до Я</label>
+            </div>
+          </div>
+        </div>
         <div class="toggle-item toggle-item_filter" id="type">
           <div class="toggle-item__title text-bold">Тип товара</div>
           <div class="toggle-item__content">
@@ -291,34 +308,20 @@
             </div>
           </div>
         </div>
-        <div class="toggle-item toggle-item_filter" id="sort">
-          <div class="toggle-item__title text-bold">Сортировать</div>
-          <div class="toggle-item__content">
-            <div class="radio mb-2">
-              <input class="radio__input" id="sort1" type="radio" name="sort"/>
-              <label class="radio__label" for="sort1">Цена: от низкой до высокой</label>
-            </div>
-            <div class="radio mb-2">
-              <input class="radio__input" id="sort2" type="radio" name="sort"/>
-              <label class="radio__label" for="sort2">Цена: от высокой до низкой</label>
-            </div>
-            <div class="radio">
-              <input class="radio__input" id="sort3" type="radio" name="sort"/>
-              <label class="radio__label" for="sort3">По алфавиту: от А до Я</label>
-            </div>
-          </div>
-        </div>
         <div class="toggle-item toggle-item_filter" id="price">
           <div class="toggle-item__title text-bold">Цена</div>
           <div class="toggle-item__content"></div>
         </div>
-        <div class="toggle-item toggle-item_filter" id="color">
-          <div class="toggle-item__title text-bold">Цвет</div>
+        <div class="toggle-item toggle-item_filter" id="brand">
+          <div class="toggle-item__title text-bold">Производитель</div>
           <div class="toggle-item__content">
-            <div class="woocommerce-widget-layered-nav-list">
-              <div class="woocommerce-widget-layered-nav-list__item"> <a>Белый </a><span class="count">(1)</span></div>
-              <div class="woocommerce-widget-layered-nav-list__item woocommerce-widget-layered-nav-list__item--chosen"> <a>Серый </a><span class="count">(1)</span></div>
-              <div class="woocommerce-widget-layered-nav-list__item"> <a>Синий </a><span class="count">(1)</span></div>
+            <div class="checkbox mb-2">
+              <input class="checkbox__input" id="brand1" type="checkbox" name="brand"/>
+              <label class="checkbox__label" for="brand1">Kerranova</label>
+            </div>
+            <div class="checkbox mb-2">
+              <input class="checkbox__input" id="brand2" type="checkbox" name="brand"/>
+              <label class="checkbox__label" for="brand2">Grasaro</label>
             </div>
           </div>
         </div>
@@ -391,7 +394,6 @@
           </div>
         </div>
       </div>
-      <div class="collection-aside_filter__footer"><a class="btn btn_action btn--small" href="#reset">Применить фильтр</a></div>
     </div>
     <footer class="footer">
       <div class="container">

@@ -25,6 +25,9 @@ $(document).ready(() =>{
         let preview = $(".collection-aside[data-collection=filter]");
         preview.addClass("collection-aside--active");
 
+        // запись cookie
+        document.cookie = "filter=open; max-age=300";
+
         $(".collection-aside .toggle-item").each(function(){
             if( $(this).hasClass("toggle-item--active") ){
                 $(this).removeClass("toggle-item--active");
@@ -46,6 +49,9 @@ $(document).ready(() =>{
 
     $(".collection-aside .collection-aside__close").on("click", function(){
         $(this).closest(".collection-aside").removeClass("collection-aside--active");
+
+        // запись cookie
+        document.cookie = "filter=close; max-age=0";
         
         $(".overlay").removeClass("overlay--aside");
         $(".overlay").addClass("overlay--disable");
@@ -86,6 +92,19 @@ $(document).ready(() =>{
                     $("body").removeClass("open-aside"); 
                 }
                 $(".collection-aside").removeClass("collection-aside--active");
+        
+                // запись cookie
+                document.cookie = "filter=close; max-age=0";
             }
     });
+
+    // Проверка cookie
+    function get_cookie ( cookie_name ){
+        var results = document.cookie.match ( '(^|;) ?' + cookie_name + '=([^;]*)(;|$)' );
+        if ( results )
+            return ( unescape ( results[2] ) );
+        else
+            return null;
+    }
+    console.log( get_cookie( "filter" ) );
 });

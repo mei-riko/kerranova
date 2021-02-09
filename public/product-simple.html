@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Catalog</title>
+    <title>Product</title>
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
   <body>
@@ -160,88 +160,278 @@
         </div>
       </div>
     </header>
-    <section class="container pt-3 pb-4 pt-md-2 pb-md-3 collection">
-      <h1 class="h3 mb-3 mb-md-2">Каталог коллекций</h1>
-      <div class="content-scroll collection__tags">
-        <div class="content-group"><a class="label content-group__item" href="#">Показать все</a><a class="label label_link content-group__item" href="#">Ванна</a><a class="label label_link content-group__item" href="#">Кухня</a><a class="label label_link content-group__item" href="#">Гостиная</a><a class="label label_link label_link--active content-group__item" href="#">Спальня</a><a class="label label_link content-group__item" href="#">Офис</a></div>
+    <div class="product">
+      <div class="product__card">
+        <ul class="breadcrumbs product__breadcrumbs">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/catalog.html">Коллекции</a></li>
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/collection.html">Marble Trend</a></li>
+          <li class="breadcrumbs__item breadcrumbs__item--active">Текстовая страница</li>
+        </ul>
+        <form class="form row">
+          <div class="col-5 col-xl-4 col-md-5 col-sm-12 mb-sm-2">
+            <div class="slider product-slider">
+              <div class="slider__item"><a class="product-slider__item" href="javascript;" data-fancybox="slider" data-src="../demo/pic-1.webp" style="background-image:url('../demo/pic-1.webp');"></a></div>
+              <div class="slider__item"><a class="product-slider__item" href="javascript;" data-fancybox="slider" data-src="../demo/pic-2.webp" style="background-image:url('../demo/pic-2.webp');"></a></div>
+              <div class="slider__item"><a class="product-slider__item" href="javascript;" data-fancybox="slider" data-src="../demo/pic-3.webp" style="background-image:url('../demo/pic-3.webp');"></a></div>
+              <div class="slider__item"><a class="product-slider__item" href="javascript;" data-fancybox="slider" data-src="../demo/pic-4.webp" style="background-image:url('../demo/pic-4.webp');"></a></div>
+              <div class="slider__item"><a class="product-slider__item" href="javascript;" data-fancybox="slider" data-src="../demo/pic-5.webp" style="background-image:url('../demo/pic-5.webp');"></a></div>
+            </div>
+            <div class="slider product-slider-nav">
+              <div class="slider__item">
+                <div class="product-slider-nav__item" style="background-image:url('../demo/pic-1.webp');"></div>
+              </div>
+              <div class="slider__item">
+                <div class="product-slider-nav__item" style="background-image:url('../demo/pic-2.webp');"></div>
+              </div>
+              <div class="slider__item">
+                <div class="product-slider-nav__item" style="background-image:url('../demo/pic-3.webp');"></div>
+              </div>
+              <div class="slider__item">
+                <div class="product-slider-nav__item" style="background-image:url('../demo/pic-4.webp');"></div>
+              </div>
+              <div class="slider__item">
+                <div class="product-slider-nav__item" style="background-image:url('../demo/pic-5.webp');"></div>
+              </div>
+            </div>
+            <div class="product-sidebar d-none d-md-block d-sm-none mt-md-2">
+              <p class="product-sidebar__info"> 
+                <svg class="product-sidebar__info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" viewBox="0 0 24.00 24.00" enable-background="new 0 0 24.00 24.00" xml:space="preserve">
+                  <path fill="#0c36b0" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 11.5,3C 16.7467,3 21,7.25329 21,12.5C 21,17.7467 16.7467,22 11.5,22C 6.25329,22 2,17.7467 2,12.5C 2,7.25329 6.25329,3 11.5,3 Z M 11.5,4C 6.80557,4 3,7.80558 3,12.5C 3,17.1944 6.80558,21 11.5,21C 16.1944,21 20,17.1944 20,12.5C 20,7.80558 16.1944,4 11.5,4 Z M 11,8.00001L 11,10L 12,10L 12,8.00001L 11,8.00001 Z M 11,12L 11,17L 12,17L 12,12L 11,12 Z "></path>
+                </svg>Важная информация
+              </p>
+              <p class="text-small">
+                Плитка продается упаковками.<br/>1 упаковка данного товара = <strong>1.44м2</strong></p>
+            </div>
+          </div>
+          <div class="col-7 col-xl-8 col-md-7 col-sm-12">
+            <div class="row">
+              <div class="col-7 col-xl-6 col-md-12 mb-md-2">
+                <div class="product__body">
+                  <h1 class="product__title">K-1000 CARRARA</h1>
+                  <p class="product__offer">Marble Trend K-1000/LR/600x600x10</p>
+                  <p class="product__label">Цвет: <span class="product__prop">PULPIS / Пульпис</span></p>
+                  <div class="form__group">
+                    <div class="input-group">
+                      <div class="radio radio_color">
+                        <input class="radio__input" id="color1" type="radio" name="color" checked="checked"/>
+                        <label class="radio_color__label radio__label" for="color1" style="background-color: #1d1d1d;"></label>
+                      </div>
+                      <div class="radio radio_color">
+                        <input class="radio__input" id="color2" type="radio" name="color"/>
+                        <label class="radio_color__label radio__label" for="color2" style="background-color: #eee;"></label>
+                      </div>
+                      <div class="radio radio_color">
+                        <input class="radio__input" id="color3" type="radio" name="color"/>
+                        <label class="radio_color__label radio__label" for="color3" style="background-color: #eee;"></label>
+                      </div>
+                      <div class="radio radio_color">
+                        <input class="radio__input" id="color4" type="radio" name="color"/>
+                        <label class="radio_color__label radio__label" for="color4" style="background-color: #eee;"></label>
+                      </div>
+                      <div class="radio radio_color">
+                        <input class="radio__input" id="color5" type="radio" name="color"/>
+                        <label class="radio_color__label radio__label" for="color5" style="background-color: #eee;"></label>
+                      </div>
+                      <div class="radio radio_color">
+                        <input class="radio__input" id="color6" type="radio" name="color"/>
+                        <label class="radio_color__label radio__label" for="color6" style="background-color: #eee;"></label>
+                      </div>
+                      <div class="radio radio_color">
+                        <input class="radio__input" id="color7" type="radio" name="color"/>
+                        <label class="radio_color__label radio__label" for="color7" style="background-color: #eee;"></label>
+                      </div>
+                      <div class="radio radio_color">
+                        <input class="radio__input" id="color8" type="radio" name="color"/>
+                        <label class="radio_color__label radio__label" for="color8" style="background-color: #eee;"></label>
+                      </div>
+                      <div class="radio radio_color">
+                        <input class="radio__input" id="color9" type="radio" name="color"/>
+                        <label class="radio_color__label radio__label" for="color9" style="background-color: #eee;"></label>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="product__label">Размер: </p>
+                  <div class="form__group">
+                    <div class="input-group">
+                      <div class="radio radio_size">
+                        <input class="radio__input" id="size1" type="radio" name="size" checked="checked"/>
+                        <label class="radio_size__label radio__label" for="size1">60x60</label>
+                      </div>
+                      <div class="radio radio_size">
+                        <input class="radio__input" id="size2" type="radio" name="size"/>
+                        <label class="radio_size__label radio__label" for="size2">30x60</label>
+                      </div>
+                      <div class="radio radio_size">
+                        <input class="radio__input" id="size3" type="radio" name="size"/>
+                        <label class="radio_size__label radio__label" for="size3">120x60</label>
+                      </div>
+                      <div class="radio radio_size">
+                        <input class="radio__input" id="size4" type="radio" name="size" checked="checked"/>
+                        <label class="radio_size__label radio__label" for="size4">60x60</label>
+                      </div>
+                      <div class="radio radio_size">
+                        <input class="radio__input" id="size5" type="radio" name="size"/>
+                        <label class="radio_size__label radio__label" for="size5">30x60</label>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="product__label">Тип поверхности: <span class="tooltip-info" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"></span></p>
+                  <select class="input input_select-product" id="material" name="">
+                    <option value="type1">Структурированная с sugar-эффектом</option>
+                    <option value="type2">Матовая</option>
+                    <option value="type3">Глянцевая</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-5 col-xl-6 col-md-12 d-sm-flex flex-sm-wrap">
+                <div class="product-sidebar product-sidebar_info d-md-none d-sm-block mt-sm-2">
+                  <p class="product-sidebar__info"> 
+                    <svg class="product-sidebar__info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" viewBox="0 0 24.00 24.00" enable-background="new 0 0 24.00 24.00" xml:space="preserve">
+                      <path fill="#0c36b0" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 11.5,3C 16.7467,3 21,7.25329 21,12.5C 21,17.7467 16.7467,22 11.5,22C 6.25329,22 2,17.7467 2,12.5C 2,7.25329 6.25329,3 11.5,3 Z M 11.5,4C 6.80557,4 3,7.80558 3,12.5C 3,17.1944 6.80558,21 11.5,21C 16.1944,21 20,17.1944 20,12.5C 20,7.80558 16.1944,4 11.5,4 Z M 11,8.00001L 11,10L 12,10L 12,8.00001L 11,8.00001 Z M 11,12L 11,17L 12,17L 12,12L 11,12 Z "></path>
+                    </svg>Важная информация
+                  </p>
+                  <p class="text-small">
+                    Плитка продается упаковками.<br/>1 упаковка данного товара = <strong>1.44м2</strong></p>
+                </div>
+                <div class="product-sidebar">
+                  <div class="row align-items-end mb-1">
+                    <div class="col-6 mb-1">
+                      <p class="product__price product__price_result">123 797<span class="product__rub">₽</span></p>
+                    </div>
+                    <div class="col-6 mb-1 text-right"><a class="text-small text-grey" href="#">Нужен расчёт?</a></div>
+                  </div>
+                  <div class="row mb-1">
+                    <div class="col-12 col-md-5 col-sm-12 mt-md-1 mt-sm-0 mb-2 mb-md-0 mb-sm-2">
+                      <p class="product__price">1 419<span class="product__rub">₽</span><span>/м<sup>2</sup></span></p>
+                      <p class="text-small">Стоимость кв.м. для <a class="product__link" href="#">Самарская обл.</a></p>
+                    </div>
+                    <div class="col-12 col-md-7 col-sm-12">
+                      <input class="input input_count input_count--full" type="number" value="1"/>
+                      <div class="input-group product-sidebar__type">
+                        <div class="radio radio_type">
+                          <input class="radio__input" id="type1" type="radio" name="type" checked="checked"/>
+                          <label class="radio_type__label radio__label" for="type1">м2</label>
+                        </div>
+                        <div class="radio radio_type">
+                          <input class="radio__input" id="type2" type="radio" name="type"/>
+                          <label class="radio_type__label radio__label" for="type2">упаковки</label>
+                        </div>
+                        <div class="radio radio_type">
+                          <input class="radio__input" id="type3" type="radio" name="type"/>
+                          <label class="radio_type__label radio__label" for="type3">штуки</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div><a class="btn btn_action btn--full" href="#">Добавить в корзину</a>
+                </div><a class="product-sidebar-btn btn btn_secondary btn--small btn--full mt-1" href="#">Купить в 1 клик</a>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="product-content product-content--close content">
+          <div class="row">
+            <div class="col-4 col-sm-12 mb-sm-2">
+              <p> <strong>Заголовок колонки</strong></p>
+              <p>Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.</p>
+            </div>
+            <div class="col-4 col-sm-12 mb-sm-2">
+              <p> <strong>Заголовок колонки</strong></p>
+              <ul>
+                <li>даже с языками, использующими латинский алфавит, могут возникнуть небольшие проблемы</li>
+                <li>лучше использовать в качестве «рыбы» текст на том языке, который планируется использовать при запуске проекта</li>
+                <li>существует несколько вариантов Lorem ipsum</li>
+              </ul>
+            </div>
+            <div class="col-4 col-sm-12">
+              <p> <strong>Заголовок колонки</strong></p>
+              <p>Некоторые вопросы, связанные с языками, использующими латинский. Частотой, имеется разница в различных языках те или иные буквы встречаются. Буквы встречаются с разной частотой, имеется разница в xvi веке. Именно из его трактата о пределах добра и демонстрации внешнего вида. Вырвал отдельные фразы и демонстрации внешнего вида контента, просмотра шрифтов. Вставки на кириллический контент – написание. Есть специальные генераторы, создающие собственные варианты текста сыграет на руку.</p>
+            </div>
+          </div>
+          <div class="product-content__btn"><a class="btn btn--small btn_secondary" id="toggleContent" href="javascript;">Подробнее о товаре</a></div>
+        </div>
       </div>
-      <div class="row mt-2 collection__row">
-        <div class="col-3 col-md-6 col-xs-12 mb-4">
-              <div class="preview preview_collection"><a class="preview_collection__catalog" href="collection.html"><img class="preview_collection__image" src="../demo/collection-1.png"/>
-                  <div class="preview_collection__gallery"><img class="preview_collection__gallery-item" src="../demo/pic-1.png"/><img class="preview_collection__gallery-item" src="../demo/pic-2.png"/><img class="preview_collection__gallery-item" src="../demo/pic-3.png"/><img class="preview_collection__gallery-item" src="../demo/pic-4.png"/></div>
-                  <div class="preview__title preview__title_link">Marble Trend</div>
-                  <p class="preview__intro preview_collection__intro">Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см</p></a>
-                <div class="link-arrow preview_collection__link" id="collection-1">Посмотреть коллекцию</div>
-              </div>
+    </div>
+    <div class="container mt-4 mt-sm-3 pb-3">
+      <h3 class="h4 content-title">Другие товары коллекции</h3>
+      <div class="slider slider_preview slider_product row">
+        <div class="col slider_product__col mb-2"><a class="preview preview_product" href="product.html">
+                <div class="preview_product__image" style="background-image:url('../demo/product-1.jpg');"></div>
+                <div class="preview__title preview_product__title">K-1001 CARRARA</div>
+                <p class="preview__intro preview_product__intro"><span class="preview_product__collection">Marble Trend</span><span class="preview_product__size">60х60, 30х60, 120х60</span></p>
+                <p class="preview_product__price">от 1 419<span class="preview_product__rub">₽</span><span class="text-bolder">/м2</span></p></a>
         </div>
-        <div class="col-3 col-md-6 col-xs-12 mb-4">
-              <div class="preview preview_collection"><a class="preview_collection__catalog" href="collection.html"><img class="preview_collection__image" src="../demo/collection-2.png"/>
-                  <div class="preview_collection__gallery"><img class="preview_collection__gallery-item" src="../demo/pic-1.png"/><img class="preview_collection__gallery-item" src="../demo/pic-2.png"/><img class="preview_collection__gallery-item" src="../demo/pic-3.png"/><img class="preview_collection__gallery-item" src="../demo/pic-4.png"/></div>
-                  <div class="preview__title preview__title_link">Premium Marble</div>
-                  <p class="preview__intro preview_collection__intro">Размеры плитки: 80x160, 80x80, 60x120 см</p></a>
-                <div class="link-arrow preview_collection__link" id="collection-2">Посмотреть коллекцию</div>
-              </div>
-        </div>
-        <div class="col-3 col-md-6 col-xs-12 mb-4">
-              <div class="preview preview_collection"><a class="preview_collection__catalog" href="collection.html"><img class="preview_collection__image" src="../demo/collection-3.png"/>
-                  <div class="preview_collection__gallery"><img class="preview_collection__gallery-item" src="../demo/pic-1.png"/><img class="preview_collection__gallery-item" src="../demo/pic-2.png"/><img class="preview_collection__gallery-item" src="../demo/pic-3.png"/><img class="preview_collection__gallery-item" src="../demo/pic-4.png"/></div>
-                  <div class="preview__title preview__title_link">Terrazzo</div>
-                  <p class="preview__intro preview_collection__intro">Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см</p></a>
-                <div class="link-arrow preview_collection__link" id="collection-3">Посмотреть коллекцию</div>
-              </div>
-        </div>
-        <div class="col-3 col-md-6 col-xs-12 mb-4">
-              <div class="preview preview_collection"><a class="preview_collection__catalog" href="collection.html"><img class="preview_collection__image" src="../demo/collection-4.png"/>
-                  <div class="preview_collection__gallery"><img class="preview_collection__gallery-item" src="../demo/pic-1.png"/><img class="preview_collection__gallery-item" src="../demo/pic-2.png"/><img class="preview_collection__gallery-item" src="../demo/pic-3.png"/><img class="preview_collection__gallery-item" src="../demo/pic-4.png"/></div>
-                  <div class="preview__title preview__title_link">Montana</div>
-                  <p class="preview__intro preview_collection__intro">Размеры плитки: 80x160, 80x80, 60x120, 120x120 см</p></a>
-                <div class="link-arrow preview_collection__link" id="collection-4">Посмотреть коллекцию</div>
-              </div>
-        </div>
-        <div class="col-3 col-md-6 col-xs-12 mb-4">
-              <div class="preview preview_collection"><a class="preview_collection__catalog" href="collection.html"><img class="preview_collection__image" src="../demo/collection-2.png"/>
-                  <div class="preview_collection__gallery"><img class="preview_collection__gallery-item" src="../demo/pic-1.png"/><img class="preview_collection__gallery-item" src="../demo/pic-2.png"/><img class="preview_collection__gallery-item" src="../demo/pic-3.png"/><img class="preview_collection__gallery-item" src="../demo/pic-4.png"/></div>
-                  <div class="preview__title preview__title_link">Premium Marble</div>
-                  <p class="preview__intro preview_collection__intro">Размеры плитки: 80x160, 80x80, 60x120 см</p></a>
-                <div class="link-arrow preview_collection__link" id="collection-5">Посмотреть коллекцию</div>
-              </div>
-        </div>
-        <div class="col-3 col-md-6 col-xs-12 mb-4">
-              <div class="preview preview_collection"><a class="preview_collection__catalog" href="collection.html"><img class="preview_collection__image" src="../demo/collection-3.png"/>
-                  <div class="preview_collection__gallery"><img class="preview_collection__gallery-item" src="../demo/pic-1.png"/><img class="preview_collection__gallery-item" src="../demo/pic-2.png"/><img class="preview_collection__gallery-item" src="../demo/pic-3.png"/><img class="preview_collection__gallery-item" src="../demo/pic-4.png"/></div>
-                  <div class="preview__title preview__title_link">Terrazzo</div>
-                  <p class="preview__intro preview_collection__intro">Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см</p></a>
-                <div class="link-arrow preview_collection__link" id="collection-6">Посмотреть коллекцию</div>
-              </div>
-        </div>
-        <div class="col-3 col-md-6 col-xs-12 mb-4">
-              <div class="preview preview_collection"><a class="preview_collection__catalog" href="collection.html"><img class="preview_collection__image" src="../demo/collection-1.png"/>
-                  <div class="preview_collection__gallery"><img class="preview_collection__gallery-item" src="../demo/pic-1.png"/><img class="preview_collection__gallery-item" src="../demo/pic-2.png"/><img class="preview_collection__gallery-item" src="../demo/pic-3.png"/><img class="preview_collection__gallery-item" src="../demo/pic-4.png"/></div>
-                  <div class="preview__title preview__title_link">Marble Trend</div>
-                  <p class="preview__intro preview_collection__intro">Размеры плитки: 80x160, 80x80, 60x120, 60x60, 120x278 см</p></a>
-                <div class="link-arrow preview_collection__link" id="collection-7">Посмотреть коллекцию</div>
-              </div>
-        </div>
-        <div class="col-3 col-md-6 col-xs-12 mb-4">
-              <div class="preview preview_collection"><a class="preview_collection__catalog" href="collection.html"><img class="preview_collection__image" src="../demo/collection-2.png"/>
-                  <div class="preview_collection__gallery"><img class="preview_collection__gallery-item" src="../demo/pic-1.png"/><img class="preview_collection__gallery-item" src="../demo/pic-2.png"/><img class="preview_collection__gallery-item" src="../demo/pic-3.png"/><img class="preview_collection__gallery-item" src="../demo/pic-4.png"/></div>
-                  <div class="preview__title preview__title_link">Premium Marble</div>
-                  <p class="preview__intro preview_collection__intro">Размеры плитки: 80x160, 80x80, 60x120 см</p></a>
-                <div class="link-arrow preview_collection__link" id="collection-8">Посмотреть коллекцию</div>
-              </div>
+        <div class="col slider_product__col mb-2"><a class="preview preview_product" href="product.html">
+                <div class="preview_product__image" style="background-image:url('../demo/product-2.jpg');"></div>
+                <div class="preview__title preview_product__title">K-1002 CARRARA</div>
+                <p class="preview__intro preview_product__intro"><span class="preview_product__collection">Marble Trend</span><span class="preview_product__size">60х60, 30х60, 120х60</span></p>
+                <p class="preview_product__price">от 769<span class="preview_product__rub">₽</span><span class="text-bolder">/м2</span></p></a>
         </div>
       </div>
-      <div class="text-center"><a class="btn btn_secondary btn--small" href="#">Загрузить ещё</a></div>
-    </section>
-    <div class="collection-aside" data-collection="collection-1"><button class="collection-aside__close icon-btn" aria-label="Закрыть" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6Z" fill="currentColor"></path></svg></button>
-      <p class="collection-aside__title">Marble Trend</p>
-      <div class="row collection-aside__row">
-        <div class="collection-aside__col col-4 mb-2"><img class="img-fluid" src="../demo/product-1.jpg" alt="" title=""/></div>
-        <div class="collection-aside__col col-4 mb-2"><img class="img-fluid" src="../demo/product-2.jpg" alt="" title=""/></div>
-        <div class="collection-aside__col col-4 mb-2"><img class="img-fluid" src="../demo/product-3.jpg" alt="" title=""/></div>
-        <div class="collection-aside__col col-4 mb-2"><img class="img-fluid" src="../demo/product-4.jpg" alt="" title=""/></div>
-        <div class="collection-aside__col col-4 mb-2"><img class="img-fluid" src="../demo/product-1.jpg" alt="" title=""/></div>
-      </div><a class="collection-aside__link btn btn_secondary btn--small" href="collection.html">Перейти в коллекцию</a>
+    </div>
+    <div class="container mt-4 mt-md-2 pb-3">
+      <h3 class="h4 content-title">Хорошо сочетается с</h3>
+      <div class="slider slider_preview slider_product row">
+        <div class="col slider_product__col mb-2"><a class="preview preview_product" href="product.html">
+                <div class="preview_product__image" style="background-image:url('../demo/product-1.jpg');"></div>
+                <div class="preview__title preview_product__title">K-1001 CARRARA</div>
+                <p class="preview__intro preview_product__intro"><span class="preview_product__collection">Marble Trend</span><span class="preview_product__size">60х60, 30х60, 120х60</span></p>
+                <p class="preview_product__price">от 1 419<span class="preview_product__rub">₽</span><span class="text-bolder">/м2</span></p></a>
+        </div>
+        <div class="col slider_product__col mb-2"><a class="preview preview_product" href="product.html">
+                <div class="preview_product__image" style="background-image:url('../demo/product-2.jpg');"></div>
+                <div class="preview__title preview_product__title">K-1002 CARRARA</div>
+                <p class="preview__intro preview_product__intro"><span class="preview_product__collection">Marble Trend</span><span class="preview_product__size">60х60, 30х60, 120х60</span></p>
+                <p class="preview_product__price">от 769<span class="preview_product__rub">₽</span><span class="text-bolder">/м2</span></p></a>
+        </div>
+        <div class="col slider_product__col mb-2"><a class="preview preview_product" href="product.html">
+                <div class="preview_product__image" style="background-image:url('../demo/product-3.jpg');"></div>
+                <div class="preview__title preview_product__title">K-1003 CARRARA</div>
+                <p class="preview__intro preview_product__intro"><span class="preview_product__collection">Marble Trend</span><span class="preview_product__size">60х60, 30х60, 120х60</span></p>
+                <p class="preview_product__price">от 2 449<span class="preview_product__rub">₽</span><span class="text-bolder">/м2</span></p></a>
+        </div>
+        <div class="col slider_product__col mb-2"><a class="preview preview_product" href="product.html">
+                <div class="preview_product__image" style="background-image:url('../demo/product-4.jpg');"></div>
+                <div class="preview__title preview_product__title">K-1004 CARRARA</div>
+                <p class="preview__intro preview_product__intro"><span class="preview_product__collection">Marble Trend</span><span class="preview_product__size">60х60, 30х60, 120х60</span></p>
+                <p class="preview_product__price">от 959<span class="preview_product__rub">₽</span><span class="text-bolder">/м2</span></p></a>
+        </div>
+        <div class="col slider_product__col mb-2"><a class="preview preview_product" href="product.html">
+                <div class="preview_product__image" style="background-image:url('../demo/product-5.jpg');"></div>
+                <div class="preview__title preview_product__title">K-1005 CARRARA</div>
+                <p class="preview__intro preview_product__intro"><span class="preview_product__collection">Marble Trend</span><span class="preview_product__size">60х60, 30х60, 120х60</span></p>
+                <p class="preview_product__price">от 1 419<span class="preview_product__rub">₽</span><span class="text-bolder">/м2</span></p></a>
+        </div>
+        <div class="col slider_product__col mb-2"><a class="preview preview_product" href="product.html">
+                <div class="preview_product__image" style="background-image:url('../demo/product-1.jpg');"></div>
+                <div class="preview__title preview_product__title">K-1006 CARRARA</div>
+                <p class="preview__intro preview_product__intro"><span class="preview_product__collection">Marble Trend</span><span class="preview_product__size">60х60, 30х60, 120х60</span></p>
+                <p class="preview_product__price">от 1 419<span class="preview_product__rub">₽</span><span class="text-bolder">/м2</span></p></a>
+        </div>
+        <div class="col slider_product__col mb-2"><a class="preview preview_product" href="product.html">
+                <div class="preview_product__image" style="background-image:url('../demo/product-2.jpg');"></div>
+                <div class="preview__title preview_product__title">K-1007 CARRARA</div>
+                <p class="preview__intro preview_product__intro"><span class="preview_product__collection">Marble Trend</span><span class="preview_product__size">60х60, 30х60, 120х60</span></p>
+                <p class="preview_product__price">от 1 419<span class="preview_product__rub">₽</span><span class="text-bolder">/м2</span></p></a>
+        </div>
+        <div class="col slider_product__col mb-2"><a class="preview preview_product" href="product.html">
+                <div class="preview_product__image" style="background-image:url('../demo/product-3.jpg');"></div>
+                <div class="preview__title preview_product__title">K-1008 CARRARA</div>
+                <p class="preview__intro preview_product__intro"><span class="preview_product__collection">Marble Trend</span><span class="preview_product__size">60х60, 30х60, 120х60</span></p>
+                <p class="preview_product__price">от 1 419<span class="preview_product__rub">₽</span><span class="text-bolder">/м2</span></p></a>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-4 mt-md-2 mb-2">
+      <h4 class="content-title">Интерьерные решения</h4>
+      <div class="content-interior">
+        <div class="content-interior__col-left">
+          <div class="content-interior__image content-interior__image--full" data-fancybox="interior" data-src="../demo/demo.jpg" style="background-image:url('../demo/demo.jpg');"></div>
+        </div>
+        <div class="content-interior__col-right">
+          <div class="content-interior__image" data-fancybox="interior" data-src="../demo/pic-1.webp" style="background-image:url('../demo/pic-1.webp');"></div>
+          <div class="content-interior__image" data-fancybox="interior" data-src="../demo/pic-2.webp" style="background-image:url('../demo/pic-2.webp');"></div>
+        </div>
+      </div>
     </div>
     <footer class="footer">
       <div class="container">
@@ -304,6 +494,10 @@
         </div>
       </form>
     </div>
+    <script src="./number_plugin/number_plugin.min.js"></script>
+    <link href="./css/slick.css" rel="stylesheet"/>
+    <link href="./css/slick-theme.css" rel="stylesheet"/>
+    <script src="./js/slick.min.js"></script>
     <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/blazy.min.js"></script>
