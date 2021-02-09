@@ -103,7 +103,7 @@
                 </div>
               </div>
             </div>
-            <div class="navbar_header__parent"><a class="navbar__item navbar_header__item" data-nav="collection" href="catalog.html">Коллекции</a>
+            <div class="navbar_header__parent"><a class="navbar__item navbar_header__item navbar_header__item--new" data-nav="collection" href="catalog.html">Коллекции</a>
               <div class="navbar-inside" id="collection"><a class="navbar-inside__title link-arrow" href="catalog.html">Все коллекции</a><button class="navbar_header__back icon-btn" data-close="collection" aria-label="Назад" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill="#1d1d1d" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 19,13L 6.74998,13L 12,18.2501L 11.3357,19L 4.83579,12.5L 11.3358,6L 12,6.75001L 6.75,12L 19,12L 19,13 Z "/></svg></button>
                 <div class="navbar-inside__row row">
                   <div class="navbar-inside__col col-2 col-lg-12 mb-lg-2"><a class="navbar_header__link" href="collection.html">CENTRAL PARK</a><a class="navbar_header__link" href="collection.html">CANYON</a><a class="navbar_header__link" href="collection.html">MONTANA</a><a class="navbar_header__link" href="collection.html">MARBLE TREND</a><a class="navbar_header__link" href="collection.html">GENESIS</a><a class="navbar_header__link" href="collection.html">TERRAZZO</a></div>
@@ -250,7 +250,7 @@
                       </div>
                     </div>
                   </div>
-                  <p class="product__label">Размер: </p>
+                  <p class="product__label" data-attribute="pa_017-size">Размер: </p>
                   <div class="form__group">
                     <div class="input-group">
                       <div class="radio radio_size">
@@ -275,7 +275,7 @@
                       </div>
                     </div>
                   </div>
-                  <p class="product__label">Тип поверхности: <span class="tooltip-info" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"></span></p>
+                  <p class="product__label" data-attribute="pa_027-surface-type">Тип поверхности: <span class="tooltip-info" data-toggle="tooltip" data-placement="bottom" title="Подробнее о поверхностях" data-fancybox="surface" data-src="#surfaceModal"></span></p>
                   <select class="input input_select-product" id="material" name="">
                     <option value="type1">Структурированная с sugar-эффектом</option>
                     <option value="type2">Матовая</option>
@@ -421,16 +421,10 @@
         </div>
       </div>
     </div>
-    <div class="container mt-4 mt-md-2 mb-2">
-      <h4 class="content-title">Интерьерные решения</h4>
-      <div class="content-interior">
-        <div class="content-interior__col-left">
-          <div class="content-interior__image content-interior__image--full" data-fancybox="interior" data-src="../demo/demo.jpg" style="background-image:url('../demo/demo.jpg');"></div>
-        </div>
-        <div class="content-interior__col-right">
-          <div class="content-interior__image" data-fancybox="interior" data-src="../demo/pic-1.webp" style="background-image:url('../demo/pic-1.webp');"></div>
-          <div class="content-interior__image" data-fancybox="interior" data-src="../demo/pic-2.webp" style="background-image:url('../demo/pic-2.webp');"></div>
-        </div>
+    <div class="slider-interior-container">
+      <div class="container mt-4 mt-md-2 mb-2">
+        <h4 class="content-title">Интерьерные решения</h4>
+        <div class="slider slider_interior"><a class="slider_interior__item" data-fancybox="interior" data-src="../demo/demo-1.jpg"><img class="img-fluid slider_interior__image" src="/demo/demo-1.jpg"/></a><a class="slider_interior__item" data-fancybox="interior" data-src="../demo/demo-2.jpg"><img class="img-fluid slider_interior__image" src="/demo/demo-2.jpg"/></a><a class="slider_interior__item" data-fancybox="interior" data-src="../demo/demo-3.jpg"><img class="img-fluid slider_interior__image" src="/demo/demo-3.jpg"/></a></div>
       </div>
     </div>
     <footer class="footer">
@@ -493,6 +487,12 @@
           <label class="checkbox__label checkbox_agree__label" for="agreeInline">согласен с обработкой <a class="form__link-inverse" href="/policy.pdf" target="_blank">персональных данных        </a></label>
         </div>
       </form>
+    </div>
+    <div class="modal" id="surfaceModal">
+      <p>Структурированный — пояснение</p>
+      <p>Sugar-эффект — пояснение </p>
+      <p>Лаппатированный — пояснение</p>
+      <p class="mb-0">Матовый — пояснение</p>
     </div>
     <script src="./number_plugin/number_plugin.min.js"></script>
     <link href="./css/slick.css" rel="stylesheet"/>

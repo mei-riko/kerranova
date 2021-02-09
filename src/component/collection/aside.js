@@ -25,8 +25,10 @@ $(document).ready(() =>{
         let preview = $(".collection-aside[data-collection=filter]");
         preview.addClass("collection-aside--active");
 
-        // запись cookie
-        document.cookie = "filter=open; max-age=300";
+        // запись информации об открытии фильтра на странице
+        let pageUrl = location.pathname;
+        sessionStorage.setItem("filter", "1");
+        sessionStorage.setItem("url", pageUrl);
 
         $(".collection-aside .toggle-item").each(function(){
             if( $(this).hasClass("toggle-item--active") ){
@@ -50,8 +52,9 @@ $(document).ready(() =>{
     $(".collection-aside .collection-aside__close").on("click", function(){
         $(this).closest(".collection-aside").removeClass("collection-aside--active");
 
-        // запись cookie
-        document.cookie = "filter=close; max-age=0";
+        // запись информации о закрытии фильтра на странице
+        sessionStorage.clear();
+        $(".collection-aside[data-collection=filter]").removeAttr("style");
         
         $(".overlay").removeClass("overlay--aside");
         $(".overlay").addClass("overlay--disable");
@@ -93,18 +96,30 @@ $(document).ready(() =>{
                 }
                 $(".collection-aside").removeClass("collection-aside--active");
         
-                // запись cookie
-                document.cookie = "filter=close; max-age=0";
+                // запись информации о закрытии фильтра на странице
+                sessionStorage.clear();
+                $(".collection-aside[data-collection=filter]").removeAttr("style");
             }
     });
 
-    // Проверка cookie
-    function get_cookie ( cookie_name ){
-        var results = document.cookie.match ( '(^|;) ?' + cookie_name + '=([^;]*)(;|$)' );
-        if ( results )
-            return ( unescape ( results[2] ) );
-        else
-            return null;
-    }
-    console.log( get_cookie( "filter" ) );
+    // Проверка информации о фильтре при загрузке
+    let pageActive = location.pathname;
+    let pageFilter = sessionStorage.getItem("url");
+
+    if( pageFilter != null ){
+        if( pageFilter != pageActive){
+            // Фильтр был открыт, но сейчас мы на другой странице;
+            sessionStorage.clear();
+        } else{
+            $(".collection-aside[data-collection=filter]").attr("style", "transition: 0s;");
+
+            $(".overlay").addClass("overlay--aside");
+            $(".overlay").removeClass("overlay--disable");
+
+            $("body").addClass("hidden open-aside");
+            
+            $(".collection-aside[data-collection=filter]").addClass("collection-aside--active");
+        }
+    };
+
 });

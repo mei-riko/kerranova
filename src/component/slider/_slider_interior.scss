@@ -1,0 +1,42 @@
+.slider_interior{
+    &__item{
+        padding: 0 $spacer/4;
+        opacity: .35;
+        transition: .4s;
+
+        &.slick-active{
+            opacity: 1;
+        }
+    }
+
+    &.slick-initialized {
+        max-width: calc(100% - 120px);
+        margin-left: 60px;
+    }
+    .slick-list{
+        overflow: visible;
+    }
+}
+
+.slider-interior-container{
+    max-width: 100%;
+    overflow: hidden;
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .slider_interior{
+        &.slick-initialized{
+            max-width: calc(100% - 80px);
+            margin-left: 40px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .slider_interior{
+        .slick-prev{
+            opacity: 0;
+        }
+        .slick-next{
+            opacity: 0;
+        }
+    }
+}

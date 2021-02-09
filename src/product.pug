@@ -89,7 +89,7 @@ html(lang="ru")
                                             .radio.radio_color
                                                 input.radio__input#color9(type="radio" name="color")
                                                 label.radio_color__label.radio__label(for="color9" style="background-color: #eee;")
-                                    p.product__label Размер: 
+                                    p.product__label(data-attribute="pa_017-size") Размер: 
                                     .form__group
                                         .input-group
                                             .radio.radio_size
@@ -107,8 +107,8 @@ html(lang="ru")
                                             .radio.radio_size
                                                 input.radio__input#size5(type="radio" name="size")
                                                 label.radio_size__label.radio__label(for="size5") 30x60
-                                    p.product__label Тип поверхности: 
-                                        span.tooltip-info(data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom")
+                                    p.product__label(data-attribute="pa_027-surface-type") Тип поверхности: 
+                                        span.tooltip-info(data-toggle="tooltip" data-placement="bottom" title="Подробнее о поверхностях" data-fancybox="surface" data-src="#surfaceModal")
                                     select#material.input.input_select-product(name="")
                                         option(value="type1") Структурированная с sugar-эффектом
                                         option(value="type2") Матовая
@@ -210,17 +210,24 @@ html(lang="ru")
                     +product("K-1007 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-2.jpg');")
                 .col.slider_product__col.mb-2
                     +product("K-1008 CARRARA", "Marble Trend" , "60х60, 30х60, 120х60", "от 1 419")(style="background-image:url('../demo/product-3.jpg');")
-        //- Interiors
-        .container.mt-4.mt-md-2.mb-2
-            h4.content-title Интерьерные решения
-            .content-interior
-                .content-interior__col-left
-                    .content-interior__image.content-interior__image--full(data-fancybox="interior" data-src="../demo/demo.jpg" style="background-image:url('../demo/demo.jpg');")
-                .content-interior__col-right
-                    .content-interior__image(data-fancybox="interior" data-src="../demo/pic-1.webp" style="background-image:url('../demo/pic-1.webp');")
-                    .content-interior__image(data-fancybox="interior" data-src="../demo/pic-2.webp" style="background-image:url('../demo/pic-2.webp');")
+        //- Interiors Update
+        .slider-interior-container
+            .container.mt-4.mt-md-2.mb-2
+                h4.content-title Интерьерные решения
+                .slider.slider_interior
+                    a.slider_interior__item(data-fancybox="interior" data-src="../demo/demo-1.jpg")
+                        img.img-fluid.slider_interior__image(src="/demo/demo-1.jpg")
+                    a.slider_interior__item(data-fancybox="interior" data-src="../demo/demo-2.jpg")
+                        img.img-fluid.slider_interior__image(src="/demo/demo-2.jpg")
+                    a.slider_interior__item(data-fancybox="interior" data-src="../demo/demo-3.jpg")
+                        img.img-fluid.slider_interior__image(src="/demo/demo-3.jpg")
         include chunks/footer.pug
 
+        #surfaceModal.modal
+            p Структурированный — пояснение
+            p Sugar-эффект — пояснение 
+            p Лаппатированный — пояснение
+            p.mb-0 Матовый — пояснение
         script(src="./number_plugin/number_plugin.min.js")
 
         link(href='./css/slick.css', rel='stylesheet')

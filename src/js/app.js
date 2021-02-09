@@ -22,7 +22,7 @@ $(document).ready(() =>{
     return false;
   });
   // Fancybox Modal Form
-  $('[data-fancybox]').fancybox({autoFocus: false});
+  $('[data-fancybox]').fancybox({autoFocus: false, touch: false});
   // Отмена стандартного поведения ссылки
   $('a[data-trigger="click"]').click(function(e){e.preventDefault();})
   // Раскрытие блока

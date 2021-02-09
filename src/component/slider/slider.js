@@ -151,5 +151,29 @@ $(document).ready(() =>{
         }
       ]
     });
+    // Slider Interior
+    let $slickInterior = $('.slider.slider_interior');
+    $slickInterior.each(function(){
+      let count =  $(this).find(".slider_interior__item").length;
+      if ( count > 2 ){
+        $(this).slick({
+          infinite      : false,
+          slidesToShow  : 2,
+          slidesToScroll: 1,
+          arrows        : true,
+          dots          : false,
+          infinite      : true,
+          autoplay      : false,
+          responsive: [{
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+      }
+    });
   }
 });
