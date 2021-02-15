@@ -2609,6 +2609,11 @@ a:hover, a:focus {
   max-width: 200px;
 }
 
+.cart.row .woocommerce-error, #sb_instagram .cart#sbi_images .woocommerce-error, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .woocommerce-error, .woocommerce .cart.woocommerce-order .woocommerce-error, .cart.row .woocommerce-info, #sb_instagram .cart#sbi_images .woocommerce-info, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .woocommerce-info, .woocommerce .cart.woocommerce-order .woocommerce-info, .cart.row .woocommerce-message, #sb_instagram .cart#sbi_images .woocommerce-message, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .woocommerce-message, .woocommerce .cart.woocommerce-order .woocommerce-message {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 .woocommerce-Price-currencySymbol {
   font-weight: 400;
 }
@@ -6658,7 +6663,7 @@ span.navbar_header__item {
 
 .product_meta {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .product_sibling {

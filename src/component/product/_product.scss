@@ -89,7 +89,7 @@
     // Woocommerce
     &_meta{
         font-size: 14px;
-        margin-bottom: map-get($spacers, 1);
+        margin-bottom: map-get($spacers, 2);
     }
     &_sibling_list{
         @extend .input-group;
