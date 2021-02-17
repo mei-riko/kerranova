@@ -118,6 +118,10 @@
         &:hover{
             fill: $grey;
         }
+
+        &_sanitary{
+            padding: 2px 0;
+        }
     }
 }
 
@@ -200,6 +204,14 @@
             }
             &_portfolio{
                 display: inline-block;
+            }
+            &_cart{
+                &--active{
+                    &:before{
+                        right: calc(50% - 12px);
+                        bottom: 24px;
+                    }
+                }
             }
         }
         &__icon{

@@ -1,17 +1,29 @@
 .slider_interior{
     &__item{
-        padding: 0 $spacer/4;
-        opacity: .35;
-        transition: .4s;
+        max-width: 100%;
+        height: auto;
+    }
 
-        &.slick-active{
-            opacity: 1;
-        }
+    &:not(.slick-initialized) {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: $grid-gutter-width;
     }
 
     &.slick-initialized {
         max-width: calc(100% - 120px);
         margin-left: 60px;
+
+        .slider_interior__item{
+            padding: 0 $spacer/4;
+            opacity: .35;
+            transition: .4s;
+    
+            &.slick-active{
+                opacity: 1;
+            }
+        }
     }
     .slick-list{
         overflow: visible;

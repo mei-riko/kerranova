@@ -48,4 +48,10 @@ $(document).ready(() =>{
    	    src: 'data-src-xs' // name attr
    	}]
   });
+  // Скрыть ненужные фильтры
+  $('.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item span.count').each(function(){
+    if ( $(this).text() === '(0)' ){ 
+      $(this).parent().hide(); 
+    }
+  })
 });
