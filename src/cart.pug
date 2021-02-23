@@ -17,6 +17,14 @@ html(lang="ru")
             .row.cart
                 .col-8.col-lg-7.col-md-6.col-sm-12.pt-3.pb-3
                     h1.h3 Ваша корзина
+                    p.knv-woocommerce-form-coupon-toggle У вас есть купон? 
+                        a.text-underline#toggle-coupon(href="#") Нажмите здесь для введения кода
+                    .coupon.woocommerce-form-coupon#form-coupon(style="display:none;")
+                        p Если у вас есть код купона, примените его ниже.
+                        .form-row.form-row-first
+                            input.input.input--full.form_inline__input(type="text" name="coupon_code" value="" placeholder="Код купона")
+                        .form-row.form-row-last
+                            button.btn.btn_action.button(type="submit" name="apply_coupon" value="Применить купон") Применить купон
                     +cart-item("Marble Trend", "K-1000 CARRARA", "K-1000/LR/600x600x10", "2 838", "1 204 ₽/м2")(src="../demo/product-1.jpg" alt="" title="")
                     +cart-item("Terrazzo", "МОЗАИКА K-1000/m01", "K-1000/m01/30x30", "5 040", "504 ₽/шт")(src="../demo/product-2.jpg" alt="" title="")
                     +cart-item("Shervo", "МОЗАИКА K-302/m016", "K-302/SR/m06/282x303x10", "5 470", "1 204 ₽/м2")(src="../demo/product-3.jpg" alt="" title="")

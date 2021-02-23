@@ -1,6 +1,9 @@
 .form{
     margin-bottom: 0;
     
+    &__label{
+        font-size: 12px;
+    }
     &__agree{
         font-size: 12px;
         color: $grey;

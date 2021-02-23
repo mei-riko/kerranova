@@ -39,6 +39,11 @@ $(document).ready(() =>{
       toggle.find(".toggle-item__content").slideUp();
     }
   });
+  // Блок с купоном
+  $('#toggle-coupon').on("click", function(e){
+    e.preventDefault();
+    $('#form-coupon').slideToggle();
+  });
   // Подсказки
   $('[data-toggle="tooltip"]').tooltip();
   // Инициализация b-lazy

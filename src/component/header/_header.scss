@@ -86,6 +86,9 @@
         &_portfolio{
             display: none;
         }
+        &_sanitary{
+            display: none;
+        }
         &_cart{
             position: relative;
 
@@ -201,6 +204,9 @@
             &_catalog{
                 display: inline-block;
                 border-left: none;
+            }
+            &_sanitary{
+                display: inline-block;
             }
             &_portfolio{
                 display: inline-block;

@@ -2571,6 +2571,7 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
+.cart .woocommerce-form-coupon,
 .woocommerce form.checkout_coupon {
   border-radius: 4px;
   border: 1px solid #d6dbe0;
@@ -2585,8 +2586,10 @@ a:hover, a:focus {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  width: 100%;
 }
 
+.cart .woocommerce-form-coupon p:not(.form-row),
 .woocommerce form.checkout_coupon p:not(.form-row) {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100%;
@@ -2594,12 +2597,31 @@ a:hover, a:focus {
   max-width: 100%;
 }
 
+.cart .woocommerce-form-coupon .form-row,
 .woocommerce form.checkout_coupon .form-row {
   float: unset;
   margin: 0;
   padding: 0;
 }
 
+.cart .woocommerce-form-coupon .form-row .input,
+.cart .woocommerce-form-coupon .form-row .input-text,
+.cart .woocommerce-form-coupon .woocommerce form.checkout_coupon .form-row .input, .woocommerce form.checkout_coupon .cart .woocommerce-form-coupon .form-row .input,
+.cart .woocommerce-form-coupon .woocommerce form.checkout_coupon .form-row .input-text, .woocommerce form.checkout_coupon .cart .woocommerce-form-coupon .form-row .input-text, .cart .woocommerce-form-coupon .form-row .input_plugin_number,
+.cart .woocommerce-form-coupon .form-row .input-text,
+.woocommerce form.checkout_coupon .form-row .input,
+.woocommerce form.checkout_coupon .form-row .input-text,
+.woocommerce form.checkout_coupon .form-row .input_plugin_number,
+.woocommerce form.checkout_coupon .form-row .input-text {
+  line-height: normal;
+}
+
+.cart .woocommerce-form-coupon .form-row .button,
+.woocommerce form.checkout_coupon .form-row .button {
+  line-height: 1.3;
+}
+
+.cart .woocommerce-form-coupon .form-row.form-row-first,
 .woocommerce form.checkout_coupon .form-row.form-row-first {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 calc(100% - 210px);
@@ -2607,6 +2629,7 @@ a:hover, a:focus {
   max-width: calc(100% - 210px);
 }
 
+.cart .woocommerce-form-coupon .form-row.form-row-last,
 .woocommerce form.checkout_coupon .form-row.form-row-last {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 200px;
@@ -2614,9 +2637,32 @@ a:hover, a:focus {
   max-width: 200px;
 }
 
+.woocommerce-remove-coupon {
+  font-size: 12px;
+  font-weight: 400;
+  color: #919191;
+}
+
 .cart.row .woocommerce-error, #sb_instagram .cart#sbi_images .woocommerce-error, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .woocommerce-error, .woocommerce .cart.woocommerce-order .woocommerce-error, .cart.row .woocommerce-info, #sb_instagram .cart#sbi_images .woocommerce-info, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .woocommerce-info, .woocommerce .cart.woocommerce-order .woocommerce-info, .cart.row .woocommerce-message, #sb_instagram .cart#sbi_images .woocommerce-message, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .woocommerce-message, .woocommerce .cart.woocommerce-order .woocommerce-message {
   padding-right: 15px;
   padding-left: 15px;
+}
+
+.cart.row .coupon .input, #sb_instagram .cart#sbi_images .coupon .input, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .input, .woocommerce .cart.woocommerce-order .coupon .input,
+.cart.row .coupon .woocommerce-form-coupon .form-row .input-text, .cart.row .woocommerce-form-coupon .form-row .coupon .input-text,
+#sb_instagram .cart#sbi_images .coupon .woocommerce-form-coupon .form-row .input-text, #sb_instagram .cart#sbi_images .woocommerce-form-coupon .form-row .coupon .input-text,
+.woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .woocommerce-form-coupon .form-row .input-text, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .woocommerce-form-coupon .form-row .coupon .input-text,
+.woocommerce .cart.woocommerce-order .coupon .woocommerce-form-coupon .form-row .input-text, .woocommerce .cart.woocommerce-order .woocommerce-form-coupon .form-row .coupon .input-text,
+.cart.row .coupon .woocommerce form.checkout_coupon .form-row .input, .woocommerce form.checkout_coupon .form-row .cart.row .coupon .input,
+.cart.row .coupon .woocommerce form.checkout_coupon .form-row .input-text, .woocommerce form.checkout_coupon .form-row .cart.row .coupon .input-text,
+#sb_instagram .cart#sbi_images .coupon .woocommerce form.checkout_coupon .form-row .input-text, .woocommerce form.checkout_coupon .form-row #sb_instagram .cart#sbi_images .coupon .input-text,
+.woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon form.checkout_coupon .form-row .input-text, .woocommerce form.checkout_coupon .form-row .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .input-text,
+.woocommerce .cart.woocommerce-order .coupon form.checkout_coupon .form-row .input-text, .woocommerce form.checkout_coupon .form-row .cart.woocommerce-order .coupon .input-text, .cart.row .coupon .input_plugin_number, #sb_instagram .cart#sbi_images .coupon .input_plugin_number, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .input_plugin_number, .woocommerce .cart.woocommerce-order .coupon .input_plugin_number {
+  line-height: normal;
+}
+
+.cart.row .coupon .button, #sb_instagram .cart#sbi_images .coupon .button, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .button, .woocommerce .cart.woocommerce-order .coupon .button {
+  line-height: 1.3;
 }
 
 .woocommerce-Price-currencySymbol {
@@ -3132,7 +3178,8 @@ a:hover, a:focus {
 .btn, .woocommerce-error .restore-item,
 .woocommerce-error .button, .woocommerce-info .restore-item,
 .woocommerce-info .button, .woocommerce-message .restore-item,
-.woocommerce-message .button, .woocommerce .woocommerce-notices-wrapper .restore-item, .woocommerce form.checkout_coupon .form-row .button {
+.woocommerce-message .button, .woocommerce .woocommerce-notices-wrapper .restore-item, .cart .woocommerce-form-coupon .form-row .button,
+.woocommerce form.checkout_coupon .form-row .button, .cart.row .coupon .button, #sb_instagram .cart#sbi_images .coupon .button, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .button, .woocommerce .cart.woocommerce-order .coupon .button {
   border: none;
   border-radius: 4px;
   outline: none;
@@ -3152,14 +3199,17 @@ a:hover, a:focus {
 .btn:hover, .woocommerce-error .restore-item:hover,
 .woocommerce-error .button:hover, .woocommerce-info .restore-item:hover,
 .woocommerce-info .button:hover, .woocommerce-message .restore-item:hover,
-.woocommerce-message .button:hover, .woocommerce .woocommerce-notices-wrapper .restore-item:hover, .woocommerce form.checkout_coupon .form-row .button:hover, .btn:focus, .woocommerce-error .restore-item:focus,
+.woocommerce-message .button:hover, .woocommerce .woocommerce-notices-wrapper .restore-item:hover, .cart .woocommerce-form-coupon .form-row .button:hover,
+.woocommerce form.checkout_coupon .form-row .button:hover, .cart.row .coupon .button:hover, #sb_instagram .cart#sbi_images .coupon .button:hover, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .button:hover, .woocommerce .cart.woocommerce-order .coupon .button:hover, .btn:focus, .woocommerce-error .restore-item:focus,
 .woocommerce-error .button:focus, .woocommerce-info .restore-item:focus,
 .woocommerce-info .button:focus, .woocommerce-message .restore-item:focus,
-.woocommerce-message .button:focus, .woocommerce .woocommerce-notices-wrapper .restore-item:focus, .woocommerce form.checkout_coupon .form-row .button:focus {
+.woocommerce-message .button:focus, .woocommerce .woocommerce-notices-wrapper .restore-item:focus, .cart .woocommerce-form-coupon .form-row .button:focus,
+.woocommerce form.checkout_coupon .form-row .button:focus, .cart.row .coupon .button:focus, #sb_instagram .cart#sbi_images .coupon .button:focus, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .button:focus, .woocommerce .cart.woocommerce-order .coupon .button:focus {
   text-decoration: none;
 }
 
-.btn--full, .woocommerce form.checkout_coupon .form-row .button {
+.btn--full, .cart .woocommerce-form-coupon .form-row .button,
+.woocommerce form.checkout_coupon .form-row .button {
   width: 100%;
 }
 
@@ -3181,7 +3231,8 @@ a:hover, a:focus {
   .btn, .woocommerce-error .restore-item,
   .woocommerce-error .button, .woocommerce-info .restore-item,
   .woocommerce-info .button, .woocommerce-message .restore-item,
-  .woocommerce-message .button, .woocommerce .woocommerce-notices-wrapper .restore-item, .woocommerce form.checkout_coupon .form-row .button {
+  .woocommerce-message .button, .woocommerce .woocommerce-notices-wrapper .restore-item, .cart .woocommerce-form-coupon .form-row .button,
+  .woocommerce form.checkout_coupon .form-row .button, .cart.row .coupon .button, #sb_instagram .cart#sbi_images .coupon .button, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .button, .woocommerce .cart.woocommerce-order .coupon .button {
     padding: 12px 20px 14px;
   }
   .btn--sm-full {
@@ -3195,12 +3246,15 @@ a:hover, a:focus {
   }
 }
 
-.btn_action, .woocommerce form.checkout_coupon .form-row .button {
+.btn_action, .cart .woocommerce-form-coupon .form-row .button,
+.woocommerce form.checkout_coupon .form-row .button, .cart.row .coupon .button, #sb_instagram .cart#sbi_images .coupon .button, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .button, .woocommerce .cart.woocommerce-order .coupon .button {
   background: #0c36b0;
   color: #ffffff;
 }
 
-.btn_action:hover, .woocommerce form.checkout_coupon .form-row .button:hover, .btn_action:focus, .woocommerce form.checkout_coupon .form-row .button:focus {
+.btn_action:hover, .cart .woocommerce-form-coupon .form-row .button:hover,
+.woocommerce form.checkout_coupon .form-row .button:hover, .cart.row .coupon .button:hover, #sb_instagram .cart#sbi_images .coupon .button:hover, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .button:hover, .woocommerce .cart.woocommerce-order .coupon .button:hover, .btn_action:focus, .cart .woocommerce-form-coupon .form-row .button:focus,
+.woocommerce form.checkout_coupon .form-row .button:focus, .cart.row .coupon .button:focus, #sb_instagram .cart#sbi_images .coupon .button:focus, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .button:focus, .woocommerce .cart.woocommerce-order .coupon .button:focus {
   background: #0d3cc3;
   color: #ffffff;
 }
@@ -3275,43 +3329,14 @@ a:hover, a:focus {
   color: #1d1d1d;
 }
 
-.form {
-  margin-bottom: 0;
-}
-
-.form__agree {
-  font-size: 12px;
-  color: #919191;
-  margin-top: 13.33333px;
-}
-
-.form__validation {
-  font-size: 12px;
-}
-
-.form_inline {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.error {
-  color: #ff0000;
-}
-
-.input, .woocommerce form.checkout_coupon .form-row .input-text, .input_plugin_number {
+.input, .cart .woocommerce-form-coupon .form-row .input,
+.cart .woocommerce-form-coupon .form-row .input-text,
+.woocommerce form.checkout_coupon .form-row .input,
+.woocommerce form.checkout_coupon .form-row .input-text, .input_plugin_number {
   border-radius: 4px;
   background-color: #f5f5f5;
   border: 1px solid #f5f5f5;
-  padding: 13.33333px 20px;
+  padding: 14px 20px;
   margin-bottom: 10px;
   max-width: 100%;
   -webkit-transition: .4s;
@@ -3319,63 +3344,78 @@ a:hover, a:focus {
   transition: .4s;
 }
 
-.input::-webkit-input-placeholder, .woocommerce form.checkout_coupon .form-row .input-text::-webkit-input-placeholder, .input_plugin_number::-webkit-input-placeholder {
+.input::-webkit-input-placeholder, .cart .woocommerce-form-coupon .form-row .input::-webkit-input-placeholder, .cart .woocommerce-form-coupon .form-row .input-text::-webkit-input-placeholder, .woocommerce form.checkout_coupon .form-row .input::-webkit-input-placeholder, .woocommerce form.checkout_coupon .form-row .input-text::-webkit-input-placeholder, .input_plugin_number::-webkit-input-placeholder {
   -webkit-transition: .4s;
   transition: .4s;
   color: #919191;
 }
 
-.input::-moz-placeholder, .woocommerce form.checkout_coupon .form-row .input-text::-moz-placeholder, .input_plugin_number::-moz-placeholder {
+.input::-moz-placeholder, .cart .woocommerce-form-coupon .form-row .input::-moz-placeholder, .cart .woocommerce-form-coupon .form-row .input-text::-moz-placeholder, .woocommerce form.checkout_coupon .form-row .input::-moz-placeholder, .woocommerce form.checkout_coupon .form-row .input-text::-moz-placeholder, .input_plugin_number::-moz-placeholder {
   -moz-transition: .4s;
   transition: .4s;
   color: #919191;
 }
 
-.input:-ms-input-placeholder, .woocommerce form.checkout_coupon .form-row .input-text:-ms-input-placeholder, .input_plugin_number:-ms-input-placeholder {
+.input:-ms-input-placeholder, .cart .woocommerce-form-coupon .form-row .input:-ms-input-placeholder, .cart .woocommerce-form-coupon .form-row .input-text:-ms-input-placeholder, .woocommerce form.checkout_coupon .form-row .input:-ms-input-placeholder, .woocommerce form.checkout_coupon .form-row .input-text:-ms-input-placeholder, .input_plugin_number:-ms-input-placeholder {
   -ms-transition: .4s;
   transition: .4s;
   color: #919191;
 }
 
-.input::-ms-input-placeholder, .woocommerce form.checkout_coupon .form-row .input-text::-ms-input-placeholder, .input_plugin_number::-ms-input-placeholder {
+.input::-ms-input-placeholder, .cart .woocommerce-form-coupon .form-row .input::-ms-input-placeholder, .cart .woocommerce-form-coupon .form-row .input-text::-ms-input-placeholder, .woocommerce form.checkout_coupon .form-row .input::-ms-input-placeholder, .woocommerce form.checkout_coupon .form-row .input-text::-ms-input-placeholder, .input_plugin_number::-ms-input-placeholder {
   -ms-transition: .4s;
   transition: .4s;
   color: #919191;
 }
 
-.input::placeholder, .woocommerce form.checkout_coupon .form-row .input-text::placeholder, .input_plugin_number::placeholder {
+.input::placeholder, .cart .woocommerce-form-coupon .form-row .input::placeholder,
+.cart .woocommerce-form-coupon .form-row .input-text::placeholder,
+.woocommerce form.checkout_coupon .form-row .input::placeholder,
+.woocommerce form.checkout_coupon .form-row .input-text::placeholder, .input_plugin_number::placeholder {
   -webkit-transition: .4s;
   -o-transition: .4s;
   transition: .4s;
   color: #919191;
 }
 
-.input:last-child, .woocommerce form.checkout_coupon .form-row .input-text:last-child, .input_plugin_number:last-child {
+.input:last-child, .cart .woocommerce-form-coupon .form-row .input:last-child,
+.cart .woocommerce-form-coupon .form-row .input-text:last-child,
+.woocommerce form.checkout_coupon .form-row .input:last-child,
+.woocommerce form.checkout_coupon .form-row .input-text:last-child, .input_plugin_number:last-child {
   margin-bottom: 0;
 }
 
-.input:hover, .woocommerce form.checkout_coupon .form-row .input-text:hover, .input_plugin_number:hover, .input:focus, .woocommerce form.checkout_coupon .form-row .input-text:focus, .input_plugin_number:focus {
+.input:hover, .cart .woocommerce-form-coupon .form-row .input:hover,
+.cart .woocommerce-form-coupon .form-row .input-text:hover,
+.woocommerce form.checkout_coupon .form-row .input:hover,
+.woocommerce form.checkout_coupon .form-row .input-text:hover, .input_plugin_number:hover, .input:focus, .cart .woocommerce-form-coupon .form-row .input:focus,
+.cart .woocommerce-form-coupon .form-row .input-text:focus,
+.woocommerce form.checkout_coupon .form-row .input:focus,
+.woocommerce form.checkout_coupon .form-row .input-text:focus, .input_plugin_number:focus {
   border-color: #d6dbe0;
   outline: none;
 }
 
-.input:focus::-webkit-input-placeholder, .woocommerce form.checkout_coupon .form-row .input-text:focus::-webkit-input-placeholder, .input_plugin_number:focus::-webkit-input-placeholder {
+.input:focus::-webkit-input-placeholder, .cart .woocommerce-form-coupon .form-row .input:focus::-webkit-input-placeholder, .cart .woocommerce-form-coupon .form-row .input-text:focus::-webkit-input-placeholder, .woocommerce form.checkout_coupon .form-row .input:focus::-webkit-input-placeholder, .woocommerce form.checkout_coupon .form-row .input-text:focus::-webkit-input-placeholder, .input_plugin_number:focus::-webkit-input-placeholder {
   opacity: 0;
 }
 
-.input:focus::-moz-placeholder, .woocommerce form.checkout_coupon .form-row .input-text:focus::-moz-placeholder, .input_plugin_number:focus::-moz-placeholder {
+.input:focus::-moz-placeholder, .cart .woocommerce-form-coupon .form-row .input:focus::-moz-placeholder, .cart .woocommerce-form-coupon .form-row .input-text:focus::-moz-placeholder, .woocommerce form.checkout_coupon .form-row .input:focus::-moz-placeholder, .woocommerce form.checkout_coupon .form-row .input-text:focus::-moz-placeholder, .input_plugin_number:focus::-moz-placeholder {
   opacity: 0;
 }
 
-.input:focus:-ms-input-placeholder, .woocommerce form.checkout_coupon .form-row .input-text:focus:-ms-input-placeholder, .input_plugin_number:focus:-ms-input-placeholder {
+.input:focus:-ms-input-placeholder, .cart .woocommerce-form-coupon .form-row .input:focus:-ms-input-placeholder, .cart .woocommerce-form-coupon .form-row .input-text:focus:-ms-input-placeholder, .woocommerce form.checkout_coupon .form-row .input:focus:-ms-input-placeholder, .woocommerce form.checkout_coupon .form-row .input-text:focus:-ms-input-placeholder, .input_plugin_number:focus:-ms-input-placeholder {
   opacity: 0;
 }
 
-.input:focus::-ms-input-placeholder, .woocommerce form.checkout_coupon .form-row .input-text:focus::-ms-input-placeholder, .input_plugin_number:focus::-ms-input-placeholder {
+.input:focus::-ms-input-placeholder, .cart .woocommerce-form-coupon .form-row .input:focus::-ms-input-placeholder, .cart .woocommerce-form-coupon .form-row .input-text:focus::-ms-input-placeholder, .woocommerce form.checkout_coupon .form-row .input:focus::-ms-input-placeholder, .woocommerce form.checkout_coupon .form-row .input-text:focus::-ms-input-placeholder, .input_plugin_number:focus::-ms-input-placeholder {
   opacity: 0;
 }
 
-.input:focus::placeholder, .woocommerce form.checkout_coupon .form-row .input-text:focus::placeholder, .input_plugin_number:focus::placeholder {
+.input:focus::placeholder, .cart .woocommerce-form-coupon .form-row .input:focus::placeholder,
+.cart .woocommerce-form-coupon .form-row .input-text:focus::placeholder,
+.woocommerce form.checkout_coupon .form-row .input:focus::placeholder,
+.woocommerce form.checkout_coupon .form-row .input-text:focus::placeholder, .input_plugin_number:focus::placeholder {
   opacity: 0;
 }
 
@@ -3383,7 +3423,10 @@ a:hover, a:focus {
   width: 100%;
 }
 
-.input.error, .woocommerce form.checkout_coupon .form-row .error.input-text, .error.input_plugin_number, .input--error {
+.input.error, .cart .woocommerce-form-coupon .form-row .error.input,
+.cart .woocommerce-form-coupon .form-row .error.input-text,
+.woocommerce form.checkout_coupon .form-row .error.input,
+.woocommerce form.checkout_coupon .form-row .error.input-text, .error.input_plugin_number, .input--error {
   border-color: #ff0000;
 }
 
@@ -3497,6 +3540,44 @@ a:hover, a:focus {
   .input_select-product {
     width: 100%;
   }
+}
+
+.form {
+  margin-bottom: 0;
+}
+
+.form__label {
+  font-size: 12px;
+}
+
+.form__agree {
+  font-size: 12px;
+  color: #919191;
+  margin-top: 13.33333px;
+}
+
+.form__validation {
+  font-size: 12px;
+}
+
+.form_inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.form_inline__input {
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+.error {
+  color: #ff0000;
 }
 
 .checkbox, .woocommerce .woocommerce-widget-layered-nav-checkboxes .woocommerce-widget-layered-nav-checkboxes__item {
@@ -4120,6 +4201,14 @@ a:hover, a:focus {
   right: 15px;
 }
 
+.slider_collection--full .slick-track {
+  min-width: 100%;
+}
+
+.slider_collection--full .slick-slide {
+  min-width: 25%;
+}
+
 @media all and (max-width: 768px) {
   .slider_collection.slick-initialized {
     max-width: calc(100% - 120px);
@@ -4166,6 +4255,10 @@ a:hover, a:focus {
   -webkit-transform: translate(-10px, -50%);
   -ms-transform: translate(-10px, -50%);
   transform: translate(-10px, -50%);
+}
+
+.slider_product--full .slick-track {
+  min-width: 100%;
 }
 
 @media all and (max-width: 1024px) {
@@ -5537,6 +5630,10 @@ span.navbar_header__item {
   display: none;
 }
 
+.header__btn_sanitary {
+  display: none;
+}
+
 .header__btn_cart {
   position: relative;
 }
@@ -5655,6 +5752,9 @@ span.navbar_header__item {
   .header__btn_catalog {
     display: inline-block;
     border-left: none;
+  }
+  .header__btn_sanitary {
+    display: inline-block;
   }
   .header__btn_portfolio {
     display: inline-block;
@@ -6234,14 +6334,16 @@ span.navbar_header__item {
 .cart__total + .btn, .woocommerce-error .cart__total + .restore-item,
 .woocommerce-error .cart__total + .button, .woocommerce-info .cart__total + .restore-item,
 .woocommerce-info .cart__total + .button, .woocommerce-message .cart__total + .restore-item,
-.woocommerce-message .cart__total + .button, .woocommerce .woocommerce-notices-wrapper .cart__total + .restore-item, .woocommerce form.checkout_coupon .form-row .cart__total + .button, .cart__total + .wc-proceed-to-checkout {
+.woocommerce-message .cart__total + .button, .woocommerce .woocommerce-notices-wrapper .cart__total + .restore-item, .cart .woocommerce-form-coupon .form-row .cart__total + .button,
+.woocommerce form.checkout_coupon .form-row .cart__total + .button, .cart.row .coupon .cart__total + .button, #sb_instagram .cart#sbi_images .coupon .cart__total + .button, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .cart__total + .button, .woocommerce .cart.woocommerce-order .coupon .cart__total + .button, .cart__total + .wc-proceed-to-checkout {
   margin-top: 20px;
 }
 
 .cart__total + .btn::first-letter, .woocommerce-error .cart__total + .restore-item::first-letter,
 .woocommerce-error .cart__total + .button::first-letter, .woocommerce-info .cart__total + .restore-item::first-letter,
 .woocommerce-info .cart__total + .button::first-letter, .woocommerce-message .cart__total + .restore-item::first-letter,
-.woocommerce-message .cart__total + .button::first-letter, .woocommerce .woocommerce-notices-wrapper .cart__total + .restore-item::first-letter, .woocommerce form.checkout_coupon .form-row .cart__total + .button::first-letter, .cart__total + .wc-proceed-to-checkout::first-letter {
+.woocommerce-message .cart__total + .button::first-letter, .woocommerce .woocommerce-notices-wrapper .cart__total + .restore-item::first-letter, .cart .woocommerce-form-coupon .form-row .cart__total + .button::first-letter,
+.woocommerce form.checkout_coupon .form-row .cart__total + .button::first-letter, .cart.row .coupon .cart__total + .button::first-letter, #sb_instagram .cart#sbi_images .coupon .cart__total + .button::first-letter, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .cart__total + .button::first-letter, .woocommerce .cart.woocommerce-order .coupon .cart__total + .button::first-letter, .cart__total + .wc-proceed-to-checkout::first-letter {
   text-transform: uppercase;
 }
 
