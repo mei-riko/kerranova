@@ -1,0 +1,25 @@
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    max-height: 100vh;
+    background: $light-grey;
+    transition: 1s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg{
+        width: 48px;
+        height: 48px;
+    }
+
+    &--ready {
+        opacity: 0;
+    }
+}

@@ -43,6 +43,10 @@
             text-decoration: underline;
         }
     }
+
+    &--smaller{
+        padding: $spacer/2;
+    }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .preview_promo{

@@ -78,6 +78,12 @@
             font-size: 26px;
             color: $red;
         }
+
+        // woocommerce 
+        .woocommerce-Price-currencySymbol{
+            font-weight: $font-weight-bold;
+            font-size: 96%;
+        }
     }
     &__rub{
         margin-left: 4px;
@@ -86,10 +92,28 @@
         color: $blue;
         text-decoration: underline;
     }
+    &__banner{
+        width: 100%;
+
+        &_sidebar{
+            width: 320px;
+            max-width: 100%;
+            margin-left: auto;
+        }
+    }
     // Woocommerce
     &_meta{
-        font-size: 14px;
+        @extend .text-small;
         margin-bottom: map-get($spacers, 2);
+
+        .posted_in{
+            padding-right: 6px;
+            margin-right: 6px;
+            border-right: 1px solid $border-color;
+            a{
+                text-decoration: underline;
+            }
+        }
     }
     &_sibling_list{
         @extend .input-group;
@@ -146,6 +170,12 @@
         }
         &__body{
             width: 100%;
+        }
+        &__banner{
+            &_sidebar{
+                width: 100%;
+                order: 3;
+            }
         }
     }
 }

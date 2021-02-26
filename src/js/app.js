@@ -46,13 +46,20 @@ $(document).ready(() =>{
   });
   // Подсказки
   $('[data-toggle="tooltip"]').tooltip();
-  // Инициализация b-lazy
-  var blazy = new Blazy({
-    breakpoints: [{
-   	    width: 480, // max-width
-   	    src: 'data-src-xs' // name attr
-   	}]
-  });
+  // Lazy Load Image
+  if( $('.b-lazy').length > 0 ){
+    // Lazy Load
+    ;(function() {
+        var bLazy = new Blazy({
+          success: function(element){
+            setTimeout(function(){
+              var parent = element.parentNode;
+              parent.className = parent.className.replace(/\bloading\b/,'');
+            }, 200);
+          }
+        });
+    })();
+  }
   // Скрыть ненужные фильтры
   $('.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item span.count').each(function(){
     if ( $(this).text() === '(0)' ){ 

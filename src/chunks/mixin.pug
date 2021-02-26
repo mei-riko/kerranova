@@ -8,12 +8,12 @@ mixin preview-simple(title, intro)
 mixin collection(title, intro)
     .preview.preview_collection
         a.preview_collection__catalog(href="collection.html")
-            img.preview_collection__image(src!=attributes.src)
+            img.preview_collection__image.b-lazy(src!=attributes.src)
             .preview_collection__gallery
-                img.preview_collection__gallery-item(src="../demo/pic-1.png")
-                img.preview_collection__gallery-item(src="../demo/pic-2.png")
-                img.preview_collection__gallery-item(src="../demo/pic-3.png")
-                img.preview_collection__gallery-item(src="../demo/pic-4.png")
+                img.preview_collection__gallery-item.b-lazy(src="../demo/pic-1.png")
+                img.preview_collection__gallery-item.b-lazy(src="../demo/pic-2.png")
+                img.preview_collection__gallery-item.b-lazy(src="../demo/pic-3.png")
+                img.preview_collection__gallery-item.b-lazy(src="../demo/pic-4.png")
             .preview__title.preview__title_link= title
             p.preview__intro.preview_collection__intro= intro
         .link-arrow.preview_collection__link(id!=attributes.id) Посмотреть коллекцию
