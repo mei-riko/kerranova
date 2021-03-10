@@ -21,6 +21,7 @@
         overflow: hidden;
 
         &_link{
+            display: block;
             color: $black;
             &:hover, &:focus{
                 color: $black;

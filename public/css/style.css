@@ -4713,6 +4713,7 @@ a:hover, a:focus {
 }
 
 .preview__title_link {
+  display: block;
   color: #1d1d1d;
 }
 
@@ -5878,7 +5879,6 @@ span.navbar_header__item {
 .header_search {
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
   z-index: 9999;
