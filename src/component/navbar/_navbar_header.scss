@@ -116,6 +116,8 @@ span.navbar_header__item{
     
         overflow-y: auto;
         overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+
         transform: translateX(-360px);
         transition: transform 0.2s 0s;
         transition-property: transform, visibility;
