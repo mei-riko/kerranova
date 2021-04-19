@@ -8,9 +8,10 @@ $(document).ready(() =>{
 		$slickContent.slick({
 			slidesToShow  : 1,
 			slidesToScroll: 1,
-			arrows        : false,
+			arrows        : true,
 			dots          : true,
-      autoplay      : false
+      autoplay      : true,
+      autoplaySpeed : 4000,
     });
     // Slider On Collection Page
     let $slickCollectionContent = $('.collection .slider.slider_content');
@@ -21,9 +22,10 @@ $(document).ready(() =>{
           infinite      : false,
           slidesToShow  : 1,
           slidesToScroll: 1,
-          arrows        : false,
+          arrows        : true,
           dots          : true,
-          autoplay      : false
+          autoplay      : true,
+          autoplaySpeed : 4000,
         });
       }
     });
