@@ -78,7 +78,7 @@
     }
     &__btn{
         // padding: 2px;
-        margin-left: $grid-gutter-width;
+        margin-left: $grid-gutter-width/2;
 
         &_catalog{
             display: none;
@@ -125,6 +125,13 @@
         &_sanitary{
             padding: 2px 0;
         }
+        &_cabinet{
+            fill: $black;
+            width: 26px;
+        }
+        &_cart{
+            height: 20px;
+        }
     }
 }
 
@@ -147,6 +154,8 @@
             flex: 0 0 260px;
             max-width: 260px;
             margin-left: $spacer/2;
+
+            padding: 0;
         }
     }
 }
@@ -196,6 +205,9 @@
             border-left: 1px solid $border-color;
 
             &_mail{
+                display: none;
+            }
+            &_cabinet{
                 display: none;
             }
             &_location{
