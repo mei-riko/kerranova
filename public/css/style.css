@@ -432,7 +432,7 @@ form .woocommerce-address-fields__field-wrapper .form-row-last, form.woocommerce
 form.woocommerce-EditAccountForm .form-row-last, .col-7, .col-8, .woocommerce .woocommerce-order .woocommerce-order-details, .woocommerce-MyAccount-content .woocommerce-order-details, .u-columns .u-column1.col-1.woocommerce-Address, .col-9, .col-10, .col-11, .col-12, .woocommerce .woocommerce-order .woocommerce-notice, .woocommerce .woocommerce-order .woocommerce-order-overview, .row .mj-page-nav, #sb_instagram #sbi_images .mj-page-nav, .woocommerce .form.form_order .woocommerce-billing-fields__field-wrapper .mj-page-nav, .woocommerce form.form_order .woocommerce-billing-fields__field-wrapper .mj-page-nav, .woocommerce .woocommerce-order .mj-page-nav, .woocommerce-MyAccount-content .mj-page-nav, .u-columns .mj-page-nav, form .woocommerce-address-fields__field-wrapper .mj-page-nav, form.woocommerce-EditAccountForm .mj-page-nav, .woocommerce-MyAccount-content > p,
 .woocommerce-MyAccount-content .widget_custom_html,
 .woocommerce-MyAccount-content .woocommerce-orders-table.shop_table, .u-columns.woocommerce-Addresses, form, form .woocommerce-address-fields__field-wrapper .form-row-wide, form.woocommerce-EditAccountForm > p, form.woocommerce-EditAccountForm fieldset,
-form.woocommerce-EditAccountForm .form-row-wide, form.woocommerce-EditAccountForm fieldset legend {
+form.woocommerce-EditAccountForm .form-row-wide, form.woocommerce-EditAccountForm fieldset legend, .woocommerce-notices-wrapper {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -530,7 +530,7 @@ form.woocommerce-EditAccountForm .form-row-last {
 .col-12, .woocommerce .woocommerce-order .woocommerce-notice, .woocommerce .woocommerce-order .woocommerce-order-overview, .row .mj-page-nav, #sb_instagram #sbi_images .mj-page-nav, .woocommerce .form.form_order .woocommerce-billing-fields__field-wrapper .mj-page-nav, .woocommerce form.form_order .woocommerce-billing-fields__field-wrapper .mj-page-nav, .woocommerce .woocommerce-order .mj-page-nav, .woocommerce-MyAccount-content .mj-page-nav, .u-columns .mj-page-nav, form .woocommerce-address-fields__field-wrapper .mj-page-nav, form.woocommerce-EditAccountForm .mj-page-nav, .woocommerce-MyAccount-content > p,
 .woocommerce-MyAccount-content .widget_custom_html,
 .woocommerce-MyAccount-content .woocommerce-orders-table.shop_table, .u-columns.woocommerce-Addresses, form, form .woocommerce-address-fields__field-wrapper .form-row-wide, form.woocommerce-EditAccountForm > p, form.woocommerce-EditAccountForm fieldset,
-form.woocommerce-EditAccountForm .form-row-wide, form.woocommerce-EditAccountForm fieldset legend {
+form.woocommerce-EditAccountForm .form-row-wide, form.woocommerce-EditAccountForm fieldset legend, .woocommerce-notices-wrapper {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
@@ -754,7 +754,7 @@ form.woocommerce-EditAccountForm .form-row-wide, form.woocommerce-EditAccountFor
     flex: 0 0 91.66667%;
     max-width: 91.66667%;
   }
-  .col-md-12, .u-columns .u-column1.col-1, .u-columns .u-column2.col-2, .u-columns #sb_instagram #sbi_images .u-column2.sbi_item, #sb_instagram #sbi_images .u-columns .u-column2.sbi_item {
+  .col-md-12, .u-columns .u-column1, .u-columns .u-column1.col-1.woocommerce-Address, .u-columns .u-column2, .u-columns .u-column2.col-2.woocommerce-Address, .u-columns #sb_instagram #sbi_images .u-column2.woocommerce-Address.sbi_item, #sb_instagram #sbi_images .u-columns .u-column2.woocommerce-Address.sbi_item {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
@@ -3230,7 +3230,7 @@ a:hover, a:focus {
 .woocommerce-info .button, .woocommerce-message .restore-item,
 .woocommerce-message .button, .woocommerce .woocommerce-notices-wrapper .restore-item, .cart .woocommerce-form-coupon .form-row .button,
 .woocommerce form.checkout_coupon .form-row .button, .cart.row .coupon .button, #sb_instagram .cart#sbi_images .coupon .button, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .button, .woocommerce form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .button, .woocommerce .cart.woocommerce-order .coupon .button, .cart.woocommerce-MyAccount-content .coupon .button, .cart.u-columns .coupon .button, form .cart.woocommerce-address-fields__field-wrapper .coupon .button, form.cart.woocommerce-EditAccountForm .coupon .button, form.woocommerce-EditAccountForm fieldset.cart .coupon .button, .u-columns .woocommerce-Address-title .edit, form.woocommerce-form button.button,
-.woocommerce-MyAccount-content form button.button {
+.woocommerce-MyAccount-content form button.button, .woocommerce-MyAccount-content .woocommerce-message .button {
   border: none;
   border-radius: 4px;
   outline: none;
@@ -3269,7 +3269,7 @@ a:hover, a:focus {
 .btn--small, .woocommerce-error .restore-item,
 .woocommerce-error .button, .woocommerce-info .restore-item,
 .woocommerce-info .button, .woocommerce-message .restore-item,
-.woocommerce-message .button, .woocommerce .woocommerce-notices-wrapper .restore-item, .u-columns .woocommerce-Address-title .edit {
+.woocommerce-message .button, .woocommerce .woocommerce-notices-wrapper .restore-item, .u-columns .woocommerce-Address-title .edit, .woocommerce-MyAccount-content .woocommerce-message .button {
   font-size: 12px;
   padding: 8px 20px 10px;
 }
@@ -3286,7 +3286,7 @@ a:hover, a:focus {
   .woocommerce-info .button, .woocommerce-message .restore-item,
   .woocommerce-message .button, .woocommerce .woocommerce-notices-wrapper .restore-item, .cart .woocommerce-form-coupon .form-row .button,
   .woocommerce form.checkout_coupon .form-row .button, .cart.row .coupon .button, #sb_instagram .cart#sbi_images .coupon .button, .woocommerce .form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .button, .woocommerce form.form_order .cart.woocommerce-billing-fields__field-wrapper .coupon .button, .woocommerce .cart.woocommerce-order .coupon .button, .cart.woocommerce-MyAccount-content .coupon .button, .cart.u-columns .coupon .button, form .cart.woocommerce-address-fields__field-wrapper .coupon .button, form.cart.woocommerce-EditAccountForm .coupon .button, form.woocommerce-EditAccountForm fieldset.cart .coupon .button, .u-columns .woocommerce-Address-title .edit, form.woocommerce-form button.button,
-  .woocommerce-MyAccount-content form button.button {
+  .woocommerce-MyAccount-content form button.button, .woocommerce-MyAccount-content .woocommerce-message .button {
     padding: 12px 20px 14px;
   }
   .btn--sm-full {
@@ -3345,7 +3345,7 @@ a:hover, a:focus {
 .btn_secondary, .woocommerce-error .restore-item,
 .woocommerce-error .button, .woocommerce-info .restore-item,
 .woocommerce-info .button, .woocommerce-message .restore-item,
-.woocommerce-message .button, .woocommerce .woocommerce-notices-wrapper .restore-item, .u-columns .woocommerce-Address-title .edit {
+.woocommerce-message .button, .woocommerce .woocommerce-notices-wrapper .restore-item, .u-columns .woocommerce-Address-title .edit, .woocommerce-MyAccount-content .woocommerce-message .button {
   background: #ffffff;
   color: #1d1d1d;
   border: 1px solid #d6dbe0;
@@ -5015,6 +5015,10 @@ a.preview_product:hover .preview_product__title, a.preview_product:focus .previe
   }
 }
 
+.preview_collection__catalog {
+  max-width: 100%;
+}
+
 .preview_collection__catalog:hover, .preview_collection__catalog:focus {
   text-decoration: none;
   color: inherit;
@@ -5266,6 +5270,12 @@ a.preview_simple {
   background-color: #ededed;
 }
 
+.navbar_header__item_account {
+  display: none;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
 .navbar_header__item--sale {
   color: #ff0000;
   font-weight: 700;
@@ -5378,6 +5388,11 @@ span.navbar_header__item {
     font-size: 14px;
     padding: 8px 13px;
     width: 100%;
+  }
+  .navbar_header__item_account {
+    display: block;
+    padding-left: 40px;
+    background: url("../icon/cabinet.svg") no-repeat 8px center/20px;
   }
   .navbar_header__item--sale {
     padding-left: 13px;
@@ -6511,6 +6526,11 @@ form.woocommerce-EditAccountForm fieldset legend {
   margin-bottom: 10px;
 }
 
+.woocommerce-notices-wrapper .woocommerce-message {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
 .woocommerce-notices-wrapper .woocommerce-error {
   margin-bottom: 20px;
 }
@@ -6523,6 +6543,26 @@ form.woocommerce-EditAccountForm fieldset legend {
   display: none;
 }
 
+.woocommerce-MyAccount-content .woocommerce-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.woocommerce-MyAccount-content .woocommerce-message .button {
+  margin-left: 10px;
+}
+
 @media all and (max-width: 1024px) {
   .woocommerce-MyAccount-content {
     padding: 20px;
@@ -6532,6 +6572,19 @@ form.woocommerce-EditAccountForm fieldset legend {
 @media all and (max-width: 768px) {
   .woocommerce-MyAccount-content .woocommerce-customer-details address {
     padding: 20px;
+  }
+  .woocommerce-MyAccount-content .woocommerce-message {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .woocommerce-MyAccount-content .woocommerce-message .button {
+    margin-top: 10px;
+    margin-left: 0;
   }
 }
 

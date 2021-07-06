@@ -38,6 +38,12 @@
             background-color: darken($color: $light-grey, $amount: 3);
         }
 
+        &_account{
+            display: none;
+            font-weight: $font-weight-bold;
+            margin-top: map-get($map: $spacers, $key: 3);
+        }
+
         &--sale{
             color: $red;
             font-weight: $font-weight-bold;
@@ -138,6 +144,12 @@ span.navbar_header__item{
             font-size: 14px;
             padding: 8px 13px;
             width: 100%;
+
+            &_account{
+                display: block;
+                padding-left: map-get($map: $spacers, $key: 3);
+                background: url('../icon/cabinet.svg') no-repeat 8px center / 20px;
+            }
 
             &--sale{
                 padding-left: 13px;

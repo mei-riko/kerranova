@@ -1,5 +1,6 @@
 .preview_collection{
     &__catalog{
+        max-width: 100%;
         &:hover, &:focus{
             text-decoration: none;
             color: inherit;

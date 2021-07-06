@@ -256,6 +256,12 @@ form.woocommerce-form button.button,
 }
 // Alert 
 .woocommerce-notices-wrapper{
+    @extend .col-12;
+
+    .woocommerce-message{
+        margin-top: 0;
+        margin-bottom: map-get($map: $spacers, $key: 2);
+    }
     .woocommerce-error{
         margin-bottom: map-get($map: $spacers, $key: 2);
         li{
@@ -268,6 +274,20 @@ form.woocommerce-form button.button,
         }
     }
 }
+.woocommerce-MyAccount-content .woocommerce-message{
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: flex-end;
+    .button{
+        @extend .btn;
+        @extend .btn--small;
+        @extend .btn_secondary;
+    
+        margin-left: map-get($map: $spacers, $key: 1);
+    }
+}
+
 @media all and (max-width: map-get($grid-breakpoints, 'lg') ) {
     // Forms
     form.woocommerce-EditAccountForm{
@@ -294,15 +314,20 @@ form.woocommerce-form button.button,
 
     // Address
     .u-columns{
-        .u-column1.col-1{
+        .u-column1{
             @extend .col-md-12;
+            &.col-1.woocommerce-Address{
+                @extend .col-md-12;
+            }
         }
-        .u-column2.col-2{
+        .u-column2{
             @extend .col-md-12;
+            &.col-2.woocommerce-Address{
+                @extend .col-md-12;
+            }
         }
     }
 }
-
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .woocommerce-MyAccount-content{
         .woocommerce-order-details{
@@ -314,6 +339,16 @@ form.woocommerce-form button.button,
             address{
                 padding: $spacer/2;
             }
+        }
+    }
+    // Alert
+    .woocommerce-MyAccount-content .woocommerce-message{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+
+        .button{
+            margin-top: map-get($map: $spacers, $key: 1);
+            margin-left: 0;
         }
     }
     // Forms

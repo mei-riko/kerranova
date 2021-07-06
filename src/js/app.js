@@ -9,6 +9,7 @@ import '../component/slider/slider';
 import '../component/input/input';
 import '../component/product/product';
 import '../component/collection/aside';
+import '../component/modal/popup';
 
 $(document).ready(() =>{
   // Плавные скролл
